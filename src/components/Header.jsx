@@ -79,7 +79,7 @@ const Header = () => {
                 width={23}
                 src={linkdinIcon}
                 alt="Linkdin" />
-  
+
             </Grid>
           </Grid>
 
@@ -192,7 +192,7 @@ const Header = () => {
 
 
             <Typography
-            fontSize={15}
+              fontSize={15}
               fontFamily='poppins'
               color="#fff" ml={4} mr={4}>
               Replacing a maintains the amount of line. When replacing a selection. help agencies to define. define their new business objectives and then.
