@@ -1,6 +1,10 @@
 import { Box, Button, Grid, Typography } from '@mui/material'
 import { bgcolor, Container } from '@mui/system'
 import studyImage from "../../public/png/study.png";
+import folderOpenIcon from "../svg/folderOpenIcon.svg";
+import editIcon from "../svg/editIcon.svg";
+import codeIcon from "../svg/codeIcon.svg";
+import settingsIcon from "../svg/settingsIcon.svg";
 
 import React from 'react'
 import Image from 'next/image';
@@ -17,7 +21,7 @@ const MakeDesignBetter = () => {
                         We are technologies company
                     </Typography>
 
-                    <Typography mt={1} fontSize={45} fontFamily="poppins-semibold" style={{lineHeight: "60px"}}>
+                    <Typography mt={1} fontSize={45} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
                         We are making design better for everyone
                     </Typography>
 
@@ -47,7 +51,75 @@ const MakeDesignBetter = () => {
                     </Image>
                 </Grid>
 
+            </Grid>
 
+
+            <Grid pb={10} container alignItems='center' display='flex' justifyContent='center'>
+
+                <Grid flexDirection='column' spacing={10} md alignItems='center' display='flex' ml={5} mr={10}>
+                    <Grid width={90} height={90} bgcolor="#01A9F5" sx={{ borderRadius: 20 }} alignItems='center' display='flex' justifyContent='center'>
+                        <Image
+                            width={35}
+                            src={folderOpenIcon}
+                            alt="Folder Open Icon" />
+                    </Grid>
+
+                    <Typography pt={1} fontSize={14} fontFamily='poppins-medium' textAlign="center" color="#27363B" textTransform='none'>
+                        World leader in consulting and finance
+                    </Typography>
+
+                </Grid>
+
+
+
+
+
+
+                <Grid flexDirection='column' md alignItems='center' display='flex' mr={10}>
+                    <Grid width={90} height={90} bgcolor="#40536B" sx={{ borderRadius: 20 }} alignItems='center' display='flex' justifyContent='center'>
+                        <Image
+                            width={35}
+                            src={codeIcon}
+                            alt="Code Icon" />
+                    </Grid>
+
+                    <Typography pt={1} fontSize={14} fontFamily='poppins-medium' textAlign="center" color="#27363B" textTransform='none'>
+                        A focused team with a specialized skill
+
+                    </Typography>
+
+                </Grid>
+
+
+                <Grid flexDirection='column' textAlign="center" md alignItems='center' display='flex' mr={10}>
+                    <Grid width={90} height={90} bgcolor="#DBBF05" sx={{ borderRadius: 20 }} alignItems='center' display='flex' justifyContent='center'>
+                        <Image
+                            width={35}
+                            src={settingsIcon}
+                            alt="Settings Icon" />
+                    </Grid>
+
+                    <Typography pt={1} fontSize={14} fontFamily='poppins-medium' color="#27363B" textTransform='none'>
+                        Trusted and professional advisors for you
+                    </Typography>
+
+                </Grid>
+
+
+
+                <Grid flexDirection='column' md alignItems='center' display='flex'  mr={10}>
+                    <Grid width={90} height={90} bgcolor="#9CC118" sx={{ borderRadius: 20 }} alignItems='center' display='flex' justifyContent='center'>
+                        <Image
+                            width={35}
+                            src={editIcon}
+                            alt="Edit Icon" />
+                    </Grid>
+
+                    <Typography pt={1} fontSize={14} textAlign="center" fontFamily='poppins-medium' color="#27363B" textTransform='none'>
+                        Experience to give you a better results
+                    </Typography>
+
+                </Grid>
 
 
             </Grid>

@@ -179,7 +179,6 @@ const Header = () => {
             <Typography
               fontFamily='poppins'
               fontSize={22}
-
               color="#fff" mt={4} ml={4}>
               Creative
             </Typography>
