@@ -13,6 +13,7 @@ const MakeDesignBetter = () => {
     return (
         <Container maxWidth="lg" sx={{ position: "relative" }}>
 
+            {/* ----------------------- We are making design section ----------------------- */}
             <Grid container mt={30} height={600} spacing={5}>
 
 
@@ -42,18 +43,19 @@ const MakeDesignBetter = () => {
                     </Grid>
                 </Grid>
 
+          {/* ----------------------- Study image ----------------------- */}
                 <Grid ml={4}>
                     <Image
                         width={550}
                         priority
                         src={studyImage}
-                        alt='Banner Image'>
+                        alt='Study Image'>
                     </Image>
                 </Grid>
 
             </Grid>
 
-
+          {/* ----------------------- Circle design section ----------------------- */}
             <Grid pb={10} container alignItems='center' display='flex' justifyContent='center'>
 
                 <Grid flexDirection='column' spacing={10} md alignItems='center' display='flex' ml={5} mr={10}>
@@ -107,7 +109,7 @@ const MakeDesignBetter = () => {
 
 
 
-                <Grid flexDirection='column' md alignItems='center' display='flex'  mr={10}>
+                <Grid flexDirection='column' md alignItems='center' display='flex' mr={10}>
                     <Grid width={90} height={90} bgcolor="#9CC118" sx={{ borderRadius: 20 }} alignItems='center' display='flex' justifyContent='center'>
                         <Image
                             width={35}

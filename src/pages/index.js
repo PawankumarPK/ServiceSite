@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Header from '../components/Header'
 import MakeDesignBetter from '../components/MakeDesignBetter'
+import YouImagineWeCreate from '../components/YouImagineWeCreate'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
 
       <Header/>
       <MakeDesignBetter/>
+      <YouImagineWeCreate/>
 
      
     </div>
