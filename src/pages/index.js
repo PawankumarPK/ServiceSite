@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Header from '../components/Header'
 import MakeDesignBetter from '../components/MakeDesignBetter'
+import WhyChooseUs from '../components/WhyChooseUs'
 import YouImagineWeCreate from '../components/YouImagineWeCreate'
 import styles from '../styles/Home.module.css'
 
@@ -17,6 +18,7 @@ export default function Home() {
       <Header/>
       <MakeDesignBetter/>
       <YouImagineWeCreate/>
+      <WhyChooseUs/>
 
      
     </div>

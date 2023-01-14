@@ -20,9 +20,15 @@ const YouImagineWeCreate = () => {
                 <Grid width={100} height={2} bgcolor="#40536B"></Grid>
 
 
-                <Typography mt={2} fontSize={45} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
-                    You Imagine, We Create
-                </Typography>
+                <Grid container justifyContent='center' textAlign="center">
+                    <Typography noWrap mt={2} fontSize={45} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
+                        You Imagine, We
+                    </Typography>
+
+                    <Typography color='#9CC118' mt={2} fontSize={45} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
+                        &nbsp;Create
+                    </Typography>
+                </Grid>
 
 
                 <Grid container pb={15} pt={10} alignItems='center' justifyContent='center'>
