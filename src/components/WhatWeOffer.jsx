@@ -1,9 +1,17 @@
 import { Box, Card, CardActionArea, CardContent, CardMedia, Grid, Grow, Paper, Stack, Typography } from '@mui/material'
 import { Container } from '@mui/system'
-import file from "../../public/png/file.png";
-import rocket from "../../public/png/rocket.png";
-import lightBulbImg from "../../public/png/lightbulb.png";
 import editIcon from "../svg/editBlack.svg";
+import androidIcon from "../svg/android.svg";
+import appStoreIos from "../svg/appStoreIos.svg";
+import bookmarkIcon from "../svg/bookmark.svg";
+import creditCardIcon from "../svg/creditCard.svg";
+import domainIcon from "../svg/domain.svg";
+import emailIcon from "../svg/email.svg";
+import flightIcon from "../svg/flight.svg";
+import headsetIcon from "../svg/headset.svg";
+import photoVideoIcon from "../svg/photoVideo.svg";
+import serverIcon from "../svg/server.svg";
+import webIcon from "../svg/web.svg";
 
 
 import React from 'react'
@@ -35,7 +43,7 @@ const WhatWeOffer = () => {
 
                 <Grid container justifyContent='center' mt={10}>
                     <Grid mb={10} mr={5}>
-                        <Card elevation={3} container>
+                        <Card elevation={2} container>
 
 
                             {/* ------------------------- Web Design Section ------------------------*/}
@@ -93,7 +101,7 @@ const WhatWeOffer = () => {
 
 
                     <Grid mr={5}>
-                        <Card elevation={3} container>
+                        <Card elevation={2} container>
 
 
                             <Grid mt={5} mr={5} height={300} width={250} bgcolor="#fff">
@@ -103,8 +111,8 @@ const WhatWeOffer = () => {
                                 <Grid ml={2} mt={2} mb={2}>
                                     <Image
                                         width={40}
-                                        src={editIcon}
-                                        alt="Folder Open Icon" />
+                                        src={webIcon}
+                                        alt="Web Icon" />
                                 </Grid>
 
                                 <Typography
@@ -153,7 +161,7 @@ const WhatWeOffer = () => {
 
 
                     <Grid mr={5}>
-                        <Card elevation={3} container>
+                        <Card elevation={2} container>
 
 
                             <Grid mt={5} mr={5} height={300} width={250} bgcolor="#fff">
@@ -163,8 +171,8 @@ const WhatWeOffer = () => {
                                 <Grid ml={2} mt={2} mb={2}>
                                     <Image
                                         width={40}
-                                        src={editIcon}
-                                        alt="Folder Open Icon" />
+                                        src={serverIcon}
+                                        alt="Server Icon" />
                                 </Grid>
 
                                 <Typography
@@ -209,7 +217,7 @@ const WhatWeOffer = () => {
                     </Grid>
 
                     <Grid mb={10}>
-                        <Card elevation={3} container>
+                        <Card elevation={2} container>
 
 
                             <Grid mt={5} mr={5} height={300} width={250} bgcolor="#fff">
@@ -219,8 +227,8 @@ const WhatWeOffer = () => {
                                 <Grid ml={2} mt={2} mb={2}>
                                     <Image
                                         width={40}
-                                        src={editIcon}
-                                        alt="Folder Open Icon" />
+                                        src={androidIcon}
+                                        alt="Android Icon" />
                                 </Grid>
 
                                 <Typography
@@ -272,7 +280,7 @@ const WhatWeOffer = () => {
 
                 <Grid container justifyContent='center'>
                     <Grid mr={5}>
-                        <Card elevation={3} container>
+                        <Card elevation={2} container>
 
 
                             {/* ------------------------- Web Design Section ------------------------*/}
@@ -283,8 +291,8 @@ const WhatWeOffer = () => {
                                 <Grid ml={2} mt={2} mb={2}>
                                     <Image
                                         width={40}
-                                        src={editIcon}
-                                        alt="Folder Open Icon" />
+                                        src={appStoreIos}
+                                        alt="App Store Icon" />
                                 </Grid>
 
                                 <Typography
@@ -327,7 +335,7 @@ const WhatWeOffer = () => {
 
 
                     <Grid mb={10} mr={5}>
-                        <Card elevation={3} container>
+                        <Card elevation={2} container>
 
 
                             <Grid mt={5} mr={5} height={300} width={250} bgcolor="#fff">
@@ -337,7 +345,7 @@ const WhatWeOffer = () => {
                                 <Grid ml={2} mt={2} mb={2}>
                                     <Image
                                         width={40}
-                                        src={editIcon}
+                                        src={domainIcon}
                                         alt="Folder Open Icon" />
                                 </Grid>
 
@@ -385,7 +393,7 @@ const WhatWeOffer = () => {
 
 
                     <Grid mb={10} mr={5}>
-                        <Card elevation={3} container>
+                        <Card elevation={2} container>
 
 
                             <Grid mt={5} mr={5} height={300} width={250} bgcolor="#fff">
@@ -395,8 +403,8 @@ const WhatWeOffer = () => {
                                 <Grid ml={2} mt={2} mb={2}>
                                     <Image
                                         width={40}
-                                        src={editIcon}
-                                        alt="Folder Open Icon" />
+                                        src={flightIcon}
+                                        alt="Flight Icon" />
                                 </Grid>
 
                                 <Typography
@@ -440,7 +448,7 @@ const WhatWeOffer = () => {
                     </Grid>
 
                     <Grid mb={10}>
-                        <Card elevation={3} container>
+                        <Card elevation={2} container>
 
 
                             <Grid mt={5} mr={5} height={300} width={250} bgcolor="#fff">
@@ -450,7 +458,7 @@ const WhatWeOffer = () => {
                                 <Grid ml={2} mt={2} mb={2}>
                                     <Image
                                         width={40}
-                                        src={editIcon}
+                                        src={emailIcon}
                                         alt="Folder Open Icon" />
                                 </Grid>
 
@@ -507,7 +515,7 @@ const WhatWeOffer = () => {
 
                 <Grid container justifyContent='center'>
                     <Grid mr={5}>
-                        <Card elevation={3} container>
+                        <Card elevation={2} container>
 
 
                             {/* ------------------------- Web Design Section ------------------------*/}
@@ -518,7 +526,7 @@ const WhatWeOffer = () => {
                                 <Grid ml={2} mt={2} mb={2}>
                                     <Image
                                         width={40}
-                                        src={editIcon}
+                                        src={bookmarkIcon}
                                         alt="Folder Open Icon" />
                                 </Grid>
 
@@ -565,7 +573,7 @@ const WhatWeOffer = () => {
 
 
                     <Grid mb={10} mr={5}>
-                        <Card elevation={3} container>
+                        <Card elevation={2} container>
 
 
                             <Grid mt={5} mr={5} height={300} width={250} bgcolor="#fff">
@@ -575,8 +583,8 @@ const WhatWeOffer = () => {
                                 <Grid ml={2} mt={2} mb={2}>
                                     <Image
                                         width={40}
-                                        src={editIcon}
-                                        alt="Folder Open Icon" />
+                                        src={creditCardIcon}
+                                        alt="Credit Card Icon" />
                                 </Grid>
 
                                 <Typography
@@ -623,7 +631,7 @@ const WhatWeOffer = () => {
 
 
                     <Grid mb={10} mr={5}>
-                        <Card elevation={3} container>
+                        <Card elevation={2} container>
 
 
                             <Grid mt={5} mr={5} height={300} width={250} bgcolor="#fff">
@@ -633,8 +641,8 @@ const WhatWeOffer = () => {
                                 <Grid ml={2} mt={2} mb={2}>
                                     <Image
                                         width={40}
-                                        src={editIcon}
-                                        alt="Folder Open Icon" />
+                                        src={headsetIcon}
+                                        alt="Headset Icon" />
                                 </Grid>
 
                                 <Typography
@@ -678,7 +686,7 @@ const WhatWeOffer = () => {
                     </Grid>
 
                     <Grid mb={10}>
-                        <Card elevation={3} container>
+                        <Card elevation={2} container>
 
 
                             <Grid mt={5} mr={5} height={300} width={250} bgcolor="#fff">
@@ -688,7 +696,7 @@ const WhatWeOffer = () => {
                                 <Grid ml={2} mt={2} mb={2}>
                                     <Image
                                         width={40}
-                                        src={editIcon}
+                                        src={photoVideoIcon}
                                         alt="Folder Open Icon" />
                                 </Grid>
 

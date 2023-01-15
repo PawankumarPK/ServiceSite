@@ -1,6 +1,4 @@
 import { Box, Card, CardActionArea, CardContent, CardMedia, Grid, Grow, Paper, Stack, Typography } from '@mui/material'
-import { Container } from '@mui/system'
-import folderOpenIcon from "../svg/folderOpenIcon.svg";
 import awardIcon from "../svg/awardIcon.svg";
 import chartLineIcon from "../svg/chartLineIcon.svg";
 import newsIcon from "../svg/newsIcon.svg";
