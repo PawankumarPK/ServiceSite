@@ -1,9 +1,17 @@
 import { Box, Card, CardActionArea, CardContent, CardMedia, Grid, Grow, Paper, Stack, Typography } from '@mui/material'
 import { Container } from '@mui/system'
 import folderOpenIcon from "../svg/folderOpenIcon.svg";
-import editIcon from "../svg/editIcon.svg";
-import codeIcon from "../svg/codeIcon.svg";
-import settingsIcon from "../svg/settingsIcon.svg";
+import awardIcon from "../svg/awardIcon.svg";
+import chartLineIcon from "../svg/chartLineIcon.svg";
+import newsIcon from "../svg/newsIcon.svg";
+import googleIcon from "../svg/googleIcon.svg";
+import homeIcon from "../svg/homeIcon.svg";
+import magnetIcon from "../svg/magnetIcon.svg";
+import metroShopIcon from "../svg/metroShopIcon.svg";
+import runIcon from "../svg/runIcon.svg";
+import webIcon from "../svg/webIcon.svg";
+
+
 
 
 import React from 'react'
@@ -49,8 +57,8 @@ const WhyChooseUs = () => {
                             <Grid mt={1} width={53} height={50} bgcolor="#DBBF05" sx={{ borderRadius: 20 }} alignItems='center' display='flex' justifyContent='center'>
                                 <Image
                                     width={20}
-                                    src={folderOpenIcon}
-                                    alt="Folder Open Icon" />
+                                    src={chartLineIcon}
+                                    alt="Chart Line Icon" />
                             </Grid>
 
                             <Grid width={250} direction='column' ml={2}>
@@ -74,7 +82,7 @@ const WhyChooseUs = () => {
                             <Grid mt={1} width={53} height={50} bgcolor="#9CC118" sx={{ borderRadius: 20 }} alignItems='center' display='flex' justifyContent='center'>
                                 <Image
                                     width={20}
-                                    src={folderOpenIcon}
+                                    src={googleIcon}
                                     alt="Folder Open Icon" />
                             </Grid>
 
@@ -99,7 +107,7 @@ const WhyChooseUs = () => {
                             <Grid mt={1} width={53} height={50} bgcolor="#01A9F5" sx={{ borderRadius: 20 }} alignItems='center' display='flex' justifyContent='center'>
                                 <Image
                                     width={20}
-                                    src={folderOpenIcon}
+                                    src={magnetIcon}
                                     alt="Folder Open Icon" />
                             </Grid>
 
@@ -137,8 +145,8 @@ const WhyChooseUs = () => {
                             <Grid mt={1} width={53} height={50} bgcolor="#0796A1" sx={{ borderRadius: 20 }} alignItems='center' display='flex' justifyContent='center'>
                                 <Image
                                     width={20}
-                                    src={folderOpenIcon}
-                                    alt="Folder Open Icon" />
+                                    src={webIcon}
+                                    alt="Web Icon" />
                             </Grid>
 
                             <Grid width={250} direction='column' ml={2}>
@@ -164,8 +172,8 @@ const WhyChooseUs = () => {
                             <Grid mt={1} width={53} height={50} bgcolor="#12A824" sx={{ borderRadius: 20 }} alignItems='center' display='flex' justifyContent='center'>
                                 <Image
                                     width={20}
-                                    src={folderOpenIcon}
-                                    alt="Folder Open Icon" />
+                                    src={metroShopIcon}
+                                    alt="Metro Shop Icon" />
                             </Grid>
 
                             <Grid width={250} direction='column' ml={2}>
@@ -190,8 +198,8 @@ const WhyChooseUs = () => {
                             <Grid mt={1} width={53} height={50} bgcolor="#8F07A1" sx={{ borderRadius: 20 }} alignItems='center' display='flex' justifyContent='center'>
                                 <Image
                                     width={20}
-                                    src={folderOpenIcon}
-                                    alt="Folder Open Icon" />
+                                    src={runIcon}
+                                    alt="Run Icon" />
                             </Grid>
 
                             <Grid width={250} direction='column' ml={2}>
@@ -222,8 +230,8 @@ const WhyChooseUs = () => {
                             <Grid mt={1} width={53} height={50} bgcolor="#DBD525" sx={{ borderRadius: 20 }} alignItems='center' display='flex' justifyContent='center'>
                                 <Image
                                     width={20}
-                                    src={folderOpenIcon}
-                                    alt="Folder Open Icon" />
+                                    src={newsIcon}
+                                    alt="News Icon" />
                             </Grid>
 
                             <Grid width={250} direction='column' ml={2}>
@@ -247,8 +255,8 @@ const WhyChooseUs = () => {
                             <Grid mt={1} width={53} height={50} bgcolor="#DB4125" sx={{ borderRadius: 20 }} alignItems='center' display='flex' justifyContent='center'>
                                 <Image
                                     width={20}
-                                    src={folderOpenIcon}
-                                    alt="Folder Open Icon" />
+                                    src={awardIcon}
+                                    alt="Award Icon" />
                             </Grid>
 
                             <Grid width={250} direction='column' ml={2}>
@@ -272,8 +280,8 @@ const WhyChooseUs = () => {
                             <Grid mt={1} width={53} height={50} bgcolor="#25DBBF" sx={{ borderRadius: 20 }} alignItems='center' display='flex' justifyContent='center'>
                                 <Image
                                     width={20}
-                                    src={folderOpenIcon}
-                                    alt="Folder Open Icon" />
+                                    src={homeIcon}
+                                    alt="Home Icon" />
                             </Grid>
 
                             <Grid width={250} direction='column' ml={2}>

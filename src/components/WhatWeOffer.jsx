@@ -43,7 +43,7 @@ const WhatWeOffer = () => {
 
 
 
-                                <Grid ml={2} mt={2} mb={2}>
+                                <Grid ml={2} mt={2}>
                                     <Image
                                         width={40}
                                         src={editIcon}
@@ -92,7 +92,7 @@ const WhatWeOffer = () => {
 
 
 
-                    <Grid mb={10} mr={5}>
+                    <Grid mr={5}>
                         <Card elevation={3} container>
 
 
@@ -152,7 +152,7 @@ const WhatWeOffer = () => {
 
 
 
-                    <Grid mb={10} mr={5}>
+                    <Grid mr={5}>
                         <Card elevation={3} container>
 
 
@@ -271,7 +271,7 @@ const WhatWeOffer = () => {
 
 
                 <Grid container justifyContent='center'>
-                    <Grid mb={10} mr={5}>
+                    <Grid mr={5}>
                         <Card elevation={3} container>
 
 
@@ -506,7 +506,7 @@ const WhatWeOffer = () => {
 
 
                 <Grid container justifyContent='center'>
-                    <Grid mb={10} mr={5}>
+                    <Grid mr={5}>
                         <Card elevation={3} container>
 
 
