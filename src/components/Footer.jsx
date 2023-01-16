@@ -1,9 +1,15 @@
-import { Box, Button, Card, CardActionArea, CardContent, CardMedia, Grid, Grow, Paper, Stack, TextField, Typography } from '@mui/material'
-import editIcon from "../svg/editBlack.svg";
+import { Box, Button, Grid, TextField, Typography } from '@mui/material'
 import facebookIcon from "../svg/facebookBlack.svg";
 import instagramIcon from "../svg/instagramBlack.svg";
 import linkdinIcon from "../svg/linkedinBlack.svg";
 import twitterIcon from "../svg/twitterBlack.svg";
+
+import callIcon from "../svg/call.svg";
+import emailIcon from "../svg/emailBlack.svg";
+import locationIcon from "../svg/location.svg";
+
+import flowerPot from "../../public/png/flowerPot.png"
+
 
 
 
@@ -15,11 +21,11 @@ import { textAlign } from '@mui/system';
 
 const Footer = () => {
     return (
-        <Grid bgcolor="#F7F8FA" >
+        <Grid bgcolor="#F7F8FA">
 
 
-            <Grid container>
-                <Grid>
+            <Grid container >
+                <Grid mb={8}>
                     <Grid container direction="column">
 
 
@@ -75,9 +81,9 @@ const Footer = () => {
 
 
                     {/* ----------------------- Social Media icons ----------------------- */}
-                    <Grid mt={5} ml={10} container mr={15} spacing={3}>
+                    <Grid  mt={10} ml={10} container>
 
-                        <Grid item xs="auto" mt="5px">
+                        <Grid item mt="5px">
                             <Image
                                 width={15}
                                 src={facebookIcon}
@@ -85,14 +91,14 @@ const Footer = () => {
                         </Grid>
 
 
-                        <Grid item xs="auto" mt="5px" ml={5}>
+                        <Grid  mt="5px" ml={10}>
                             <Image
                                 width={25}
                                 src={twitterIcon}
                                 alt="Twitter" />
                         </Grid>
 
-                        <Grid item xs="auto" mt="4px" ml={5}>
+                        <Grid mt="4px" ml={10}>
                             <Image
                                 width={23}
                                 src={instagramIcon}
@@ -100,26 +106,73 @@ const Footer = () => {
 
                         </Grid>
 
-                        <Grid item xs="auto" mt="3px" ml={5}>
+                        <Grid mt="3px" ml={10}>
                             <Image
                                 width={23}
                                 src={linkdinIcon}
                                 alt="Linkdin" />
 
                         </Grid>
-                    </Grid>
 
+
+
+
+                    </Grid>
+                    <Typography ml={10} mt={10} fontSize={12} fontFamily='poppins-regular' color="#838788" textTransform='none'>
+                        Copyright © 2022  |  Created with Love by OWN Inc.
+                    </Typography>
                 </Grid>
 
 
-                <Grid display='flex'>
-                    <Image
-                        width={15}
-                        src={facebookIcon}
-                        alt="Facebook" />
-                    <Typography fontFamily='poppins-medium' color="#000" textTransform='none'>
-                        Start your project
-                    </Typography>
+                <Grid ml={20} mt={35} height={160} direction='column' width={500}>
+
+                    <Grid display='flex' container >
+                        <Image
+                            width={18}
+                            src={locationIcon}
+                            alt="Facebook" />
+
+
+                        <Typography ml={2} fontFamily='poppins-regular' color="#000" textTransform='none'>
+                            C-717, JVTS GARDEN, CHATTARPUR, NEW DELHI - 110074
+                        </Typography>
+
+                    </Grid>
+
+
+
+
+                    <Grid display='flex' mt={5}>
+                        <Image
+                            width={18}
+                            src={callIcon}
+                            alt="Facebook" />
+                        <Typography ml={2} fontFamily='poppins-regular' color="#000" textTransform='none'>
+                            +91 9910765616
+                        </Typography>
+
+                    </Grid>
+
+
+
+                    <Grid display='flex' mt={5}>
+                        <Image
+                            width={18}
+                            src={emailIcon}
+                            alt="Facebook" />
+                        <Typography ml={2} fontFamily='poppins-regular' color="#000" textTransform='none'>
+                            PAWAN@GMAIL.COM
+                        </Typography>
+
+                    </Grid>
+
+
+                    <Grid mt={10}>
+                        <Image
+                            width={300}
+                            src={flowerPot}
+                            alt="Flower Pot" />
+                    </Grid>
 
                 </Grid>
 
