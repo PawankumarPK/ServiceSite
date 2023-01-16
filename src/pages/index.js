@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Footer from '../components/Footer'
 import Header from '../components/Header'
 import MakeDesignBetter from '../components/MakeDesignBetter'
 import TeamSection from '../components/TeamSection'
@@ -23,6 +24,7 @@ export default function Home() {
       <WhyChooseUs/>
       <WhatWeOffer/>
       <TeamSection/>
+      <Footer/>
 
      
     </div>

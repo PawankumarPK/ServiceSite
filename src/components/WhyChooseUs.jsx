@@ -10,8 +10,6 @@ import runIcon from "../svg/runIcon.svg";
 import webIcon from "../svg/webIcon.svg";
 
 
-
-
 import React from 'react'
 import Image from 'next/image';
 
