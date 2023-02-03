@@ -43,7 +43,7 @@ const MakeDesignBetter = () => {
                     </Grid>
                 </Grid>
 
-          {/* ----------------------- Study image ----------------------- */}
+                {/* ----------------------- Study image ----------------------- */}
                 <Grid ml={4}>
                     <Image
                         width={550}
@@ -55,7 +55,7 @@ const MakeDesignBetter = () => {
 
             </Grid>
 
-          {/* ----------------------- Circle design section ----------------------- */}
+            {/* ----------------------- Circle design section ----------------------- */}
             <Grid pb={10} container alignItems='center' display='flex' justifyContent='center'>
 
                 <Grid flexDirection='column' spacing={10} md alignItems='center' display='flex' ml={5} mr={10}>

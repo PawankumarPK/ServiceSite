@@ -10,14 +10,8 @@ import locationIcon from "../svg/location.svg";
 
 import flowerPot from "../../public/png/flowerPot.png"
 
-
-
-
-
-
 import React from 'react'
 import Image from 'next/image';
-import { textAlign } from '@mui/system';
 
 const Footer = () => {
     return (

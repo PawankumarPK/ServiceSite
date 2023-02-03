@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Button, colors, Grid, MenuItem, Select, styled, TextField, Typography } from "@mui/material";
+import { Box, Button, Grid, Typography } from "@mui/material";
 import bannerImage from "../media/bannerImg.jpg";
 import whatsappIcon from "../svg/whatsappIcon.svg";
 
