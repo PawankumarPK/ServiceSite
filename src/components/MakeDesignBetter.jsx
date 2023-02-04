@@ -9,24 +9,57 @@ import settingsIcon from "../svg/settingsIcon.svg";
 import React from 'react'
 import Image from 'next/image';
 
+
 const MakeDesignBetter = () => {
     return (
-        <Container maxWidth="lg" sx={{ position: "relative" }}>
+        <Container>
 
             {/* ----------------------- We are making design section ----------------------- */}
-            <Grid container mt={30} height={600} spacing={5}>
+            <Grid
+                container={{ lg: true, sm: false }}
+                justifyContent="center"
+                mt={{ lg: 30, md: 30, sm: 15, xs: 15 }}
+                textAlign={{ lg: "start", md: "start", sm: "center", xs: "center" }}
+                height={{ lg: 600, sm: 700, }} >
 
 
-                <Grid width={600}>
-                    <Typography fontSize={20} color="#595959" fontFamily="poppins">
+                <Grid width={{ lg: 500, md: 320 }} mr={{ lg: 8, md: 8 }}>
+                    <Typography
+                        sx={{
+                            fontSize: {
+                                lg: 20,
+                                md: 16,
+                                sm: 16,
+                                xs: 12
+                            }
+                        }}
+                        color="#595959" fontFamily="poppins">
                         We are technologies company
                     </Typography>
 
-                    <Typography mt={1} fontSize={45} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
+                    <Typography
+                        sx={{
+                            fontSize: {
+                                lg: 45,
+                                md: 40,
+                                sm: 35,
+                                xs: 30
+                            }
+                        }}
+                        mt={1} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
                         We are making design better for everyone
                     </Typography>
 
-                    <Typography mt={4} fontSize={17} color="#595959" fontFamily="poppins">
+                    <Typography
+                        sx={{
+                            fontSize: {
+                                lg: 17,
+                                md: 15,
+                                sm: 15,
+                                xs: 12
+                            }
+                        }}
+                        mt={4} color="#595959" fontFamily="poppins">
                         There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly believable. If you are going to use a passage of Lorem Ipsum.
                     </Typography>
 
@@ -44,9 +77,9 @@ const MakeDesignBetter = () => {
                 </Grid>
 
                 {/* ----------------------- Study image ----------------------- */}
-                <Grid ml={4}>
+                <Grid ml={{ lg: 4, md: 4 }} width={{ lg: 550, md: 450, sm: 450, xs: 400 }} mt={{ sm: 5, xs: 5 }}>
                     <Image
-                        width={550}
+                        layout='responsive'
                         priority
                         src={studyImage}
                         alt='Study Image'>
@@ -58,7 +91,16 @@ const MakeDesignBetter = () => {
             {/* ----------------------- Circle design section ----------------------- */}
             <Grid pb={10} container alignItems='center' display='flex' justifyContent='center'>
 
-                <Grid flexDirection='column' spacing={10} md alignItems='center' display='flex' ml={5} mr={10}>
+                <Grid
+                    flexDirection='column'
+                    alignItems='center'
+                    display='flex'
+                    md
+                    ml={{ lg: 5, md: 5 }}
+                    mr={{ lg: 10, sm: 10 }}
+                    mt={{ sm: 10, xs: 10 }}
+                >
+
                     <Grid width={90} height={90} bgcolor="#01A9F5" sx={{ borderRadius: 20 }} alignItems='center' display='flex' justifyContent='center'>
                         <Image
                             width={35}
@@ -77,7 +119,15 @@ const MakeDesignBetter = () => {
 
 
 
-                <Grid flexDirection='column' md alignItems='center' display='flex' mr={10}>
+                <Grid
+                    flexDirection='column'
+                    md
+                    alignItems='center'
+                    display='flex'
+                    ml={{ lg: 5, md: 5 }}
+                    mr={{ lg: 10, sm: 10 }}
+                    mt={{ sm: 10, xs: 10 }}
+                >
                     <Grid width={90} height={90} bgcolor="#40536B" sx={{ borderRadius: 20 }} alignItems='center' display='flex' justifyContent='center'>
                         <Image
                             width={35}
@@ -93,7 +143,15 @@ const MakeDesignBetter = () => {
                 </Grid>
 
 
-                <Grid flexDirection='column' textAlign="center" md alignItems='center' display='flex' mr={10}>
+                <Grid
+                    flexDirection='column'
+                    textAlign="center"
+                    md
+                    alignItems='center'
+                    display='flex'
+                    ml={{ lg: 5, md: 5 }}
+                    mr={{ lg: 10, sm: 10 }}
+                    mt={{ sm: 10, xs: 10 }}>
                     <Grid width={90} height={90} bgcolor="#DBBF05" sx={{ borderRadius: 20 }} alignItems='center' display='flex' justifyContent='center'>
                         <Image
                             width={35}
@@ -109,7 +167,14 @@ const MakeDesignBetter = () => {
 
 
 
-                <Grid flexDirection='column' md alignItems='center' display='flex' mr={10}>
+                <Grid
+                    flexDirection='column'
+                    md
+                    alignItems='center'
+                    display='flex'
+                    ml={{ lg: 5, md: 5 }}
+                    mr={{ lg: 10, sm: 10 }}
+                    mt={{ sm: 10, xs: 10 }}>
                     <Grid width={90} height={90} bgcolor="#9CC118" sx={{ borderRadius: 20 }} alignItems='center' display='flex' justifyContent='center'>
                         <Image
                             width={35}
