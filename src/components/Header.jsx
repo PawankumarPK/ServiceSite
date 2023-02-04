@@ -9,28 +9,30 @@ import linkdinIcon from "../svg/linkedinIcon.svg";
 import twitterIcon from "../svg/twitterIcon.svg";
 import menuIcon from "../svg/menuIcon.svg";
 
-import {
-  createTheme,
-  responsiveFontSizes,
-  ThemeProvider
-} from "@mui/material/styles";
-
-
-
-import { Container, height, width } from '@mui/system';
+import { Container } from '@mui/system';
 import Image from 'next/image';
 
 
-
-let theme = createTheme();
-theme = responsiveFontSizes(theme)
-
+///----------------- Navbar common title -----------------
+const NavbarTitle = ({ text }) => (
+  <Typography
+    sx={{
+      fontSize: {
+        lg: 17,
+        md: 17,
+        sm: 14,
+        xs: 10
+      }
+    }}
+    fontWeight={600}>
+    {text}
+  </Typography>
+)
 
 
 const Header = () => {
 
   return (
-    <ThemeProvider theme={theme}>
       <Box sx={{ display: 'flex', alignItems: 'center' }} >
         <Image
           priority
@@ -88,7 +90,7 @@ const Header = () => {
 
 
             {/* ----------------------- Social Media icons ----------------------- */}
-            <Grid container item xs="auto"  spacing={3}>
+            <Grid container item xs="auto" spacing={3}>
 
               <Grid item
                 sx={{
@@ -112,7 +114,7 @@ const Header = () => {
               </Grid>
 
 
-              <Grid item 
+              <Grid item
                 sx={{
                   width: {
                     lg: 53,
@@ -134,21 +136,21 @@ const Header = () => {
                   alt="Twitter" />
               </Grid>
 
-              <Grid item 
-              sx={{
-                width: {
-                  lg: 48,
-                  md: 48,
-                  sm: 45,
-                  xs: 42
-                },
-                height: {
-                  lg: 48,
-                  md: 48,
-                  sm: 45,
-                  xs: 42
-                }
-              }}>
+              <Grid item
+                sx={{
+                  width: {
+                    lg: 48,
+                    md: 48,
+                    sm: 45,
+                    xs: 42
+                  },
+                  height: {
+                    lg: 48,
+                    md: 48,
+                    sm: 45,
+                    xs: 42
+                  }
+                }}>
                 <Image
                   layout='responsive'
                   src={instagramIcon}
@@ -156,21 +158,21 @@ const Header = () => {
 
               </Grid>
 
-              <Grid item 
-              sx={{
-                width: {
-                  lg: 50,
-                  md: 48,
-                  sm: 45,
-                  xs: 42
-                },
-                height: {
-                  lg: 50,
-                  md: 48,
-                  sm: 45,
-                  xs: 42
-                }
-              }}>
+              <Grid item
+                sx={{
+                  width: {
+                    lg: 50,
+                    md: 48,
+                    sm: 45,
+                    xs: 42
+                  },
+                  height: {
+                    lg: 50,
+                    md: 48,
+                    sm: 45,
+                    xs: 42
+                  }
+                }}>
                 <Image
                   layout='responsive'
                   src={linkdinIcon}
@@ -228,80 +230,29 @@ const Header = () => {
 
 
                 <Grid item xs="auto" paddingRight={4}>
-                  <Typography component="h3"
-                    sx={{
-                      fontSize: {
-                        lg: 17,
-                        md: 17,
-                        sm: 14,
-                        xs: 10
-                      }
-                    }}
-                    fontWeight={600}>
-                    HOME
-                  </Typography>
+                  <NavbarTitle text="HOME" />
                 </Grid>
 
 
                 <Grid item xs="auto" paddingRight={4}>
-                  <Typography
-                    sx={{
-                      fontSize: {
-                        lg: 17,
-                        md: 17,
-                        sm: 14,
-                        xs: 10
-                      }
-                    }}
-                    fontWeight={600}>
-                    ABOUT
-                  </Typography>
+                  <NavbarTitle text="ABOUT" />
                 </Grid>
 
 
                 <Grid item xs="auto" paddingRight={4}>
-                  <Typography
-                    sx={{
-                      fontSize: {
-                        lg: 17,
-                        md: 17,
-                        sm: 14,
-                        xs: 10
-                      }
-                    }}
-                    fontWeight={600}>
-                    PORTFOLIO
-                  </Typography>
+                  <NavbarTitle text="PORTFOLIO" />
                 </Grid>
 
 
                 <Grid item xs="auto" paddingRight={4}>
-                  <Typography
-                    sx={{
-                      fontSize: {
-                        lg: 17,
-                        md: 17,
-                        sm: 14,
-                        xs: 10
-                      }
-                    }} fontWeight={600}>
-                    CLIENT
-                  </Typography>
+                  <NavbarTitle text="CLIENT" />
+
+
                 </Grid>
 
                 <Grid item xs="auto" paddingRight={4}>
-                  <Typography
-                    sx={{
-                      fontSize: {
-                        lg: 17,
-                        md: 17,
-                        sm: 14,
-                        xs: 10
-                      }
-                    }}
-                    fontWeight={600}>
-                    CONTACT
-                  </Typography>
+                  <NavbarTitle text="CONTACT" />
+
                 </Grid>
 
               </Grid>
@@ -320,18 +271,16 @@ const Header = () => {
 
 
 
-          <Grid container justifyContent={{lg:"end",xs:"end"}} alignItems='center' mt={13}
-          
-          >
+          <Grid container justifyContent={{ lg: "end", xs: "end" }} alignItems='center' mt={13}>
 
             {/* ----------------------- We make beautiful & Resposive text section ----------------------- */}
 
             <Grid>
-              <Typography pr={{lg:5,xs:2}} fontSize={40} fontFamily="poppins-bold">
+              <Typography pr={{ lg: 5, xs: 2 }} fontSize={40} fontFamily="poppins-bold">
                 WE MAKE
               </Typography>
 
-              <Typography fontSize={15} fontFamily="poppins" textAlign='center' pr={{lg:5,xs:0}}>
+              <Typography fontSize={15} fontFamily="poppins" textAlign='center' pr={{ lg: 5, xs: 0 }}>
                 Beautiful & Responsive
               </Typography>
 
@@ -387,7 +336,6 @@ const Header = () => {
 
       </Box >
 
-    </ThemeProvider>
   )
 }
 
