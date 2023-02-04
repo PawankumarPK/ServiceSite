@@ -20,7 +20,7 @@ const YouImagineWeCreate = () => {
                 <Grid width={100} height={2} bgcolor="#40536B"></Grid>
 
 
-                <Grid container justifyContent='center' textAlign="center">
+                <Grid container justifyContent='center' textAlign="center" mb={5}>
                     <Typography noWrap mt={2} fontSize={45} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
                         You Imagine, We
                     </Typography>
@@ -31,11 +31,11 @@ const YouImagineWeCreate = () => {
                 </Grid>
 
 
-                <Grid container pb={15} pt={10} alignItems='center' justifyContent='center'>
+                <Grid container={{lg:true,sm:false}} pb={15} pt={10} alignItems='center' justifyContent='center'>
 
 
                     {/* ------------------------- Tell your requirements Section ------------------------*/}
-                    <Grid mr={5} height={300} width={400} bgcolor="#fff">
+                    <Grid mr={{lg:5,md:5}}  height={300} width={400} mb={5}bgcolor="#fff">
 
                         <Box
                             sx={{
@@ -86,7 +86,7 @@ const YouImagineWeCreate = () => {
 
 
                     {/* ------------------------- We Plan & design Section ------------------------*/}
-                    <Grid mr={5} height={300} width={400} bgcolor="#fff">
+                    <Grid mr={{lg:5,md:5}}  mb={5} height={300} width={400} bgcolor="#fff">
 
                         <Box
                             sx={{
@@ -137,7 +137,7 @@ const YouImagineWeCreate = () => {
 
 
                     {/* ------------------------- We Deliver & Launch Section ------------------------*/}
-                    <Grid height={300} width={400} bgcolor="#fff">
+                    <Grid height={300} width={400}  mb={5} bgcolor="#fff">
 
                         <Box
                             sx={{
