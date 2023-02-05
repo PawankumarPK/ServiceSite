@@ -20,7 +20,7 @@ import Image from 'next/image';
 
 ///----------------- Services common title -----------------
 const ServicesOffer = ({ title, description, icon }) => (
-    <Grid mb={{lg:10, md:10, sm:5, xs:5}} mr={{lg:5,md:1,sm:5}}>
+    <Grid mb={{ lg: 10, md: 10, sm: 5, xs: 5 }} mr={{ lg: 5, md: 1, sm: 5 }}>
         <Card elevation={2} container>
 
             <Grid mt={5} mr={1} height={300} width={250} bgcolor="#fff">
@@ -126,7 +126,7 @@ const WhatWeOffer = () => {
 
 
                 <Grid container justifyContent='center'>
-                  
+
 
                     <ServicesOffer
                         title="IOS App Development"
@@ -165,7 +165,7 @@ const WhatWeOffer = () => {
 
 
                 <Grid container justifyContent='center'>
-                    
+
 
                     <ServicesOffer
                         title="Social & Email Marketing"
