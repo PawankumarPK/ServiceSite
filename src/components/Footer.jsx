@@ -15,27 +15,33 @@ import Image from 'next/image';
 
 const Footer = () => {
     return (
-        <Grid bgcolor="#F7F8FA">
+        <Grid bgcolor="#F7F8FA" >
 
 
-            <Grid container >
-                <Grid mb={8}>
-                    <Grid container direction="column">
+
+            <Grid
+                mb={8}
+                justifyContent={{ lg: "start", md: "start", sm: "center", xs: "center" }}
+                container={{ lg: true, md: false, sm: false, xs: false }}>
+
+                <Grid>
+                    <Grid container direction="column" >
 
 
-                        <Grid ml={10} mt={10}>
-                            <Typography noWrap mt={2} fontSize={45} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
+                        <Grid ml={{ lg: 10, md:10,sm: 0 }} mt={10}>
+                            <Typography noWrap mt={2} fontSize={{lg:45,xs:35}} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
                                 Questions?
                             </Typography>
-                            <Typography noWrap mt={1} fontSize={45} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
+                            <Typography noWrap mt={1} fontSize={{lg:45,xs:35}} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
                                 Let's Get In Touch
                             </Typography>
                         </Grid>
 
-                        <Grid container>
-                            <Grid width={300} ml={10} mt={5}>
+                        {/* ///--------- All Textfield ----------------------  */}
+                        <Grid container >
+                            <Grid width={{ lg: 300, md: 200, sm: 350, xs: 200 }} ml={{ lg: 10, md: 10, sm: 0 }} mt={5}>
 
-                                <Grid >
+                                <Grid>
                                     <TextField fullWidth id="outlined-basic" label="Your Name" variant="outlined" />
                                 </Grid>
 
@@ -49,121 +55,94 @@ const Footer = () => {
                             </Grid>
 
 
-
-                            <Grid ml={5} mt={5} width={300} height={200}>
+                            <Grid ml={5} mt={5} width={{ lg: 300, md: 300 }} mr={{ lg: 0, md: 10, sm: 0 }} height={200}>
                                 <TextField multiline={true} rows={7} height={200} variant="outlined" fullWidth id="outlined-basic" label="Your Message" />
                             </Grid>
-
-
-
 
                         </Grid>
 
                     </Grid>
 
-                    <Grid mt={5} ml={10}>
-                        <Button variant="contained" sx={{ borderRadius: 50, bgcolor: "#27363B" }}
-                            style={{
-                                color: "#000",
-                            }}>
-                            <Typography pl={30} pr={30} pb={1} pt={1} fontFamily='poppins-medium' color="#fff" textTransform='none'>
+
+                    {/* ///--------- Button ----------------------  */}
+                    <Grid mt={5} ml={{ lg: 9, md:10, sm: 0 }}>
+                        <Button variant="contained" sx={{ borderRadius: 50, bgcolor: "#27363B" }}>
+                            <Typography
+                                width={{ lg: 620, md: 520, sm: 570, xs: 420 }}
+                                pb={1}
+                                pt={1}
+                                fontFamily='poppins-medium'
+                                color="#fff"
+                                textTransform='none'>
+
                                 Start your project
+
                             </Typography>
 
                         </Button>
                     </Grid>
 
-
-                    {/* ----------------------- Social Media icons ----------------------- */}
-                    <Grid  mt={10} ml={10} container>
-
-                        <Grid item mt="5px">
-                            <Image
-                                width={15}
-                                src={facebookIcon}
-                                alt="Facebook" />
-                        </Grid>
-
-
-                        <Grid  mt="5px" ml={10}>
-                            <Image
-                                width={25}
-                                src={twitterIcon}
-                                alt="Twitter" />
-                        </Grid>
-
-                        <Grid mt="4px" ml={10}>
-                            <Image
-                                width={23}
-                                src={instagramIcon}
-                                alt="Instagram" />
-
-                        </Grid>
-
-                        <Grid mt="3px" ml={10}>
-                            <Image
-                                width={23}
-                                src={linkdinIcon}
-                                alt="Linkdin" />
-
-                        </Grid>
-
-
-
-
-                    </Grid>
-                    <Typography ml={10} mt={10} fontSize={12} fontFamily='poppins-regular' color="#838788" textTransform='none'>
-                        Copyright © 2022  |  Created with Love by OWN Inc.
-                    </Typography>
                 </Grid>
 
+                {/* ///--------- Right Section ----------------------  */}
 
-                <Grid ml={20} mt={35} height={160} direction='column' width={500}>
+                <Grid
+                    justifyContent='center'
 
-                    <Grid display='flex' container >
-                        <Image
-                            width={18}
-                            src={locationIcon}
-                            alt="Facebook" />
+                    width={{ lg: 400, md: 700, sm: 700 }}
+                    ml={{ lg: 10, md: 5, sm: 0 }}
+                    mt={{ lg: 35, md: 5, sm: 10,xs:10 }}
+                    container={{ lg: false, md: true, sm: true }}>
+
+                    <Grid >
+                        <Grid container>
+                            <Grid width={15} mt={1}>
+                                <Image
+                                    layout='responsive'
+                                    src={locationIcon}
+                                    alt="location" />
+                            </Grid>
 
 
-                        <Typography ml={2} fontFamily='poppins-regular' color="#000" textTransform='none'>
-                            C-717, JVTS GARDEN, CHATTARPUR, NEW DELHI - 110074
-                        </Typography>
+                            <Grid width={270} ml={2}>
+                                <Typography fontFamily='poppins-regular' color="#000" >
+                                    C-717, JVTS GARDEN, CHATTARPUR, NEW DELHI - 110074
+                                </Typography>
+                            </Grid>
 
+                        </Grid>
+
+
+
+
+                        <Grid display='flex' mt={5}>
+                            <Image
+                                width={18}
+                                src={callIcon}
+                                alt="Facebook" />
+                            <Typography ml={2} fontFamily='poppins-regular' color="#000" textTransform='none'>
+                                +91 9910765616
+                            </Typography>
+
+                        </Grid>
+
+
+
+                        <Grid display='flex' mt={5}>
+                            <Image
+                                width={18}
+                                src={emailIcon}
+                                alt="Facebook" />
+                            <Typography ml={2} fontFamily='poppins-regular' color="#000" textTransform='none'>
+                                PAWAN@GMAIL.COM
+                            </Typography>
+
+                        </Grid>
                     </Grid>
 
-
-
-
-                    <Grid display='flex' mt={5}>
+                    <Grid mt={10} width={300}>
                         <Image
-                            width={18}
-                            src={callIcon}
-                            alt="Facebook" />
-                        <Typography ml={2} fontFamily='poppins-regular' color="#000" textTransform='none'>
-                            +91 9910765616
-                        </Typography>
-
-                    </Grid>
-
-
-
-                    <Grid display='flex' mt={5}>
-                        <Image
-                            width={18}
-                            src={emailIcon}
-                            alt="Facebook" />
-                        <Typography ml={2} fontFamily='poppins-regular' color="#000" textTransform='none'>
-                            PAWAN@GMAIL.COM
-                        </Typography>
-
-                    </Grid>
-
-
-                    <Grid mt={10}>
-                        <Image
-                            width={300}
+                            layout='responsive'
                             src={flowerPot}
                             alt="Flower Pot" />
                     </Grid>
@@ -173,6 +152,55 @@ const Footer = () => {
 
 
             </Grid>
+            {/* ----------------------- Social Media icons ----------------------- */}
+            <Grid justifyContent={{lg:'start',sm:"center",xs:"center"}} mt={10} ml={{ lg: 10 }} container>
+
+                <Grid item mt="5px">
+                    <Image
+                        width={15}
+                        src={facebookIcon}
+                        alt="Facebook" />
+                </Grid>
+
+
+                <Grid mt="5px" ml={10}>
+                    <Image
+                        width={25}
+                        src={twitterIcon}
+                        alt="Twitter" />
+                </Grid>
+
+                <Grid mt="4px" ml={10}>
+                    <Image
+                        width={23}
+                        src={instagramIcon}
+                        alt="Instagram" />
+
+                </Grid>
+
+                <Grid mt="3px" ml={10}>
+                    <Image
+                        width={23}
+                        src={linkdinIcon}
+                        alt="Linkdin" />
+
+                </Grid>
+
+
+
+
+            </Grid>
+
+            <Grid textAlign={{lg:'start',sm:"center",xs:"center"}} pb={5}>
+                <Typography ml={{ lg: 10 }} mt={10} fontSize={12} fontFamily='poppins-regular' color="#838788" textTransform='none'>
+                    Copyright © 2022  |  Created with Love by OWN Inc.
+                </Typography>
+            </Grid>
+
+
+
+
+
 
         </Grid>
     )
