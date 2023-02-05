@@ -13,7 +13,7 @@ import webIcon from "../svg/webIcon.svg";
 import React from 'react'
 import Image from 'next/image';
 
-///----------------- Navbar common title -----------------
+///----------------- Services common title -----------------
 const Services = ({ title, description, icon, bgColor }) => (
     <Grid mt={5} width={300} bgcolor="#fff" display='flex'>
         <Grid mt={1} width={53} height={50} bgcolor={bgColor} sx={{ borderRadius: 20 }} alignItems='center' display='flex' justifyContent='center'>

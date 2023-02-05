@@ -17,6 +17,49 @@ import webIcon from "../svg/web.svg";
 import React from 'react'
 import Image from 'next/image';
 
+
+///----------------- Services common title -----------------
+const ServicesOffer = ({ title, description, icon }) => (
+    <Grid mb={{lg:10, md:10, sm:5, xs:5}} mr={{lg:5,md:1,sm:5}}>
+        <Card elevation={2} container>
+
+            <Grid mt={5} mr={1} height={300} width={250} bgcolor="#fff">
+                <Grid ml={2} mt={2} mb={2}>
+                    <Image
+                        width={40}
+                        src={icon}
+                        alt="Folder Open Icon" />
+                </Grid>
+
+                <Typography
+                    ml={2}
+                    variant='p'
+                    fontFamily="poppins-regular"
+                    component='p2'
+                    color='#202020'>
+
+                    {title}
+
+                </Typography>
+
+
+                <Grid pt={1} pb={5}>
+                    <Typography sx={{ padding: 2 }}
+                        fontSize={13}
+                        lineHeight="25px"
+                        fontFamily="poppins-regular"
+                        component='p'
+                        color='#595959'>
+
+                        {description}
+
+                    </Typography>
+                </Grid>
+            </Grid>
+        </Card>
+    </Grid>
+)
+
 const WhatWeOffer = () => {
     return (
         <Grid bgcolor="#F7F8FA" >
@@ -42,468 +85,36 @@ const WhatWeOffer = () => {
 
 
                 <Grid container justifyContent='center' mt={10}>
-                    <Grid mb={10} mr={5}>
-                        <Card elevation={2} container>
 
+                    <ServicesOffer
+                        title="Web Designing"
+                        description="We Provide a wide array of web designing services from individual, portfolio websites to commercial websites or fully customized websites."
+                        icon={editIcon}>
+                    </ServicesOffer>
 
-                            {/* ------------------------- Web Design Section ------------------------*/}
-                            <Grid mt={5} mr={5} height={300} width={250} bgcolor="#fff">
 
 
+                    <ServicesOffer
+                        title="Front End Development"
+                        description="Front-End Development is related to the User Interface and User Experience (UI/UX). And We provide top quality Frond End developing service to our clients."
+                        icon={webIcon}>
+                    </ServicesOffer>
 
-                                <Grid ml={2} mt={2}>
-                                    <Image
-                                        width={40}
-                                        src={editIcon}
-                                        alt="Folder Open Icon" />
-                                </Grid>
 
-                                <Typography
-                                    ml={2}
-                                    variant='p'
-                                    fontFamily="poppins-regular"
-                                    component='p2'
-                                    color='#202020'>
 
-                                    Web Designing
+                    <ServicesOffer
+                        title="Back End Development"
+                        description="Back-end concepts are related with Coding and Programing to create a website. We Majorly Use HTML, CSS, JAVA, JavaScript, J-Query and C++ To create Stunning Results."
+                        icon={serverIcon}>
+                    </ServicesOffer>
 
 
+                    <ServicesOffer
+                        title="Android App Development"
+                        description="Back-end concepts are related with Coding and Programing to create a website. We Majorly Use HTML, CSS, JAVA, JavaScript, J-Query and C++ To create Stunning Results."
+                        icon={androidIcon}>
+                    </ServicesOffer>
 
-
-                                </Typography>
-
-
-
-
-                                <Grid pt={1} pb={5}>
-                                    <Typography sx={{ padding: 2 }}
-                                        fontSize={13}
-                                        lineHeight="25px"
-                                        fontFamily="poppins-regular"
-                                        component='p'
-                                        color='#595959'
-                                    >
-
-                                        We Provide a wide array of web designing services from individual, portfolio websites to commercial websites or fully customized websites.
-
-
-
-                                    </Typography>
-                                </Grid>
-
-
-                            </Grid>
-
-                        </Card>
-                    </Grid>
-
-
-
-
-                    <Grid mr={5}>
-                        <Card elevation={2} container>
-
-
-                            <Grid mt={5} mr={5} height={300} width={250} bgcolor="#fff">
-
-
-
-                                <Grid ml={2} mt={2} mb={2}>
-                                    <Image
-                                        width={40}
-                                        src={webIcon}
-                                        alt="Web Icon" />
-                                </Grid>
-
-                                <Typography
-                                    ml={2}
-                                    variant='p'
-                                    fontFamily="poppins-regular"
-                                    component='p2'
-                                    color='#202020'>
-
-                                    Front End Development
-
-
-
-                                </Typography>
-
-
-
-
-                                <Grid pt={1} pb={5}>
-                                    <Typography sx={{ padding: 2 }}
-                                        fontSize={13}
-                                        lineHeight="25px"
-                                        fontFamily="poppins-regular"
-                                        component='p'
-                                        color='#595959'
-                                    >
-
-                                        Front-End Development is related to the User Interface and User Experience (UI/UX). And We provide top quality Frond End developing service to our clients.
-
-
-
-                                    </Typography>
-                                </Grid>
-
-
-                            </Grid>
-
-
-
-
-
-                        </Card>
-                    </Grid>
-
-
-
-
-                    <Grid mr={5}>
-                        <Card elevation={2} container>
-
-
-                            <Grid mt={5} mr={5} height={300} width={250} bgcolor="#fff">
-
-
-
-                                <Grid ml={2} mt={2} mb={2}>
-                                    <Image
-                                        width={40}
-                                        src={serverIcon}
-                                        alt="Server Icon" />
-                                </Grid>
-
-                                <Typography
-                                    ml={2}
-                                    variant='p'
-                                    fontFamily="poppins-regular"
-                                    component='p2'
-                                    color='#202020'>
-
-                                    Back End Development
-
-
-
-                                </Typography>
-
-
-
-
-                                <Grid pt={1} pb={5}>
-                                    <Typography sx={{ padding: 2 }}
-                                        fontSize={13}
-                                        lineHeight="25px"
-                                        fontFamily="poppins-regular"
-                                        component='p'
-                                        color='#595959'
-                                    >
-
-                                        Back-end concepts are related with Coding and Programing to create a website. We Majorly Use HTML, CSS, JAVA, JavaScript, J-Query and C++ To create Stunning Results.
-
-
-                                    </Typography>
-                                </Grid>
-
-
-                            </Grid>
-
-
-
-
-
-                        </Card>
-                    </Grid>
-
-                    <Grid mb={10}>
-                        <Card elevation={2} container>
-
-
-                            <Grid mt={5} mr={5} height={300} width={250} bgcolor="#fff">
-
-
-
-                                <Grid ml={2} mt={2} mb={2}>
-                                    <Image
-                                        width={40}
-                                        src={androidIcon}
-                                        alt="Android Icon" />
-                                </Grid>
-
-                                <Typography
-                                    ml={2}
-                                    variant='p'
-                                    fontFamily="poppins-regular"
-                                    component='p2'
-                                    color='#202020'>
-
-                                    Android App Development
-
-
-
-                                </Typography>
-
-
-
-
-                                <Grid pt={1} pb={5}>
-                                    <Typography sx={{ padding: 2 }}
-                                        fontSize={13}
-                                        lineHeight="25px"
-                                        fontFamily="poppins-regular"
-                                        component='p'
-                                        color='#595959'
-                                    >
-
-                                        Back-end concepts are related with Coding and Programing to create a website. We Majorly Use HTML, CSS, JAVA, JavaScript, J-Query and C++ To create Stunning Results.
-
-
-                                    </Typography>
-                                </Grid>
-
-
-                            </Grid>
-
-
-
-
-
-                        </Card>
-                    </Grid>
-                </Grid>
-
-
-
-
-
-
-                <Grid container justifyContent='center'>
-                    <Grid mr={5}>
-                        <Card elevation={2} container>
-
-
-                            {/* ------------------------- Web Design Section ------------------------*/}
-                            <Grid mt={5} mr={5} height={300} width={250} bgcolor="#fff">
-
-
-
-                                <Grid ml={2} mt={2} mb={2}>
-                                    <Image
-                                        width={40}
-                                        src={appStoreIos}
-                                        alt="App Store Icon" />
-                                </Grid>
-
-                                <Typography
-                                    ml={2}
-                                    variant='p'
-                                    fontFamily="poppins-regular"
-                                    component='p2'
-                                    color='#202020'>
-
-                                    IOS App Development
-
-
-                                </Typography>
-
-
-
-
-                                <Grid pt={1} pb={5}>
-                                    <Typography sx={{ padding: 2 }}
-                                        fontSize={13}
-                                        lineHeight="25px"
-                                        fontFamily="poppins-regular"
-                                        component='p'
-                                        color='#595959'
-                                    >
-
-                                        We Provide a wide array of web designing services from individual, portfolio websites to commercial websites or fully customized websites.
-
-
-                                    </Typography>
-                                </Grid>
-
-
-                            </Grid>
-
-                        </Card>
-                    </Grid>
-
-
-
-
-                    <Grid mb={10} mr={5}>
-                        <Card elevation={2} container>
-
-
-                            <Grid mt={5} mr={5} height={300} width={250} bgcolor="#fff">
-
-
-
-                                <Grid ml={2} mt={2} mb={2}>
-                                    <Image
-                                        width={40}
-                                        src={domainIcon}
-                                        alt="Folder Open Icon" />
-                                </Grid>
-
-                                <Typography
-                                    ml={2}
-                                    variant='p'
-                                    fontFamily="poppins-regular"
-                                    component='p2'
-                                    color='#202020'>
-
-                                    Updation & Maintenance
-
-
-
-                                </Typography>
-
-
-
-
-                                <Grid pt={1} pb={5}>
-                                    <Typography sx={{ padding: 2 }}
-                                        fontSize={13}
-                                        lineHeight="25px"
-                                        fontFamily="poppins-regular"
-                                        component='p'
-                                        color='#595959'
-                                    >
-
-                                        New or Existing, All Websites need updation & Maintenance on time to time and We do it for you so that you can focus on your work.
-
-                                    </Typography>
-                                </Grid>
-
-
-                            </Grid>
-
-
-
-
-
-                        </Card>
-                    </Grid>
-
-
-
-
-                    <Grid mb={10} mr={5}>
-                        <Card elevation={2} container>
-
-
-                            <Grid mt={5} mr={5} height={300} width={250} bgcolor="#fff">
-
-
-
-                                <Grid ml={2} mt={2} mb={2}>
-                                    <Image
-                                        width={40}
-                                        src={flightIcon}
-                                        alt="Flight Icon" />
-                                </Grid>
-
-                                <Typography
-                                    ml={2}
-                                    variant='p'
-                                    fontFamily="poppins-regular"
-                                    component='p2'
-                                    color='#202020'>
-
-                                    SEO & Promotion
-
-
-                                </Typography>
-
-
-
-
-                                <Grid pt={1} pb={5}>
-                                    <Typography sx={{ padding: 2 }}
-                                        fontSize={13}
-                                        lineHeight="25px"
-                                        fontFamily="poppins-regular"
-                                        component='p'
-                                        color='#595959'
-                                    >
-
-                                        We also provide SEO Services and Promotional Campaigns to boost your business and get you more organic clients.
-
-
-                                    </Typography>
-                                </Grid>
-
-
-                            </Grid>
-
-
-
-
-
-                        </Card>
-                    </Grid>
-
-                    <Grid mb={10}>
-                        <Card elevation={2} container>
-
-
-                            <Grid mt={5} mr={5} height={300} width={250} bgcolor="#fff">
-
-
-
-                                <Grid ml={2} mt={2} mb={2}>
-                                    <Image
-                                        width={40}
-                                        src={emailIcon}
-                                        alt="Folder Open Icon" />
-                                </Grid>
-
-                                <Typography
-                                    ml={2}
-                                    variant='p'
-                                    fontFamily="poppins-regular"
-                                    component='p2'
-                                    color='#202020'>
-
-                                    Business Emails
-
-
-
-
-                                </Typography>
-
-
-
-
-                                <Grid pt={1} pb={5}>
-                                    <Typography sx={{ padding: 2 }}
-                                        fontSize={13}
-                                        lineHeight="25px"
-                                        fontFamily="poppins-regular"
-                                        component='p'
-                                        color='#595959'
-                                    >
-
-                                        Sending an Official Email is always a Profesional way to intract with your Customers. Get multiple official emails with our Service.
-
-
-
-                                    </Typography>
-                                </Grid>
-
-
-                            </Grid>
-
-
-
-
-
-                        </Card>
-                    </Grid>
                 </Grid>
 
 
@@ -513,232 +124,77 @@ const WhatWeOffer = () => {
 
 
 
+
                 <Grid container justifyContent='center'>
-                    <Grid mr={5}>
-                        <Card elevation={2} container>
+                  
 
+                    <ServicesOffer
+                        title="IOS App Development"
+                        description="We Provide a wide array of web designing services from individual, portfolio websites to commercial websites or fully customized websites."
+                        icon={appStoreIos}>
+                    </ServicesOffer>
 
-                            {/* ------------------------- Web Design Section ------------------------*/}
-                            <Grid mt={5} mr={5} height={300} width={250} bgcolor="#fff">
 
 
 
-                                <Grid ml={2} mt={2} mb={2}>
-                                    <Image
-                                        width={40}
-                                        src={bookmarkIcon}
-                                        alt="Folder Open Icon" />
-                                </Grid>
+                    <ServicesOffer
+                        title="Updation & Maintenance"
+                        description="New or Existing, All Websites need updation & Maintenance on time to time and We do it for you so that you can focus on your work."
+                        icon={domainIcon}>
+                    </ServicesOffer>
 
-                                <Typography
-                                    ml={2}
-                                    variant='p'
-                                    fontFamily="poppins-regular"
-                                    component='p2'
-                                    color='#202020'>
 
-                                    Social & Email Marketing
 
+                    <ServicesOffer
+                        title="SEO & Promotion"
+                        description="We also provide SEO Services and Promotional Campaigns to boost your business and get you more organic clients."
+                        icon={flightIcon}>
+                    </ServicesOffer>
 
 
-                                </Typography>
+                    <ServicesOffer
+                        title="Business Emails"
+                        description="Sending an Official Email is always a Profesional way to intract with your Customers. Get multiple official emails with our Service."
+                        icon={emailIcon}>
+                    </ServicesOffer>
 
+                </Grid>
 
 
 
-                                <Grid pt={1} pb={5}>
-                                    <Typography sx={{ padding: 2 }}
-                                        fontSize={13}
-                                        lineHeight="25px"
-                                        fontFamily="poppins-regular"
-                                        component='p'
-                                        color='#595959'
-                                    >
 
-                                        Entering in the crowd of new digital era of Internet, Social Media and Emails, It seems a good way to generate leads and procespects for your business and our team does it for you.
 
+                <Grid container justifyContent='center'>
+                    
 
+                    <ServicesOffer
+                        title="Social & Email Marketing"
+                        description="Entering in the crowd of new digital era of Internet, Social Media and Emails, It seems a good way to generate leads and procespects for your business and our team does it for you."
+                        icon={bookmarkIcon}>
+                    </ServicesOffer>
 
 
-                                    </Typography>
-                                </Grid>
 
+                    <ServicesOffer
+                        title="eCommerce"
+                        description="If you want to sell your products online, We can build a professional Online Store for your products to sell them globaly and receive the payments directly to your Bank and Wallets etc."
+                        icon={creditCardIcon}>
+                    </ServicesOffer>
 
-                            </Grid>
 
-                        </Card>
-                    </Grid>
+                    <ServicesOffer
+                        title="Training & Support"
+                        description="Whether you are facing any issue to operate our application, software or website, don’t hesitate to call, you can even call for repetative training or share your ideas, complains and suggestion to us."
+                        icon={headsetIcon}>
+                    </ServicesOffer>
 
 
+                    <ServicesOffer
+                        title="Video Promotions"
+                        description="Sending an Official Email is always a Profesional way to intract with your Customers. Get multiple official emails with our Service."
+                        icon={photoVideoIcon}>
+                    </ServicesOffer>
 
-
-                    <Grid mb={10} mr={5}>
-                        <Card elevation={2} container>
-
-
-                            <Grid mt={5} mr={5} height={300} width={250} bgcolor="#fff">
-
-
-
-                                <Grid ml={2} mt={2} mb={2}>
-                                    <Image
-                                        width={40}
-                                        src={creditCardIcon}
-                                        alt="Credit Card Icon" />
-                                </Grid>
-
-                                <Typography
-                                    ml={2}
-                                    variant='p'
-                                    fontFamily="poppins-regular"
-                                    component='p2'
-                                    color='#202020'>
-
-                                    eCommerce
-
-
-                                </Typography>
-
-
-
-
-                                <Grid pt={1} pb={5}>
-                                    <Typography sx={{ padding: 2 }}
-                                        fontSize={13}
-                                        lineHeight="25px"
-                                        fontFamily="poppins-regular"
-                                        component='p'
-                                        color='#595959'
-                                    >
-
-                                        If you want to sell your products online, We can build a professional Online Store for your products to sell them globaly and receive the payments directly to your Bank and Wallets etc.
-
-
-                                    </Typography>
-                                </Grid>
-
-
-                            </Grid>
-
-
-
-
-
-                        </Card>
-                    </Grid>
-
-
-
-
-                    <Grid mb={10} mr={5}>
-                        <Card elevation={2} container>
-
-
-                            <Grid mt={5} mr={5} height={300} width={250} bgcolor="#fff">
-
-
-
-                                <Grid ml={2} mt={2} mb={2}>
-                                    <Image
-                                        width={40}
-                                        src={headsetIcon}
-                                        alt="Headset Icon" />
-                                </Grid>
-
-                                <Typography
-                                    ml={2}
-                                    variant='p'
-                                    fontFamily="poppins-regular"
-                                    component='p2'
-                                    color='#202020'>
-
-                                    Training & Support
-
-
-                                </Typography>
-
-
-
-
-                                <Grid pt={1} pb={5}>
-                                    <Typography sx={{ padding: 2 }}
-                                        fontSize={13}
-                                        lineHeight="25px"
-                                        fontFamily="poppins-regular"
-                                        component='p'
-                                        color='#595959'
-                                    >
-
-                                        Whether you are facing any issue to operate our application, software or website, don’t hesitate to call, you can even call for repetative training or share your ideas, complains and suggestion to us.
-
-
-                                    </Typography>
-                                </Grid>
-
-
-                            </Grid>
-
-
-
-
-
-                        </Card>
-                    </Grid>
-
-                    <Grid mb={10}>
-                        <Card elevation={2} container>
-
-
-                            <Grid mt={5} mr={5} height={300} width={250} bgcolor="#fff">
-
-
-
-                                <Grid ml={2} mt={2} mb={2}>
-                                    <Image
-                                        width={40}
-                                        src={photoVideoIcon}
-                                        alt="Folder Open Icon" />
-                                </Grid>
-
-                                <Typography
-                                    ml={2}
-                                    variant='p'
-                                    fontFamily="poppins-regular"
-                                    component='p2'
-                                    color='#202020'>
-
-                                    Video Promotions
-
-
-                                </Typography>
-
-
-
-
-                                <Grid pt={1} pb={5}>
-                                    <Typography sx={{ padding: 2 }}
-                                        fontSize={13}
-                                        lineHeight="25px"
-                                        fontFamily="poppins-regular"
-                                        component='p'
-                                        color='#595959'
-                                    >
-
-                                        Sending an Official Email is always a Profesional way to intract with your Customers. Get multiple official emails with our Service.
-
-
-                                    </Typography>
-                                </Grid>
-
-
-                            </Grid>
-
-
-
-
-
-                        </Card>
-                    </Grid>
                 </Grid>
 
             </Grid>
