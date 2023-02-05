@@ -52,15 +52,15 @@ const Header = () => {
               <Grid
                 sx={{
                   width: {
-                    lg: 30,
-                    md: 30,
-                    sm: 25,
+                    lg: 22,
+                    md: 22,
+                    sm: 22,
                     xs: 20
                   },
                   height: {
-                    lg: 30,
-                    md: 30,
-                    sm: 25,
+                    lg: 22,
+                    md: 22,
+                    sm: 22,
                     xs: 20
                   }
                 }}>
@@ -75,8 +75,8 @@ const Header = () => {
               <Typography
                 sx={{
                   fontSize: {
-                    lg: 20,
-                    md: 20,
+                    lg: 18,
+                    md: 18,
                     sm: 18,
                     xs: 15
                   }
@@ -95,16 +95,16 @@ const Header = () => {
               <Grid item
                 sx={{
                   width: {
-                    lg: 40,
-                    md: 40,
-                    sm: 37,
-                    xs: 35
+                    lg: 35,
+                    md: 35,
+                    sm: 32,
+                    xs: 32
                   },
                   height: {
-                    lg: 40,
-                    md: 40,
-                    sm: 37,
-                    xs: 35
+                    lg: 35,
+                    md: 35,
+                    sm: 32,
+                    xs: 32
                   }
                 }}>
                 <Image
@@ -117,14 +117,14 @@ const Header = () => {
               <Grid item
                 sx={{
                   width: {
-                    lg: 53,
-                    md: 53,
+                    lg: 45,
+                    md: 45,
                     sm: 45,
                     xs: 45
                   },
                   height: {
-                    lg: 53,
-                    md: 53,
+                    lg: 45,
+                    md: 45,
                     sm: 45,
                     xs: 45
                   }
@@ -139,15 +139,15 @@ const Header = () => {
               <Grid item
                 sx={{
                   width: {
-                    lg: 48,
-                    md: 48,
-                    sm: 45,
+                    lg: 42,
+                    md: 42,
+                    sm: 42,
                     xs: 42
                   },
                   height: {
-                    lg: 48,
-                    md: 48,
-                    sm: 45,
+                    lg: 42,
+                    md: 42,
+                    sm: 42,
                     xs: 42
                   }
                 }}>
@@ -161,15 +161,15 @@ const Header = () => {
               <Grid item
                 sx={{
                   width: {
-                    lg: 50,
-                    md: 48,
-                    sm: 45,
+                    lg: 42,
+                    md: 42,
+                    sm: 42,
                     xs: 42
                   },
                   height: {
-                    lg: 50,
-                    md: 48,
-                    sm: 45,
+                    lg: 42,
+                    md: 42,
+                    sm: 42,
                     xs: 42
                   }
                 }}>
