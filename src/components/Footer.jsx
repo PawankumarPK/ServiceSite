@@ -13,10 +13,10 @@ import flowerPot from "../../public/png/flowerPot.png"
 import React from 'react'
 import Image from 'next/image';
 
-// F7F8FA
+
 const Footer = () => {
     return (
-        <Grid bgcolor="#ccc" id="contact">
+        <Grid bgcolor="#F7F8FA" id="contact">
 
 
 
@@ -168,22 +168,22 @@ const Footer = () => {
                 mt={10} ml={{ lg: 10 }}
                 container>
 
-                <Grid item mt="5px">
+                {/* <Grid item mt="5px">
                     <Image
                         width={15}
                         src={facebookIcon}
                         alt="Facebook" />
-                </Grid>
+                </Grid> */}
 
 
-                <Grid mt="5px" ml={10}>
+                {/* <Grid mt="5px" ml={10}>
                     <Image
                         width={25}
                         src={twitterIcon}
                         alt="Twitter" />
-                </Grid>
+                </Grid> */}
 
-                <Grid mt="4px" ml={10}>
+                <Grid mt="4px" >
                     <Image
                         width={23}
                         src={instagramIcon}
@@ -191,7 +191,7 @@ const Footer = () => {
 
                 </Grid>
 
-                <Grid mt="3px" ml={10}>
+                <Grid mt="3px" ml={5}>
                     <Image
                         width={23}
                         src={linkdinIcon}

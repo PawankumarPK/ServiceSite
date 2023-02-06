@@ -12,16 +12,21 @@ import Image from 'next/image';
 
 const MakeDesignBetter = () => {
     return (
-        <Container>
+        <Container justifyContent="center">
 
             {/* ----------------------- We are making design section ----------------------- */}
             <Grid
+                container
+                spacing={0}
+
+                alignItems="center"
+                justifyContent="center"
                 id="about"
                 container={{ lg: true, sm: false }}
-                justifyContent="center"
                 mt={{ lg: 30, md: 30, sm: 15, xs: 15 }}
                 textAlign={{ lg: "start", md: "start", sm: "center", xs: "center" }}
-                height={{ lg: 500, sm: 700, }} >
+                height={{ lg: 500, sm: 700, }}
+            >
 
 
                 <Grid width={{ lg: 500, md: 320 }} mr={{ lg: 8, md: 8 }}>
@@ -61,7 +66,38 @@ const MakeDesignBetter = () => {
                             }
                         }}
                         mt={4} color="#595959" fontFamily="poppins">
-                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly believable. If you are going to use a passage of Lorem Ipsum.
+                        We specialise on high performance immersive digital experience aimed at delivering our clients a competitive advantage and effective ROI on their investment.
+
+                    </Typography>
+
+
+
+                    <Typography
+                        sx={{
+                            fontSize: {
+                                lg: 17,
+                                md: 15,
+                                sm: 15,
+                                xs: 12
+                            }
+                        }}
+                        mt={4} color="#595959" fontFamily="poppins">
+                        Our team of Solution Architects, Developers, Designers and Project Managers deliver world-class solutions that result in solutions that are innovative, engaging, scalable, maintainable and sustainable.
+
+                    </Typography>
+
+                    <Typography
+                        sx={{
+                            fontSize: {
+                                lg: 17,
+                                md: 15,
+                                sm: 15,
+                                xs: 12
+                            }
+                        }}
+                        mt={4} color="#595959" fontFamily="poppins">
+                        Our solutions are built on the latest technologies to enable you to achieve your goals in the most cost-efficient manner possible.
+
                     </Typography>
 
                     <Grid mt={5}>
@@ -97,7 +133,7 @@ const MakeDesignBetter = () => {
             </Grid>
 
             {/* ----------------------- Circle design section ----------------------- */}
-            <Grid pb={10} container alignItems='center' display='flex' justifyContent='center'>
+            <Grid mt={20} pb={10} container alignItems='center' display='flex' justifyContent='center'>
 
                 <Grid
                     flexDirection='column'

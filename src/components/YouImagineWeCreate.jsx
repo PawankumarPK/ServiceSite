@@ -9,7 +9,7 @@ import Image from 'next/image';
 
 const YouImagineWeCreate = () => {
     return (
-        <Grid  bgcolor="#F7F8FA">
+        <Grid bgcolor="#F7F8FA">
 
             <Grid container direction="column" alignItems="center">
 
@@ -31,11 +31,11 @@ const YouImagineWeCreate = () => {
                 </Grid>
 
 
-                <Grid container={{lg:true,sm:false}} pb={15} pt={10} alignItems='center' justifyContent='center'>
+                <Grid container={{ lg: true, sm: false }} pb={15} pt={10} alignItems='center' justifyContent='center'>
 
 
                     {/* ------------------------- Tell your requirements Section ------------------------*/}
-                    <Grid mr={{lg:5,md:5}}  height={300} width={400} mb={5}bgcolor="#fff">
+                    <Grid mr={{ lg: 5, md: 5 }} height={350} width={400} mb={5} bgcolor="#fff">
 
                         <Box
                             sx={{
@@ -77,7 +77,7 @@ const YouImagineWeCreate = () => {
                                 color='#202020'
                                 textAlign='center'>
 
-                                Tell us your Business requirements, thoughts & imaginations about your website and we will fully customize your website, plus we will stay in touch with you and you will get updates about the progress of your project untill it completes.
+                                Tell us your goals and we will help you build a website that speaks to your brand, customers, and audience. From content strategy to design, we'll work closely with you to create an online presence that reflects your values and elevates the products and services you offer.
                             </Typography>
                         </Grid>
 
@@ -86,7 +86,7 @@ const YouImagineWeCreate = () => {
 
 
                     {/* ------------------------- We Plan & design Section ------------------------*/}
-                    <Grid mr={{lg:5,md:5}}  mb={5} height={300} width={400} bgcolor="#fff">
+                    <Grid mr={{ lg: 5, md: 5 }} mb={5} height={350} width={400} bgcolor="#fff">
 
                         <Box
                             sx={{
@@ -128,7 +128,7 @@ const YouImagineWeCreate = () => {
                                 color='#595959'
                                 textAlign='center'>
 
-                                We Analyse and plan it and Our Brilliant Team Will turn your imaginations into reality as per your need regardless of whatever efforts it takes. Depending upon project’s length & complexity the time may vary between 5-15 day.
+                                We plan, design and develop web projects from scratch. We analyse the needs of our clients, who may be small to medium sized businesses or government bodies, and produce solutions that meet their requirements. Our aim is to help you achieve your goals as quickly as possible by offering a high-quality service at reasonable costs.
                             </Typography>
                         </Grid>
 
@@ -137,7 +137,7 @@ const YouImagineWeCreate = () => {
 
 
                     {/* ------------------------- We Deliver & Launch Section ------------------------*/}
-                    <Grid height={300} width={400}  mb={5} bgcolor="#fff">
+                    <Grid height={350} width={400} mb={5} bgcolor="#fff">
 
                         <Box
                             sx={{
@@ -179,7 +179,7 @@ const YouImagineWeCreate = () => {
                                 color='#595959'
                                 textAlign='center'>
 
-                                Our team do their best to launch your website on time. After the successful completion of the project, our team will tell you the features of the website plus if you require any updation, we provide one month’s free maintenence to you.
+                                We have a team of skilled professionals who will take care of your project from designing and development to launch. After the successful completion of the project, our team will tell you the features of the website plus if you require any updation, we provide one month's free maintenance to you.
                             </Typography>
                         </Grid>
                     </Grid>

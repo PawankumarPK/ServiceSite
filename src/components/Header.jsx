@@ -44,7 +44,7 @@ const Header = () => {
         alt='Banner Image'>
       </Image>
 
-      <Container maxWidth="lg" sx={{ position: "relative" }}>
+      <Container  sx={{ position: "relative" }}>
 
         {/* ----------------------- Whatsapp and contact number ----------------------- */}
         <Grid container alignItems='center' spacing={8} pt={6} pb={2}>
@@ -94,7 +94,7 @@ const Header = () => {
           {/* ----------------------- Social Media icons ----------------------- */}
           <Grid container item xs="auto" spacing={3}>
 
-            <Grid item
+            {/* <Grid item
               sx={{
                 width: {
                   lg: 35,
@@ -113,10 +113,10 @@ const Header = () => {
                 layout="responsive"
                 src={facebookIcon}
                 alt="Facebook" />
-            </Grid>
+            </Grid> */}
 
 
-            <Grid item
+            {/* <Grid item
               sx={{
                 width: {
                   lg: 45,
@@ -136,7 +136,7 @@ const Header = () => {
                 layout="responsive"
                 src={twitterIcon}
                 alt="Twitter" />
-            </Grid>
+            </Grid> */}
 
             <Grid item
               sx={{
@@ -299,7 +299,7 @@ const Header = () => {
 
 
           {/* ----------------------- Creative website & app section ----------------------- */}
-          <Grid flexDirection='column' container height={330} width={600} bgcolor="#DBD525">
+          <Grid flexDirection='column' container height={350} width={600} bgcolor="#DBD525">
 
 
             <Typography
@@ -320,7 +320,7 @@ const Header = () => {
               fontSize={15}
               fontFamily='poppins'
               color="#fff" ml={4} mr={4}>
-              Replacing a maintains the amount of line. When replacing a selection. help agencies to define. define their new business objectives and then.
+              Are you looking for a rapid but high performance web design or application development? Look no further, we are an advanced digital agency with a team of professional web designers and developers who have worked on countless projects for startups, companies and agencies alike.
             </Typography>
 
 
