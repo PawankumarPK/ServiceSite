@@ -94,7 +94,7 @@ const TeamSection = () => {
                 </Typography>
 
 
-                <Grid width={500}>
+                <Grid width={{lg:400,md:400,sm:200,xs:200}}>
                     <Typography mt={2} fontSize={12} fontFamily='poppins-regular' textAlign="center" color="#595959">
                         There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected.
                     </Typography>

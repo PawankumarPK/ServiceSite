@@ -42,7 +42,7 @@ const Services = ({ title, description, icon, bgColor }) => (
 const WhyChooseUs = () => {
     return (
 
-            <Grid container direction="column" alignItems="center" id="description">
+            <Grid  container direction="column" alignItems="center" id="description">
 
                 <Typography mt={10} fontSize={14} fontFamily='poppins-medium' textAlign="center" color="#27363B">
                     How To Start

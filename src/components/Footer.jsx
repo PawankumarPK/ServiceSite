@@ -13,9 +13,10 @@ import flowerPot from "../../public/png/flowerPot.png"
 import React from 'react'
 import Image from 'next/image';
 
+// F7F8FA
 const Footer = () => {
     return (
-        <Grid bgcolor="#F7F8FA" id="contact">
+        <Grid bgcolor="#ccc" id="contact">
 
 
 
@@ -157,8 +158,15 @@ const Footer = () => {
 
 
             </Grid>
+
+
+
             {/* ----------------------- Social Media icons ----------------------- */}
-            <Grid justifyContent={{ lg: 'start', sm: "center", xs: "center" }} mt={10} ml={{ lg: 10 }} container>
+            <Grid
+                width={400}
+                justifyContent={{ lg: 'start', sm: "center", xs: "center" }}
+                mt={10} ml={{ lg: 10 }}
+                container>
 
                 <Grid item mt="5px">
                     <Image

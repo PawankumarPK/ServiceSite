@@ -12,7 +12,7 @@ import Image from 'next/image';
 
 const MakeDesignBetter = () => {
     return (
-        <Container >
+        <Container>
 
             {/* ----------------------- We are making design section ----------------------- */}
             <Grid
@@ -72,11 +72,7 @@ const MakeDesignBetter = () => {
                             },
 
 
-                        }}
-                            // onClick={() => {
-                            //     <Link href="#team" scroll={true} />
-                            // }}
-                            >
+                        }}>
                             <Typography pl={3} pr={3} pb={1} pt={1} fontFamily='poppins-medium' color="#fff" textTransform='none'>
                                 Start your project
                             </Typography>
@@ -86,7 +82,10 @@ const MakeDesignBetter = () => {
                 </Grid>
 
                 {/* ----------------------- Study image ----------------------- */}
-                <Grid ml={{ lg: 4, md: 4 }} width={{ lg: 550, md: 450, sm: 450, xs: 400 }} mt={{ sm: 5, xs: 5 }}>
+                <Grid
+                    ml={{ lg: 4, md: 4 }}
+                    width={{ lg: 550, md: 450, sm: 450, xs: 400 }}
+                    mt={{ sm: 5, xs: 5 }}>
                     <Image
                         layout='responsive'
                         priority

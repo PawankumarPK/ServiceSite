@@ -9,7 +9,7 @@ import Image from 'next/image';
 
 const YouImagineWeCreate = () => {
     return (
-        <Grid bgcolor="#F7F8FA">
+        <Grid  bgcolor="#F7F8FA">
 
             <Grid container direction="column" alignItems="center">
 

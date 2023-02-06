@@ -1,5 +1,4 @@
 html {
-  
   scroll-behavior: smooth !important;
 }
 
@@ -23,8 +22,6 @@ a {
 
 @media (prefers-color-scheme: dark) {
   html {
-    scroll-behavior: smooth;
-
     color-scheme: dark;
   }
 

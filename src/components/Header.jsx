@@ -35,7 +35,7 @@ const Header = () => {
 
 
   return (
-    <Box sx={{ display: 'flex', alignItems: 'center' }} id="header" >
+    <Box  sx={{ display: 'flex', alignItems: 'center' }} id="header" >
       <Image
         priority
         src={bannerImage}
