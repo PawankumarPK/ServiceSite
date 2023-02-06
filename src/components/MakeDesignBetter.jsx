@@ -1,4 +1,4 @@
-import { Box, Button, Grid, Typography } from '@mui/material'
+import { Box, Button, Grid, Link, Typography } from '@mui/material'
 import { bgcolor, Container } from '@mui/system'
 import studyImage from "../../public/png/study.png";
 import folderOpenIcon from "../svg/folderOpenIcon.svg";
@@ -12,15 +12,16 @@ import Image from 'next/image';
 
 const MakeDesignBetter = () => {
     return (
-        <Container>
+        <Container >
 
             {/* ----------------------- We are making design section ----------------------- */}
             <Grid
+                id="about"
                 container={{ lg: true, sm: false }}
                 justifyContent="center"
                 mt={{ lg: 30, md: 30, sm: 15, xs: 15 }}
                 textAlign={{ lg: "start", md: "start", sm: "center", xs: "center" }}
-                height={{ lg: 600, sm: 700, }} >
+                height={{ lg: 500, sm: 700, }} >
 
 
                 <Grid width={{ lg: 500, md: 320 }} mr={{ lg: 8, md: 8 }}>
@@ -64,10 +65,18 @@ const MakeDesignBetter = () => {
                     </Typography>
 
                     <Grid mt={5}>
-                        <Button variant="contained" sx={{ borderRadius: 50, bgcolor: "#27363B" }}
-                            style={{
-                                color: "#000",
-                            }}>
+                        <Button href="#contact" scroll={true} variant="contained" sx={{
+                            borderRadius: 50, bgcolor: "#27363B",
+                            ':hover': {
+                                bgcolor: '#9CC118',
+                            },
+
+
+                        }}
+                            // onClick={() => {
+                            //     <Link href="#team" scroll={true} />
+                            // }}
+                            >
                             <Typography pl={3} pr={3} pb={1} pt={1} fontFamily='poppins-medium' color="#fff" textTransform='none'>
                                 Start your project
                             </Typography>

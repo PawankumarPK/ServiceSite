@@ -15,7 +15,7 @@ import Image from 'next/image';
 
 const Footer = () => {
     return (
-        <Grid bgcolor="#F7F8FA" >
+        <Grid bgcolor="#F7F8FA" id="contact">
 
 
 
@@ -28,11 +28,11 @@ const Footer = () => {
                     <Grid container direction="column" >
 
 
-                        <Grid ml={{ lg: 10, md:10,sm: 0 }} mt={10}>
-                            <Typography noWrap mt={2} fontSize={{lg:45,xs:35}} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
+                        <Grid ml={{ lg: 10, md: 10, sm: 0 }} mt={10}>
+                            <Typography noWrap mt={2} fontSize={{ lg: 45, xs: 35 }} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
                                 Questions?
                             </Typography>
-                            <Typography noWrap mt={1} fontSize={{lg:45,xs:35}} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
+                            <Typography noWrap mt={1} fontSize={{ lg: 45, xs: 35 }} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
                                 Let's Get In Touch
                             </Typography>
                         </Grid>
@@ -65,8 +65,13 @@ const Footer = () => {
 
 
                     {/* ///--------- Button ----------------------  */}
-                    <Grid mt={5} ml={{ lg: 9, md:10, sm: 0 }}>
-                        <Button variant="contained" sx={{ borderRadius: 50, bgcolor: "#27363B" }}>
+                    <Grid mt={5} ml={{ lg: 9, md: 10, sm: 0 }}>
+                        <Button variant="contained" sx={{
+                            borderRadius: 50, bgcolor: "#27363B",
+                            ':hover': {
+                                bgcolor: '#9CC118',
+                            },
+                        }}>
                             <Typography
                                 width={{ lg: 620, md: 520, sm: 570, xs: 420 }}
                                 pb={1}
@@ -91,7 +96,7 @@ const Footer = () => {
 
                     width={{ lg: 400, md: 700, sm: 700 }}
                     ml={{ lg: 10, md: 5, sm: 0 }}
-                    mt={{ lg: 35, md: 5, sm: 10,xs:10 }}
+                    mt={{ lg: 35, md: 5, sm: 10, xs: 10 }}
                     container={{ lg: false, md: true, sm: true }}>
 
                     <Grid >
@@ -153,7 +158,7 @@ const Footer = () => {
 
             </Grid>
             {/* ----------------------- Social Media icons ----------------------- */}
-            <Grid justifyContent={{lg:'start',sm:"center",xs:"center"}} mt={10} ml={{ lg: 10 }} container>
+            <Grid justifyContent={{ lg: 'start', sm: "center", xs: "center" }} mt={10} ml={{ lg: 10 }} container>
 
                 <Grid item mt="5px">
                     <Image
@@ -191,7 +196,7 @@ const Footer = () => {
 
             </Grid>
 
-            <Grid textAlign={{lg:'start',sm:"center",xs:"center"}} pb={5}>
+            <Grid textAlign={{ lg: 'start', sm: "center", xs: "center" }} pb={5}>
                 <Typography ml={{ lg: 10 }} mt={10} fontSize={12} fontFamily='poppins-regular' color="#838788" textTransform='none'>
                     Copyright © 2022  |  Created with Love by OWN Inc.
                 </Typography>

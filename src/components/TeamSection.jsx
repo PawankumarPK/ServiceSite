@@ -69,7 +69,7 @@ const TeamSection = () => {
     return (
         
 
-            <Grid container direction="column" alignItems="center">
+            <Grid container direction="column" alignItems="center" id="team">
 
                 <Typography mt={10} fontSize={14} fontFamily='poppins-medium' textAlign="center" color="#27363B">
                     We are own technologies company
