@@ -16,7 +16,7 @@ const MakeDesignBetter = () => {
 
             {/* ----------------------- We are making design section ----------------------- */}
             <Grid
-                container
+                
                 alignItems="center"
                 justifyContent="center"
                 id="about"

@@ -294,7 +294,7 @@ const Footer = () => {
 
             <Grid textAlign={{ lg: 'center',md:"center", sm: "start", xs: "start" }} pb={5} ml={{lg:0,md:2,sm:2,xs:2}}>
                 <Typography ml={{ lg: 10 }} mt={10} fontSize={12} fontFamily='poppins-regular' color="#838788" textTransform='none'>
-                    Copyright © 2022  |  Created with ❤️ by OWN Inc.
+                    Copyright © 2023  |  Created with ❤️ by OWN Technologies.
                 </Typography>
             </Grid>
 
