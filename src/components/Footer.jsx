@@ -10,6 +10,8 @@ import locationIcon from "../svg/location.svg";
 
 import flowerPot from "../../public/png/flowerPot.png"
 
+import ownLogo from "../../public/png/ownLogo.png"
+
 import React from 'react'
 import Image from 'next/image';
 
@@ -22,24 +24,59 @@ const Footer = () => {
 
             <Grid
                 mb={8}
-                justifyContent={{ lg: "start", md: "start", sm: "center", xs: "center" }}
+                justifyContent={{ lg: "center", md: "start", sm: "start", xs: "start" }}
                 container={{ lg: true, md: false, sm: false, xs: false }}>
 
-                <Grid>
-                    <Grid container direction="column" >
+                <Grid ml={{ md: 2, sm: 2,xs:2 }}>
 
 
-                        <Grid ml={{ lg: 10, md: 10, sm: 0 }} mt={10}>
-                            <Typography noWrap mt={2} fontSize={{ lg: 45, xs: 35 }} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
-                                Questions?
-                            </Typography>
-                            <Typography noWrap mt={1} fontSize={{ lg: 45, xs: 35 }} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
-                                Let's Get In Touch
-                            </Typography>
+
+                    <Grid container mt={10} >
+
+                        <Grid>
+                            <Image
+                                width={80}
+                                src={ownLogo}
+                                alt="Team Memeber One " />
+                        </Grid>
+
+                        <Grid justifyContent='center' >
+                            {/* --------------------- OWN text ------------------------- */}
+                            <Grid container
+                                width={150}
+                                height={45}
+                                ml={{ lg: 1, md: 1, sm: 1 , xs:1}}
+                            >
+
+                                <Typography color="#27363B" textAlign='center' fontSize={{ lg: 40, xs: 35 }} fontFamily="poppins-bold">
+                                    OWN
+                                </Typography>
+
+                            </Grid>
+
+                            {/* --------------------- Technologies text ------------------------- */}
+                            <Grid
+
+                                color="#27363B"
+                                container
+                                width={105}
+                                justifyContent="center"
+                                ml={{ lg: 1, md: 1, sm: 1, xs:1 }}
+                            >
+
+
+                                <Typography textAlign='center' fontSize={{ lg: 15, xs: 15 }} fontFamily="poppins-regular">
+                                    Technologies
+                                </Typography>
+
+                            </Grid>
+
+
+
                         </Grid>
 
                         {/* ///--------- All Textfield ----------------------  */}
-                        <Grid container >
+                        {/* <Grid container >
                             <Grid width={{ lg: 300, md: 200, sm: 350, xs: 200 }} ml={{ lg: 10, md: 10, sm: 0 }} mt={5}>
 
                                 <Grid>
@@ -60,65 +97,66 @@ const Footer = () => {
                                 <TextField multiline={true} rows={7} height={200} variant="outlined" fullWidth id="outlined-basic" label="Your Message" />
                             </Grid>
 
-                        </Grid>
+                        </Grid> */}
+                    </Grid>
+
+
+                    <Grid
+                        width={200}
+                        justifyContent="center"
+                        mt={3}
+                    >
+
+
+                        <Typography textAlign='start' fontSize={{ lg: 15, xs: 15 }} fontFamily="poppins-regular">
+                            Grow with us.
+                        </Typography>
+
+                    </Grid>
+
+                    <Grid
+                        color="#27363B"
+                        container
+                        width={400}
+                        justifyContent="center"
+                        mt={1}
+                    >
+
+
+                        <Typography color="#838788" textAlign='start' fontSize={{ lg: 15, xs: 15 }} fontFamily="poppins-regular">
+                            We've been helping businesses reach their full potential — and beyond. Our web development agency offers a wide array of services to get you there. Explore our website for more info, and see how far you can go!
+                        </Typography>
 
                     </Grid>
 
 
-                    {/* ///--------- Button ----------------------  */}
-                    <Grid mt={5} ml={{ lg: 9, md: 10, sm: 0 }}>
-                        <Button variant="contained" sx={{
-                            borderRadius: 50, bgcolor: "#27363B",
-                            ':hover': {
-                                bgcolor: '#9CC118',
-                            },
-                        }}>
-                            <Typography
-                                width={{ lg: 620, md: 520, sm: 570, xs: 420 }}
-                                pb={1}
-                                pt={1}
-                                fontFamily='poppins-medium'
-                                color="#fff"
-                                textTransform='none'>
 
-                                Start your project
-
-                            </Typography>
-
-                        </Button>
-                    </Grid>
 
                 </Grid>
 
-                {/* ///--------- Right Section ----------------------  */}
 
-                <Grid
-                    justifyContent='center'
-
-                    width={{ lg: 400, md: 700, sm: 700 }}
-                    ml={{ lg: 10, md: 5, sm: 0 }}
-                    mt={{ lg: 35, md: 5, sm: 10, xs: 10 }}
-                    container={{ lg: false, md: true, sm: true }}>
-
-                    <Grid >
-                        <Grid container>
-                            <Grid width={15} mt={1}>
-                                <Image
-                                    layout='responsive'
-                                    src={locationIcon}
-                                    alt="location" />
-                            </Grid>
+                {/* /// ------------------- Contact section ------------------ */}
+                <Grid ml={{ lg: 8, md: 0, sm: 2, xs:2}}>
+                    <Grid
+                    
+                        color="#27363B"
+                        width={{ lg: 400, md: 300, sm: 250 }}
+                        mt={10}
+                        >
 
 
-                            <Grid width={270} ml={2}>
-                                <Typography fontFamily='poppins-regular' color="#000" >
-                                    C-717, JVTS GARDEN, CHATTARPUR, NEW DELHI - 110074
-                                </Typography>
-                            </Grid>
+                        <Typography textAlign='start' fontSize={{ lg: 20, xs: 15 }} fontFamily="poppins-semibold">
+                            Contact Us:
 
-                        </Grid>
+                        </Typography>
 
+                    </Grid>
 
+                    <Grid
+                        color="#27363B"
+                        width={{ lg: 400, md: 200, sm: 250 }}
+                        mt={1}
+                        >
 
 
                         <Grid display='flex' mt={5}>
@@ -140,34 +178,79 @@ const Footer = () => {
                                 src={emailIcon}
                                 alt="Facebook" />
                             <Typography ml={2} fontFamily='poppins-regular' color="#000" textTransform='none'>
-                                PAWAN@GMAIL.COM
+                                hello@owntechnolgies.com
                             </Typography>
 
                         </Grid>
+
                     </Grid>
 
-                    <Grid mt={10} width={300}>
+
+
+                </Grid>
+
+
+
+                {/* /// ------------------- Address section ------------------ */}
+
+                <Grid ml={{ sm:2, xs:2}}>
+                    <Grid
+                    
+                        color="#27363B"
+                        width={100}
+                        mt={10}
+                        ml={{lg:0,md:2,sm:0}}>
+
+
+                        <Typography textAlign='start' fontSize={{ lg: 20, xs: 15 }} fontFamily="poppins-semibold">
+                            Address
+
+                        </Typography>
+
+                    </Grid>
+
+                    <Grid container mt={5} ml={{lg:0,md:2,sm:0}}>
+                        <Grid width={15} mt={1}>
+                            <Image
+                                layout='responsive'
+                                src={locationIcon}
+                                alt="location" />
+                        </Grid>
+
+
+                        <Grid width={{ lg: 270, md: 300, sm: 150 }} ml={2}>
+                            <Typography fontFamily='poppins-regular' color="#000" >
+                                C-717, Jvts Garden, Chattarpur, New DELHI - 110074
+                            </Typography>
+                        </Grid>
+
+
+
+
+                    </Grid>
+
+                    <Grid mt={10} width={{ lg: 300, md: 250, }}>
                         <Image
                             layout='responsive'
                             src={flowerPot}
                             alt="Flower Pot" />
                     </Grid>
 
+
                 </Grid>
-
-
-
             </Grid>
 
 
 
             {/* ----------------------- Social Media icons ----------------------- */}
-            
-            
+
+
             <Grid
                 width={400}
-                justifyContent={{ lg: 'start', sm: "center", xs: "center" }}
-                mt={10} ml={{ lg: 10 }}
+                justifyContent={{ lg: 'center', md:"start", sm:"start", xs: "start" }}
+                ml={{lg:0,md:2,sm:2,xs:2}}
+
+                mt={8}
                 container>
 
                 {/* <Grid item mt="5px">
@@ -205,13 +288,13 @@ const Footer = () => {
 
 
             </Grid>
-            
+
 
             {/* ----------------------- Copyright text ----------------------- */}
 
-            <Grid textAlign={{ lg: 'start', sm: "center", xs: "center" }} pb={5}>
+            <Grid textAlign={{ lg: 'center',md:"center", sm: "start", xs: "start" }} pb={5} ml={{lg:0,md:2,sm:2,xs:2}}>
                 <Typography ml={{ lg: 10 }} mt={10} fontSize={12} fontFamily='poppins-regular' color="#838788" textTransform='none'>
-                    Copyright © 2022  |  Created with Love by OWN Inc.
+                    Copyright © 2022  |  Created with ❤️ by OWN Inc.
                 </Typography>
             </Grid>
 

@@ -1,11 +1,13 @@
 import { Box, Card, CardActionArea, CardContent, CardMedia, Container, Grid, Grow, Paper, Stack, Typography } from '@mui/material'
 import teamOne from "../../public/png/team1.png";
+import teamTwo from "../../public/png/team2.png";
+import teamThree from "../../public/png/team3.png";
+
+
 import teamBgOne from "../../public/png/teamBg1.png";
 
-import teamTwo from "../../public/png/team2.png";
 import teamBgTwo from "../../public/png/teamBg2.png";
 
-import teamThree from "../../public/png/team3.png";
 import teamBgThree from "../../public/png/teamBg3.png";
 import React from 'react'
 import Image from 'next/image';
@@ -16,7 +18,7 @@ const Teams = ({ name, designation, img, nameBg }) => (
     <Grid mt={10} mr={{ lg: 12, md: 7, sm: 5, xs: 5 }} ml={{ lg: 12, md: 7, sm: 5 }}>
         <Grid justifyContent='center' alignItems="center" display='flex'>
             <Image
-                width={200}
+                width={220}
                 src={img}
                 alt="Team Memeber One " />
         </Grid>
@@ -107,7 +109,7 @@ const TeamSection = () => {
 
 
                 <Teams
-                    name="Alex Stoke"
+                    name="Pawan Yadav"
                     designation="Director"
                     nameBg={teamBgOne}
                     img={teamOne}>
@@ -116,8 +118,8 @@ const TeamSection = () => {
 
 
                 <Teams
-                    name="Lisa Waren"
-                    designation="Director"
+                    name="Yuvraj"
+                    designation="Full Stack Developer"
                     nameBg={teamBgTwo}
                     img={teamTwo}>
 
@@ -126,8 +128,8 @@ const TeamSection = () => {
 
 
                 <Teams
-                    name="Alex Stoke"
-                    designation="Director"
+                    name="Nischal"
+                    designation="Full Stack Developer"
                     nameBg={teamBgThree}
                     img={teamThree}>
 
