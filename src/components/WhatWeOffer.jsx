@@ -88,15 +88,15 @@ const WhatWeOffer = () => {
 
                     <ServicesOffer
                         title="Web Designing"
-                        description="We Provide a wide array of web designing services from individual, portfolio websites to commercial websites or fully customized websites."
+                        description="From individual and portfolio websites to commercial or custom sites, we have you covered with our wide array of web design services. Let us craft something special just for you."
                         icon={editIcon}>
                     </ServicesOffer>
 
 
 
                     <ServicesOffer
-                        title="Front End Development"
-                        description="Front-End Development is related to the User Interface and User Experience (UI/UX). And We provide top quality Frond End developing service to our clients."
+                        title="UI/UX Designing"
+                        description="We create user and customer experiences that engage, inspire, and drive tangible business results — all through beautiful UI design."
                         icon={webIcon}>
                     </ServicesOffer>
 
@@ -104,14 +104,14 @@ const WhatWeOffer = () => {
 
                     <ServicesOffer
                         title="Back End Development"
-                        description="Back-end concepts are related with Coding and Programing to create a website. We Majorly Use HTML, CSS, JAVA, JavaScript, J-Query and C++ To create Stunning Results."
+                        description="Back-end concepts come alive with coding and programming — HTML, CSS, Java, JavaScript, jQuery, and C++ are just some of the tools you’ll use to create stunning results."
                         icon={serverIcon}>
                     </ServicesOffer>
 
 
                     <ServicesOffer
                         title="Android App Development"
-                        description="Back-end concepts are related with Coding and Programing to create a website. We Majorly Use HTML, CSS, JAVA, JavaScript, J-Query and C++ To create Stunning Results."
+                        description="We specialize in Android app development and provide top-notch services for our clients. Get the perfect user interface and user experience with us, so you can take your apps to the next level."
                         icon={androidIcon}>
                     </ServicesOffer>
 
@@ -130,7 +130,7 @@ const WhatWeOffer = () => {
 
                     <ServicesOffer
                         title="IOS App Development"
-                        description="We Provide a wide array of web designing services from individual, portfolio websites to commercial websites or fully customized websites."
+                        description="We specialize in iOS app development, helping you get the perfect user interface and experience — so you can take your apps to the next level."
                         icon={appStoreIos}>
                     </ServicesOffer>
 
@@ -147,14 +147,14 @@ const WhatWeOffer = () => {
 
                     <ServicesOffer
                         title="SEO & Promotion"
-                        description="We also provide SEO Services and Promotional Campaigns to boost your business and get you more organic clients."
+                        description="Get your business noticed with our SEO Services and Promotional Campaigns, designed to help you reach more organic customers and boost your bottom line."
                         icon={flightIcon}>
                     </ServicesOffer>
 
 
                     <ServicesOffer
                         title="Business Emails"
-                        description="Sending an Official Email is always a Profesional way to intract with your Customers. Get multiple official emails with our Service."
+                        description="Make an impact with every message you send. Get multiple official emails with our service — and make sure your customers know they're dealing with the real deal."
                         icon={emailIcon}>
                     </ServicesOffer>
 
@@ -169,7 +169,7 @@ const WhatWeOffer = () => {
 
                     <ServicesOffer
                         title="Social & Email Marketing"
-                        description="Entering in the crowd of new digital era of Internet, Social Media and Emails, It seems a good way to generate leads and procespects for your business and our team does it for you."
+                        description="Entering the new digital era of Internet, Social Media and Emails? Our team will help you generate leads and prospects for your business — so you can stay ahead of the competition."
                         icon={bookmarkIcon}>
                     </ServicesOffer>
 
@@ -177,21 +177,21 @@ const WhatWeOffer = () => {
 
                     <ServicesOffer
                         title="eCommerce"
-                        description="If you want to sell your products online, We can build a professional Online Store for your products to sell them globaly and receive the payments directly to your Bank and Wallets etc."
+                        description="Open up your business to the world with our professional Online Store, and start selling products globally — all while receiving payments directly in your bank or wallet of choice."
                         icon={creditCardIcon}>
                     </ServicesOffer>
 
 
                     <ServicesOffer
                         title="Training & Support"
-                        description="Whether you are facing any issue to operate our application, software or website, don’t hesitate to call, you can even call for repetative training or share your ideas, complains and suggestion to us."
+                        description="For any issue you have with our application, software or website — don't hesitate to call. Plus, get personalized training and share your ideas, complaints and suggestions with us."
                         icon={headsetIcon}>
                     </ServicesOffer>
 
 
                     <ServicesOffer
                         title="Video Promotions"
-                        description="Sending an Official Email is always a Profesional way to intract with your Customers. Get multiple official emails with our Service."
+                        description="Share vital information with a promo video. Discount codes, dates and times for events, or deadlines for the end of a sale. Get your message out fast and make sure everyone knows what's going on."
                         icon={photoVideoIcon}>
                     </ServicesOffer>
 

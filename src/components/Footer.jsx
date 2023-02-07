@@ -162,6 +162,8 @@ const Footer = () => {
 
 
             {/* ----------------------- Social Media icons ----------------------- */}
+            
+            
             <Grid
                 width={400}
                 justifyContent={{ lg: 'start', sm: "center", xs: "center" }}
@@ -203,6 +205,9 @@ const Footer = () => {
 
 
             </Grid>
+            
+
+            {/* ----------------------- Copyright text ----------------------- */}
 
             <Grid textAlign={{ lg: 'start', sm: "center", xs: "center" }} pb={5}>
                 <Typography ml={{ lg: 10 }} mt={10} fontSize={12} fontFamily='poppins-regular' color="#838788" textTransform='none'>

@@ -1,5 +1,5 @@
 import { Box, Button, Grid, Link, Typography } from '@mui/material'
-import { bgcolor, Container } from '@mui/system'
+import { Container } from '@mui/system'
 import studyImage from "../../public/png/study.png";
 import folderOpenIcon from "../svg/folderOpenIcon.svg";
 import editIcon from "../svg/editIcon.svg";
@@ -12,21 +12,18 @@ import Image from 'next/image';
 
 const MakeDesignBetter = () => {
     return (
-        <Container justifyContent="center">
+        <Container>
 
             {/* ----------------------- We are making design section ----------------------- */}
             <Grid
                 container
-                spacing={0}
-
                 alignItems="center"
                 justifyContent="center"
                 id="about"
                 container={{ lg: true, sm: false }}
                 mt={{ lg: 30, md: 30, sm: 15, xs: 15 }}
                 textAlign={{ lg: "start", md: "start", sm: "center", xs: "center" }}
-                height={{ lg: 500, sm: 700, }}
-            >
+                height={{ lg: 500, sm: 700, }}>
 
 
                 <Grid width={{ lg: 500, md: 320 }} mr={{ lg: 8, md: 8 }}>

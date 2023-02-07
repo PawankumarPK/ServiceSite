@@ -77,7 +77,7 @@ const YouImagineWeCreate = () => {
                                 color='#202020'
                                 textAlign='center'>
 
-                                Tell us your goals and we will help you build a website that speaks to your brand, customers, and audience. From content strategy to design, we'll work closely with you to create an online presence that reflects your values and elevates the products and services you offer.
+                                Get the best app and website development services for your business. We specialize in cross-platform mobile applications, website design and development, eCommerce solutions, and SEO services that help you get maximum ROI from internet marketing.
                             </Typography>
                         </Grid>
 
@@ -128,7 +128,7 @@ const YouImagineWeCreate = () => {
                                 color='#595959'
                                 textAlign='center'>
 
-                                We plan, design and develop web projects from scratch. We analyse the needs of our clients, who may be small to medium sized businesses or government bodies, and produce solutions that meet their requirements. Our aim is to help you achieve your goals as quickly as possible by offering a high-quality service at reasonable costs.
+                                We offer custom-made app and website development services for businesses of all sizes. Our team of developers, designers, and SEO experts will help you create a digital presence that'll make your brand stand out from the competition.
                             </Typography>
                         </Grid>
 
@@ -179,7 +179,7 @@ const YouImagineWeCreate = () => {
                                 color='#595959'
                                 textAlign='center'>
 
-                                We have a team of skilled professionals who will take care of your project from designing and development to launch. After the successful completion of the project, our team will tell you the features of the website plus if you require any updation, we provide one month's free maintenance to you.
+                                Our team do their best to launch your website on time. After the successful completion of the project, our team will tell you the features of the website plus if you require any updation, we provide one month’s free maintenence to you.
                             </Typography>
                         </Grid>
                     </Grid>
