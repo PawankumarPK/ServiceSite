@@ -27,7 +27,7 @@ const Footer = () => {
                 justifyContent={{ lg: "center", md: "start", sm: "start", xs: "start" }}
                 container={{ lg: true, md: false, sm: false, xs: false }}>
 
-                <Grid ml={{ md: 2, sm: 2,xs:2 }}>
+                <Grid ml={{ md: 2, sm: 2, xs: 2 }}>
 
 
 
@@ -45,7 +45,7 @@ const Footer = () => {
                             <Grid container
                                 width={150}
                                 height={45}
-                                ml={{ lg: 1, md: 1, sm: 1 , xs:1}}
+                                ml={{ lg: 1, md: 1, sm: 1, xs: 1 }}
                             >
 
                                 <Typography color="#27363B" textAlign='center' fontSize={{ lg: 40, xs: 35 }} fontFamily="poppins-bold">
@@ -61,7 +61,7 @@ const Footer = () => {
                                 container
                                 width={105}
                                 justifyContent="center"
-                                ml={{ lg: 1, md: 1, sm: 1, xs:1 }}
+                                ml={{ lg: 1, md: 1, sm: 1, xs: 1 }}
                             >
 
 
@@ -124,7 +124,7 @@ const Footer = () => {
 
 
                         <Typography color="#838788" textAlign='start' fontSize={{ lg: 15, xs: 15 }} fontFamily="poppins-regular">
-                            We've been helping businesses reach their full potential — and beyond. Our web development agency offers a wide array of services to get you there. Explore our website for more info, and see how far you can go!
+                            We've been helping businesses reach their full potential — and beyond. Our agency offers a wide array of services to get you there. Explore our website for more info, and see how far you can go!
                         </Typography>
 
                     </Grid>
@@ -136,17 +136,17 @@ const Footer = () => {
 
 
                 {/* /// ------------------- Contact section ------------------ */}
-                <Grid ml={{ lg: 8, md: 0, sm: 2, xs:2}}>
+                <Grid ml={{ lg: 8, md: 0, sm: 2, xs: 2 }}>
                     <Grid
-                    
+
                         color="#27363B"
                         width={{ lg: 400, md: 300, sm: 250 }}
                         mt={10}
-                        >
+                    >
 
 
                         <Typography textAlign='start' fontSize={{ lg: 20, xs: 15 }} fontFamily="poppins-semibold">
-                            Contact Us:
+                            Contact Us
 
                         </Typography>
 
@@ -156,10 +156,10 @@ const Footer = () => {
                         color="#27363B"
                         width={{ lg: 400, md: 200, sm: 250 }}
                         mt={1}
-                        >
+                    >
 
 
-                        <Grid display='flex' mt={5}>
+                        <Grid alignItems='center' display='flex' mt={5}>
                             <Image
                                 width={18}
                                 src={callIcon}
@@ -172,11 +172,13 @@ const Footer = () => {
 
 
 
-                        <Grid display='flex' mt={5}>
+                        <Grid alignItems='center' display='flex' mt={5}>
+
                             <Image
                                 width={18}
                                 src={emailIcon}
-                                alt="Facebook" />
+                                alt="email" />
+
                             <Typography ml={2} fontFamily='poppins-regular' color="#000" textTransform='none'>
                                 hello@owntechnolgies.com
                             </Typography>
@@ -193,13 +195,13 @@ const Footer = () => {
 
                 {/* /// ------------------- Address section ------------------ */}
 
-                <Grid ml={{ sm:2, xs:2}}>
+                <Grid ml={{ sm: 2, xs: 2 }}>
                     <Grid
-                    
+
                         color="#27363B"
                         width={100}
                         mt={10}
-                        ml={{lg:0,md:2,sm:0}}>
+                        ml={{ lg: 0, md: 2, sm: 0 }}>
 
 
                         <Typography textAlign='start' fontSize={{ lg: 20, xs: 15 }} fontFamily="poppins-semibold">
@@ -209,13 +211,13 @@ const Footer = () => {
 
                     </Grid>
 
-                    <Grid container mt={5} ml={{lg:0,md:2,sm:0}}>
-                        <Grid width={15} mt={1}>
-                            <Image
-                                layout='responsive'
-                                src={locationIcon}
-                                alt="location" />
-                        </Grid>
+                    <Grid alignItems='center' container mt={5} ml={{ lg: 0, md: 2, sm: 0 }}>
+
+                        <Image
+                            width={18}
+                            src={locationIcon}
+                            alt="location" />
+
 
 
                         <Grid width={{ lg: 270, md: 300, sm: 150 }} ml={2}>
@@ -247,8 +249,8 @@ const Footer = () => {
 
             <Grid
                 width={400}
-                justifyContent={{ lg: 'center', md:"start", sm:"start", xs: "start" }}
-                ml={{lg:0,md:2,sm:2,xs:2}}
+                justifyContent={{ lg: 'center', md: "start", sm: "start", xs: "start" }}
+                ml={{ lg: 0, md: 2, sm: 2, xs: 2 }}
 
                 mt={8}
                 container>
@@ -292,7 +294,7 @@ const Footer = () => {
 
             {/* ----------------------- Copyright text ----------------------- */}
 
-            <Grid textAlign={{ lg: 'center',md:"center", sm: "start", xs: "start" }} pb={5} ml={{lg:0,md:2,sm:2,xs:2}}>
+            <Grid textAlign={{ lg: 'center', md: "center", sm: "start", xs: "start" }} pb={5} ml={{ lg: 0, md: 2, sm: 2, xs: 2 }}>
                 <Typography ml={{ lg: 10 }} mt={10} fontSize={12} fontFamily='poppins-regular' color="#838788" textTransform='none'>
                     Copyright © 2023  |  Created with ❤️ by OWN Technologies.
                 </Typography>
