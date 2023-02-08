@@ -16,7 +16,7 @@ const MakeDesignBetter = () => {
 
             {/* ----------------------- We are making design section ----------------------- */}
             <Grid
-                
+
                 alignItems="center"
                 justifyContent="center"
                 id="about"
@@ -28,6 +28,7 @@ const MakeDesignBetter = () => {
 
                 <Grid width={{ lg: 500, md: 320 }} mr={{ lg: 8, md: 8 }}>
                     <Typography
+                        component="p"
                         sx={{
                             fontSize: {
                                 lg: 20,
@@ -41,6 +42,7 @@ const MakeDesignBetter = () => {
                     </Typography>
 
                     <Typography
+                        component="h2"
                         sx={{
                             fontSize: {
                                 lg: 45,
@@ -54,6 +56,7 @@ const MakeDesignBetter = () => {
                     </Typography>
 
                     <Typography
+                        component="p"
                         sx={{
                             fontSize: {
                                 lg: 17,
@@ -70,6 +73,8 @@ const MakeDesignBetter = () => {
 
 
                     <Typography
+                        component="p"
+
                         sx={{
                             fontSize: {
                                 lg: 17,
@@ -84,6 +89,7 @@ const MakeDesignBetter = () => {
                     </Typography>
 
                     <Typography
+
                         sx={{
                             fontSize: {
                                 lg: 17,
@@ -106,7 +112,8 @@ const MakeDesignBetter = () => {
 
 
                         }}>
-                            <Typography pl={3} pr={3} pb={1} pt={1} fontFamily='poppins-medium' color="#fff" textTransform='none'>
+                            <Typography component="p"
+                                pl={3} pr={3} pb={1} pt={1} fontFamily='poppins-medium' color="#fff" textTransform='none'>
                                 Start your project
                             </Typography>
 
@@ -123,7 +130,7 @@ const MakeDesignBetter = () => {
                         layout='responsive'
                         priority
                         src={studyImage}
-                        alt='Study Image'>
+                        alt='study image'>
                     </Image>
                 </Grid>
 
@@ -149,7 +156,7 @@ const MakeDesignBetter = () => {
                             alt="Folder Open Icon" />
                     </Grid>
 
-                    <Typography pt={1} fontSize={14} fontFamily='poppins-medium' textAlign="center" color="#27363B" textTransform='none'>
+                    <Typography component="p" pt={1} fontSize={14} fontFamily='poppins-medium' textAlign="center" color="#27363B" textTransform='none'>
                         World leader in consulting and finance
                     </Typography>
 
@@ -176,7 +183,7 @@ const MakeDesignBetter = () => {
                             alt="Code Icon" />
                     </Grid>
 
-                    <Typography pt={1} fontSize={14} fontFamily='poppins-medium' textAlign="center" color="#27363B" textTransform='none'>
+                    <Typography component="p" pt={1} fontSize={14} fontFamily='poppins-medium' textAlign="center" color="#27363B" textTransform='none'>
                         A focused team with a specialized skill
 
                     </Typography>
@@ -200,7 +207,7 @@ const MakeDesignBetter = () => {
                             alt="Settings Icon" />
                     </Grid>
 
-                    <Typography pt={1} fontSize={14} fontFamily='poppins-medium' color="#27363B" textTransform='none'>
+                    <Typography component="p" pt={1} fontSize={14} fontFamily='poppins-medium' color="#27363B" textTransform='none'>
                         Trusted and professional advisors for you
                     </Typography>
 
@@ -223,7 +230,7 @@ const MakeDesignBetter = () => {
                             alt="Edit Icon" />
                     </Grid>
 
-                    <Typography pt={1} fontSize={14} textAlign="center" fontFamily='poppins-medium' color="#27363B" textTransform='none'>
+                    <Typography component="p" pt={1} fontSize={14} textAlign="center" fontFamily='poppins-medium' color="#27363B" textTransform='none'>
                         Experience to give you a better results
                     </Typography>
 

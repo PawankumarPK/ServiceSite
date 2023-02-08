@@ -17,6 +17,7 @@ import Link from "next/link"
 ///----------------- Navbar common title -----------------
 const NavbarTitle = ({ text }) => (
   <Typography
+    component="p"
     sx={{
       fontSize: {
         lg: 17,
@@ -35,7 +36,7 @@ const Header = () => {
 
 
   return (
-    <Box  sx={{ display: 'flex', alignItems: 'center' }} id="header" >
+    <Box sx={{ display: 'flex', alignItems: 'center' }} id="header" >
       <Image
         priority
         src={bannerImage}
@@ -44,7 +45,7 @@ const Header = () => {
         alt='Banner Image'>
       </Image>
 
-      <Container  sx={{ position: "relative" }}>
+      <Container sx={{ position: "relative" }}>
 
         {/* ----------------------- Whatsapp and contact number ----------------------- */}
         <Grid container alignItems='center' spacing={8} pt={6} pb={2}>
@@ -75,6 +76,7 @@ const Header = () => {
             </Grid>
 
             <Typography
+              component="p"
               sx={{
                 fontSize: {
                   lg: 18,
@@ -83,7 +85,7 @@ const Header = () => {
                   xs: 15
                 }
               }}
-              pl={1} component="h2"
+              pl={1}
               fontWeight={500}
               color='common.white'>
               +91 9910765616
@@ -156,7 +158,7 @@ const Header = () => {
               <Image
                 layout='responsive'
                 src={instagramIcon}
-                alt="Instagram" />
+                alt="instagram icon" />
 
             </Grid>
 
@@ -178,7 +180,7 @@ const Header = () => {
               <Image
                 layout='responsive'
                 src={linkdinIcon}
-                alt="Linkdin" />
+                alt="linkdin icon" />
 
             </Grid>
           </Grid>
@@ -211,6 +213,7 @@ const Header = () => {
             display='flex' alignItems='center' justifyContent='center' bgcolor='#27363B'>
 
             <Typography
+              component="h3"
               sx={{
                 fontSize: {
                   lg: 40,
@@ -287,11 +290,11 @@ const Header = () => {
           {/* ----------------------- We make beautiful & Resposive text section ----------------------- */}
 
           <Grid>
-            <Typography pr={{ lg: 5, xs: 2 }} fontSize={40} fontFamily="poppins-bold">
+            <Typography component="h3" pr={{ lg: 5, xs: 2 }} fontSize={40} fontFamily="poppins-bold">
               WE MAKE
             </Typography>
 
-            <Typography fontSize={15} fontFamily="poppins" textAlign='center' pr={{ lg: 5, xs: 0 }}>
+            <Typography component="h3" fontSize={15} fontFamily="poppins" textAlign='center' pr={{ lg: 5, xs: 0 }}>
               Beautiful & Responsive
             </Typography>
 
@@ -303,6 +306,7 @@ const Header = () => {
 
 
             <Typography
+              component="h1"
               fontFamily='poppins'
               fontSize={22}
               color="#fff" mt={4} ml={4}>
@@ -310,6 +314,7 @@ const Header = () => {
             </Typography>
 
             <Typography
+              component="h1"
               fontFamily='poppins-bold'
               color="#fff" fontSize={40} fontWeight={800} ml={4}>
               WEBSITE & APPS
@@ -317,6 +322,7 @@ const Header = () => {
 
 
             <Typography
+              component="subtitle1"
               fontSize={15}
               fontFamily='poppins'
               color="#fff" ml={4} mr={4}>
@@ -330,7 +336,7 @@ const Header = () => {
                   color: "#fff",
                   border: '2px solid',
                 }}>
-                <Typography pl={3} pr={3} pb={0.5} pt={0.5} fontFamily='poppins-medium' color="#fff" textTransform='none'>
+                <Typography component="p" pl={3} pr={3} pb={0.5} pt={0.5} fontFamily='poppins-medium' color="#fff" textTransform='none'>
                   Learn More
                 </Typography>
 

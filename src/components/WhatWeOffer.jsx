@@ -19,7 +19,7 @@ import Image from 'next/image';
 
 
 ///----------------- Services common title -----------------
-const ServicesOffer = ({ title, description, icon }) => (
+const ServicesOffer = ({ title, description, icon, altName }) => (
     <Grid mb={{ lg: 10, md: 10, sm: 5, xs: 5 }} mr={{ lg: 5, md: 1, sm: 5 }} id="services">
         <Card elevation={2} container>
 
@@ -28,14 +28,14 @@ const ServicesOffer = ({ title, description, icon }) => (
                     <Image
                         width={40}
                         src={icon}
-                        alt="Folder Open Icon" />
+                        alt={altName} />
                 </Grid>
 
                 <Typography
                     ml={2}
                     variant='p'
                     fontFamily="poppins-regular"
-                    component='p2'
+                    component='subtitle1'
                     color='#202020'>
 
                     {title}
@@ -66,7 +66,7 @@ const WhatWeOffer = () => {
 
             <Grid container direction="column" alignItems="center" >
 
-                <Typography mt={10} fontSize={14} fontFamily='poppins-medium' textAlign="center" color="#27363B">
+                <Typography component="subtitle2" mt={10} fontSize={14} fontFamily='poppins-medium' textAlign="center" color="#27363B">
                     Our Services
                 </Typography>
 
@@ -74,11 +74,11 @@ const WhatWeOffer = () => {
 
 
                 <Grid container justifyContent='center' textAlign="center">
-                    <Typography noWrap mt={2} fontSize={45} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
+                    <Typography component="h3" noWrap mt={2} fontSize={45} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
                         What We
                     </Typography>
 
-                    <Typography color='#9CC118' mt={2} fontSize={45} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
+                    <Typography component="h3" color='#9CC118' mt={2} fontSize={45} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
                         &nbsp;Offer
                     </Typography>
                 </Grid>
@@ -89,7 +89,8 @@ const WhatWeOffer = () => {
                     <ServicesOffer
                         title="Web Designing"
                         description="From individual and portfolio websites to commercial or custom sites, we have you covered with our wide array of web design services. Let us craft something special just for you."
-                        icon={editIcon}>
+                        icon={editIcon}
+                        altName = "Edit Icon">
                     </ServicesOffer>
 
 
@@ -97,7 +98,8 @@ const WhatWeOffer = () => {
                     <ServicesOffer
                         title="UI/UX Designing"
                         description="We create user and customer experiences that engage, inspire, and drive tangible business results — all through beautiful UI design."
-                        icon={webIcon}>
+                        icon={webIcon}
+                        altName = "web Icon">
                     </ServicesOffer>
 
 
@@ -105,14 +107,17 @@ const WhatWeOffer = () => {
                     <ServicesOffer
                         title="Back End Development"
                         description="Back-end concepts come alive with coding and programming — HTML, CSS, Java, JavaScript, jQuery, and C++ are just some of the tools you’ll use to create stunning results."
-                        icon={serverIcon}>
+                        icon={serverIcon}
+                        altName = "server Icon">
                     </ServicesOffer>
 
 
                     <ServicesOffer
                         title="Android App Development"
                         description="We specialize in Android app development and provide top-notch services for our clients. Get the perfect user interface and user experience with us, so you can take your apps to the next level."
-                        icon={androidIcon}>
+                        icon={androidIcon}
+                        altName = "android Icon"
+                        >
                     </ServicesOffer>
 
                 </Grid>
@@ -131,7 +136,9 @@ const WhatWeOffer = () => {
                     <ServicesOffer
                         title="IOS App Development"
                         description="We specialize in iOS app development, helping you get the perfect user interface and experience — so you can take your apps to the next level."
-                        icon={appStoreIos}>
+                        icon={appStoreIos}
+                        altName = "appStoreIos Icon"
+                        >
                     </ServicesOffer>
 
 
@@ -140,7 +147,9 @@ const WhatWeOffer = () => {
                     <ServicesOffer
                         title="Updation & Maintenance"
                         description="New or Existing, All Websites need updation & Maintenance on time to time and We do it for you so that you can focus on your work."
-                        icon={domainIcon}>
+                        icon={domainIcon}
+                        altName = "domain Icon"
+                        >
                     </ServicesOffer>
 
 
@@ -148,14 +157,18 @@ const WhatWeOffer = () => {
                     <ServicesOffer
                         title="SEO & Promotion"
                         description="Get your business noticed with our SEO Services and Promotional Campaigns, designed to help you reach more organic customers and boost your bottom line."
-                        icon={flightIcon}>
+                        icon={flightIcon}
+                        altName = "flight Icon"
+                        >
                     </ServicesOffer>
 
 
                     <ServicesOffer
                         title="Business Emails"
                         description="Make an impact with every message you send. Get multiple official emails with our service — and make sure your customers know they're dealing with the real deal."
-                        icon={emailIcon}>
+                        icon={emailIcon}
+                        altName = "Business Emails Icon"
+                        >
                     </ServicesOffer>
 
                 </Grid>
@@ -170,7 +183,9 @@ const WhatWeOffer = () => {
                     <ServicesOffer
                         title="Social & Email Marketing"
                         description="Entering the new digital era of Internet, Social Media and Emails? Our team will help you generate leads and prospects for your business — so you can stay ahead of the competition."
-                        icon={bookmarkIcon}>
+                        icon={bookmarkIcon}
+                        altName = "Bookmark Icon Icon"
+                        >
                     </ServicesOffer>
 
 
@@ -178,21 +193,27 @@ const WhatWeOffer = () => {
                     <ServicesOffer
                         title="eCommerce"
                         description="Open up your business to the world with our professional Online Store, and start selling products globally — all while receiving payments directly in your bank or wallet of choice."
-                        icon={creditCardIcon}>
+                        icon={creditCardIcon}
+                        altName = "creditCard Icon"
+                        >
                     </ServicesOffer>
 
 
                     <ServicesOffer
                         title="Training & Support"
                         description="For any issue you have with our application, software or website — don't hesitate to call. Plus, get personalized training and share your ideas, complaints and suggestions with us."
-                        icon={headsetIcon}>
+                        icon={headsetIcon}
+                        altName = "headset Icon"
+                        >
                     </ServicesOffer>
 
 
                     <ServicesOffer
                         title="Video Promotions"
                         description="Share vital information with a promo video. Discount codes, dates and times for events, or deadlines for the end of a sale. Get your message out fast and make sure everyone knows what's going on."
-                        icon={photoVideoIcon}>
+                        icon={photoVideoIcon}
+                        altName = "photo Video Icon"
+                        >
                     </ServicesOffer>
 
                 </Grid>

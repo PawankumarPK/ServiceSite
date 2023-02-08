@@ -37,7 +37,7 @@ const Footer = () => {
                             <Image
                                 width={80}
                                 src={ownLogo}
-                                alt="Team Memeber One " />
+                                alt="Logo" />
                         </Grid>
 
                         <Grid justifyContent='center' >
@@ -48,7 +48,7 @@ const Footer = () => {
                                 ml={{ lg: 1, md: 1, sm: 1, xs: 1 }}
                             >
 
-                                <Typography color="#27363B" textAlign='center' fontSize={{ lg: 40, xs: 35 }} fontFamily="poppins-bold">
+                                <Typography component="h6" color="#27363B" textAlign='center' fontSize={{ lg: 40, xs: 35 }} fontFamily="poppins-bold">
                                     OWN
                                 </Typography>
 
@@ -56,7 +56,7 @@ const Footer = () => {
 
                             {/* --------------------- Technologies text ------------------------- */}
                             <Grid
-
+                                component="body1"
                                 color="#27363B"
                                 container
                                 width={105}
@@ -108,7 +108,7 @@ const Footer = () => {
                     >
 
 
-                        <Typography textAlign='start' fontSize={{ lg: 15, xs: 15 }} fontFamily="poppins-regular">
+                        <Typography component="subtitle1" textAlign='start' fontSize={{ lg: 15, xs: 15 }} fontFamily="poppins-regular">
                             Grow with us.
                         </Typography>
 
@@ -123,7 +123,8 @@ const Footer = () => {
                     >
 
 
-                        <Typography color="#838788" textAlign='start' fontSize={{ lg: 15, xs: 15 }} fontFamily="poppins-regular">
+                        <Typography component="body1"
+                            color="#838788" textAlign='start' fontSize={{ lg: 15, xs: 15 }} fontFamily="poppins-regular">
                             We've been helping businesses reach their full potential — and beyond. Our agency offers a wide array of services to get you there. Explore our website for more info, and see how far you can go!
                         </Typography>
 
@@ -145,7 +146,8 @@ const Footer = () => {
                     >
 
 
-                        <Typography textAlign='start' fontSize={{ lg: 20, xs: 15 }} fontFamily="poppins-semibold">
+                        <Typography component="h4"
+                            textAlign='start' fontSize={{ lg: 20, xs: 15 }} fontFamily="poppins-semibold">
                             Contact Us
 
                         </Typography>
@@ -155,16 +157,15 @@ const Footer = () => {
                     <Grid
                         color="#27363B"
                         width={{ lg: 400, md: 200, sm: 250 }}
-                        mt={1}
-                    >
+                        mt={1}>
 
 
                         <Grid alignItems='center' display='flex' mt={5}>
                             <Image
                                 width={18}
                                 src={callIcon}
-                                alt="Facebook" />
-                            <Typography ml={2} fontFamily='poppins-regular' color="#000" textTransform='none'>
+                                alt="call Icon" />
+                            <Typography component="subtitle1" ml={2} fontFamily='poppins-regular' color="#000" textTransform='none'>
                                 +91 9910765616
                             </Typography>
 
@@ -177,9 +178,9 @@ const Footer = () => {
                             <Image
                                 width={18}
                                 src={emailIcon}
-                                alt="email" />
+                                alt="email Icon" />
 
-                            <Typography ml={2} fontFamily='poppins-regular' color="#000" textTransform='none'>
+                            <Typography component="subtitle1" ml={2} fontFamily='poppins-regular' color="#000" textTransform='none'>
                                 hello@owntechnolgies.com
                             </Typography>
 
@@ -204,7 +205,7 @@ const Footer = () => {
                         ml={{ lg: 0, md: 2, sm: 0 }}>
 
 
-                        <Typography textAlign='start' fontSize={{ lg: 20, xs: 15 }} fontFamily="poppins-semibold">
+                        <Typography component="h4" textAlign='start' fontSize={{ lg: 20, xs: 15 }} fontFamily="poppins-semibold">
                             Address
 
                         </Typography>
@@ -216,12 +217,12 @@ const Footer = () => {
                         <Image
                             width={18}
                             src={locationIcon}
-                            alt="location" />
+                            alt="location icon" />
 
 
 
                         <Grid width={{ lg: 270, md: 300, sm: 150 }} ml={2}>
-                            <Typography fontFamily='poppins-regular' color="#000" >
+                            <Typography component="subtitle1" fontFamily='poppins-regular' color="#000" >
                                 C-717, Jvts Garden, Chattarpur, New DELHI - 110074
                             </Typography>
                         </Grid>
@@ -295,7 +296,7 @@ const Footer = () => {
             {/* ----------------------- Copyright text ----------------------- */}
 
             <Grid textAlign={{ lg: 'center', md: "center", sm: "start", xs: "start" }} pb={5} ml={{ lg: 0, md: 2, sm: 2, xs: 2 }}>
-                <Typography ml={{ lg: 10 }} mt={10} fontSize={12} fontFamily='poppins-regular' color="#838788" textTransform='none'>
+                <Typography component="p" ml={{ lg: 10 }} mt={10} fontSize={12} fontFamily='poppins-regular' color="#838788" textTransform='none'>
                     Copyright © 2023  |  Created with ❤️ by OWN Technologies.
                 </Typography>
             </Grid>

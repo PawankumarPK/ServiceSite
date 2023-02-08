@@ -13,7 +13,7 @@ const YouImagineWeCreate = () => {
 
             <Grid container direction="column" alignItems="center">
 
-                <Typography mt={10} fontSize={14} fontFamily='poppins-medium' textAlign="center" color="#27363B">
+                <Typography component="p" mt={10} fontSize={14} fontFamily='poppins-medium' textAlign="center" color="#27363B">
                     How To Start
                 </Typography>
 
@@ -21,11 +21,11 @@ const YouImagineWeCreate = () => {
 
 
                 <Grid container justifyContent='center' textAlign="center" mb={5}>
-                    <Typography noWrap mt={2} fontSize={45} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
+                    <Typography component="h3" noWrap mt={2} fontSize={45} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
                         You Imagine, We
                     </Typography>
 
-                    <Typography color='#9CC118' mt={2} fontSize={45} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
+                    <Typography component="h3" color='#9CC118' mt={2} fontSize={45} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
                         &nbsp;Create
                     </Typography>
                 </Grid>
@@ -55,7 +55,7 @@ const YouImagineWeCreate = () => {
                             <Typography sx={{ position: "absolute", pt: 9, pl: 3 }}
                                 variant='h5'
                                 fontFamily="poppins-semibold"
-                                component='h3'
+                                component='subtitle1'
                                 color='#202020'
                                 fontWeight='600'
                                 textAlign='center'>
@@ -106,7 +106,7 @@ const YouImagineWeCreate = () => {
                             <Typography sx={{ position: "absolute", pt: 9, pl: 3 }}
                                 variant='h5'
                                 fontFamily="poppins-semibold"
-                                component='h3'
+                                component='subtitle1'
                                 color='#202020'
                                 fontWeight='600'
                                 textAlign='center'>
@@ -157,7 +157,7 @@ const YouImagineWeCreate = () => {
                             <Typography sx={{ position: "absolute", pt: 9, pl: 3 }}
                                 variant='h5'
                                 fontFamily="poppins-semibold"
-                                component='h3'
+                                component='subtitle'
                                 color='#202020'
                                 fontWeight='600'
                                 textAlign='center'>
