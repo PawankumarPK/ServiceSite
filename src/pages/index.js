@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Home - OWN TECHNOLOGIES</title>
+        <title>OWN TECHNOLOGIES</title>
         <meta name="description" content="Tell us your business needs and wildest imaginations for your website — and our team of experts will customize a site that works just for you. Plus, we’ll stay in touch to make sure everything is running smoothly down the line." />
         <link rel="icon" href="/ownLogo.ico" />
       </Head>

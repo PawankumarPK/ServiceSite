@@ -128,7 +128,7 @@ const YouImagineWeCreate = () => {
                                 color='#595959'
                                 textAlign='center'>
 
-                                We offer custom-made app and website development services for businesses of all sizes. Our team of developers, designers, and SEO experts will help you create a digital presence that'll make your brand stand out from the competition.
+                                We offer custom-made app and website development services for businesses of all sizes. Our team of developers, designers, and SEO experts will help you create a digital presence that will make your brand stand out from the competition.
                             </Typography>
                         </Grid>
 

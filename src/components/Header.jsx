@@ -155,10 +155,13 @@ const Header = () => {
                   xs: 42
                 }
               }}>
-              <Image
-                layout='responsive'
-                src={instagramIcon}
-                alt="instagram icon" />
+              <Link href="https://www.instagram.com/own_technologies/?next=%2F" target='_blank'>
+                <Image
+                  layout='responsive'
+                  src={instagramIcon}
+                  alt="instagram icon" />
+
+              </Link>
 
             </Grid>
 
@@ -177,11 +180,12 @@ const Header = () => {
                   xs: 42
                 }
               }}>
-              <Image
-                layout='responsive'
-                src={linkdinIcon}
-                alt="linkdin icon" />
-
+              <Link href="https://www.linkedin.com/company/own-technologies/?viewAsMember=true" target='_blank'>
+                <Image
+                  layout='responsive'
+                  src={linkdinIcon}
+                  alt="linkdin icon" />
+              </Link>
             </Grid>
           </Grid>
 

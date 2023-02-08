@@ -1,4 +1,4 @@
-import { Box, Button, Grid, TextField, Typography } from '@mui/material'
+import { Box, Button, Grid, Link, TextField, Typography } from '@mui/material'
 import facebookIcon from "../svg/facebookBlack.svg";
 import instagramIcon from "../svg/instagramBlack.svg";
 import linkdinIcon from "../svg/linkedinBlack.svg";
@@ -125,7 +125,7 @@ const Footer = () => {
 
                         <Typography component="body1"
                             color="#838788" textAlign='start' fontSize={{ lg: 15, xs: 15 }} fontFamily="poppins-regular">
-                            We've been helping businesses reach their full potential — and beyond. Our agency offers a wide array of services to get you there. Explore our website for more info, and see how far you can go!
+                            We have been helping businesses reach their full potential — and beyond. Our agency offers a wide array of services to get you there. Explore our website for more info, and see how far you can go!
                         </Typography>
 
                     </Grid>
@@ -166,7 +166,7 @@ const Footer = () => {
                                 src={callIcon}
                                 alt="call Icon" />
                             <Typography component="subtitle1" ml={2} fontFamily='poppins-regular' color="#000" textTransform='none'>
-                                +91 9910765616
+                                +91-9910765616
                             </Typography>
 
                         </Grid>
@@ -272,19 +272,23 @@ const Footer = () => {
                 </Grid> */}
 
                 <Grid mt="4px" >
-                    <Image
-                        width={23}
-                        src={instagramIcon}
-                        alt="Instagram" />
+                    <Link href="https://www.instagram.com/own_technologies/?next=%2F" target='_blank'>
+                        <Image
+                            width={23}
+                            src={instagramIcon}
+                            alt="Instagram" />
+                    </Link>
 
                 </Grid>
 
                 <Grid mt="3px" ml={5}>
-                    <Image
-                        width={23}
-                        src={linkdinIcon}
-                        alt="Linkdin" />
+                    <Link href="https://www.linkedin.com/company/own-technologies/?viewAsMember=true" target='_blank'>
+                        <Image
+                            width={23}
+                            src={linkdinIcon}
+                            alt="Linkdin" />
 
+                    </Link>
                 </Grid>
 
 
