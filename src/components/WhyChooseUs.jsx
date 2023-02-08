@@ -28,7 +28,7 @@ const Services = ({ title, description, icon, bgColor, altTag }) => (
                 {title}
             </Typography>
 
-            <Typography component="body" lineHeight="20px" pt={1} fontSize={12} fontFamily='poppins-regular' color="#595959" textTransform='none'>
+            <Typography component="p" lineHeight="20px" pt={1} fontSize={12} fontFamily='poppins-regular' color="#595959" textTransform='none'>
                 {description}
 
 
@@ -42,7 +42,7 @@ const Services = ({ title, description, icon, bgColor, altTag }) => (
 const WhyChooseUs = () => {
     return (
 
-        <Grid container direction="column" alignItems="center" id="description">
+        <Grid container direction="column" alignItems="center" id="features">
 
             <Typography mt={10} fontSize={14} fontFamily='poppins-medium' textAlign="center" color="#27363B">
                 How To Start

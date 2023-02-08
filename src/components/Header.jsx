@@ -36,7 +36,7 @@ const Header = () => {
 
 
   return (
-    <Box sx={{ display: 'flex', alignItems: 'center' }} id="header" >
+    <Box sx={{ display: 'flex', alignItems: 'center' }} id="home" >
       <Image
         priority
         src={bannerImage}
@@ -235,7 +235,7 @@ const Header = () => {
 
 
               <Grid item xs="auto" paddingRight={4}>
-                <Link href="#team" scroll={true} >
+                <Link href="#home" scroll={true} >
                   <NavbarTitle text="HOME" />
                 </Link>
               </Grid>
@@ -254,8 +254,8 @@ const Header = () => {
 
 
               <Grid item xs="auto" paddingRight={4}>
-                <Link href="#team" scroll={true}>
-                  <NavbarTitle text="TEAM" />
+                <Link href="#features" scroll={true}>
+                  <NavbarTitle text="FEATURES" />
                 </Link>
               </Grid>
 
@@ -290,11 +290,11 @@ const Header = () => {
           {/* ----------------------- We make beautiful & Resposive text section ----------------------- */}
 
           <Grid>
-            <Typography component="h3" pr={{ lg: 5, xs: 2 }} fontSize={40} fontFamily="poppins-bold">
+            <Typography component="h3" color="#000" pr={{ lg: 5, xs: 2 }} fontSize={40} fontFamily="poppins-bold">
               WE MAKE
             </Typography>
 
-            <Typography component="h3" fontSize={15} fontFamily="poppins" textAlign='center' pr={{ lg: 5, xs: 0 }}>
+            <Typography component="h3" color="#000" fontSize={15} fontFamily="poppins" textAlign='center' pr={{ lg: 5, xs: 0 }}>
               Beautiful & Responsive
             </Typography>
 
@@ -331,7 +331,7 @@ const Header = () => {
 
 
             <Grid ml={4} mt={4}>
-              <Button href="#description" scroll={true} variant="outlined" sx={{ borderRadius: 50 }}
+              <Button href="#about" scroll={true} variant="outlined" sx={{ borderRadius: 50 }}
                 style={{
                   color: "#fff",
                   border: '2px solid',
