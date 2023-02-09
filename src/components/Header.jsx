@@ -306,7 +306,13 @@ const Header = () => {
 
 
           {/* ----------------------- Creative website & app section ----------------------- */}
-          <Grid flexDirection='column' container height={350} width={600} bgcolor="#DBD525">
+          <Grid
+            flexDirection='column'
+            container height={{ lg: 350, xs: 330 }}
+            width={{ lg: 600, md: 400, sm: 400, xs: 400 }}
+            bgcolor="#DBD525"
+
+          >
 
 
             <Typography
@@ -320,34 +326,45 @@ const Header = () => {
             <Typography
               component="h1"
               fontFamily='poppins-bold'
-              color="#fff" fontSize={40} fontWeight={800} ml={4}>
+              color="#fff" fontSize={{ lg: 40, xs: 30 }} fontWeight={800} ml={4}>
               WEBSITE & APPS
             </Typography>
 
 
             <Typography
               component="subtitle1"
-              fontSize={15}
+              fontSize={{ lg: 15, xs: 11 }}
               fontFamily='poppins'
               color="#fff" ml={4} mr={4}>
               Are you looking for a rapid but high performance web design or application development? Look no further, we are an advanced digital agency with a team of professional web designers and developers who have worked on countless projects for startups, companies and agencies alike.
             </Typography>
 
 
-            <Grid ml={4} mt={4}>
+            <Grid ml={4} mt={4} mb={0}>
               <Button href="#about" scroll={true} variant="outlined" sx={{ borderRadius: 50 }}
                 style={{
                   color: "#fff",
                   border: '2px solid',
                 }}>
-                <Typography component="p" pl={3} pr={3} pb={0.5} pt={0.5} fontFamily='poppins-medium' color="#fff" textTransform='none'>
+                <Typography
+                  component="p"
+                  pl={{ lg: 3, xs: 1 }} pr={3} pb={{ lg: 0.5 }} pt={0.5}
+                  fontFamily='poppins-medium'
+                  color="#fff"
+                  textTransform='none'>
+
                   Learn More
+
                 </Typography>
 
               </Button>
             </Grid>
 
           </Grid>
+
+
+
+
 
         </Grid>
 

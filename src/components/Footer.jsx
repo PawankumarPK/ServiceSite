@@ -115,12 +115,12 @@ const Footer = () => {
                     </Grid>
 
                     <Grid
+                    
                         color="#27363B"
                         container
-                        width={400}
+                        width={{lg:400,xs:300}}
                         justifyContent="center"
-                        mt={1}
-                    >
+                        mt={1}>
 
 
                         <Typography component="body1"
@@ -249,7 +249,7 @@ const Footer = () => {
 
 
             <Grid
-                width={400}
+                width={{lg:400,xs:100}}
                 justifyContent={{ lg: 'center', md: "start", sm: "start", xs: "start" }}
                 ml={{ lg: 0, md: 2, sm: 2, xs: 2 }}
 
