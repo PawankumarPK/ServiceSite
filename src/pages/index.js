@@ -19,15 +19,16 @@ export default function Home() {
         <link rel="icon" href="/ownLogo.ico" />
       </Head>
 
-      <Header/>
-      <MakeDesignBetter/>
-      <YouImagineWeCreate/>
-      <WhyChooseUs/>
-      <WhatWeOffer/>
-      <TeamSection/>
-      <Footer/>
+      
+      <Header />
+      <MakeDesignBetter />
+      <YouImagineWeCreate />
+      <WhyChooseUs />
+      <WhatWeOffer />
+      <TeamSection />
+      <Footer />
 
-     
+
     </div>
   )
 }

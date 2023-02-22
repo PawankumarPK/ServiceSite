@@ -1,4 +1,4 @@
-import { Box, Card, CardActionArea, CardContent, CardMedia, Grid, Paper, Stack, Typography } from '@mui/material'
+import { Box, Grid, Typography } from '@mui/material'
 import { Container } from '@mui/system'
 import file from "../../public/png/file.png";
 import rocket from "../../public/png/rocket.png";

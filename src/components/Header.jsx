@@ -13,6 +13,8 @@ import { Container } from '@mui/system';
 import Image from 'next/image';
 import Link from "next/link"
 
+import { HashLink as SuperLink } from 'react-router-hash-link'
+
 
 ///----------------- Navbar common title -----------------
 const NavbarTitle = ({ text }) => (
@@ -155,7 +157,7 @@ const Header = () => {
                   xs: 42
                 }
               }}>
-              <Link href="https://www.instagram.com/own_technologies/?next=%2F" target='_blank'>
+              <Link href="https://www.instagram.com/own_technologies/?next=%2F" target='_blank' passHref>
                 <Image
                   layout='responsive'
                   src={instagramIcon}
@@ -180,7 +182,7 @@ const Header = () => {
                   xs: 42
                 }
               }}>
-              <Link href="https://www.linkedin.com/company/own-technologies/?viewAsMember=true" target='_blank'>
+              <Link href="https://www.linkedin.com/company/own-technologies/?viewAsMember=true" target='_blank' passHref>
                 <Image
                   layout='responsive'
                   src={linkdinIcon}
@@ -238,28 +240,40 @@ const Header = () => {
             <Grid container height={75} bgcolor="#fff" alignContent='center' justifyContent="end">
 
 
-              <Grid item xs="auto" paddingRight={4}>
-                <Link href="#home" scroll={true} >
+              {/* <Grid item xs="auto" paddingRight={4}>
+                <Link href="#home" scroll={true} passHref>
                   <NavbarTitle text="HOME" />
                 </Link>
-              </Grid>
+              </Grid> */}
+
+
 
               <Grid item xs="auto" paddingRight={4}>
-                <Link href="#about" scroll={true}>
+                <Link href="#about" scroll={true} passHref>
                   <NavbarTitle text="ABOUT" />
                 </Link>
               </Grid>
 
+
+
+
+
               <Grid item xs="auto" paddingRight={4}>
-                <Link href="#services" scroll={true}>
+                <Link href="#services" scroll={true} passHref>
                   <NavbarTitle text="SERVICES" />
                 </Link>
               </Grid>
 
 
               <Grid item xs="auto" paddingRight={4}>
-                <Link href="#features" scroll={true}>
+                <Link href="#features" scroll={true} passHref>
                   <NavbarTitle text="FEATURES" />
+                </Link>
+              </Grid>
+
+              <Grid item xs="auto" paddingRight={4}>
+                <Link href="https://blog.owntechnologies.com/" target='_blank' scroll={true} passHref>
+                  <NavbarTitle text="BLOGS" />
                 </Link>
               </Grid>
 
@@ -267,7 +281,7 @@ const Header = () => {
 
 
               <Grid item xs="auto" paddingRight={4}>
-                <Link href="#contact" scroll={true}>
+                <Link href="#contact" scroll={true} passHref>
                   <NavbarTitle text="CONTACT" />
                 </Link>
 
