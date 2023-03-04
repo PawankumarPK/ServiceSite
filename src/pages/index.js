@@ -15,7 +15,7 @@ export default function Home() {
     <div>
       <Head>
         <title>OWN TECHNOLOGIES</title>
-        <meta name="description" content="Tell us your business needs and wildest imaginations for your website — and our team of experts will customize a site that works just for you. Plus, we’ll stay in touch to make sure everything is running smoothly down the line." />
+        <meta name="description" content="We are an advanced digital agency with a team of professionals who always develop user-friendly, responsive and mobile-friendly websites. We offer innovative online solutions for companies to promote their brand in the best possible way." />
         <link rel="icon" href="/ownLogo.ico" />
       </Head>
 

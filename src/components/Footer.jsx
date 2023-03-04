@@ -166,7 +166,7 @@ const Footer = () => {
                                 src={callIcon}
                                 alt="call Icon" />
                             <Typography component="subtitle1" ml={2} fontFamily='poppins-regular' color="#000" textTransform='none'>
-                                +91-9910765616
+                                +91-9650636804
                             </Typography>
 
                         </Grid>
@@ -181,7 +181,7 @@ const Footer = () => {
                                 alt="email Icon" />
 
                             <Typography component="subtitle1" ml={2} fontFamily='poppins-regular' color="#000" textTransform='none'>
-                                hello@owntechnolgies.com
+                                hello@owntechnologies.com
                             </Typography>
 
                         </Grid>
