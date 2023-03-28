@@ -1,6 +1,6 @@
 import { Box, Button, Grid, Link, Typography } from '@mui/material'
 import { Container } from '@mui/system'
-import studyImage from "../../public/png/study.png";
+import studyImage from "../../public/png/study_two.png";
 import folderOpenIcon from "../svg/folderOpenIcon.svg";
 import editIcon from "../svg/editIcon.svg";
 import codeIcon from "../svg/codeIcon.svg";
@@ -18,15 +18,15 @@ const MakeDesignBetter = () => {
             <Grid
 
                 alignItems="center"
-                justifyContent="center"
                 id="about"
                 container={{ lg: true, sm: false }}
-                mt={{ lg: 30, md: 30, sm: 15, xs: 15 }}
+                mt={{ lg: 20, md: 30, sm: 15, xs: 15 }}
                 textAlign={{ lg: "start", md: "start", sm: "center", xs: "center" }}
-                height={{ lg: 500, sm: 700, }}>
+                // height={{ lg: 600, sm: 700, }}
+                >
 
 
-                <Grid width={{ lg: 500, md: 320 }} mr={{ lg: 8, md: 8 }}>
+                <Grid  width={{ lg: 600, md: 320 }} mr={{ lg: 8, md: 8 }}>
                     <Typography
                         component="p"
                         sx={{
@@ -124,7 +124,7 @@ const MakeDesignBetter = () => {
                 {/* ----------------------- Study image ----------------------- */}
                 <Grid
                     ml={{ lg: 4, md: 4 }}
-                    width={{ lg: 550, md: 450, sm: 450, xs: 400 }}
+                    width={{ lg: 350, md: 350, sm: 300, xs: 350 }}
                     mt={{ sm: 5, xs: 5 }}>
                     <Image
                         layout='responsive'
@@ -137,7 +137,7 @@ const MakeDesignBetter = () => {
             </Grid>
 
             {/* ----------------------- Circle design section ----------------------- */}
-            <Grid mt={20} pb={10} container alignItems='center' display='flex' justifyContent='center'>
+            <Grid mt={5} pb={15} container alignItems='center' display='flex' justifyContent='center'>
 
                 <Grid
                     flexDirection='column'

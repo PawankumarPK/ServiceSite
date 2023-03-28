@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import MakeDesignBetter from '../components/MakeDesignBetter'
+import Portfolio from '../components/Portfolio'
 import TeamSection from '../components/TeamSection'
 import WhatWeOffer from '../components/WhatWeOffer'
 import WhyChooseUs from '../components/WhyChooseUs'
@@ -14,7 +15,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>OWN TECHNOLOGIES</title>
+        <title>Own Technologies</title>
         <meta name="description" content="We are an advanced digital agency with a team of professionals who always develop user-friendly, responsive and mobile-friendly websites. We offer innovative online solutions for companies to promote their brand in the best possible way." />
         <link rel="icon" href="/ownLogo.ico" />
       </Head>
@@ -26,6 +27,7 @@ export default function Home() {
       <WhyChooseUs />
       <WhatWeOffer />
       <TeamSection />
+      <Portfolio/>
       <Footer />
 
 
