@@ -62,7 +62,7 @@ const Portfolio = () => {
     return (
 
 
-        <Grid height={800} bgcolor="#F7F8FA">
+        <Grid height={800} bgcolor="#F7F8FA" id="portfolio">
 
 
 

@@ -248,7 +248,7 @@ const Header = () => {
 
 
 
-              <Grid item xs="auto" paddingRight={4}>
+              <Grid item xs="auto" paddingRight={{lg:4,xs:2}}>
                 <Link href="#about" scroll={true} passHref>
                   <NavbarTitle text="ABOUT" />
                 </Link>
@@ -258,20 +258,26 @@ const Header = () => {
 
 
 
-              <Grid item xs="auto" paddingRight={4}>
+              <Grid item xs="auto" paddingRight={{lg:4,xs:2}}>
                 <Link href="#services" scroll={true} passHref>
                   <NavbarTitle text="SERVICES" />
                 </Link>
               </Grid>
 
+              <Grid item xs="auto" paddingRight={{lg:4,xs:2}}>
+                <Link href="#portfolio" scroll={true} passHref>
+                  <NavbarTitle text="PORTFOLIO" />
+                </Link>
+              </Grid>
 
-              <Grid item xs="auto" paddingRight={4}>
+
+              <Grid item xs="auto" paddingRight={{lg:4,xs:2}}>
                 <Link href="#features" scroll={true} passHref>
                   <NavbarTitle text="FEATURES" />
                 </Link>
               </Grid>
 
-              <Grid item xs="auto" paddingRight={4}>
+              <Grid item xs="auto" paddingRight={{lg:4,xs:2}}>
                 <Link href="https://blog.owntechnologies.com/" target='_blank' scroll={true} passHref>
                   <NavbarTitle text="BLOGS" />
                 </Link>
@@ -280,7 +286,7 @@ const Header = () => {
 
 
 
-              <Grid item xs="auto" paddingRight={4}>
+              <Grid item xs="auto" paddingRight={{lg:4,xs:2}}>
                 <Link href="#contact" scroll={true} passHref>
                   <NavbarTitle text="CONTACT" />
                 </Link>

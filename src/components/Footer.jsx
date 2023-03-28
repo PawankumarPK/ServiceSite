@@ -102,23 +102,22 @@ const Footer = () => {
 
 
                     <Grid
-                        width={200}
+                        width={250}
                         justifyContent="center"
-                        mt={3}
-                    >
+                        mt={3}>
 
 
                         <Typography component="subtitle1" textAlign='start' fontSize={{ lg: 15, xs: 15 }} fontFamily="poppins-regular">
-                            Grow with us.
+                            Accelerate your online presence
                         </Typography>
 
                     </Grid>
 
                     <Grid
-                    
+
                         color="#27363B"
                         container
-                        width={{lg:400,xs:300}}
+                        width={{ lg: 400, xs: 300 }}
                         justifyContent="center"
                         mt={1}>
 
@@ -249,7 +248,7 @@ const Footer = () => {
 
 
             <Grid
-                width={{lg:400,xs:100}}
+                width={{ lg: 400, xs: 100 }}
                 justifyContent={{ lg: 'center', md: "start", sm: "start", xs: "start" }}
                 ml={{ lg: 0, md: 2, sm: 2, xs: 2 }}
 
