@@ -12,21 +12,21 @@ import Image from 'next/image';
 
 const MakeDesignBetter = () => {
     return (
-        <Container>
+        <Grid bgcolor="#fff" >
 
             {/* ----------------------- We are making design section ----------------------- */}
             <Grid
-
+                justifyContent='center'
                 alignItems="center"
                 id="about"
                 container={{ lg: true, sm: false }}
-                mt={{ lg: 20, md: 30, sm: 15, xs: 15 }}
+                mt={{ lg: 30, md: 30, sm: 15, xs: 15 }}
                 textAlign={{ lg: "start", md: "start", sm: "center", xs: "center" }}
-                // height={{ lg: 600, sm: 700, }}
-                >
+            // height={{ lg: 600, sm: 700, }}
+            >
 
 
-                <Grid  width={{ lg: 600, md: 320 }} mr={{ lg: 8, md: 8 }}>
+                <Grid width={{ lg: 600, md: 320 }} mr={{ lg: 8, md: 8 }}>
                     <Typography
                         component="p"
                         sx={{
@@ -137,14 +137,14 @@ const MakeDesignBetter = () => {
             </Grid>
 
             {/* ----------------------- Circle design section ----------------------- */}
-            <Grid mt={5} pb={15} container alignItems='center' display='flex' justifyContent='center'>
+            <Grid mt={5} pb={20} container alignItems='center' display='flex' justifyContent='center'>
 
                 <Grid
                     flexDirection='column'
                     alignItems='center'
                     display='flex'
                     md
-                    ml={{ lg: 5, md: 5 }}
+                    ml={{ lg: 15, md: 5 }}
                     mr={{ lg: 10, sm: 10 }}
                     mt={{ sm: 10, xs: 10 }}
                 >
@@ -221,7 +221,7 @@ const MakeDesignBetter = () => {
                     alignItems='center'
                     display='flex'
                     ml={{ lg: 5, md: 5 }}
-                    mr={{ lg: 10, sm: 10 }}
+                    mr={{ lg: 15, sm: 10 }}
                     mt={{ sm: 10, xs: 10 }}>
                     <Grid width={90} height={90} bgcolor="#9CC118" sx={{ borderRadius: 20 }} alignItems='center' display='flex' justifyContent='center'>
                         <Image
@@ -239,7 +239,7 @@ const MakeDesignBetter = () => {
 
             </Grid>
 
-        </Container>
+        </Grid>
     )
 }
 

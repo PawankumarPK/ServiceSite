@@ -18,7 +18,7 @@ import Image from 'next/image';
 
 const Footer = () => {
     return (
-        <Grid bgcolor="#F7F8FA" id="contact">
+        <Grid bgcolor="#fff" id="contact">
 
 
 

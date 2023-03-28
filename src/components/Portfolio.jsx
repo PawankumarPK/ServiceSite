@@ -50,10 +50,10 @@ const Portfolio = () => {
                 items: 2,
             },
             700: {
-                items: 3,
+                items: 2,
             },
             1000: {
-                items: 4,
+                items: 3,
             },
         },
     };
@@ -66,9 +66,9 @@ const Portfolio = () => {
 
 
 
-            <Grid mt={10} alignItems="center" justifyContent='center'>
+            <Grid mt={10}>
                 <Grid container direction="column" alignItems="center">
-                    <Typography component="subtitle2" mt={10} fontSize={14} fontFamily='poppins-medium' textAlign="center" color="#27363B">
+                    <Typography component="subtitle2" mt={15} fontSize={14} fontFamily='poppins-medium' textAlign="center" color="#27363B">
                         Our Portfolio
                     </Typography>
 
@@ -98,8 +98,9 @@ const Portfolio = () => {
                         animateIn="slideInDown"
                         dots={true}
                         margin={10}
-
+                        {...options}
                     >
+
 
                         <div>
                             <Link href="https://ownsafe.in/" target='_blank' passHref>
@@ -121,7 +122,7 @@ const Portfolio = () => {
 
                         </div>
 
-                        <div data-animate="flipInX animated">
+                        <div>
                             <Link href="https://dentist.owntechnologies.com/" target='_blank' passHref>
                                 <motion.div
                                     whileHover={{ scale: 1.1 }}
