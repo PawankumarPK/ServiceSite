@@ -20,13 +20,13 @@ const MakeDesignBetter = () => {
                 alignItems="center"
                 id="about"
                 container={{ lg: true, sm: false }}
-                mt={{ lg: 30, md: 30, sm: 15, xs: 15 }}
+                pt={{ lg: 30, md: 30, sm: 15, xs: 15 }}
                 textAlign={{ lg: "start", md: "start", sm: "center", xs: "center" }}
             // height={{ lg: 600, sm: 700, }}
             >
 
 
-                <Grid width={{ lg: 600, md: 320 }} mr={{ lg: 8, md: 8 }}>
+                <Grid width={{ lg: 600, md: 320 }} pr={{ lg: 5, md: 5 }}>
                     <Typography
                         component="p"
                         sx={{
@@ -51,7 +51,8 @@ const MakeDesignBetter = () => {
                                 xs: 30
                             }
                         }}
-                        mt={1} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
+                        pt={1} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}
+                        color="#000">
                         We are making design better for everyone
                     </Typography>
 
@@ -65,7 +66,7 @@ const MakeDesignBetter = () => {
                                 xs: 12
                             }
                         }}
-                        mt={4} color="#595959" fontFamily="poppins">
+                        pt={4} color="#595959" fontFamily="poppins">
                         We specialise on high performance immersive digital experience aimed at delivering our clients a competitive advantage and effective ROI on their investment.
 
                     </Typography>
@@ -83,7 +84,7 @@ const MakeDesignBetter = () => {
                                 xs: 12
                             }
                         }}
-                        mt={4} color="#595959" fontFamily="poppins">
+                        pt={4} color="#595959" fontFamily="poppins">
                         Our team of Solution Architects, Developers, Designers and Project Managers deliver world-class solutions that result in solutions that are innovative, engaging, scalable, maintainable and sustainable.
 
                     </Typography>
@@ -98,12 +99,12 @@ const MakeDesignBetter = () => {
                                 xs: 12
                             }
                         }}
-                        mt={4} color="#595959" fontFamily="poppins">
+                        pt={4} color="#595959" fontFamily="poppins">
                         Our solutions are built on the latest technologies to enable you to achieve your goals in the most cost-efficient manner possible.
 
                     </Typography>
 
-                    <Grid mt={5}>
+                    <Grid pt={5}>
                         <Button href="#contact" scroll={true} variant="contained" sx={{
                             borderRadius: 50, bgcolor: "#27363B",
                             ':hover': {
@@ -123,9 +124,9 @@ const MakeDesignBetter = () => {
 
                 {/* ----------------------- Study image ----------------------- */}
                 <Grid
-                    ml={{ lg: 4, md: 4 }}
-                    width={{ lg: 350, md: 350, sm: 300, xs: 350 }}
-                    mt={{ sm: 5, xs: 5 }}>
+                    pl={{ lg: 10, md: 4 }}
+                    width={{ lg: 450, md: 350, sm: 300, xs: 250 }}
+                    pt={{ sm: 5, xs: 5 }}>
                     <Image
                         layout='responsive'
                         priority
@@ -137,16 +138,16 @@ const MakeDesignBetter = () => {
             </Grid>
 
             {/* ----------------------- Circle design section ----------------------- */}
-            <Grid mt={5} pb={20} container alignItems='center' display='flex' justifyContent='center'>
+            <Grid pt={5} pb={20} container alignItems='center' display='flex' justifyContent='center'>
 
                 <Grid
                     flexDirection='column'
                     alignItems='center'
                     display='flex'
                     md
-                    ml={{ lg: 15, md: 5 }}
-                    mr={{ lg: 10, sm: 10 }}
-                    mt={{ sm: 10, xs: 10 }}
+                    pl={{ lg: 15, md: 5 }}
+                    pr={{ lg: 10, sm: 10 }}
+                    pt={{ sm: 10, xs: 10 }}
                 >
 
                     <Grid width={90} height={90} bgcolor="#01A9F5" sx={{ borderRadius: 20 }} alignItems='center' display='flex' justifyContent='center'>
@@ -172,9 +173,9 @@ const MakeDesignBetter = () => {
                     md
                     alignItems='center'
                     display='flex'
-                    ml={{ lg: 5, md: 5 }}
-                    mr={{ lg: 10, sm: 10 }}
-                    mt={{ sm: 10, xs: 10 }}
+                    pl={{ lg: 5, md: 5 }}
+                    pr={{ lg: 10, sm: 10 }}
+                    pt={{ sm: 10, xs: 10 }}
                 >
                     <Grid width={90} height={90} bgcolor="#40536B" sx={{ borderRadius: 20 }} alignItems='center' display='flex' justifyContent='center'>
                         <Image
@@ -197,9 +198,9 @@ const MakeDesignBetter = () => {
                     md
                     alignItems='center'
                     display='flex'
-                    ml={{ lg: 5, md: 5 }}
-                    mr={{ lg: 10, sm: 10 }}
-                    mt={{ sm: 10, xs: 10 }}>
+                    pl={{ lg: 5, md: 5 }}
+                    pr={{ lg: 10, sm: 10 }}
+                    pt={{ sm: 10, xs: 10 }}>
                     <Grid width={90} height={90} bgcolor="#DBBF05" sx={{ borderRadius: 20 }} alignItems='center' display='flex' justifyContent='center'>
                         <Image
                             width={35}
@@ -220,9 +221,9 @@ const MakeDesignBetter = () => {
                     md
                     alignItems='center'
                     display='flex'
-                    ml={{ lg: 5, md: 5 }}
-                    mr={{ lg: 15, sm: 10 }}
-                    mt={{ sm: 10, xs: 10 }}>
+                    pl={{ lg: 5, md: 5 }}
+                    pr={{ lg: 15, sm: 10 }}
+                    pt={{ sm: 10, xs: 10 }}>
                     <Grid width={90} height={90} bgcolor="#9CC118" sx={{ borderRadius: 20 }} alignItems='center' display='flex' justifyContent='center'>
                         <Image
                             width={35}

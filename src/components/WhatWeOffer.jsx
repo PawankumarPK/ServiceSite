@@ -74,7 +74,7 @@ const WhatWeOffer = () => {
 
 
                 <Grid container justifyContent='center' textAlign="center">
-                    <Typography component="h3" noWrap mt={2} fontSize={45} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
+                    <Typography component="h3" color="#000" noWrap mt={2} fontSize={45} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
                         What We
                     </Typography>
 
@@ -90,7 +90,7 @@ const WhatWeOffer = () => {
                         title="Web Designing"
                         description="From individual and portfolio websites to commercial or custom sites, we have you covered with our wide array of web design services. Let us craft something special just for you."
                         icon={editIcon}
-                        altName = "Edit Icon">
+                        altName="Edit Icon">
                     </ServicesOffer>
 
 
@@ -99,7 +99,7 @@ const WhatWeOffer = () => {
                         title="UI/UX Designing"
                         description="We create user and customer experiences that engage, inspire, and drive tangible business results — all through beautiful UI design."
                         icon={webIcon}
-                        altName = "web Icon">
+                        altName="web Icon">
                     </ServicesOffer>
 
 
@@ -108,7 +108,7 @@ const WhatWeOffer = () => {
                         title="Back End Development"
                         description="Back-end concepts come alive with coding and programming — HTML, CSS, Java, JavaScript, jQuery, and C++ are just some of the tools you’ll use to create stunning results."
                         icon={serverIcon}
-                        altName = "server Icon">
+                        altName="server Icon">
                     </ServicesOffer>
 
 
@@ -116,8 +116,8 @@ const WhatWeOffer = () => {
                         title="Android App Development"
                         description="We specialize in Android app development and provide top-notch services for our clients. Get the perfect user interface and user experience with us, so you can take your apps to the next level."
                         icon={androidIcon}
-                        altName = "android Icon"
-                        >
+                        altName="android Icon"
+                    >
                     </ServicesOffer>
 
                 </Grid>
@@ -137,8 +137,8 @@ const WhatWeOffer = () => {
                         title="IOS App Development"
                         description="We specialize in iOS app development, helping you get the perfect user interface and experience — so you can take your apps to the next level."
                         icon={appStoreIos}
-                        altName = "appStoreIos Icon"
-                        >
+                        altName="appStoreIos Icon"
+                    >
                     </ServicesOffer>
 
 
@@ -148,8 +148,8 @@ const WhatWeOffer = () => {
                         title="Updation & Maintenance"
                         description="New or Existing, All Websites need updation & Maintenance on time to time and We do it for you so that you can focus on your work."
                         icon={domainIcon}
-                        altName = "domain Icon"
-                        >
+                        altName="domain Icon"
+                    >
                     </ServicesOffer>
 
 
@@ -158,8 +158,8 @@ const WhatWeOffer = () => {
                         title="SEO & Promotion"
                         description="Get your business noticed with our SEO Services and Promotional Campaigns, designed to help you reach more organic customers and boost your bottom line."
                         icon={flightIcon}
-                        altName = "flight Icon"
-                        >
+                        altName="flight Icon"
+                    >
                     </ServicesOffer>
 
 
@@ -167,8 +167,8 @@ const WhatWeOffer = () => {
                         title="Business Emails"
                         description="Make an impact with every message you send. Get multiple official emails with our service — and make sure your customers know they're dealing with the real deal."
                         icon={emailIcon}
-                        altName = "Business Emails Icon"
-                        >
+                        altName="Business Emails Icon"
+                    >
                     </ServicesOffer>
 
                 </Grid>
@@ -184,8 +184,8 @@ const WhatWeOffer = () => {
                         title="Social & Email Marketing"
                         description="Entering the new digital era of Internet, Social Media and Emails? Our team will help you generate leads and prospects for your business — so you can stay ahead of the competition."
                         icon={bookmarkIcon}
-                        altName = "Bookmark Icon Icon"
-                        >
+                        altName="Bookmark Icon Icon"
+                    >
                     </ServicesOffer>
 
 
@@ -194,8 +194,8 @@ const WhatWeOffer = () => {
                         title="eCommerce"
                         description="Open up your business to the world with our professional Online Store, and start selling products globally — all while receiving payments directly in your bank or wallet of choice."
                         icon={creditCardIcon}
-                        altName = "creditCard Icon"
-                        >
+                        altName="creditCard Icon"
+                    >
                     </ServicesOffer>
 
 
@@ -203,8 +203,8 @@ const WhatWeOffer = () => {
                         title="Training & Support"
                         description="For any issue you have with our application, software or website — don't hesitate to call. Plus, get personalized training and share your ideas, complaints and suggestions with us."
                         icon={headsetIcon}
-                        altName = "headset Icon"
-                        >
+                        altName="headset Icon"
+                    >
                     </ServicesOffer>
 
 
@@ -212,8 +212,8 @@ const WhatWeOffer = () => {
                         title="Video Promotions"
                         description="Share vital information with a promo video. Discount codes, dates and times for events, or deadlines for the end of a sale. Get your message out fast and make sure everyone knows what's going on."
                         icon={photoVideoIcon}
-                        altName = "photo Video Icon"
-                        >
+                        altName="photo Video Icon"
+                    >
                     </ServicesOffer>
 
                 </Grid>

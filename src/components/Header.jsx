@@ -25,10 +25,11 @@ const NavbarTitle = ({ text }) => (
         lg: 17,
         md: 17,
         sm: 14,
-        xs: 10
+        xs: 6
       }
     }}
-    fontWeight={600}>
+    fontWeight={600}
+    color="#000">
     {text}
   </Typography>
 )
@@ -196,7 +197,7 @@ const Header = () => {
 
 
 
-        <Grid container alignItems='center' mt={2}>
+        <Grid container alignItems='center' pt={2}>
 
           {/* ----------------------- Own button section ----------------------- */}
 
@@ -309,7 +310,7 @@ const Header = () => {
 
 
 
-        <Grid container justifyContent={{ lg: "end", xs: "end" }} alignItems='center' mt={13}>
+        <Grid container justifyContent={{ lg: "end", xs: "end" }} alignItems='center' pt={13}>
 
           {/* ----------------------- We make beautiful & Resposive text section ----------------------- */}
 
@@ -339,14 +340,14 @@ const Header = () => {
               component="h1"
               fontFamily='poppins'
               fontSize={22}
-              color="#fff" mt={4} ml={4}>
+              color="#fff" pt={4} pl={4}>
               Creative
             </Typography>
 
             <Typography
               component="h1"
               fontFamily='poppins-bold'
-              color="#fff" fontSize={{ lg: 40, xs: 30 }} fontWeight={800} ml={4}>
+              color="#fff" fontSize={{ lg: 40, xs: 30 }} fontWeight={800} pl={4}>
               WEBSITE & APPS
             </Typography>
 
@@ -355,12 +356,12 @@ const Header = () => {
               component="subtitle1"
               fontSize={{ lg: 15, xs: 11 }}
               fontFamily='poppins'
-              color="#fff" ml={4} mr={4}>
+              color="#fff" pl={4} pr={4}>
               Are you looking for a rapid but high performance web design or application development? Look no further, we are an advanced digital agency with a team of professional web designers and developers who have worked on countless projects for startups, companies and agencies alike.
             </Typography>
 
 
-            <Grid ml={4} mt={4} mb={0}>
+            <Grid pl={4} pt={4} pb={0}>
               <Button href="#about" scroll={true} variant="outlined" sx={{ borderRadius: 50 }}
                 style={{
                   color: "#fff",

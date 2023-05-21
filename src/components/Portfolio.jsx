@@ -66,9 +66,9 @@ const Portfolio = () => {
 
 
 
-            <Grid mt={10}>
+            <Grid>
                 <Grid container direction="column" alignItems="center">
-                    <Typography component="subtitle2" mt={15} fontSize={14} fontFamily='poppins-medium' textAlign="center" color="#27363B">
+                    <Typography component="subtitle2" pt={15} fontSize={14} fontFamily='poppins-medium' textAlign="center" color="#27363B">
                         Our Portfolio
                     </Typography>
 
@@ -76,7 +76,7 @@ const Portfolio = () => {
 
 
                     <Grid container justifyContent='center' textAlign="center">
-                        <Typography component="h3" noWrap mt={2} fontSize={45} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
+                        <Typography component="h3" color="#000" noWrap mt={2} fontSize={45} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
                             Latest &
                         </Typography>
 

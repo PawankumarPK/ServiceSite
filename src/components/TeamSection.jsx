@@ -82,7 +82,7 @@ const TeamSection = () => {
 
 
             <Grid container justifyContent='center' textAlign="center">
-                <Typography component='h3' noWrap mt={2} fontSize={{ lg: 45, md: 40, sm: 40, xs: 40 }} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
+                <Typography component='h3' color="#000" noWrap mt={2} fontSize={{ lg: 45, md: 40, sm: 40, xs: 40 }} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
                     We have some
                 </Typography>
 
@@ -91,7 +91,7 @@ const TeamSection = () => {
                 </Typography>
             </Grid>
 
-            <Typography component='h4' noWrap mt={1} fontSize={{ lg: 45, md: 40, sm: 40, xs: 40 }} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
+            <Typography component='h4' color="#000" noWrap mt={1} fontSize={{ lg: 45, md: 40, sm: 40, xs: 40 }} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
                 talented staff
             </Typography>
 

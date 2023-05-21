@@ -107,7 +107,7 @@ const Footer = () => {
                         mt={3}>
 
 
-                        <Typography component="subtitle1" textAlign='start' fontSize={{ lg: 15, xs: 15 }} fontFamily="poppins-regular">
+                        <Typography component="subtitle1" color="#000" textAlign='start' fontSize={{ lg: 15, xs: 15 }} fontFamily="poppins-regular">
                             Accelerate your online presence
                         </Typography>
 
