@@ -43,22 +43,23 @@ const variants = {
 
 ///----------------- Team common sections -----------------
 const PortfolioDesc = ({ name, img, nameBg, altName }) => (
-    <Grid mt={10} mr={{ lg: 5, md: 7, sm: 5, xs: 5 }} ml={{ lg: 5, md: 7, sm: 5 }}>
+    <Grid mt={10} mr={{ lg: 5, md: 7, }} ml={{ lg: 5, md: 7, sm: 5 }}>
 
-        <Grid justifyContent='center' alignItems="center" display='flex'
+        <Grid justifyContent='center' ml={{ xs: 3.5 }} width={{ lg: 325, sm: 325, xs: 325 }} alignItems="center" display='flex'
             style={{
                 color: "#707070",
                 border: '2px solid',
-            }}
-        >
+            }}>
 
             <Image
                 width={320}
                 src={img}
                 alt={altName} />
+
         </Grid>
 
         <Box
+
 
             sx={{
                 pt: 2,
@@ -84,19 +85,12 @@ const PortfolioDesc = ({ name, img, nameBg, altName }) => (
                 {name}
 
             </Typography>
-
-
         </Box>
-
-
-
-
     </Grid>
 )
 
 
 const Portfolio = () => {
-
 
     <Grid
         ml={{ lg: 4, md: 4 }}
@@ -112,9 +106,7 @@ const Portfolio = () => {
     return (
 
 
-        <Grid height={1750} id="portfolio">
-
-
+        <Grid height={{ lg: 1750, md: 1750, sm: 3200 }} id="portfolio">
 
             <Grid container direction="column" alignItems="center">
                 <Typography component="subtitle2" pt={15} fontSize={14} fontFamily='poppins-medium' textAlign="center" color="#27363B">
@@ -125,17 +117,17 @@ const Portfolio = () => {
 
 
                 <Grid container justifyContent='center' textAlign="center">
-                    <Typography component="h3" color="#000" noWrap mt={2} fontSize={45} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
+                    <Typography component="h3" color="#000" mt={2} fontSize={{lg:45,md:45,xs:40}} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
                         Latest &
                     </Typography>
 
-                    <Typography component="h3" color='#9CC118' mt={2} fontSize={45} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
+                    <Typography component="h3" color='#9CC118' mt={{lg:2,md:2,sm:0,xs:0}} fontSize={{lg:45,md:45,xs:40}} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
                         &nbsp;Creative Work
                     </Typography>
                 </Grid>
 
             </Grid>
-            <Grid >
+            <Grid>
 
                 {/* <OwlCarousel items={3}
 
@@ -213,7 +205,7 @@ const Portfolio = () => {
                     </OwlCarousel> */}
 
 
-                <Grid display='flex' justifyContent='center' >
+                <Grid display={{ lg: 'flex', md: 'flex' }} justifyContent='center'  >
 
                     {/* Chemtime Academy */}
                     <Link href="https://chemtime.co.in/" scroll={true} passHref target="_blank">
@@ -250,7 +242,7 @@ const Portfolio = () => {
                 </Grid>
 
 
-                <Grid display='flex' justifyContent='center' >
+                <Grid display={{ lg: 'flex', md: 'flex' }} justifyContent='center' >
 
                     {/* Guragon IAS Academy */}
                     <Link href="https://ielts-guroo.netlify.app/" scroll={true} passHref target="_blank">

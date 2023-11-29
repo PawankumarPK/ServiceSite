@@ -1,8 +1,8 @@
 import { Box, Grid, Typography } from '@mui/material'
 import { Container } from '@mui/system'
-import file from "../../public/png/file.png";
-import rocket from "../../public/png/rocket.png";
-import lightBulbImg from "../../public/png/lightbulb.png";
+import business from "../../public/png/business.png";
+import moneyBack from "../../public/png/money-back.png";
+import support from "../../public/png/support.png";
 
 import React from 'react'
 import Image from 'next/image';
@@ -22,7 +22,7 @@ const Guarantee = () => {
 
                 <Grid container justifyContent='center' textAlign="center" mb={5}>
                     <Typography component="h3" noWrap mt={2} fontSize={45} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
-                        We Gives
+                        Work With
                     </Typography>
 
                     <Typography component="h3" color='#9CC118' mt={2} fontSize={45} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
@@ -48,7 +48,7 @@ const Guarantee = () => {
                                 height={120}
                                 pt={5}
                                 sx={{ position: 'relative', pt: 5 }}
-                                src={lightBulbImg}
+                                src={moneyBack}
                                 alt='LightBulb Image'>
                             </Image>
 
@@ -99,8 +99,8 @@ const Guarantee = () => {
                                 height={120}
                                 pt={5}
                                 sx={{ position: 'relative', pt: 5 }}
-                                src={file}
-                                alt='File Image'>
+                                src={support}
+                                alt='Money Back Image'>
                             </Image>
 
                             <Typography sx={{ position: "absolute", pt: 9, pl: 3 }}
@@ -150,8 +150,8 @@ const Guarantee = () => {
                                 height={120}
                                 pt={5}
                                 sx={{ position: 'relative', pt: 5 }}
-                                src={rocket}
-                                alt='Rocket Image'>
+                                src={business}
+                                alt='moneyBack Image'>
                             </Image>
 
                             <Typography sx={{ position: "absolute", pt: 9, pl: 3 }}

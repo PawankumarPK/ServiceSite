@@ -52,11 +52,11 @@ const WhyChooseUs = () => {
 
 
             <Grid container justifyContent='center' textAlign="center">
-                <Typography component="h3" color="#000" noWrap mt={2} fontSize={45} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
+                <Typography component="h3" color="#000" noWrap mt={2} fontSize={{lg:45,md:45,xs:40}} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
                     Why Choose
                 </Typography>
 
-                <Typography  component="h3" color='#9CC118' mt={2} fontSize={45} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
+                <Typography  component="h3" color='#9CC118' mt={2} fontSize={{lg:45,md:45,xs:40}} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
                     &nbsp;Us
                 </Typography>
             </Grid>
