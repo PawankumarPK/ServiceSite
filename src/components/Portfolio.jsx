@@ -312,9 +312,6 @@ const Portfolio = () => {
             </Grid>
         </Grid>
 
-
-
-
     );
 
 };
