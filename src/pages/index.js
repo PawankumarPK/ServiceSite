@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Footer from '../components/Footer'
+import Guarantee from '../components/Guarantee'
 import Header from '../components/Header'
 import MakeDesignBetter from '../components/MakeDesignBetter'
 import Portfolio from '../components/Portfolio'
@@ -20,14 +21,16 @@ export default function Home() {
         <link rel="icon" href="/ownLogo.ico" />
       </Head>
 
-      
+
       <Header />
       <MakeDesignBetter />
+      <Guarantee />
+      <Portfolio />
       <YouImagineWeCreate />
       <WhyChooseUs />
       <WhatWeOffer />
       <TeamSection />
-      <Portfolio/>
+
       <Footer />
 
 
