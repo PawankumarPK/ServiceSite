@@ -1,4 +1,4 @@
-import { Box, Card, CardActionArea, CardContent, CardMedia, Grid, Grow, Paper, Stack, Typography } from '@mui/material'
+import { Grid, Typography } from '@mui/material'
 import awardIcon from "../svg/awardIcon.svg";
 import chartLineIcon from "../svg/chartLineIcon.svg";
 import newsIcon from "../svg/newsIcon.svg";

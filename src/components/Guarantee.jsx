@@ -9,7 +9,7 @@ import Image from 'next/image';
 
 const Guarantee = () => {
     return (
-        <Grid bgcolor="#F7F8FA">
+        <Grid bgcolor="#F7F8FA" id="guarantee">
 
             <Grid container direction="column" alignItems="center">
 
