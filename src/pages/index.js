@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import Footer from '../components/Footer'
 import Guarantee from '../components/Guarantee'
 import Header from '../components/Header'
@@ -9,15 +8,15 @@ import TeamSection from '../components/TeamSection'
 import WhatWeOffer from '../components/WhatWeOffer'
 import WhyChooseUs from '../components/WhyChooseUs'
 import YouImagineWeCreate from '../components/YouImagineWeCreate'
-import styles from '../styles/Home.module.css'
 
 
 export default function Home() {
   return (
     <div>
       <Head>
-        <title>Own Technologies</title>
-        <meta name="description" content="We are an advanced digital agency with a team of professionals who always develop user-friendly, responsive and mobile-friendly websites. We offer innovative online solutions for companies to promote their brand in the best possible way." />
+        <title>Expert Website and Mobile App Development Services OwnTechnologies</title>
+        <meta name="description" content="Transform your ideas into reality with our website and mobile app development services. As a leading agency, we specialize in crafting innovative digital solutions to drive your business forward." />
+        <meta name="keywords" content="Website development,Mobile app development,Responsive web design,Android app development,Back-end development,E-commerce solutions,Mobile app UI/UX,Enterprise app development" />
         <link rel="icon" href="/ownLogo.ico" />
       </Head>
 

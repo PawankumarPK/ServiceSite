@@ -299,9 +299,9 @@ const Portfolio = () => {
                         </PortfolioDesc>
                     </Link>
 
-                    {/* Optimum Travel */}
+                    {/* Educat */}
                     <PortfolioDesc
-                        name="Coming Soon"
+                        name="Coming Soon.."
                         nameBg={teamBgTwo}
                         img={portfolio_8}
                         altName="Coming Soon">
@@ -311,7 +311,7 @@ const Portfolio = () => {
                     {/* INGTI Travel */}
 
                     <PortfolioDesc
-                        name="Coming Soon"
+                        name="Coming Soon.."
                         nameBg={teamBgThree}
                         img={portfolio_9}
                         altName="Coming Soon">
