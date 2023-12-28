@@ -11,6 +11,10 @@ import portfolio_3 from "../../public/png/portfolio_3.png";
 import portfolio_4 from "../../public/png/portfolio_4.png";
 import portfolio_5 from "../../public/png/portfolio_5.png";
 import portfolio_6 from "../../public/png/portfolio_6.png";
+import portfolio_7 from "../../public/png/portfolio_7.png";
+import portfolio_8 from "../../public/png/portfolio_8.png";
+import portfolio_9 from "../../public/png/portfolio_9.png";
+import portfolio_10 from "../../public/png/portfolio_10.png";
 import Image from "next/image";
 import { Box, Grid, Link, Typography } from "@mui/material";
 import { motion, AnimatePresence } from 'framer-motion'
@@ -106,7 +110,7 @@ const Portfolio = () => {
     return (
 
 
-        <Grid height={{ lg: 1750, md: 1750, sm: 3200 }} id="portfolio">
+        <Grid height={{ lg: 2350, md: 1750, sm: 3200 }} id="portfolio">
 
             <Grid container direction="column" alignItems="center">
                 <Typography component="subtitle2" pt={15} fontSize={14} fontFamily='poppins-medium' textAlign="center" color="#27363B">
@@ -117,11 +121,11 @@ const Portfolio = () => {
 
 
                 <Grid container justifyContent='center' textAlign="center">
-                    <Typography component="h3" color="#000" mt={2} fontSize={{lg:45,md:45,xs:40}} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
+                    <Typography component="h3" color="#000" mt={2} fontSize={{ lg: 45, md: 45, xs: 40 }} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
                         Latest &
                     </Typography>
 
-                    <Typography component="h3" color='#9CC118' mt={{lg:2,md:2,sm:0,xs:0}} fontSize={{lg:45,md:45,xs:40}} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
+                    <Typography component="h3" color='#9CC118' mt={{ lg: 2, md: 2, sm: 0, xs: 0 }} fontSize={{ lg: 45, md: 45, xs: 40 }} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
                         &nbsp;Creative Work
                     </Typography>
                 </Grid>
@@ -245,7 +249,7 @@ const Portfolio = () => {
                 <Grid display={{ lg: 'flex', md: 'flex' }} justifyContent='center' >
 
                     {/* Guragon IAS Academy */}
-                    <Link href="https://ielts-guroo.netlify.app/" scroll={true} passHref target="_blank">
+                    <Link href="https://gurgaon-ias-academy.netlify.app/" scroll={true} passHref target="_blank">
                         <PortfolioDesc
                             name="Gurgaon IAS"
                             nameBg={teamBgOne}
@@ -253,15 +257,17 @@ const Portfolio = () => {
                             altName="Gurgaon IAS Website">
                         </PortfolioDesc>
                     </Link>
-
+                    
                     {/* Optimum Travel */}
-                    <PortfolioDesc
-                        name="Optimum Travel"
-                        nameBg={teamBgTwo}
-                        img={portfolio_6}
-                        altName="Optimum Travel Website">
+                    <Link href="https://optimumholiday.com/" scroll={true} passHref target="_blank">
+                        <PortfolioDesc
+                            name="Optimum Travel"
+                            nameBg={teamBgTwo}
+                            img={portfolio_6}
+                            altName="Optimum Travel Website">
 
-                    </PortfolioDesc>
+                        </PortfolioDesc>
+                    </Link>
 
                     {/* INGTI Travel */}
                     <Link href="https://ignti-landing-page.netlify.app/" scroll={true} passHref target="_blank">
@@ -275,6 +281,46 @@ const Portfolio = () => {
                     </Link>
 
                 </Grid>
+
+
+
+
+
+
+                <Grid display={{ lg: 'flex', md: 'flex' }} justifyContent='center' >
+
+                    {/* Guragon IAS Academy */}
+                    <Link href="https://ownsafe.in/" scroll={true} passHref target="_blank">
+                        <PortfolioDesc
+                            name="Ownsafe"
+                            nameBg={teamBgOne}
+                            img={portfolio_7}
+                            altName="Ownsafe">
+                        </PortfolioDesc>
+                    </Link>
+
+                    {/* Optimum Travel */}
+                    <PortfolioDesc
+                        name="Coming Soon"
+                        nameBg={teamBgTwo}
+                        img={portfolio_8}
+                        altName="Coming Soon">
+
+                    </PortfolioDesc>
+
+                    {/* INGTI Travel */}
+
+                    <PortfolioDesc
+                        name="Coming Soon"
+                        nameBg={teamBgThree}
+                        img={portfolio_9}
+                        altName="Coming Soon">
+
+                    </PortfolioDesc>
+
+
+                </Grid>
+
 
 
                 <Grid justifyContent='center' alignItems='center' display='flex' pt={8}>
@@ -302,7 +348,7 @@ const Portfolio = () => {
                 </Grid>
 
             </Grid>
-        </Grid>
+        </Grid >
 
     );
 
