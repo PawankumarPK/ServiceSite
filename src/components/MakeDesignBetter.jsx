@@ -105,7 +105,7 @@ const MakeDesignBetter = () => {
                     </Typography>
 
                     <Grid pt={5}>
-                        <Button onClick={() => window.open(`tel:+9910765616`)}variant="contained" sx={{
+                        <Button onClick={() => window.open(`tel:9910765616`)}variant="contained" sx={{
                             borderRadius: 50, bgcolor: "#27363B",
                             ':hover': {
                                 bgcolor: '#9CC118',

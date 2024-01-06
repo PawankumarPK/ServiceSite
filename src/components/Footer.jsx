@@ -161,7 +161,7 @@ const Footer = () => {
                             sx={{
                                 cursor: 'pointer',
                             }}
-                            onClick={() => window.open(`tel:+9910765616`)}>
+                            onClick={() => window.open(`tel:9910765616`)}>
                             <Image
                                 width={18}
                                 src={callIcon}

@@ -63,7 +63,7 @@ const Header = () => {
         {/* ----------------------- Whatsapp and contact number ----------------------- */}
         <Grid container alignItems='center' spacing={8} pt={6} pb={2}>
           <Grid
-            onClick={() => window.open(`tel:+9910765616`)}
+            onClick={() => window.open(`tel:9910765616`)}
             container item xs alignItems='center'>
 
 
