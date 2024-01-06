@@ -1,6 +1,6 @@
 import { Box, Button, Grid, Link, Typography } from '@mui/material'
 import { Container } from '@mui/system'
-import studyImage from "../../public/png/study_two.png";
+import studyImage from "../../public/png/girl.png";
 import folderOpenIcon from "../svg/folderOpenIcon.svg";
 import editIcon from "../svg/editIcon.svg";
 import codeIcon from "../svg/codeIcon.svg";
@@ -105,7 +105,7 @@ const MakeDesignBetter = () => {
                     </Typography>
 
                     <Grid pt={5}>
-                        <Button href="#contact" scroll={true} variant="contained" sx={{
+                        <Button onClick={() => window.open(`tel:+9910765616`)}variant="contained" sx={{
                             borderRadius: 50, bgcolor: "#27363B",
                             ':hover': {
                                 bgcolor: '#9CC118',

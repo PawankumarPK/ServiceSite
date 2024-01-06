@@ -47,9 +47,9 @@ const variants = {
 
 ///----------------- Team common sections -----------------
 const PortfolioDesc = ({ name, img, nameBg, altName }) => (
-    <Grid mt={10} mr={{ lg: 5, md: 7, }} ml={{ lg: 5, md: 7, sm: 5 }}>
+    <Grid mt={10} mr={{ lg: 5, md: 7, }} ml={{ lg: 5, md: 7, sm: 5 }} >
 
-        <Grid justifyContent='center' ml={{ xs: 3.5 }} width={{ lg: 325, sm: 325, xs: 325 }} alignItems="center" display='flex'
+        <Grid justifyContent='center' ml={{ xs: 2 }} width={{ lg: 325, sm: 325, xs: 325 }} alignItems="center" display='flex'
             style={{
                 color: "#707070",
                 border: '2px solid',
@@ -99,7 +99,8 @@ const Portfolio = () => {
     <Grid
         ml={{ lg: 4, md: 4 }}
         width={{ lg: 300, md: 350, sm: 300, xs: 350 }}
-        mt={{ sm: 5, xs: 5 }}>
+        mt={{ sm: 5, xs: 5 }}
+        bgcolor="#F7F8FA">
         <Image
             layout='responsive'
             priority

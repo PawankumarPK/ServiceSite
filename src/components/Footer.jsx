@@ -20,8 +20,6 @@ const Footer = () => {
     return (
         <Grid bgcolor="#fff" id="contact">
 
-
-
             <Grid
                 mb={8}
                 justifyContent={{ lg: "center", md: "start", sm: "start", xs: "start" }}
@@ -159,7 +157,11 @@ const Footer = () => {
                         mt={1}>
 
 
-                        <Grid alignItems='center' display='flex' mt={5}>
+                        <Grid alignItems='center' display='flex' mt={5}
+                            sx={{
+                                cursor: 'pointer',
+                            }}
+                            onClick={() => window.open(`tel:+9910765616`)}>
                             <Image
                                 width={18}
                                 src={callIcon}
@@ -172,7 +174,11 @@ const Footer = () => {
 
 
 
-                        <Grid alignItems='center' display='flex' mt={5}>
+                        <Grid alignItems='center' display='flex' mt={5}
+                            sx={{
+                                cursor: 'pointer',
+                            }}
+                            onClick={() => window.open(`mailto:hello@owntechnologies.com?subject=Enquiry`)}>
 
                             <Image
                                 width={18}

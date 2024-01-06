@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import { Box, Button, Grid, Typography, Drawer, IconButton, createTheme, useTheme, useMediaQuery, } from "@mui/material";
 import bannerImage from "../media/bannerImg.jpg";
-import whatsappIcon from "../svg/whatsappIcon.svg";
+import calling from "../svg/calling.svg";
+import popupWhatsapp from "../../public/png/popup-whatsapp.png";
+import upArrow from "../../public/png/up-arrow.png";
 
 import facebookIcon from "../svg/facebookIcon.svg";
 import instagramIcon from "../svg/instagramIcon.svg";
@@ -11,12 +13,10 @@ import menuIcon from "../svg/menu.svg";
 
 import { Container } from '@mui/system';
 import Image from 'next/image';
-import Link from "next/link"
 
-import { HashLink as SuperLink } from 'react-router-hash-link'
-import DrawerNav from './Drawer';
 import DrawerItem from './Drawer';
 import { useEffect } from 'react';
+import Link from 'next/link';
 
 
 
@@ -49,7 +49,7 @@ const Header = () => {
 
   return (
 
-    <Box sx={{ display: 'flex', alignItems: 'center' }} id="home" >
+    <Box sx={{ display: 'flex', alignItems: 'center' }} id="home" bgcolor="#F7F8FA">
       <Image
         priority
         src={bannerImage}
@@ -63,10 +63,14 @@ const Header = () => {
         {/* ----------------------- Whatsapp and contact number ----------------------- */}
         <Grid container alignItems='center' spacing={8} pt={6} pb={2}>
           <Grid
+            onClick={() => window.open(`tel:+9910765616`)}
             container item xs alignItems='center'>
 
+
             <Grid
+
               sx={{
+                cursor: 'pointer',
                 width: {
                   lg: 22,
                   md: 22,
@@ -82,15 +86,17 @@ const Header = () => {
               }}>
               <Image
                 layout="responsive"
-                src={whatsappIcon}
+                src={calling}
                 component="img"
-                alt="Whatsapp logo">
+                alt="Calling logo">
               </Image>
             </Grid>
+
 
             <Typography
               component="p"
               sx={{
+                cursor: 'pointer',
                 fontSize: {
                   lg: 18,
                   md: 18,
@@ -419,6 +425,83 @@ const Header = () => {
                 </Typography>
 
               </Button>
+            </Grid>
+
+            {/* Whatsapp Icon */}
+            <Grid
+              onClick={() => window.open(`https://wa.me/+919650636804?text=`)}
+              p={1}
+              position="fixed"
+              display='flex'
+              justifyContent="end"
+              left='78%'
+              top='75%'
+              container
+              sx={{
+                cursor: 'pointer',
+                left: {
+                  lg: '90%',
+                  md: '90%',
+                  sm: '80%',
+                  xs: '80%'
+                },
+                width: {
+                  lg: 80,
+                  md: 80,
+                  sm: 80,
+                  xs: 70
+                },
+
+              }}>
+              <Image
+                layout="responsive"
+                src={popupWhatsapp}
+                component="img"
+                alt="Whatsapp logo">
+              </Image>
+
+            </Grid>
+
+            {/* Up Arrow Icon */}
+            <Grid
+              p={1}
+              position="fixed"
+              display='flex'
+              justifyContent="end"
+              left='78%'
+              top='85%'
+              container
+              sx={{
+                cursor: 'pointer',
+                left: {
+                  lg: '90.3%',
+                  md: '90.3%',
+                  sm: '80.3%',
+                  xs: '81%'
+                },
+                width: {
+                  lg: 75,
+                  md: 75,
+                  sm: 70,
+                  xs: 65
+                },
+
+              }}>
+
+              <Link href="#" scroll={true} passHref>
+                <Grid
+                  paddingTop={2}
+                  sx={{
+                    cursor: 'pointer',
+                  }}>
+                  <Image
+                    layout="responsive"
+                    src={upArrow}
+                    component="img"
+                    alt="Up Arrow">
+                  </Image>
+                </Grid>
+              </Link>
             </Grid>
 
           </Grid>

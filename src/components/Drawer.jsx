@@ -28,7 +28,7 @@ const NavbarTitle = ({ text }) => (
 const DrawerItem = ({ chooseMessage }) => {
     return (
         <>
-            <Box p={2} width="250px" >
+            <Box p={2} width="250px" bgcolor="#F7F8FA">
                 <Grid item xs>
                     <Grid height={75}>
 
