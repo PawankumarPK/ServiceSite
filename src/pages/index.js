@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import DrawerNav from '../components/Drawer'
+import Drawer from '../components/Drawer'
 import Footer from '../components/Footer'
 import Guarantee from '../components/Guarantee'
 import Header from '../components/Header'

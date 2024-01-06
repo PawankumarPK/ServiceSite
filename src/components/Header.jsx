@@ -1,5 +1,5 @@
-import React from 'react'
-import { Box, Button, Grid, Typography } from "@mui/material";
+import React, { useState } from 'react'
+import { Box, Button, Grid, Typography, Drawer, IconButton, createTheme, useTheme, useMediaQuery, } from "@mui/material";
 import bannerImage from "../media/bannerImg.jpg";
 import whatsappIcon from "../svg/whatsappIcon.svg";
 
@@ -7,18 +7,23 @@ import facebookIcon from "../svg/facebookIcon.svg";
 import instagramIcon from "../svg/instagramIcon.svg";
 import linkdinIcon from "../svg/linkedinIcon.svg";
 import twitterIcon from "../svg/twitterIcon.svg";
-import menuIcon from "../svg/menuIcon.svg";
+import menuIcon from "../svg/menu.svg";
 
 import { Container } from '@mui/system';
 import Image from 'next/image';
 import Link from "next/link"
 
 import { HashLink as SuperLink } from 'react-router-hash-link'
+import DrawerNav from './Drawer';
+import DrawerItem from './Drawer';
+import { useEffect } from 'react';
+
 
 
 ///----------------- Navbar common title -----------------
 const NavbarTitle = ({ text }) => (
   <Typography
+    display={{ xs: 'none', sm: 'block', md: 'block', lg: 'block' }}
     component="p"
     sx={{
       fontSize: {
@@ -36,9 +41,14 @@ const NavbarTitle = ({ text }) => (
 
 
 const Header = () => {
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false)
 
+  const chooseMessage = (message) => {
+    setIsDrawerOpen(message);
+  };
 
   return (
+
     <Box sx={{ display: 'flex', alignItems: 'center' }} id="home" >
       <Image
         priority
@@ -237,7 +247,7 @@ const Header = () => {
 
 
           {/* ----------------------- Navbar section ----------------------- */}
-          <Grid item xs>
+          <Grid item xs >
             <Grid container height={75} bgcolor="#fff" alignContent='center' justifyContent="end">
 
 
@@ -258,7 +268,7 @@ const Header = () => {
                 <Link href="#guarantee" scroll={true} passHref>
                   <NavbarTitle text="GUARANTEE" />
                 </Link>
-              </Grid> 
+              </Grid>
 
 
               <Grid item xs="auto" paddingRight={{ lg: 4, xs: 2 }}>
@@ -287,8 +297,42 @@ const Header = () => {
                 <Link href="#contact" scroll={true} passHref>
                   <NavbarTitle text="CONTACT" />
                 </Link>
+              </Grid>
+
+              {/* Drawer */}
+
+
+
+              <Grid display={{ xs: 'block', sm: 'none', md: 'none', lg: 'none' }} paddingRight={{ lg: 4, xs: 2 }}>
+
+                <Grid width={30}>
+                  <Image
+                    onClick={() => setIsDrawerOpen(true)}
+                    layout="responsive"
+                    src={menuIcon}
+                    component="img"
+                    alt="Menu Icon">
+                  </Image>
+                </Grid>
+
+
+
+                {/* <DrawerNav /> */}
+
+                <Drawer
+                  anchor='left'
+                  open={isDrawerOpen}
+                  onClose={() => {
+                    setIsDrawerOpen(chooseMessage)
+                  }
+                  }>
+
+                  <DrawerItem chooseMessage={chooseMessage} />
+
+                </Drawer>
 
               </Grid>
+
 
             </Grid>
           </Grid>

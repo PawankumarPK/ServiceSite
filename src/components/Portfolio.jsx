@@ -222,7 +222,7 @@ const Portfolio = () => {
                     </Link>
 
                     {/* Givan Academy */}
-                    <Link href="https://givan-academy.netlify.app/" scroll={true} passHref target="_blank">
+                    {/* <Link href="https://givan-academy.netlify.app/" scroll={true} passHref target="_blank">
                         <PortfolioDesc
                             name="Givan Academy"
                             nameBg={teamBgTwo}
@@ -230,7 +230,18 @@ const Portfolio = () => {
                             altName="Givan Academy Website">
 
                         </PortfolioDesc>
-                    </Link>
+                    </Link> */}
+
+                    {/* Educat */}
+                    <PortfolioDesc
+                        name="Coming Soon.."
+                        nameBg={teamBgTwo}
+                        img={portfolio_8}
+                        altName="Coming Soon">
+
+                    </PortfolioDesc>
+
+
 
                     {/* IELTS Guroo Academy */}
                     <Link href="https://ielts-guroo.netlify.app/" scroll={true} passHref target="_blank">
@@ -257,7 +268,7 @@ const Portfolio = () => {
                             altName="Gurgaon IAS Website">
                         </PortfolioDesc>
                     </Link>
-                    
+
                     {/* Optimum Travel */}
                     <Link href="https://optimumholiday.com/" scroll={true} passHref target="_blank">
                         <PortfolioDesc
