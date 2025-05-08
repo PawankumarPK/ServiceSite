@@ -167,7 +167,7 @@ const Footer = () => {
                                 src={callIcon}
                                 alt="call Icon" />
                             <Typography component="subtitle1" ml={2} fontFamily='poppins-regular' color="#000" textTransform='none'>
-                                +91-9910765616 / 9650636804
+                                +91-9910765616
                             </Typography>
 
                         </Grid>
@@ -186,7 +186,7 @@ const Footer = () => {
                                 alt="email Icon" />
 
                             <Typography component="subtitle1" ml={2} fontFamily='poppins-regular' color="#000" textTransform='none'>
-                                hello@owntechnologies.com
+                                hello@owntechnologies.in
                             </Typography>
 
                         </Grid>
@@ -228,7 +228,7 @@ const Footer = () => {
 
                         <Grid width={{ lg: 270, md: 300, sm: 150 }} ml={2}>
                             <Typography component="subtitle1" fontFamily='poppins-regular' color="#000" >
-                                C-717, Jvts Garden, Chattarpur, New DELHI - 110074
+                                B-162/1, Birla Farm, Chattarpur, New DELHI - 110074
                             </Typography>
                         </Grid>
 

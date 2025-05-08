@@ -111,10 +111,10 @@ const Portfolio = () => {
     return (
 
 
-        <Grid height={{ lg: 2350, md: 1750, sm: 3200 }} id="portfolio" bgcolor="#F7F8FA" >
+        <Grid height={{ lg: 2300, md: 1750, sm: 3200 }} id="portfolio" bgcolor="#F7F8FA" >
 
             <Grid container direction="column" alignItems="center">
-                <Typography component="subtitle2" pt={15} fontSize={14} fontFamily='poppins-medium' textAlign="center" color="#27363B">
+                <Typography component="subtitle2" pt={0} fontSize={14} fontFamily='poppins-medium' textAlign="center" color="#27363B">
                     Our Portfolio
                 </Typography>
 

@@ -13,7 +13,7 @@ const YouImagineWeCreate = () => {
 
             <Grid container direction="column" alignItems="center">
 
-                <Typography component="p" mt={10} fontSize={14} fontFamily='poppins-medium' textAlign="center" color="#27363B">
+                <Typography component="p" mt={0} fontSize={14} fontFamily='poppins-medium' textAlign="center" color="#27363B">
                     How To Start
                 </Typography>
 
@@ -31,7 +31,7 @@ const YouImagineWeCreate = () => {
                 </Grid>
 
 
-                <Grid container={{ lg: true, sm: false }} pb={15} pt={10} alignItems='center' justifyContent='center'>
+                <Grid container={{ lg: true, sm: false }} pb={5} pt={10} alignItems='center' justifyContent='center'>
 
 
                     {/* ------------------------- Tell your requirements Section ------------------------*/}

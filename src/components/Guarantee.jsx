@@ -31,7 +31,7 @@ const Guarantee = () => {
                 </Grid>
 
 
-                <Grid container={{ lg: true, sm: false }} pb={15} pt={10} alignItems='center' justifyContent='center'>
+                <Grid container={{ lg: true, sm: false }} pb={15} pt={5} alignItems='center' justifyContent='center'>
 
 
                     {/* ------------------------- Tell your requirements Section ------------------------*/}

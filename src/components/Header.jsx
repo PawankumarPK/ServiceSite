@@ -361,7 +361,7 @@ const Header = () => {
           {/* ----------------------- We make beautiful & Resposive text section ----------------------- */}
 
           <Grid>
-            <Typography component="h3" color="#000" pr={{ lg: 5, xs: 2 }} fontSize={40} fontFamily="poppins-bold">
+            <Typography component="h3" color="#000" pr={{ lg: 5, xs: 2 }} mt={-10} fontSize={40} fontFamily="poppins-bold">
               WE MAKE
             </Typography>
 
@@ -376,7 +376,8 @@ const Header = () => {
           <Grid
             flexDirection='column'
             container height={{ lg: 350, xs: 330 }}
-            width={{ lg: 600, md: 400, sm: 400, xs: 400 }}
+            width={{ lg: 550, md: 400, sm: 400, xs: 400 }}
+            mt={-3}
             bgcolor="#DBD525"
 
           >
@@ -429,13 +430,13 @@ const Header = () => {
 
             {/* Whatsapp Icon */}
             <Grid
-              onClick={() => window.open(`https://wa.me/+919650636804?text=`)}
+              onClick={() => window.open(`https://wa.me/+919910765616?text=`)}
               p={1}
               position="fixed"
               display='flex'
               justifyContent="end"
               left='78%'
-              top='75%'
+              top='80%'
               container
               sx={{
                 cursor: 'pointer',
@@ -463,7 +464,7 @@ const Header = () => {
             </Grid>
 
             {/* Up Arrow Icon */}
-            <Grid
+            {/* <Grid
               p={1}
               position="fixed"
               display='flex'
@@ -502,7 +503,7 @@ const Header = () => {
                   </Image>
                 </Grid>
               </Link>
-            </Grid>
+            </Grid> */}
 
           </Grid>
 

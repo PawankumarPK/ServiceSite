@@ -20,7 +20,7 @@ const MakeDesignBetter = () => {
                 alignItems="center"
                 id="about"
                 container={{ lg: true, sm: false }}
-                pt={{ lg: 30, md: 30, sm: 15, xs: 15 }}
+                pt={{ lg: 15, md: 30, sm: 15, xs: 15 }}
                 textAlign={{ lg: "start", md: "start", sm: "center", xs: "center" }}
             // height={{ lg: 600, sm: 700, }}
             >
@@ -138,7 +138,7 @@ const MakeDesignBetter = () => {
             </Grid>
 
             {/* ----------------------- Circle design section ----------------------- */}
-            <Grid pt={5} pb={20} container alignItems='center' display='flex' justifyContent='center'>
+            <Grid pt={5} pb={10} container alignItems='center' display='flex' justifyContent='center'>
 
                 <Grid
                     flexDirection='column'
