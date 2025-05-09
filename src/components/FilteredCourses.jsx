@@ -13,8 +13,10 @@ import {
     Chip
 } from '@mui/material';
 import { motion, AnimatePresence } from 'framer-motion';
-import teamBgTwo from "../../public/png/teamBg2.png";
 import portfolio_8 from "../../public/png/portfolio_8.png";
+import teamBgOne from "../../public/png/teamBg1.png";
+import teamBgTwo from "../../public/png/teamBg2.png";
+import teamBgThree from "../../public/png/teamBg3.png";
 
 
 // Replace with actual course images
@@ -27,6 +29,7 @@ const categorizedCourseData = [
                 name: "Portfolio 1",
                 description: "CSIR NET - Chemistry",
                 image: "../png/portfolio_8.png",
+                nameBg: "../../png/teamBg1.png",
                 batch: "Morning Batch",
                 location: "Uttar Pradesh"
             },
@@ -35,6 +38,7 @@ const categorizedCourseData = [
                 name: "Portfolio 2",
                 description: "CSIR NET - Physics",
                 image: "../png/portfolio_8.png",
+                nameBg: "../../png/teamBg2.png",
                 location: "Delhi"
             },
             {
@@ -42,6 +46,7 @@ const categorizedCourseData = [
                 name: "Portfolio 3",
                 description: "CSIR NET - Physics",
                 image: "../png/portfolio_8.png",
+                nameBg: "../../png/teamBg3.png",
                 location: "Delhi"
             }
         ]
@@ -54,6 +59,7 @@ const categorizedCourseData = [
                 name: "App Design 1",
                 description: "Android Development",
                 image: "../png/portfolio_8.png",
+                nameBg: "../../png/teamBg1.png",
                 location: "Bangalore"
             },
             {
@@ -61,6 +67,7 @@ const categorizedCourseData = [
                 name: "App Design 2",
                 description: "iOS Development",
                 image: "../png/portfolio_8.png",
+                nameBg: "../../png/teamBg2.png",
                 location: "Mumbai"
             }
         ]
@@ -73,6 +80,7 @@ const categorizedCourseData = [
                 name: "Video Edit 1",
                 description: "Premiere Pro Basics",
                 image: "../png/portfolio_8.png",
+                nameBg: "../../png/teamBg1.png",
                 location: "Online"
             }
         ]
@@ -85,6 +93,7 @@ const categorizedCourseData = [
                 name: "AI Model Training",
                 description: "Train custom models",
                 image: "../png/portfolio_8.png",
+                nameBg: "../../png/teamBg1.png",
                 location: "Hyderabad"
             },
             {
@@ -92,6 +101,7 @@ const categorizedCourseData = [
                 name: "ML Workshop",
                 description: "Machine Learning bootcamp",
                 image: "../png/portfolio_8.png",
+                nameBg: "../../png/teamBg2.png",
                 location: "Pune"
             }
         ]
@@ -133,6 +143,7 @@ const PortfolioDesc = ({ name, img, nameBg, altName }) => (
             }}>
 
             <Image
+                width={250}
                 height={40}
                 sx={{ position: 'relative' }}
                 src={nameBg}
@@ -213,7 +224,7 @@ const FilteredCourses = () => {
                             <Grid item xs={12} sm={6} md={3.5} key={course.id}>
                                 <PortfolioDesc
                                     name={course.name}
-                                    nameBg={teamBgTwo}
+                                    nameBg={course.nameBg}
                                     img={course.image}
                                     altName={course.name}
                                 />

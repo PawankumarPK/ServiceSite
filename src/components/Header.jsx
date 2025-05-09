@@ -17,8 +17,15 @@ import Image from 'next/image';
 import DrawerItem from './Drawer';
 import { useEffect } from 'react';
 import Link from 'next/link';
+import { keyframes } from '@emotion/react';
 
 
+
+const breatheAnimation = keyframes`
+  0% { transform: scale(1); box-shadow: 0 0 10px #25D366, 0 0 20px #25D366; }
+  50% { transform: scale(1.05); box-shadow: 0 0 20px #25D366, 0 0 30px #25D366; }
+  100% { transform: scale(1); box-shadow: 0 0 10px #25D366, 0 0 20px #25D366; }
+`;
 
 ///----------------- Navbar common title -----------------
 const NavbarTitle = ({ text }) => (
@@ -431,29 +438,33 @@ const Header = () => {
             {/* Whatsapp Icon */}
             <Grid
               onClick={() => window.open(`https://wa.me/+919910765616?text=`)}
-              p={1}
+              p={1.2}
               position="fixed"
               display='flex'
               justifyContent="end"
-              left='78%'
+              left='80%'
               top='80%'
               container
               sx={{
                 cursor: 'pointer',
                 left: {
-                  lg: '90%',
+                  lg: '92%',
                   md: '90%',
                   sm: '80%',
                   xs: '80%'
                 },
                 width: {
-                  lg: 80,
+                  lg: 60,
                   md: 80,
                   sm: 80,
                   xs: 70
                 },
+                animation: `${breatheAnimation} 2.5s infinite ease-in-out`,
+                borderRadius: '50%',
 
-              }}>
+              }}
+
+            >
               <Image
                 layout="responsive"
                 src={popupWhatsapp}

@@ -26,25 +26,7 @@ import FilteredCourses from "./FilteredCourses";
 
 //import OwlCarousel from "react-owl-carousel"
 
-var $ = require("jquery");
-if (typeof window !== "undefined") {
-    window.$ = window.jQuery = require("jquery");
-}
 
-const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
-    ssr: false,
-});
-
-
-const variants = {
-    hidden: { opacity: 0 },
-    show: {
-        opacity: 5,
-        transition: {
-            duration: 2
-        }
-    }
-}
 
 ///----------------- Team common sections -----------------
 const PortfolioDesc = ({ name, img, nameBg, altName }) => (

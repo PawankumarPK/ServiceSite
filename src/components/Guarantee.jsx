@@ -35,7 +35,7 @@ const Guarantee = () => {
 
 
                     {/* ------------------------- Tell your requirements Section ------------------------*/}
-                    <Grid mr={{ lg: 5, md: 5 }} height={350} width={400} mb={5} bgcolor="#fff">
+                    <Grid mr={{ lg: 3, md: 5 }} height={350} width={350} mb={5} bgcolor="#fff">
 
                         <Box
                             sx={{
@@ -86,7 +86,7 @@ const Guarantee = () => {
 
 
                     {/* ------------------------- We Plan & design Section ------------------------*/}
-                    <Grid mr={{ lg: 5, md: 5 }} mb={5} height={350} width={400} bgcolor="#fff">
+                    <Grid mr={{ lg: 3, md: 5 }} mb={5} height={350} width={400} bgcolor="#fff">
 
                         <Box
                             sx={{

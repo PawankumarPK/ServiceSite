@@ -31,11 +31,11 @@ const YouImagineWeCreate = () => {
                 </Grid>
 
 
-                <Grid container={{ lg: true, sm: false }} pb={5} pt={10} alignItems='center' justifyContent='center'>
+                <Grid container={{ lg: true, sm: false }} pb={5} pt={5} alignItems='center' justifyContent='center'>
 
 
                     {/* ------------------------- Tell your requirements Section ------------------------*/}
-                    <Grid mr={{ lg: 5, md: 5 }} height={350} width={400} mb={5} bgcolor="#fff">
+                    <Grid mr={{ lg: 4, md: 5 }} height={350} width={360} mb={5} bgcolor="#fff">
 
                         <Box
                             sx={{
@@ -86,7 +86,7 @@ const YouImagineWeCreate = () => {
 
 
                     {/* ------------------------- We Plan & design Section ------------------------*/}
-                    <Grid mr={{ lg: 5, md: 5 }} mb={5} height={350} width={400} bgcolor="#fff">
+                    <Grid mr={{ lg: 4, md: 5 }} mb={5} height={350} width={360} bgcolor="#fff">
 
                         <Box
                             sx={{

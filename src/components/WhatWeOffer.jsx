@@ -20,7 +20,7 @@ import Image from 'next/image';
 
 ///----------------- Services common title -----------------
 const ServicesOffer = ({ title, description, icon, altName }) => (
-    <Grid mb={{ lg: 10, md: 10, sm: 5, xs: 5 }} mr={{ lg: 5, md: 1, sm: 5 }} id="services">
+    <Grid mb={{ lg: 10, md: 10, sm: 5, xs: 5 }} mx={{ lg: 2, md: 1, sm: 5 }} id="services">
         <Card elevation={2} container>
 
             <Grid mt={5} mr={1} height={300} width={250} bgcolor="#fff">
@@ -73,7 +73,7 @@ const WhatWeOffer = () => {
                 <Grid width={100} height={2} bgcolor="#40536B"></Grid>
 
 
-                <Grid container justifyContent='center' textAlign="center">
+                <Grid container justifyContent='center' alignItems='center' textAlign="center">
                     <Typography component="h3" color="#000" noWrap mt={2} fontSize={{lg:45,md:45,xs:40}} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
                         What We
                     </Typography>
@@ -84,7 +84,7 @@ const WhatWeOffer = () => {
                 </Grid>
 
 
-                <Grid container justifyContent='center' mt={10}>
+                <Grid container justifyContent='center' mt={6}>
 
                     <ServicesOffer
                         title="Web Designing"
@@ -122,16 +122,7 @@ const WhatWeOffer = () => {
 
                 </Grid>
 
-
-
-
-
-
-
-
-
                 <Grid container justifyContent='center'>
-
 
                     <ServicesOffer
                         title="IOS App Development"
@@ -141,9 +132,6 @@ const WhatWeOffer = () => {
                     >
                     </ServicesOffer>
 
-
-
-
                     <ServicesOffer
                         title="Updation & Maintenance"
                         description="New or Existing, All Websites need updation & Maintenance on time to time and We do it for you so that you can focus on your work."
@@ -151,8 +139,6 @@ const WhatWeOffer = () => {
                         altName="domain Icon"
                     >
                     </ServicesOffer>
-
-
 
                     <ServicesOffer
                         title="SEO & Promotion"
@@ -172,10 +158,6 @@ const WhatWeOffer = () => {
                     </ServicesOffer>
 
                 </Grid>
-
-
-
-
 
                 <Grid container justifyContent='center'>
 
