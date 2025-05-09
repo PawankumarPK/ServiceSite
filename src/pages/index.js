@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import ClientFeedback from '../components/ClientFeedback'
+import ClientFeedbackCard from '../components/ClientFeedbackCard'
 import DrawerNav from '../components/Drawer'
 import Drawer from '../components/Drawer'
 import Footer from '../components/Footer'
@@ -28,9 +30,11 @@ export default function Home() {
       <Guarantee />
       <Portfolio />
       <YouImagineWeCreate />
+      <ClientFeedback/>
       <WhyChooseUs />
       <WhatWeOffer />
       <TeamSection />
+      
 
       <Footer />
 

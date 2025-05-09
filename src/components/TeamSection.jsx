@@ -12,6 +12,7 @@ import teamBgThree from "../../public/png/teamBg3.png";
 import React from 'react'
 import Image from 'next/image';
 import { textAlign } from '@mui/system';
+import ClientFeedbackCard from './ClientFeedbackCard';
 
 ///----------------- Team common sections -----------------
 const Teams = ({ name, designation, img, nameBg, altName }) => (
@@ -149,10 +150,16 @@ const TeamSection = () => {
 
                 </Teams>
 
-                
+
 
 
             </Grid>
+
+
+
+
+
+            
         </Grid>
 
 
