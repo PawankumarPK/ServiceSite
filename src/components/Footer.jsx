@@ -178,7 +178,7 @@ const Footer = () => {
                             sx={{
                                 cursor: 'pointer',
                             }}
-                            onClick={() => window.open(`mailto:hello@owntechnologies.com?subject=Enquiry`)}>
+                            onClick={() => window.open(`mailto:hello@owntechnologies.in?subject=Enquiry`)}>
 
                             <Image
                                 width={18}
@@ -187,6 +187,24 @@ const Footer = () => {
 
                             <Typography component="subtitle1" ml={2} fontFamily='poppins-regular' color="#000" textTransform='none'>
                                 hello@owntechnologies.in
+                            </Typography>
+
+                        </Grid>
+
+
+                        <Grid alignItems='center' display='flex' mt={5}
+                            sx={{
+                                cursor: 'pointer',
+                            }}
+                            onClick={() => window.open(`mailto:pyadav.workmail@gmail.com?subject=Enquiry`)}>
+
+                            <Image
+                                width={18}
+                                src={emailIcon}
+                                alt="email Icon" />
+
+                            <Typography component="subtitle1" ml={2} fontFamily='poppins-regular' color="#000" textTransform='none'>
+                                pyadav.workmail@gmail.com
                             </Typography>
 
                         </Grid>

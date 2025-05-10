@@ -298,7 +298,7 @@ const Header = () => {
               </Grid>
 
               <Grid item xs="auto" paddingRight={{ lg: 4, xs: 2 }}>
-                <Link href="https://blog.owntechnologies.com/" target='_blank' scroll={true} passHref>
+                <Link href="https://blog.owntechnologies.in/" target='_blank' scroll={true} passHref>
                   <NavbarTitle text="BLOGS" />
                 </Link>
               </Grid>

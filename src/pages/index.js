@@ -21,7 +21,7 @@ export default function Home() {
         <title>Expert Website and Mobile App Development Services OwnTechnologies</title>
         <meta name="description" content="Transform your ideas into reality with our website and mobile app development services. As a leading agency, we specialize in crafting innovative digital solutions to drive your business forward." />
         <meta name="keywords" content="Website development,Mobile app development,Responsive web design,Android app development,Back-end development,E-commerce solutions,Mobile app UI/UX,Enterprise app development" />
-        <link rel="icon" href="/ownLogo.ico" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
 
@@ -30,11 +30,11 @@ export default function Home() {
       <Guarantee />
       <Portfolio />
       <YouImagineWeCreate />
-      <ClientFeedback/>
+      <ClientFeedback />
       <WhyChooseUs />
       <WhatWeOffer />
       <TeamSection />
-      
+
 
       <Footer />
 

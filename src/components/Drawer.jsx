@@ -60,7 +60,7 @@ const DrawerItem = ({ chooseMessage }) => {
                         </Grid>
 
                         <Grid item xs="auto" paddingRight={{ lg: 4, xs: 2 }} onClick={() => { chooseMessage(false) }}>
-                            <Link href="https://blog.owntechnologies.com/" target='_blank' scroll={true} passHref style={{ textDecoration: 'none' }}>
+                            <Link href="https://blog.owntechnologies.in/" target='_blank' scroll={true} passHref style={{ textDecoration: 'none' }}>
                                 <NavbarTitle text="BLOGS" />
                             </Link>
                         </Grid>
