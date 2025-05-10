@@ -95,7 +95,7 @@ const feedbackData = [
         designation: 'Founder',
         message: 'What sets Pawan apart is not just technical skills but also empathy. He understood the sensitivity of our health product and built accordingly. Truly trustworthy.',
     },
-    
+
 ];
 
 const ClientFeedback = () => {
@@ -135,16 +135,22 @@ const ClientFeedback = () => {
                 <Typography
                     component="h3"
                     color="#9CC118"
-                    mt={2}
+                    sx={{
+                        mt: {
+                            xs: 0,
+                            sm: 0,
+                            md: 2,
+                        }
+                    }}
                     fontSize={{ lg: 45, md: 40, sm: 40, xs: 40 }}
                     fontFamily="poppins-semibold"
-                    sx={{ lineHeight: '60px' }}
+                    // sx={{ lineHeight: '60px' }}
                 >
                     &nbsp;Big Impact
                 </Typography>
             </Grid>
 
-          
+
 
 
             {/* Slider */}
@@ -165,8 +171,8 @@ const ClientFeedback = () => {
                 ))}
             </Box>
 
-              {/* Navigation Arrows */}
-              <Box display="flex" justifyContent="center" mt={2}>
+            {/* Navigation Arrows */}
+            <Box display="flex" justifyContent="center" mt={2}>
                 <IconButton
                     onClick={() => scroll('left')}
                     sx={{

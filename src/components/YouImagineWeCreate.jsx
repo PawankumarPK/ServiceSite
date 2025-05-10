@@ -21,11 +21,11 @@ const YouImagineWeCreate = () => {
 
 
                 <Grid container justifyContent='center' textAlign="center" mb={5}>
-                    <Typography component="h3" color="#000" noWrap mt={2} fontSize={{lg:45,md:45,xs:40}} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
-                        You Imagine, 
+                    <Typography component="h3" color="#000" noWrap mt={2} fontSize={{ lg: 45, md: 45, xs: 40 }} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
+                        You Imagine,
                     </Typography>
 
-                    <Typography component="h3" color='#9CC118' mt={2} fontSize={{lg:45,md:45,xs:40}} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
+                    <Typography component="h3" color='#9CC118' sx={{mt: {xs: 0,sm: 0,md: 2,}}} fontSize={{ lg: 45, md: 45, xs: 40 }} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
                         We Create
                     </Typography>
                 </Grid>

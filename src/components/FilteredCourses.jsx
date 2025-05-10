@@ -232,6 +232,41 @@ const categorizedCourseData = [
         ]
     },
     {
+        parent: "AI/ML",
+        content: [
+            {
+                id: 1,
+                name: "Healthcare Robots",
+                description: "Healthcare Robots",
+                image: "../projects/ai/jetbrain.png",
+                nameBg: "../../png/teamBg1.png",
+                location: "Gurugram",
+                link: "https://www.youtube.com/watch?v=uNMA7h-OZ1o&t=3s&ab_channel=JetbrainRobotics"
+
+            },
+            {
+                id: 2,
+                name: "UV Disinfection Robot",
+                description: "UV Disinfection Robot",
+                image: "../projects/ai/uv-disinfect.png",
+                nameBg: "../../png/teamBg2.png",
+                location: "Gurugram",
+                link: "https://www.youtube.com/watch?v=q_fqQ1YuB9I&ab_channel=JetbrainRobotics"
+
+            },
+            {
+                id: 3,
+                name: "Solaris Lytbot",
+                description: "Solaris Lytbot",
+                image: "../projects/ai/solaris-lytbot.png",
+                nameBg: "../../png/teamBg3.png",
+                location: "Canada",
+                link: "https://www.youtube.com/watch?v=wJfNTI-5NHU&ab_channel=SolarisRobots"
+
+            }
+        ]
+    },
+    {
         parent: "Video Editing",
         content: [
             {
@@ -297,41 +332,7 @@ const categorizedCourseData = [
 
         ]
     },
-    {
-        parent: "AI/ML",
-        content: [
-            {
-                id: 1,
-                name: "Healthcare Robots",
-                description: "Healthcare Robots",
-                image: "../projects/ai/jetbrain.png",
-                nameBg: "../../png/teamBg1.png",
-                location: "Gurugram",
-                link: "https://www.youtube.com/watch?v=uNMA7h-OZ1o&t=3s&ab_channel=JetbrainRobotics"
-
-            },
-            {
-                id: 2,
-                name: "UV Disinfection Robot",
-                description: "UV Disinfection Robot",
-                image: "../projects/ai/uv-disinfect.png",
-                nameBg: "../../png/teamBg2.png",
-                location: "Gurugram",
-                link: "https://www.youtube.com/watch?v=q_fqQ1YuB9I&ab_channel=JetbrainRobotics"
-
-            },
-            {
-                id: 3,
-                name: "Solaris Lytbot",
-                description: "Solaris Lytbot",
-                image: "../projects/ai/solaris-lytbot.png",
-                nameBg: "../../png/teamBg3.png",
-                location: "Canada",
-                link: "https://www.youtube.com/watch?v=wJfNTI-5NHU&ab_channel=SolarisRobots"
-
-            }
-        ]
-    },
+   
 
 ];
 
@@ -408,14 +409,31 @@ const FilteredCourses = () => {
     return (
         <Box sx={{ p: 2 }}>
 
-            <Box sx={{ display: 'flex', justifyContent: 'center', mt: 2 }}>
+            <Box sx={{ display: 'flex', justifyContent: 'center', mt: 2, px: { xs: 1, sm: 2 } }}>
                 <Tabs
                     value={selectedTab}
                     onChange={handleTabChange}
+                    variant="scrollable"               
+                    scrollButtons="auto"               
+                    allowScrollButtonsMobile           
                     sx={{
                         backgroundColor: '#DFF2A1',
                         borderRadius: '30px',
                         padding: '4px',
+                        width: {
+                            xs: '100%',
+                            sm: '100%',
+                            md: '100%',
+                            lg: 'auto', 
+                            xl: 'auto',
+                          },
+                          maxWidth: {
+                            xs: 700,
+                            sm: 700,
+                            md: 700,
+                            lg: 'none',
+                            xl: 'none',
+                          }
                     }}
                     TabIndicatorProps={{ style: { display: 'none' } }}
                 >
@@ -428,19 +446,20 @@ const FilteredCourses = () => {
                                 borderRadius: '30px',
                                 textTransform: 'none',
                                 fontWeight: 600,
-                                px: 5,
+                                px: 3,                           // reduce padding for mobile
                                 color: 'black',
                                 backgroundColor: 'transparent',
-                                fontFamily: "poppins-semibold",
+                                fontFamily: 'poppins-semibold',
                                 '&.Mui-selected': {
                                     color: 'white',
                                     backgroundColor: '#000',
-                                }
+                                },
                             }}
                         />
                     ))}
                 </Tabs>
             </Box>
+
 
             <AnimatePresence mode="wait">
                 <motion.div
