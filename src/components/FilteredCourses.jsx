@@ -332,7 +332,7 @@ const categorizedCourseData = [
 
         ]
     },
-   
+
 
 ];
 
@@ -413,9 +413,9 @@ const FilteredCourses = () => {
                 <Tabs
                     value={selectedTab}
                     onChange={handleTabChange}
-                    variant="scrollable"               
-                    scrollButtons="auto"               
-                    allowScrollButtonsMobile           
+                    variant="scrollable"
+                    scrollButtons="auto"
+                    allowScrollButtonsMobile
                     sx={{
                         backgroundColor: '#DFF2A1',
                         borderRadius: '30px',
@@ -424,16 +424,16 @@ const FilteredCourses = () => {
                             xs: '100%',
                             sm: '100%',
                             md: '100%',
-                            lg: 'auto', 
+                            lg: 'auto',
                             xl: 'auto',
-                          },
-                          maxWidth: {
+                        },
+                        maxWidth: {
                             xs: 700,
                             sm: 700,
                             md: 700,
                             lg: 'none',
                             xl: 'none',
-                          }
+                        }
                     }}
                     TabIndicatorProps={{ style: { display: 'none' } }}
                 >
@@ -472,18 +472,28 @@ const FilteredCourses = () => {
                     <Grid container spacing={0} justifyContent="center" mb={20}>
                         {filteredData.map((course) => (
                             <Grid item xs={12} sm={6} md={3.5} key={course.id}>
-                                <PortfolioDesc
-                                    name={course.name}
-                                    nameBg={course.nameBg}
-                                    img={course.image}
-                                    altName={course.name}
-                                    isMobileApp={selectedTab === "Mobile Apps"}
-                                    link={course.link}
-
-                                />
+                                <Box
+                                    sx={{
+                                        transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                                        '&:hover': {
+                                            transform: 'translateY(-5px)',
+                                            
+                                        },
+                                    }}
+                                >
+                                    <PortfolioDesc
+                                        name={course.name}
+                                        nameBg={course.nameBg}
+                                        img={course.image}
+                                        altName={course.name}
+                                        isMobileApp={selectedTab === 'Mobile Apps'}
+                                        link={course.link}
+                                    />
+                                </Box>
                             </Grid>
                         ))}
                     </Grid>
+
                 </motion.div>
             </AnimatePresence>
 
