@@ -5,7 +5,7 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 import screenshot_one from "../../public/png/screenshot_1.png";
 import screenshot_two from "../../public/png/screenshot_2.png";
 import screenshot_three from "../../public/png/screenshot_3.png";
-import portfolio_1 from "../../public/png/portfolio_1.png";
+import asap from "../../public/projects/asap.png";
 import portfolio_2 from "../../public/png/portfolio_2.png";
 import portfolio_3 from "../../public/png/portfolio_3.png";
 import portfolio_4 from "../../public/png/portfolio_4.png";
@@ -87,7 +87,7 @@ const Portfolio = () => {
         <Image
             layout='responsive'
             priority
-            src={portfolio_1}
+            src={asap}
             alt='study image'>
         </Image>
     </Grid>
