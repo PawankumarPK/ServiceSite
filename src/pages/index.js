@@ -18,11 +18,51 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Expert Website and Mobile App Development Services OwnTechnologies</title>
-        <meta name="description" content="Transform your ideas into reality with our website and mobile app development services. As a leading agency, we specialize in crafting innovative digital solutions to drive your business forward." />
-        <meta name="keywords" content="Website development,Mobile app development,Responsive web design,Android app development,Back-end development,E-commerce solutions,Mobile app UI/UX,Enterprise app development" />
+        <title>Top Website & Mobile App Development Company | OwnTechnologies</title>
+        <meta
+          name="description"
+          content="OwnTechnologies is a top-rated website and mobile app development company in India, offering scalable, secure, and innovative solutions for startups and enterprises. Build responsive websites, Android/iOS apps, and powerful web platforms with us."
+        />
+        <meta
+          name="keywords"
+          content="Website development company, Mobile app development services, Custom web application development, Android app development, iOS app development, Full-stack development, React Native apps, Flutter development, Web and mobile solutions, App development agency, UI/UX design, E-commerce website development, Scalable web apps, SaaS development, Digital product development, Best development company in India"
+        />
+        <meta
+          property="og:title"
+          content="Expert Website & Mobile App Development | OwnTechnologies"
+        />
+        <meta
+          property="og:description"
+          content="Turn your vision into digital reality. Get robust, responsive websites and mobile apps crafted by industry-leading developers at OwnTechnologies."
+        />
+        <meta
+          property="og:image"
+          content="https://owntechnologies.in/seo-featured-image.jpg"
+        />
+        <meta
+          property="og:url"
+          content="https://owntechnologies.in/"
+        />
+        <meta
+          name="twitter:card"
+          content="summary_large_image"
+        />
+        <meta
+          name="twitter:title"
+          content="Website & Mobile App Development Experts | OwnTechnologies"
+        />
+        <meta
+          name="twitter:description"
+          content="Grow your business with powerful digital solutions. Hire expert web and mobile developers from OwnTechnologies."
+        />
+        <meta
+          name="twitter:image"
+          content="https://owntechnologies.in/seo-featured-image.jpg"
+        />
+        <link rel="canonical" href="https://owntechnologies.in/" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
 
 
       <Header />
