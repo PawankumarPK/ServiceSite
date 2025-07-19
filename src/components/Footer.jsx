@@ -246,7 +246,7 @@ const Footer = () => {
 
                         <Grid width={{ lg: 270, md: 300, sm: 150 }} ml={2}>
                             <Typography component="subtitle1" fontFamily='poppins-regular' color="#000" >
-                                B-162/1, Birla Farm, Chattarpur, New Delhi - 110074, INDIA
+                                10, Poorvi Marg, DLF Phase 2, Sector 25, Gurugram, Haryana 122022
                             </Typography>
                         </Grid>
 
