@@ -26,6 +26,15 @@ const categorizedCourseData = [
     {
         parent: "Websites",
         content: [
+             {
+                id: 1,
+                name: "CITE Lifestyle",
+                description: "CITE Lifestyle",
+                image: "../projects/cite.jpg",
+                nameBg: "../../png/teamBg2.png",
+                location: "New Delhi",
+                link: "https://citelifestyle.com/"
+            },
             {
                 id: 1,
                 name: "ASAP Institute",
@@ -59,7 +68,7 @@ const categorizedCourseData = [
                 name: "Solaris Robots",
                 description: "Solaris Robots",
                 image: "../projects/solaris.png",
-                nameBg: "../../png/teamBg3.png",
+                nameBg: "../../png/teamBg2.png",
                 location: "Canada",
                 link: "https://solarisrobots.com/"
 
@@ -79,7 +88,7 @@ const categorizedCourseData = [
                 name: "IGNTI",
                 description: "IGNTI",
                 image: "../projects/ignti.png",
-                nameBg: "../../png/teamBg2.png",
+                nameBg: "../../png/teamBg3.png",
                 location: "Delhi",
                 link: "https://ignti.in/"
 
@@ -119,7 +128,7 @@ const categorizedCourseData = [
                 name: "Technocom",
                 description: "Technocom",
                 image: "../projects/technocom.png",
-                nameBg: "../../png/teamBg3.png",
+                nameBg: "../../png/teamBg2.png",
                 location: "Noida",
                 link: "https://www.technocomsolutions.com/"
 
