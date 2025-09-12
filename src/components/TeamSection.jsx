@@ -21,7 +21,7 @@ import ClientFeedbackCard from './ClientFeedbackCard';
 
 ///----------------- Team common sections -----------------
 const Teams = ({ name, designation, img, nameBg, altName }) => (
-    <Grid mt={5} mr={{ lg: 1, md: 7, sm: 5, xs: 5 }} ml={{ lg: 1, md: 7, sm: 5,xs:5 }}>
+    <Grid mt={5} mr={{ lg: 1, md: 7, sm: 5, xs: 5 }} ml={{ lg: 1, md: 7, sm: 5, xs: 5 }}>
         <Grid justifyContent="center" alignItems="center" display="flex">
             <Box
                 sx={{
@@ -111,9 +111,9 @@ const TeamSection = () => {
 
             <Typography component='h4' color="#9CC118" mt={{ lg: 0, xs: 0 }} fontSize={{ lg: 45, md: 40, sm: 40, xs: 30 }} fontFamily="poppins-semibold" sx={{
                 lineHeight: {
-                    xs: '30px', 
-                    sm: '30px', 
-                    md: '60px', 
+                    xs: '30px',
+                    sm: '30px',
+                    md: '60px',
                 },
             }}>
                 great talented staff

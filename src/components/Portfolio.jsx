@@ -83,7 +83,7 @@ const Portfolio = () => {
         ml={{ lg: 4, md: 4 }}
         width={{ lg: 300, md: 350, sm: 300, xs: 350 }}
         mt={{ sm: 5, xs: 5 }}
-        >
+    >
         <Image
             layout='responsive'
             priority
@@ -94,7 +94,7 @@ const Portfolio = () => {
     return (
 
 
-        <Grid height={{  }} id="portfolio" bgcolor="#F7F8FA" >
+        <Grid height={{}} id="portfolio" bgcolor="#F7F8FA" >
 
             <Grid container direction="column" alignItems="center">
                 <Typography component="subtitle2" pt={0} fontSize={14} fontFamily='poppins-medium' textAlign="center" color="#27363B">
@@ -115,8 +115,8 @@ const Portfolio = () => {
                 </Grid>
 
             </Grid>
-           
-           <FilteredCourses/>
+
+            <FilteredCourses />
         </Grid >
 
     );

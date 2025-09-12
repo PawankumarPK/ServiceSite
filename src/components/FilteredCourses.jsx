@@ -26,7 +26,7 @@ const categorizedCourseData = [
     {
         parent: "Websites",
         content: [
-             {
+            {
                 id: 1,
                 name: "CITE Lifestyle",
                 description: "CITE Lifestyle",
@@ -486,7 +486,7 @@ const FilteredCourses = () => {
                                         transition: 'transform 0.3s ease, box-shadow 0.3s ease',
                                         '&:hover': {
                                             transform: 'translateY(-5px)',
-                                            
+
                                         },
                                     }}
                                 >
