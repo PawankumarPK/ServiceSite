@@ -7,12 +7,8 @@ import meera from "../../public/team/meera.jpg";
 import ananya from "../../public/team/ananya.jpg";
 import teamTwo from "../../public/png/team2.png";
 import teamThree from "../../public/png/team3.png";
-
-
 import teamBgOne from "../../public/png/teamBg1.png";
-
 import teamBgTwo from "../../public/png/teamBg2.png";
-
 import teamBgThree from "../../public/png/teamBg3.png";
 import React from 'react'
 import Image from 'next/image';
@@ -21,7 +17,7 @@ import ClientFeedbackCard from './ClientFeedbackCard';
 
 ///----------------- Team common sections -----------------
 const Teams = ({ name, designation, img, nameBg, altName }) => (
-    <Grid mt={5} mr={{ lg: 1, md: 7, sm: 5, xs: 5 }} ml={{ lg: 1, md: 7, sm: 5,xs:5 }}>
+    <Grid mt={5} mr={{ lg: 1, md: 7, sm: 5, xs: 5 }} ml={{ lg: 1, md: 7, sm: 5, xs: 5 }}>
         <Grid justifyContent="center" alignItems="center" display="flex">
             <Box
                 sx={{
@@ -111,9 +107,9 @@ const TeamSection = () => {
 
             <Typography component='h4' color="#9CC118" mt={{ lg: 0, xs: 0 }} fontSize={{ lg: 45, md: 40, sm: 40, xs: 30 }} fontFamily="poppins-semibold" sx={{
                 lineHeight: {
-                    xs: '30px', 
-                    sm: '30px', 
-                    md: '60px', 
+                    xs: '30px',
+                    sm: '30px',
+                    md: '60px',
                 },
             }}>
                 great talented staff
@@ -128,7 +124,7 @@ const TeamSection = () => {
 
 
 
-            <Grid container={{ lg: false, md: true, sm: false, xs: false }} justifyContent='center' pb={5}>
+            <Grid container justifyContent='center' pb={5}>
 
 
 
