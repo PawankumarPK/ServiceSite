@@ -204,8 +204,8 @@ const ModernPortfolio = () => {
                             whileTap={{ scale: 0.95 }}
                             onClick={() => setSelectedCategory(category.id)}
                             className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${selectedCategory === category.id
-                                    ? 'bg-gradient-to-r from-secondary to-accent text-white shadow-lg'
-                                    : 'bg-white text-gray-600 hover:bg-gray-100 border border-gray-200'
+                                ? 'bg-gradient-to-r from-secondary to-accent text-white shadow-lg'
+                                : 'bg-white text-gray-600 hover:bg-gray-100 border border-gray-200'
                                 }`}
                         >
                             {category.name}
