@@ -28,6 +28,15 @@ const categorizedCourseData = [
         content: [
             {
                 id: 1,
+                name: "Aarogya Global",
+                description: "Aarogya Global",
+                image: "../projects/aarogya-global.jpg",
+                nameBg: "../../png/teamBg1.png",
+                location: "New Delhi",
+                link: "https://aarogyaglobal.com/"
+            },
+            {
+                id: 1,
                 name: "CITE Lifestyle",
                 description: "CITE Lifestyle",
                 image: "../projects/cite.jpg",
