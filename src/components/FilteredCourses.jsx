@@ -28,6 +28,15 @@ const categorizedCourseData = [
         content: [
             {
                 id: 1,
+                name: "Rimus Tech",
+                description: "Rimus Tech",
+                image: "../projects/rimus-tech.jpg",
+                nameBg: "../../png/teamBg3.png",
+                location: "New Delhi",
+                link: "https://rimus-tech.com/"
+            },
+            {
+                id: 1,
                 name: "Aarogya Global",
                 description: "Aarogya Global",
                 image: "../projects/aarogya-global.jpg",
