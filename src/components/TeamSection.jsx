@@ -5,6 +5,7 @@ import aarav from "../../public/team/aarav.jpg";
 import vihaan from "../../public/team/vihaan.jpg";
 import meera from "../../public/team/meera.jpg";
 import ananya from "../../public/team/ananya.jpg";
+import armaan from "../../public/team/armaan.jpg";
 import teamTwo from "../../public/png/team2.png";
 import teamThree from "../../public/png/team3.png";
 
@@ -21,12 +22,12 @@ import ClientFeedbackCard from './ClientFeedbackCard';
 
 ///----------------- Team common sections -----------------
 const Teams = ({ name, designation, img, nameBg, altName }) => (
-    <Grid mt={5} mr={{ lg: 1, md: 7, sm: 5, xs: 5 }} ml={{ lg: 1, md: 7, sm: 5, xs: 5 }}>
-        <Grid justifyContent="center" alignItems="center" display="flex">
+    <Grid>
+        <Grid justifyContent="center" alignItems="center" display="flex" mb={2}>
             <Box
                 sx={{
-                    width: 180,
-                    height: 180,
+                    width: { xs: 100, sm: 120, md: 150, lg: 180 },
+                    height: { xs: 100, sm: 120, md: 150, lg: 180 },
                     overflow: 'hidden',
                     borderRadius: '10%',
                 }}
@@ -36,7 +37,7 @@ const Teams = ({ name, designation, img, nameBg, altName }) => (
                     alt={altName}
                     width={180}
                     height={180}
-                    style={{ objectFit: 'cover' }}
+                    style={{ objectFit: 'cover', width: '100%', height: '100%' }}
                 />
             </Box>
         </Grid>
@@ -53,11 +54,11 @@ const Teams = ({ name, designation, img, nameBg, altName }) => (
                 height={30}
                 sx={{ position: 'relative' }}
                 src={nameBg}
-                alt='Team BG One Image'>
+                alt='Team BG Image'>
             </Image>
 
             <Typography sx={{ position: "absolute" }}
-                fontSize={15}
+                fontSize={{ xs: 12, sm: 13, md: 15 }}
                 fontFamily="poppins-semibold"
                 component='h4'
                 color='#fff'
@@ -71,7 +72,7 @@ const Teams = ({ name, designation, img, nameBg, altName }) => (
 
         <Typography
             mt={1}
-            fontSize={15}
+            fontSize={{ xs: 12, sm: 13, md: 15 }}
             fontFamily="poppins-regular"
             component='p'
             color='#000'
@@ -128,71 +129,82 @@ const TeamSection = () => {
 
 
 
-            <Grid container={{ lg: false, md: true, sm: false, xs: false }} justifyContent='center' pb={5}>
+            <Grid container spacing={3} justifyContent='center' sx={{ maxWidth: '1200px', margin: '0 auto', px: 3 }} pb={5}>
 
 
+                <Grid item xs={6} sm={4} md={3} lg={2.4}>
+                    <Link href="https://www.linkedin.com/in/pawan-kumar-yadav/" scroll={true} passHref target="_blank" style={{ textDecoration: 'none' }}>
+                        <Teams
+                            name="Pawan"
+                            designation="Captain"
+                            nameBg={teamBgOne}
+                            img={pawan}
+                            altName="team Member One">
+                        </Teams>
+                    </Link>
+                </Grid>
 
-                <Link href="https://www.linkedin.com/in/pawan-kumar-yadav/" scroll={true} passHref target="_blank">
+
+                <Grid item xs={6} sm={4} md={3} lg={2.4}>
                     <Teams
-                        name="Pawan"
-                        designation="Captain"
-                        nameBg={teamBgOne}
-                        img={pawan}
-                        altName="team Member One">
-
+                        name="Rohan"
+                        designation="Frontend Developer"
+                        nameBg={teamBgTwo}
+                        img={rohan}
+                        altName="team Member Two">
                     </Teams>
-                </Link>
+                </Grid>
 
 
-                <Teams
-                    name="Rohan"
-                    designation="Frontend Developer"
-                    nameBg={teamBgTwo}
-                    img={rohan}
-                    altName="team Member Two">
+                <Grid item xs={6} sm={4} md={3} lg={2.4}>
+                    <Teams
+                        name="Aarav"
+                        designation="Backend Developer"
+                        nameBg={teamBgThree}
+                        img={aarav}
+                        altName="team Member Three">
+                    </Teams>
+                </Grid>
 
-                </Teams>
+                <Grid item xs={6} sm={4} md={3} lg={2.4}>
+                    <Teams
+                        name="Vihaan"
+                        designation="FullStack Developer"
+                        nameBg={teamBgTwo}
+                        img={vihaan}
+                        altName="team Member Four">
+                    </Teams>
+                </Grid>
 
+                <Grid item xs={6} sm={4} md={3} lg={2.4}>
+                    <Teams
+                        name="Meera"
+                        designation="DevOps Engineer"
+                        nameBg={teamBgOne}
+                        img={meera}
+                        altName="team Member Five">
+                    </Teams>
+                </Grid>
 
+                <Grid item xs={6} sm={4} md={3} lg={2.4}>
+                    <Teams
+                        name="Ananya"
+                        designation="UI/UX Designer"
+                        nameBg={teamBgTwo}
+                        img={ananya}
+                        altName="team Member Six">
+                    </Teams>
+                </Grid>
 
-                <Teams
-                    name="Aarav"
-                    designation="Backend Developer"
-                    nameBg={teamBgThree}
-                    img={aarav}
-                    altName="team Member Three">
-
-                </Teams>
-
-                <Teams
-                    name="Vihaan"
-                    designation="FullStack Developer"
-                    nameBg={teamBgTwo}
-                    img={vihaan}
-                    altName="team Member Three">
-
-                </Teams>
-
-                <Teams
-                    name="Meera"
-                    designation="DevOps Engineer"
-                    nameBg={teamBgOne}
-                    img={meera}
-                    altName="team Member Three">
-
-                </Teams>
-
-                <Teams
-                    name="Ananya"
-                    designation="UI/UX Designer"
-                    nameBg={teamBgTwo}
-                    img={ananya}
-                    altName="team Member Three">
-
-                </Teams>
-
-
-
+                <Grid item xs={6} sm={4} md={3} lg={2.4}>
+                    <Teams
+                        name="Armaan"
+                        designation="FullStack Developer"
+                        nameBg={teamBgThree}
+                        img={armaan}
+                        altName="team Member Seven">
+                    </Teams>
+                </Grid>
 
             </Grid>
 
