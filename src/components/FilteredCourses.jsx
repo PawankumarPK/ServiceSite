@@ -28,6 +28,15 @@ const categorizedCourseData = [
         content: [
             {
                 id: 1,
+                name: "Cleansip Water",
+                description: "Cleansip Water",
+                image: "../projects/cleansip.jpg",
+                nameBg: "../../png/teamBg2.png",
+                location: "New Delhi",
+                link: "https://cleansipwater.com/"
+            },
+            {
+                id: 1,
                 name: "Rimus Tech",
                 description: "Rimus Tech",
                 image: "../projects/rimus-tech.jpg",
