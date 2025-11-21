@@ -12,13 +12,40 @@ import flowerPot from "../../public/png/flowerPot.png"
 
 import ownLogo from "../../public/png/ownLogo.png"
 
-import React from 'react'
+import React, { useRef } from 'react'
 import Image from 'next/image';
+import { motion, useInView } from 'framer-motion';
 
 
 const Footer = () => {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.1
+            }
+        }
+    };
+
+    const itemVariants = {
+        hidden: { opacity: 0, y: 30 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.6,
+                type: "spring",
+                stiffness: 100
+            }
+        }
+    };
+
     return (
-        <Grid bgcolor="#fff" id="contact">
+        <Grid bgcolor="#fff" id="contact" ref={ref}>
 
             <Grid
                 mb={8}
@@ -29,49 +56,61 @@ const Footer = () => {
 
 
 
-                    <Grid container mt={10} >
+                    <motion.div
+                        variants={containerVariants}
+                        initial="hidden"
+                        animate={isInView ? "visible" : "hidden"}
+                        style={{ width: '100%' }}
+                    >
+                        <Grid container mt={10} >
 
-                        <Grid>
-                            <Image
-                                width={80}
-                                src={ownLogo}
-                                alt="Logo" />
-                        </Grid>
+                            <motion.div variants={itemVariants}>
+                                <Grid>
+                                    <Image
+                                        width={80}
+                                        src={ownLogo}
+                                        alt="Logo" />
+                                </Grid>
+                            </motion.div>
 
-                        <Grid justifyContent='center' >
-                            {/* --------------------- OWN text ------------------------- */}
-                            <Grid container
-                                width={150}
-                                height={45}
-                                ml={{ lg: 1, md: 1, sm: 1, xs: 1 }}
-                            >
+                            <Grid justifyContent='center' >
+                                {/* --------------------- OWN text ------------------------- */}
+                                <motion.div variants={itemVariants}>
+                                    <Grid container
+                                        width={150}
+                                        height={45}
+                                        ml={{ lg: 1, md: 1, sm: 1, xs: 1 }}
+                                    >
 
-                                <Typography component="h6" color="#27363B" textAlign='center' fontSize={{ lg: 40, xs: 35 }} fontFamily="poppins-bold">
-                                    OWN
-                                </Typography>
+                                        <Typography component="h6" color="#27363B" textAlign='center' fontSize={{ lg: 40, xs: 35 }} fontFamily="poppins-bold">
+                                            OWN
+                                        </Typography>
+
+                                    </Grid>
+                                </motion.div>
+
+                                {/* --------------------- Technologies text ------------------------- */}
+                                <motion.div variants={itemVariants}>
+                                    <Grid
+                                        component="body1"
+                                        color="#27363B"
+                                        container
+                                        width={105}
+                                        justifyContent="center"
+                                        ml={{ lg: 1, md: 1, sm: 1, xs: 1 }}
+                                    >
+
+
+                                        <Typography textAlign='center' fontSize={{ lg: 15, xs: 15 }} fontFamily="poppins-regular">
+                                            Technologies
+                                        </Typography>
+
+                                    </Grid>
+                                </motion.div>
+
+
 
                             </Grid>
-
-                            {/* --------------------- Technologies text ------------------------- */}
-                            <Grid
-                                component="body1"
-                                color="#27363B"
-                                container
-                                width={105}
-                                justifyContent="center"
-                                ml={{ lg: 1, md: 1, sm: 1, xs: 1 }}
-                            >
-
-
-                                <Typography textAlign='center' fontSize={{ lg: 15, xs: 15 }} fontFamily="poppins-regular">
-                                    Technologies
-                                </Typography>
-
-                            </Grid>
-
-
-
-                        </Grid>
 
                         {/* ///--------- All Textfield ----------------------  */}
                         {/* <Grid container >
@@ -96,36 +135,49 @@ const Footer = () => {
                             </Grid>
 
                         </Grid> */}
-                    </Grid>
+                        </Grid>
+                    </motion.div>
 
 
-                    <Grid
-                        width={250}
-                        justifyContent="center"
-                        mt={3}>
+                    <motion.div
+                        initial={{ opacity: 0, x: -30 }}
+                        animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
+                        transition={{ duration: 0.6, delay: 0.3 }}
+                    >
+                        <Grid
+                            width={250}
+                            justifyContent="center"
+                            mt={3}>
 
 
-                        <Typography component="subtitle1" color="#000" textAlign='start' fontSize={{ lg: 15, xs: 15 }} fontFamily="poppins-regular">
-                            Accelerate your online presence
-                        </Typography>
+                            <Typography component="subtitle1" color="#000" textAlign='start' fontSize={{ lg: 15, xs: 15 }} fontFamily="poppins-regular">
+                                Accelerate your online presence
+                            </Typography>
 
-                    </Grid>
+                        </Grid>
+                    </motion.div>
 
-                    <Grid
+                    <motion.div
+                        initial={{ opacity: 0, x: -30 }}
+                        animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
+                        transition={{ duration: 0.6, delay: 0.4 }}
+                    >
+                        <Grid
 
-                        color="#27363B"
-                        container
-                        width={{ lg: 400, xs: 300 }}
-                        justifyContent="center"
-                        mt={1}>
+                            color="#27363B"
+                            container
+                            width={{ lg: 400, xs: 300 }}
+                            justifyContent="center"
+                            mt={1}>
 
 
-                        <Typography component="body1"
-                            color="#838788" textAlign='start' fontSize={{ lg: 15, xs: 15 }} fontFamily="poppins-regular">
-                            We have been helping businesses reach their full potential — and beyond. Our agency offers a wide array of services to get you there. Explore our website for more info, and see how far you can go!
-                        </Typography>
+                            <Typography component="body1"
+                                color="#838788" textAlign='start' fontSize={{ lg: 15, xs: 15 }} fontFamily="poppins-regular">
+                                We have been helping businesses reach their full potential — and beyond. Our agency offers a wide array of services to get you there. Explore our website for more info, and see how far you can go!
+                            </Typography>
 
-                    </Grid>
+                        </Grid>
+                    </motion.div>
 
 
 
@@ -134,199 +186,266 @@ const Footer = () => {
 
 
                 {/* /// ------------------- Contact section ------------------ */}
-                <Grid ml={{ lg: 8, md: 0, sm: 2, xs: 2 }}>
-                    <Grid
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                    transition={{ duration: 0.6, delay: 0.5 }}
+                >
+                    <Grid ml={{ lg: 8, md: 0, sm: 2, xs: 2 }}>
+                        <Grid
 
-                        color="#27363B"
-                        width={{ lg: 400, md: 300, sm: 250 }}
-                        mt={10}
-                    >
+                            color="#27363B"
+                            width={{ lg: 400, md: 300, sm: 250 }}
+                            mt={10}
+                        >
 
 
-                        <Typography component="h4"
-                            textAlign='start' fontSize={{ lg: 20, xs: 15 }} fontFamily="poppins-semibold">
-                            Contact Us
+                            <Typography component="h4"
+                                textAlign='start' fontSize={{ lg: 20, xs: 15 }} fontFamily="poppins-semibold">
+                                Contact Us
 
-                        </Typography>
+                            </Typography>
 
+                        </Grid>
+
+                        <Grid
+                            color="#27363B"
+                            width={{ lg: 400, md: 200, sm: 250 }}
+                            mt={1}>
+
+                            <motion.div
+                                initial={{ opacity: 0, x: -20 }}
+                                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+                                transition={{ duration: 0.5, delay: 0.6 }}
+                                whileHover={{ x: 5, transition: { duration: 0.2 } }}
+                            >
+                                <Grid alignItems='center' display='flex' mt={5}
+                                    sx={{
+                                        cursor: 'pointer',
+                                    }}
+                                    onClick={() => window.open(`tel:9910765616`)}>
+                                    <Image
+                                        width={18}
+                                        src={callIcon}
+                                        alt="call Icon" />
+                                    <Typography component="subtitle1" ml={2} fontFamily='poppins-regular' color="#000" textTransform='none'>
+                                        +91-9910765616
+                                    </Typography>
+
+                                </Grid>
+                            </motion.div>
+
+
+
+                            <motion.div
+                                initial={{ opacity: 0, x: -20 }}
+                                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+                                transition={{ duration: 0.5, delay: 0.7 }}
+                                whileHover={{ x: 5, transition: { duration: 0.2 } }}
+                            >
+                                <Grid alignItems='center' display='flex' mt={5}
+                                    sx={{
+                                        cursor: 'pointer',
+                                    }}
+                                    onClick={() => window.open(`mailto:hello@owntechnologies.in?subject=Enquiry`)}>
+
+                                    <Image
+                                        width={18}
+                                        src={emailIcon}
+                                        alt="email Icon" />
+
+                                    <Typography component="subtitle1" ml={2} fontFamily='poppins-regular' color="#000" textTransform='none'>
+                                        hello@owntechnologies.in
+                                    </Typography>
+
+                                </Grid>
+                            </motion.div>
+
+
+                            <motion.div
+                                initial={{ opacity: 0, x: -20 }}
+                                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+                                transition={{ duration: 0.5, delay: 0.8 }}
+                                whileHover={{ x: 5, transition: { duration: 0.2 } }}
+                            >
+                                <Grid alignItems='center' display='flex' mt={5}
+                                    sx={{
+                                        cursor: 'pointer',
+                                    }}
+                                    onClick={() => window.open(`mailto:pyadav.workmail@gmail.com?subject=Enquiry`)}>
+
+                                    <Image
+                                        width={18}
+                                        src={emailIcon}
+                                        alt="email Icon" />
+
+                                    <Typography component="subtitle1" ml={2} fontFamily='poppins-regular' color="#000" textTransform='none'>
+                                        pyadav.workmail@gmail.com
+                                    </Typography>
+
+                                </Grid>
+                            </motion.div>
+
+                        </Grid>
                     </Grid>
-
-                    <Grid
-                        color="#27363B"
-                        width={{ lg: 400, md: 200, sm: 250 }}
-                        mt={1}>
-
-
-                        <Grid alignItems='center' display='flex' mt={5}
-                            sx={{
-                                cursor: 'pointer',
-                            }}
-                            onClick={() => window.open(`tel:9910765616`)}>
-                            <Image
-                                width={18}
-                                src={callIcon}
-                                alt="call Icon" />
-                            <Typography component="subtitle1" ml={2} fontFamily='poppins-regular' color="#000" textTransform='none'>
-                                +91-9910765616
-                            </Typography>
-
-                        </Grid>
-
-
-
-                        <Grid alignItems='center' display='flex' mt={5}
-                            sx={{
-                                cursor: 'pointer',
-                            }}
-                            onClick={() => window.open(`mailto:hello@owntechnologies.in?subject=Enquiry`)}>
-
-                            <Image
-                                width={18}
-                                src={emailIcon}
-                                alt="email Icon" />
-
-                            <Typography component="subtitle1" ml={2} fontFamily='poppins-regular' color="#000" textTransform='none'>
-                                hello@owntechnologies.in
-                            </Typography>
-
-                        </Grid>
-
-
-                        <Grid alignItems='center' display='flex' mt={5}
-                            sx={{
-                                cursor: 'pointer',
-                            }}
-                            onClick={() => window.open(`mailto:pyadav.workmail@gmail.com?subject=Enquiry`)}>
-
-                            <Image
-                                width={18}
-                                src={emailIcon}
-                                alt="email Icon" />
-
-                            <Typography component="subtitle1" ml={2} fontFamily='poppins-regular' color="#000" textTransform='none'>
-                                pyadav.workmail@gmail.com
-                            </Typography>
-
-                        </Grid>
-
-                    </Grid>
-
-
-
-                </Grid>
+                </motion.div>
 
 
 
                 {/* /// ------------------- Address section ------------------ */}
 
-                <Grid ml={{ sm: 2, xs: 2 }}>
-                    <Grid
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                    transition={{ duration: 0.6, delay: 0.6 }}
+                >
+                    <Grid ml={{ sm: 2, xs: 2 }}>
+                        <Grid
 
-                        color="#27363B"
-                        width={100}
-                        mt={10}
-                        ml={{ lg: 0, md: 2, sm: 0 }}>
-
-
-                        <Typography component="h4" textAlign='start' fontSize={{ lg: 20, xs: 15 }} fontFamily="poppins-semibold">
-                            Address
-
-                        </Typography>
-
-                    </Grid>
-
-                    <Grid alignItems='center' container mt={5} ml={{ lg: 0, md: 2, sm: 0 }}>
-
-                        <Image
-                            width={18}
-                            src={locationIcon}
-                            alt="location icon" />
+                            color="#27363B"
+                            width={100}
+                            mt={10}
+                            ml={{ lg: 0, md: 2, sm: 0 }}>
 
 
+                            <Typography component="h4" textAlign='start' fontSize={{ lg: 20, xs: 15 }} fontFamily="poppins-semibold">
+                                Address
 
-                        <Grid width={{ lg: 270, md: 300, sm: 150 }} ml={2}>
-                            <Typography component="subtitle1" fontFamily='poppins-regular' color="#000" >
-                                10, Poorvi Marg, DLF Phase 2, Sector 25, Gurugram, Haryana 122022
                             </Typography>
+
                         </Grid>
 
+                        <motion.div
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+                            transition={{ duration: 0.5, delay: 0.7 }}
+                        >
+                            <Grid alignItems='center' container mt={5} ml={{ lg: 0, md: 2, sm: 0 }}>
 
+                                <Image
+                                    width={18}
+                                    src={locationIcon}
+                                    alt="location icon" />
+
+
+
+                                <Grid width={{ lg: 270, md: 300, sm: 150 }} ml={2}>
+                                    <Typography component="subtitle1" fontFamily='poppins-regular' color="#000" >
+                                        10, Poorvi Marg, DLF Phase 2, Sector 25, Gurugram, Haryana 122022
+                                    </Typography>
+                                </Grid>
+
+
+
+
+                            </Grid>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
+                            animate={isInView ? { opacity: 1, scale: 1, rotate: 0 } : { opacity: 0, scale: 0.8, rotate: -5 }}
+                            transition={{ duration: 0.7, delay: 0.9, type: "spring" }}
+                            whileHover={{ scale: 1.05, rotate: 2, transition: { duration: 0.2 } }}
+                        >
+                            <Grid mt={10} width={{ lg: 300, md: 250, }}>
+                                <Image
+                                    layout='responsive'
+                                    src={flowerPot}
+                                    alt="Flower Pot" />
+                            </Grid>
+                        </motion.div>
 
 
                     </Grid>
-
-                    <Grid mt={10} width={{ lg: 300, md: 250, }}>
-                        <Image
-                            layout='responsive'
-                            src={flowerPot}
-                            alt="Flower Pot" />
-                    </Grid>
-
-
-                </Grid>
+                </motion.div>
             </Grid>
 
 
 
             {/* ----------------------- Social Media icons ----------------------- */}
 
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ duration: 0.6, delay: 1 }}
+            >
+                <Grid
+                    width={{ lg: 400, xs: 100 }}
+                    justifyContent={{ lg: 'center', md: "start", sm: "start", xs: "start" }}
+                    ml={{ lg: 0, md: 2, sm: 2, xs: 2 }}
 
-            <Grid
-                width={{ lg: 400, xs: 100 }}
-                justifyContent={{ lg: 'center', md: "start", sm: "start", xs: "start" }}
-                ml={{ lg: 0, md: 2, sm: 2, xs: 2 }}
+                    mt={8}
+                    container>
 
-                mt={8}
-                container>
-
-                {/* <Grid item mt="5px">
-                    <Image
-                        width={15}
-                        src={facebookIcon}
-                        alt="Facebook" />
-                </Grid> */}
-
-
-                {/* <Grid mt="5px" ml={10}>
-                    <Image
-                        width={25}
-                        src={twitterIcon}
-                        alt="Twitter" />
-                </Grid> */}
-
-                <Grid mt="4px" >
-                    <Link href="https://www.instagram.com/own_technologies/?next=%2F" target='_blank'>
+                    {/* <Grid item mt="5px">
                         <Image
-                            width={23}
-                            src={instagramIcon}
-                            alt="Instagram" />
-                    </Link>
+                            width={15}
+                            src={facebookIcon}
+                            alt="Facebook" />
+                    </Grid> */}
+
+
+                    {/* <Grid mt="5px" ml={10}>
+                        <Image
+                            width={25}
+                            src={twitterIcon}
+                            alt="Twitter" />
+                    </Grid> */}
+
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.5, rotate: -180 }}
+                        animate={isInView ? { opacity: 1, scale: 1, rotate: 0 } : { opacity: 0, scale: 0.5, rotate: -180 }}
+                        transition={{ duration: 0.6, delay: 1.1 }}
+                        whileHover={{ scale: 1.2, rotate: 10, transition: { duration: 0.2 } }}
+                    >
+                        <Grid mt="4px" >
+                            <Link href="https://www.instagram.com/own_technologies/?next=%2F" target='_blank'>
+                                <Image
+                                    width={23}
+                                    src={instagramIcon}
+                                    alt="Instagram" />
+                            </Link>
+
+                        </Grid>
+                    </motion.div>
+
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.5, rotate: -180 }}
+                        animate={isInView ? { opacity: 1, scale: 1, rotate: 0 } : { opacity: 0, scale: 0.5, rotate: -180 }}
+                        transition={{ duration: 0.6, delay: 1.2 }}
+                        whileHover={{ scale: 1.2, rotate: 10, transition: { duration: 0.2 } }}
+                    >
+                        <Grid mt="3px" ml={5}>
+                            <Link href="https://www.linkedin.com/company/own-technologies/?viewAsMember=true" target='_blank'>
+                                <Image
+                                    width={23}
+                                    src={linkdinIcon}
+                                    alt="Linkdin" />
+
+                            </Link>
+                        </Grid>
+                    </motion.div>
+
+
+
 
                 </Grid>
-
-                <Grid mt="3px" ml={5}>
-                    <Link href="https://www.linkedin.com/company/own-technologies/?viewAsMember=true" target='_blank'>
-                        <Image
-                            width={23}
-                            src={linkdinIcon}
-                            alt="Linkdin" />
-
-                    </Link>
-                </Grid>
-
-
-
-
-            </Grid>
+            </motion.div>
 
 
             {/* ----------------------- Copyright text ----------------------- */}
 
-            <Grid textAlign={{ lg: 'center', md: "center", sm: "start", xs: "start" }} pb={5} ml={{ lg: 0, md: 2, sm: 2, xs: 2 }}>
-                <Typography component="p" ml={{ lg: 10 }} mt={10} fontSize={12} fontFamily='poppins-regular' color="#838788" textTransform='none'>
-                    Copyright © 2025  |  Created with ❤️ by OWN Technologies.
-                </Typography>
-            </Grid>
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+                transition={{ duration: 0.6, delay: 1.3 }}
+            >
+                <Grid textAlign={{ lg: 'center', md: "center", sm: "start", xs: "start" }} pb={5} ml={{ lg: 0, md: 2, sm: 2, xs: 2 }}>
+                    <Typography component="p" ml={{ lg: 10 }} mt={10} fontSize={12} fontFamily='poppins-regular' color="#838788" textTransform='none'>
+                        Copyright © 2025  |  Created with ❤️ by OWN Technologies.
+                    </Typography>
+                </Grid>
+            </motion.div>
 
 
 
