@@ -375,61 +375,153 @@ const categorizedCourseData = [
 
 ///----------------- Team common sections -----------------
 const PortfolioDesc = ({ name, img, nameBg, altName, isMobileApp, link }) => (
-    <Grid mt={6} >
-
-        <Link href={link} passHref target="_blank">
-
-            <Grid justifyContent='center' alignItems="center" display='flex'>
-
+    <motion.div
+        whileHover={{
+            y: -15,
+            scale: 1.02,
+        }}
+        style={{
+            transition: 'all 0.3s ease',
+            height: '100%',
+        }}
+    >
+        <Box
+            sx={{
+                bgcolor: '#fff',
+                borderRadius: '25px',
+                overflow: 'hidden',
+                boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
+                transition: 'all 0.4s ease',
+                position: 'relative',
+                border: '1px solid rgba(0,0,0,0.05)',
+                height: '100%',
+                display: 'flex',
+                flexDirection: 'column',
+                '&::before': {
+                    content: '""',
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    height: '4px',
+                    background: 'linear-gradient(90deg, #9CC118 0%, #DBD525 50%, #9CC118 100%)',
+                    transform: 'scaleX(0)',
+                    transformOrigin: 'left',
+                    transition: 'transform 0.4s ease',
+                    zIndex: 1,
+                },
+                '&:hover': {
+                    boxShadow: '0 20px 50px rgba(156,193,24,0.25)',
+                    transform: 'translateY(-8px)',
+                    border: '1px solid rgba(156,193,24,0.3)',
+                    '&::before': {
+                        transform: 'scaleX(1)',
+                    },
+                    '& .portfolio-image': {
+                        transform: 'scale(1.08)',
+                    },
+                    '& .portfolio-overlay': {
+                        opacity: 1,
+                    },
+                    '& .portfolio-name': {
+                        transform: 'translateY(-5px)',
+                    }
+                }
+            }}
+        >
+            <Link href={link} passHref target="_blank" style={{ textDecoration: 'none', height: '100%', display: 'flex', flexDirection: 'column' }}>
                 <Box
                     sx={{
-                        border: isMobileApp ? 'none' : '2px solid #707070',
-                        mr: "20px"
+                        position: 'relative',
+                        overflow: 'hidden',
+                        bgcolor: '#f8f9fa',
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        px: { xs: 2, sm: 2.5 },
+                        py: { xs: 0.5, sm: 1 },
+                        minHeight: isMobileApp ? 240 : 220,
+                        maxHeight: isMobileApp ? 240 : 220,
+                    }}
+                >
+                    <Box
+                        className="portfolio-overlay"
+                        sx={{
+                            position: 'absolute',
+                            inset: 0,
+                            background: 'linear-gradient(135deg, rgba(156,193,24,0.15) 0%, rgba(219,213,37,0.15) 100%)',
+                            opacity: 0,
+                            transition: 'opacity 0.4s ease',
+                            zIndex: 1,
+                        }}
+                    />
+                    <Box
+                        className="portfolio-image"
+                        sx={{
+                            position: 'relative',
+                            zIndex: 2,
+                            transition: 'transform 0.5s ease',
+                            width: '100%',
+                            height: '100%',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                        }}
+                    >
+                        <Image
+                            width={isMobileApp ? 400 : 500}
+                            height={isMobileApp ? 200 : 200}
+                            src={img}
+                            alt={altName}
+                            style={{
+                                display: 'block',
+                                width: '100%',
+                                height: 'auto',
+                                objectFit: 'contain',
+                                maxHeight: '100%',
+                            }}
+                        />
+                    </Box>
+                </Box>
+
+                <Box
+                    className="portfolio-name"
+                    sx={{
+                        pt: 2,
+                        pb: 2.5,
+                        px: 2,
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        position: 'relative',
+                        transition: 'transform 0.4s ease',
+                        background: 'linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(247,248,250,1) 100%)',
                     }}
                 >
                     <Image
-                        width={isMobileApp ? 200 : 400}
-                        height={isMobileApp ? 400 : 300}
-                        layout="intrinsic"
-                        src={img}
-                        alt={altName}
+                        width={250}
+                        height={45}
+                        src={nameBg}
+                        alt='Team BG One Image'
+                        style={{ position: 'relative' }}
                     />
+                    <Typography
+                        sx={{
+                            position: "absolute",
+                            fontSize: { xs: 15, sm: 16 },
+                            fontFamily: "poppins-semibold",
+                            color: '#fff',
+                            fontWeight: 600,
+                        }}
+                        component='h4'
+                        textAlign='center'
+                    >
+                        {name}
+                    </Typography>
                 </Box>
-
-            </Grid>
-
-
-            <Box
-
-
-                sx={{
-                    pt: 2,
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center"
-                }}>
-
-                <Image
-                    width={250}
-                    height={40}
-                    sx={{ position: 'relative' }}
-                    src={nameBg}
-                    alt='Team BG One Image'>
-                </Image>
-
-                <Typography sx={{ position: "absolute" }}
-                    fontSize={15}
-                    fontFamily="poppins-semibold"
-                    component='h4'
-                    color='#fff'
-                    textAlign='center'>
-
-                    {name}
-
-                </Typography>
-            </Box>
-        </Link>
-    </Grid>
+            </Link>
+        </Box>
+    </motion.div>
 )
 
 
@@ -443,9 +535,21 @@ const FilteredCourses = () => {
     const filteredData = categorizedCourseData.find(item => item.parent === selectedTab)?.content || [];
 
     return (
-        <Box sx={{ p: 2 }}>
-
-            <Box sx={{ display: 'flex', justifyContent: 'center', mt: 2, px: { xs: 1, sm: 2 } }}>
+        <Box
+            sx={{
+                pb: 10,
+                pt: 2,
+            }}
+        >
+            <Box
+                sx={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    mt: 0,
+                    mb: 6,
+                    px: { xs: 2, sm: 3, md: 4 },
+                }}
+            >
                 <Tabs
                     value={selectedTab}
                     onChange={handleTabChange}
@@ -453,9 +557,10 @@ const FilteredCourses = () => {
                     scrollButtons="auto"
                     allowScrollButtonsMobile
                     sx={{
-                        backgroundColor: '#DFF2A1',
+                        background: 'linear-gradient(135deg, rgba(156,193,24,0.15) 0%, rgba(219,213,37,0.15) 100%)',
                         borderRadius: '30px',
-                        padding: '4px',
+                        padding: '6px',
+                        boxShadow: '0 5px 20px rgba(0,0,0,0.1)',
                         width: {
                             xs: '100%',
                             sm: '100%',
@@ -482,13 +587,20 @@ const FilteredCourses = () => {
                                 borderRadius: '30px',
                                 textTransform: 'none',
                                 fontWeight: 600,
-                                px: 3,                           // reduce padding for mobile
-                                color: 'black',
+                                px: { xs: 2, sm: 3 },
+                                py: 1.5,
+                                color: '#27363B',
                                 backgroundColor: 'transparent',
                                 fontFamily: 'poppins-semibold',
+                                fontSize: { xs: 13, sm: 14 },
+                                transition: 'all 0.3s ease',
+                                '&:hover': {
+                                    backgroundColor: 'rgba(156,193,24,0.1)',
+                                },
                                 '&.Mui-selected': {
-                                    color: 'white',
-                                    backgroundColor: '#000',
+                                    color: '#fff',
+                                    background: 'linear-gradient(135deg, #9CC118 0%, #DBD525 100%)',
+                                    boxShadow: '0 5px 15px rgba(156,193,24,0.3)',
                                 },
                             }}
                         />
@@ -496,43 +608,58 @@ const FilteredCourses = () => {
                 </Tabs>
             </Box>
 
-
-            <AnimatePresence mode="wait">
-                <motion.div
-                    key={selectedTab}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -20 }}
-                    transition={{ duration: 0.3 }}
-                >
-                    <Grid container spacing={0} justifyContent="center" mb={20}>
-                        {filteredData.map((course) => (
-                            <Grid item xs={12} sm={6} md={3.5} key={course.id}>
-                                <Box
-                                    sx={{
-                                        transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-                                        '&:hover': {
-                                            transform: 'translateY(-5px)',
-
-                                        },
-                                    }}
+            <Box
+                sx={{
+                    maxWidth: '1400px',
+                    mx: 'auto',
+                    px: { xs: '20px', sm: '20px', md: '20px', lg: '20px' },
+                }}
+            >
+                <AnimatePresence mode="wait">
+                    <motion.div
+                        key={selectedTab}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        transition={{ duration: 0.4 }}
+                    >
+                        <Grid
+                            container
+                            spacing={{ xs: 3, sm: 4, md: 4 }}
+                            justifyContent="center"
+                            sx={{ mb: 10 }}
+                        >
+                            {filteredData.map((course, index) => (
+                                <Grid
+                                    item
+                                    xs={12}
+                                    sm={6}
+                                    md={4}
+                                    lg={3}
+                                    key={course.id}
+                                    sx={{ display: 'flex' }}
                                 >
-                                    <PortfolioDesc
-                                        name={course.name}
-                                        nameBg={course.nameBg}
-                                        img={course.image}
-                                        altName={course.name}
-                                        isMobileApp={selectedTab === 'Mobile Apps'}
-                                        link={course.link}
-                                    />
-                                </Box>
-                            </Grid>
-                        ))}
-                    </Grid>
-
-                </motion.div>
-            </AnimatePresence>
-
+                                    <motion.div
+                                        initial={{ opacity: 0, scale: 0.9 }}
+                                        animate={{ opacity: 1, scale: 1 }}
+                                        transition={{ duration: 0.4, delay: index * 0.1 }}
+                                        style={{ width: '100%' }}
+                                    >
+                                        <PortfolioDesc
+                                            name={course.name}
+                                            nameBg={course.nameBg}
+                                            img={course.image}
+                                            altName={course.name}
+                                            isMobileApp={selectedTab === 'Mobile Apps'}
+                                            link={course.link}
+                                        />
+                                    </motion.div>
+                                </Grid>
+                            ))}
+                        </Grid>
+                    </motion.div>
+                </AnimatePresence>
+            </Box>
         </Box>
     );
 };

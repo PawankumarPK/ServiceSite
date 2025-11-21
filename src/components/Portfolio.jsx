@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import dynamic from "next/dynamic";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
@@ -17,7 +17,7 @@ import portfolio_9 from "../../public/png/portfolio_9.png";
 import portfolio_10 from "../../public/png/portfolio_10.png";
 import Image from "next/image";
 import { Box, Grid, Link, Typography } from "@mui/material";
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence, useInView } from 'framer-motion'
 import teamBgOne from "../../public/png/teamBg1.png";
 import teamBgTwo from "../../public/png/teamBg2.png";
 import teamBgThree from "../../public/png/teamBg3.png";
@@ -78,48 +78,87 @@ const PortfolioDesc = ({ name, img, nameBg, altName }) => (
 
 
 const Portfolio = () => {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-    <Grid
-        ml={{ lg: 4, md: 4 }}
-        width={{ lg: 300, md: 350, sm: 300, xs: 350 }}
-        mt={{ sm: 5, xs: 5 }}
-    >
-        <Image
-            layout='responsive'
-            priority
-            src={asap}
-            alt='study image'>
-        </Image>
-    </Grid>
     return (
+        <Grid
+            id="portfolio"
+            bgcolor="#F7F8FA"
+            ref={ref}
+            sx={{
+                position: 'relative',
+                overflow: 'hidden',
+                '&::before': {
+                    content: '""',
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    height: '250px',
+                    background: 'linear-gradient(180deg, rgba(247,248,250,1) 0%, rgba(247,248,250,0.5) 100%)',
+                    zIndex: 0,
+                },
+                '&::after': {
+                    content: '""',
+                    position: 'absolute',
+                    bottom: 0,
+                    left: 0,
+                    right: 0,
+                    height: '200px',
+                    background: 'linear-gradient(0deg, rgba(156,193,24,0.05) 0%, rgba(219,213,37,0.05) 50%, transparent 100%)',
+                    zIndex: 0,
+                }
+            }}
+        >
+            <Box sx={{ position: 'relative', zIndex: 1, width: '100%' }}>
+                <Grid container direction="column" alignItems="center">
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                        transition={{ duration: 0.6 }}
+                        style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}
+                    >
+                        <Typography
+                            component="subtitle2"
+                            mt={10}
+                            fontSize={14}
+                            fontFamily='poppins-medium'
+                            textAlign="center"
+                            color="#27363B"
+                        >
+                            Our Portfolio
+                        </Typography>
 
+                        <Grid width={100} height={2} bgcolor="#40536B" sx={{ mt: 1 }} />
 
-        <Grid height={{}} id="portfolio" bgcolor="#F7F8FA" >
+                        <Grid container justifyContent='center' textAlign="center" mt={2} mb={3}>
+                            <Typography
+                                component="h3"
+                                color="#000"
+                                fontSize={{ lg: 50, md: 45, xs: 40 }}
+                                fontFamily="poppins-bold"
+                                sx={{ lineHeight: { lg: "60px", xs: "1.2" } }}
+                            >
+                                Latest &
+                            </Typography>
 
-            <Grid container direction="column" alignItems="center">
-                <Typography component="subtitle2" pt={0} fontSize={14} fontFamily='poppins-medium' textAlign="center" color="#27363B">
-                    Our Portfolio
-                </Typography>
-
-                <Grid width={100} height={2} bgcolor="#40536B" />
-
-
-                <Grid container justifyContent='center' textAlign="center">
-                    <Typography component="h3" color="#000" mt={2} fontSize={{ lg: 45, md: 45, xs: 40 }} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
-                        Latest &
-                    </Typography>
-
-                    <Typography component="h3" color='#9CC118' mt={{ lg: 2, md: 2, sm: 0, xs: 0 }} fontSize={{ lg: 45, md: 45, xs: 40 }} fontFamily="poppins-semibold" style={{ lineHeight: "60px" }}>
-                        &nbsp;Creative Work
-                    </Typography>
+                            <Typography
+                                component="h3"
+                                color='#9CC118'
+                                fontSize={{ lg: 50, md: 45, xs: 40 }}
+                                fontFamily="poppins-bold"
+                                sx={{ lineHeight: { lg: "60px", xs: "1.2" } }}
+                            >
+                                &nbsp;Creative Work
+                            </Typography>
+                        </Grid>
+                    </motion.div>
                 </Grid>
 
-            </Grid>
-
-            <FilteredCourses />
-        </Grid >
-
+                <FilteredCourses />
+            </Box>
+        </Grid>
     );
-
 };
 export default Portfolio;
