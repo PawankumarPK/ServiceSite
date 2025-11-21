@@ -223,7 +223,7 @@ const Header = () => {
                 initial={{ opacity: 0, scale: 0.5, rotate: -180 }}
                 animate={{ opacity: 1, scale: 1, rotate: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                whileHover={{ scale: 1.2, rotate: 10 }}
+                whileHover={{ scale: 1.2, rotate: 10, transition: { duration: 0.15 } }}
               >
                 <Link href="https://www.instagram.com/own_technologies/?next=%2F" target='_blank' passHref>
                   <Image
@@ -255,7 +255,7 @@ const Header = () => {
                 initial={{ opacity: 0, scale: 0.5, rotate: -180 }}
                 animate={{ opacity: 1, scale: 1, rotate: 0 }}
                 transition={{ duration: 0.6, delay: 0.5 }}
-                whileHover={{ scale: 1.2, rotate: 10 }}
+                whileHover={{ scale: 1.2, rotate: 10, transition: { duration: 0.15 } }}
               >
                 <Link href="https://www.linkedin.com/company/own-technologies/?viewAsMember=true" target='_blank' passHref>
                   <Image
@@ -335,7 +335,7 @@ const Header = () => {
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.2 }}
-                  whileHover={{ scale: 1.1, y: -2 }}
+                  whileHover={{ scale: 1.1, y: -2, transition: { duration: 0.15 } }}
                 >
                   <Link href="#services" scroll={true} passHref>
                     <NavbarTitle text="SERVICES" />
@@ -348,21 +348,7 @@ const Header = () => {
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.3 }}
-                  whileHover={{ scale: 1.1, y: -2 }}
-                >
-                  <Link href="#guarantee" scroll={true} passHref>
-                    <NavbarTitle text="GUARANTEE" />
-                  </Link>
-                </motion.div>
-              </Grid>
-
-
-              <Grid item xs="auto" paddingRight={{ lg: 4, xs: 2 }}>
-                <motion.div
-                  initial={{ opacity: 0, y: -20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.4 }}
-                  whileHover={{ scale: 1.1, y: -2 }}
+                  whileHover={{ scale: 1.1, y: -2, transition: { duration: 0.15 } }}
                 >
                   <Link href="#portfolio" scroll={true} passHref>
                     <NavbarTitle text="PORTFOLIO" />
@@ -370,13 +356,12 @@ const Header = () => {
                 </motion.div>
               </Grid>
 
-
               <Grid item xs="auto" paddingRight={{ lg: 4, xs: 2 }}>
                 <motion.div
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.5 }}
-                  whileHover={{ scale: 1.1, y: -2 }}
+                  transition={{ duration: 0.5, delay: 0.4 }}
+                  whileHover={{ scale: 1.1, y: -2, transition: { duration: 0.15 } }}
                 >
                   <Link href="#features" scroll={true} passHref>
                     <NavbarTitle text="FEATURES" />
@@ -388,27 +373,37 @@ const Header = () => {
                 <motion.div
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.6 }}
-                  whileHover={{ scale: 1.1, y: -2 }}
+                  transition={{ duration: 0.5, delay: 0.5 }}
+                  whileHover={{ scale: 1.1, y: -2, transition: { duration: 0.15 } }}
                 >
-                  <Link href="https://blog.owntechnologies.in/" target='_blank' scroll={true} passHref>
-                    <NavbarTitle text="BLOGS" />
+                  <Link href="#guarantee" scroll={true} passHref>
+                    <NavbarTitle text="GUARANTEE" />
                   </Link>
                 </motion.div>
               </Grid>
 
-
-
+              <Grid item xs="auto" paddingRight={{ lg: 4, xs: 2 }}>
+                <motion.div
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.6 }}
+                  whileHover={{ scale: 1.1, y: -2, transition: { duration: 0.15 } }}
+                >
+                  <Link href="#contact" scroll={true} passHref>
+                    <NavbarTitle text="CONTACT" />
+                  </Link>
+                </motion.div>
+              </Grid>
 
               <Grid item xs="auto" paddingRight={{ lg: 4, xs: 2 }}>
                 <motion.div
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.7 }}
-                  whileHover={{ scale: 1.1, y: -2 }}
+                  whileHover={{ scale: 1.1, y: -2, transition: { duration: 0.15 } }}
                 >
-                  <Link href="#contact" scroll={true} passHref>
-                    <NavbarTitle text="CONTACT" />
+                  <Link href="https://blog.owntechnologies.in/" target='_blank' scroll={true} passHref>
+                    <NavbarTitle text="BLOGS" />
                   </Link>
                 </motion.div>
               </Grid>
