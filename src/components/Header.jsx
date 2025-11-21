@@ -18,6 +18,7 @@ import DrawerItem from './Drawer';
 import { useEffect } from 'react';
 import Link from 'next/link';
 import { keyframes } from '@emotion/react';
+import { motion } from 'framer-motion';
 
 
 
@@ -56,66 +57,103 @@ const Header = () => {
 
   return (
 
-    <Box sx={{ display: 'flex', alignItems: 'center' }} id="home" bgcolor="#F7F8FA">
-      <Image
-        priority
-        src={bannerImage}
-        layout='fill'
-        objectFit='cover'
-        alt='Banner Image'>
-      </Image>
+    <Box 
+      sx={{ 
+        display: 'flex', 
+        alignItems: 'center',
+        position: 'relative',
+        minHeight: { xs: '100vh', sm: '100vh', md: '100vh', lg: '100vh' },
+        width: '100%',
+        overflow: 'hidden'
+      }} 
+      id="home" 
+      bgcolor="#F7F8FA">
+      <Box
+        sx={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          width: '100%',
+          height: '100%',
+          zIndex: 0
+        }}
+      >
+        <Image
+          priority
+          src={bannerImage}
+          layout='fill'
+          objectFit='cover'
+          alt='Banner Image'
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover'
+          }}>
+        </Image>
+      </Box>
 
-      <Container sx={{ position: "relative" }}>
+      <Container sx={{ position: "relative", zIndex: 1, width: '100%' }}>
 
         {/* ----------------------- Whatsapp and contact number ----------------------- */}
         <Grid container alignItems='center' spacing={8} pt={6} pb={2}>
           <Grid
             onClick={() => window.open(`tel:9910765616`)}
             container item xs alignItems='center'>
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <Grid
 
+                sx={{
+                  cursor: 'pointer',
+                  width: {
+                    lg: 22,
+                    md: 22,
+                    sm: 22,
+                    xs: 20
+                  },
+                  height: {
+                    lg: 22,
+                    md: 22,
+                    sm: 22,
+                    xs: 20
+                  }
+                }}>
+                <Image
+                  layout="responsive"
+                  src={calling}
+                  component="img"
+                  alt="Calling logo">
+                </Image>
+              </Grid>
+            </motion.div>
 
-            <Grid
-
-              sx={{
-                cursor: 'pointer',
-                width: {
-                  lg: 22,
-                  md: 22,
-                  sm: 22,
-                  xs: 20
-                },
-                height: {
-                  lg: 22,
-                  md: 22,
-                  sm: 22,
-                  xs: 20
-                }
-              }}>
-              <Image
-                layout="responsive"
-                src={calling}
-                component="img"
-                alt="Calling logo">
-              </Image>
-            </Grid>
-
-
-            <Typography
-              component="p"
-              sx={{
-                cursor: 'pointer',
-                fontSize: {
-                  lg: 18,
-                  md: 18,
-                  sm: 18,
-                  xs: 15
-                }
-              }}
-              pl={1}
-              fontWeight={500}
-              color='common.white'>
-              +91-9910765616
-            </Typography>
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
+              <Typography
+                component="p"
+                sx={{
+                  cursor: 'pointer',
+                  fontSize: {
+                    lg: 18,
+                    md: 18,
+                    sm: 18,
+                    xs: 15
+                  }
+                }}
+                pl={1}
+                fontWeight={500}
+                color='common.white'>
+                +91-9910765616
+              </Typography>
+            </motion.div>
           </Grid>
 
 
@@ -181,13 +219,20 @@ const Header = () => {
                   xs: 42
                 }
               }}>
-              <Link href="https://www.instagram.com/own_technologies/?next=%2F" target='_blank' passHref>
-                <Image
-                  layout='responsive'
-                  src={instagramIcon}
-                  alt="instagram icon" />
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5, rotate: -180 }}
+                animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                whileHover={{ scale: 1.2, rotate: 10 }}
+              >
+                <Link href="https://www.instagram.com/own_technologies/?next=%2F" target='_blank' passHref>
+                  <Image
+                    layout='responsive'
+                    src={instagramIcon}
+                    alt="instagram icon" />
 
-              </Link>
+                </Link>
+              </motion.div>
 
             </Grid>
 
@@ -206,12 +251,19 @@ const Header = () => {
                   xs: 42
                 }
               }}>
-              <Link href="https://www.linkedin.com/company/own-technologies/?viewAsMember=true" target='_blank' passHref>
-                <Image
-                  layout='responsive'
-                  src={linkdinIcon}
-                  alt="linkdin icon" />
-              </Link>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5, rotate: -180 }}
+                animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                whileHover={{ scale: 1.2, rotate: 10 }}
+              >
+                <Link href="https://www.linkedin.com/company/own-technologies/?viewAsMember=true" target='_blank' passHref>
+                  <Image
+                    layout='responsive'
+                    src={linkdinIcon}
+                    alt="linkdin icon" />
+                </Link>
+              </motion.div>
             </Grid>
           </Grid>
 
@@ -224,39 +276,46 @@ const Header = () => {
 
           {/* ----------------------- Own button section ----------------------- */}
 
-          <Grid
-            sx={{
-              width: {
-                lg: 140,
-                md: 130,
-                sm: 100,
-                xs: 80
-              },
-              height: {
-                lg: 75,
-                md: 75,
-                sm: 75,
-                xs: 75
-              }
-            }}
-
-            display='flex' alignItems='center' justifyContent='center' bgcolor='#27363B'>
-
-            <Typography
-              component="h3"
+          <motion.div
+            initial={{ opacity: 0, x: -50, scale: 0.8 }}
+            animate={{ opacity: 1, x: 0, scale: 1 }}
+            transition={{ duration: 0.7, delay: 0.1, type: "spring", stiffness: 100 }}
+            whileHover={{ scale: 1.05 }}
+          >
+            <Grid
               sx={{
-                fontSize: {
-                  lg: 40,
-                  md: 30,
-                  sm: 30,
-                  xs: 20
+                width: {
+                  lg: 140,
+                  md: 130,
+                  sm: 100,
+                  xs: 80
+                },
+                height: {
+                  lg: 75,
+                  md: 75,
+                  sm: 75,
+                  xs: 75
                 }
               }}
-              color='#fff' fontWeight='700'>
-              OWN
-            </Typography>
 
-          </Grid>
+              display='flex' alignItems='center' justifyContent='center' bgcolor='#27363B'>
+
+              <Typography
+                component="h3"
+                sx={{
+                  fontSize: {
+                    lg: 40,
+                    md: 30,
+                    sm: 30,
+                    xs: 20
+                  }
+                }}
+                color='#fff' fontWeight='700'>
+                OWN
+              </Typography>
+
+            </Grid>
+          </motion.div>
 
 
           {/* ----------------------- Navbar section ----------------------- */}
@@ -272,44 +331,86 @@ const Header = () => {
 
 
               <Grid item xs="auto" paddingRight={{ lg: 4, xs: 2 }}>
-                <Link href="#services" scroll={true} passHref>
-                  <NavbarTitle text="SERVICES" />
-                </Link>
+                <motion.div
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  whileHover={{ scale: 1.1, y: -2 }}
+                >
+                  <Link href="#services" scroll={true} passHref>
+                    <NavbarTitle text="SERVICES" />
+                  </Link>
+                </motion.div>
               </Grid>
 
               <Grid item xs="auto" paddingRight={{ lg: 4, xs: 2 }}>
-                <Link href="#guarantee" scroll={true} passHref>
-                  <NavbarTitle text="GUARANTEE" />
-                </Link>
+                <motion.div
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  whileHover={{ scale: 1.1, y: -2 }}
+                >
+                  <Link href="#guarantee" scroll={true} passHref>
+                    <NavbarTitle text="GUARANTEE" />
+                  </Link>
+                </motion.div>
               </Grid>
 
 
               <Grid item xs="auto" paddingRight={{ lg: 4, xs: 2 }}>
-                <Link href="#portfolio" scroll={true} passHref>
-                  <NavbarTitle text="PORTFOLIO" />
-                </Link>
+                <motion.div
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.4 }}
+                  whileHover={{ scale: 1.1, y: -2 }}
+                >
+                  <Link href="#portfolio" scroll={true} passHref>
+                    <NavbarTitle text="PORTFOLIO" />
+                  </Link>
+                </motion.div>
               </Grid>
 
 
               <Grid item xs="auto" paddingRight={{ lg: 4, xs: 2 }}>
-                <Link href="#features" scroll={true} passHref>
-                  <NavbarTitle text="FEATURES" />
-                </Link>
+                <motion.div
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.5 }}
+                  whileHover={{ scale: 1.1, y: -2 }}
+                >
+                  <Link href="#features" scroll={true} passHref>
+                    <NavbarTitle text="FEATURES" />
+                  </Link>
+                </motion.div>
               </Grid>
 
               <Grid item xs="auto" paddingRight={{ lg: 4, xs: 2 }}>
-                <Link href="https://blog.owntechnologies.in/" target='_blank' scroll={true} passHref>
-                  <NavbarTitle text="BLOGS" />
-                </Link>
+                <motion.div
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.6 }}
+                  whileHover={{ scale: 1.1, y: -2 }}
+                >
+                  <Link href="https://blog.owntechnologies.in/" target='_blank' scroll={true} passHref>
+                    <NavbarTitle text="BLOGS" />
+                  </Link>
+                </motion.div>
               </Grid>
 
 
 
 
               <Grid item xs="auto" paddingRight={{ lg: 4, xs: 2 }}>
-                <Link href="#contact" scroll={true} passHref>
-                  <NavbarTitle text="CONTACT" />
-                </Link>
+                <motion.div
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.7 }}
+                  whileHover={{ scale: 1.1, y: -2 }}
+                >
+                  <Link href="#contact" scroll={true} passHref>
+                    <NavbarTitle text="CONTACT" />
+                  </Link>
+                </motion.div>
               </Grid>
 
               {/* Drawer */}
@@ -368,72 +469,138 @@ const Header = () => {
           {/* ----------------------- We make beautiful & Resposive text section ----------------------- */}
 
           <Grid>
-            <Typography component="h3" color="#000" pr={{ lg: 5, xs: 2 }} mt={-10} fontSize={40} fontFamily="poppins-bold">
-              WE MAKE
-            </Typography>
+            <motion.div
+              initial={{ opacity: 0, x: 50, scale: 0.8 }}
+              animate={{ opacity: 1, x: 0, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.3, type: "spring", stiffness: 80 }}
+            >
+              <Typography component="h3" color="#000" pr={{ lg: 5, xs: 2 }} mt={-10} fontSize={40} fontFamily="poppins-bold">
+                WE BUILD
+              </Typography>
+            </motion.div>
 
-            <Typography component="h3" color="#000" fontSize={15} fontFamily="poppins" textAlign='center' pr={{ lg: 5, xs: 0 }}>
-              Beautiful & Responsive
-            </Typography>
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+            >
+              <Typography component="h3" color="#000" fontSize={15} fontFamily="poppins" textAlign='center' pr={{ lg: 5, xs: 0 }}>
+                Modern & Scalable
+              </Typography>
+            </motion.div>
 
           </Grid>
 
 
           {/* ----------------------- Creative website & app section ----------------------- */}
-          <Grid
-            flexDirection='column'
-            container height={{ lg: 350, xs: 330 }}
-            width={{ lg: 550, md: 400, sm: 400, xs: 400 }}
-            mt={-3}
-            bgcolor="#DBD525"
-
+          <motion.div
+            initial={{ opacity: 0, y: 100, scale: 0.9, rotateX: 15 }}
+            animate={{ opacity: 1, y: 0, scale: 1, rotateX: 0 }}
+            transition={{ duration: 1, delay: 0.4, type: "spring", stiffness: 60 }}
           >
+            <Grid
+              flexDirection='column'
+              container 
+              height={{ lg: 350, xs: 330 }}
+              width={{ lg: 550, md: 400, sm: 400, xs: 400 }}
+              mt={-3}
+              bgcolor="#DBD525"
+              sx={{
+                alignItems: 'flex-start',
+                justifyContent: 'flex-start',
+                px: { xs: 3, sm: 4, md: 4, lg: 4 },
+              }}
 
+            >
 
-            <Typography
-              component="h1"
-              fontFamily='poppins'
-              fontSize={22}
-              color="#fff" pt={4} pl={4}>
-              Creative
-            </Typography>
-
-            <Typography
-              component="h1"
-              fontFamily='poppins-bold'
-              color="#fff" fontSize={{ lg: 40, xs: 30 }} fontWeight={800} pl={4}>
-              WEBSITE & APPS
-            </Typography>
-
-
-            <Typography
-              component="subtitle1"
-              fontSize={{ lg: 15, xs: 11 }}
-              fontFamily='poppins'
-              color="#fff" pl={4} pr={4}>
-              Are you looking for a rapid but high performance web design or application development? Look no further, we are an advanced digital agency with a team of professional web designers and developers who have worked on countless projects for startups, companies and agencies alike.
-            </Typography>
-
-
-            <Grid pl={4} pt={4} pb={0}>
-              <Button href="#about" scroll={true} variant="outlined" sx={{ borderRadius: 50 }}
-                style={{
-                  color: "#fff",
-                  border: '2px solid',
-                }}>
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.8 }}
+                style={{ width: '100%' }}
+              >
                 <Typography
-                  component="p"
-                  pl={{ lg: 3, xs: 1 }} pr={3} pb={{ lg: 0.5 }} pt={0.5}
-                  fontFamily='poppins-medium'
-                  color="#fff"
-                  textTransform='none'>
-
-                  Learn More
-
+                  component="h1"
+                  fontFamily='poppins'
+                  fontSize={22}
+                  color="#fff" 
+                  pt={4}
+                  sx={{ textAlign: 'left' }}>
+                  Innovative
                 </Typography>
+              </motion.div>
 
-              </Button>
+              <motion.div
+                initial={{ opacity: 0, x: -30, scale: 0.9 }}
+                animate={{ opacity: 1, x: 0, scale: 1 }}
+                transition={{ duration: 0.7, delay: 1, type: "spring" }}
+                style={{ width: '100%' }}
+              >
+                <Typography
+                  component="h1"
+                  fontFamily='poppins-bold'
+                  color="#fff" 
+                  fontSize={{ lg: 40, xs: 30 }} 
+                  fontWeight={800}
+                  sx={{ textAlign: 'left' }}>
+                  WEBSITE & APPS
+                </Typography>
+              </motion.div>
+
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 1.2 }}
+                style={{ width: '100%' }}
+              >
+                <Typography
+                  component="subtitle1"
+                  fontSize={{ lg: 15, xs: 11 }}
+                  fontFamily='poppins'
+                  color="#fff" 
+                  pt={2}
+                  pb={2}
+                  sx={{ 
+                    textAlign: 'left',
+                    width: '100%'
+                  }}>
+                  Ready to elevate your digital presence? We craft stunning websites and powerful mobile applications that combine speed, functionality, and exceptional user experience. Our expert team transforms your vision into reality, delivering custom solutions that drive engagement and boost your business growth.
+                </Typography>
+              </motion.div>
+
+
+              <Grid pt={2} pb={0} sx={{ width: '100%', display: 'flex', justifyContent: 'flex-start' }}>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.6, delay: 1.4 }}
+                >
+                  <Button href="#about" scroll={true} variant="outlined" sx={{ 
+                    borderRadius: 50,
+                    py: 1,
+                    px: { xs: 2, sm: 3, md: 3, lg: 3 }
+                  }}
+                    style={{
+                      color: "#fff",
+                      border: '2px solid',
+                    }}>
+                    <Typography
+                      component="p"
+                      fontFamily='poppins-medium'
+                      color="#fff"
+                      textTransform='none'
+                      fontSize={{ xs: 13, sm: 14, md: 15, lg: 16 }}>
+
+                      Learn More
+
+                    </Typography>
+
+                  </Button>
+                </motion.div>
+              </Grid>
             </Grid>
+          </motion.div>
 
             {/* Whatsapp Icon */}
             <Grid
@@ -518,17 +685,9 @@ const Header = () => {
 
           </Grid>
 
-
-
-
-
-        </Grid>
-
-
       </Container >
 
-
-    </Box >
+    </Box>
 
   )
 }
