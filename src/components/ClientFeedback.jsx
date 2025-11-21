@@ -5,6 +5,7 @@ import { Box, Grid, Typography, IconButton } from '@mui/material';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ClientFeedbackCard from './ClientFeedbackCard';
+import { motion, useInView } from 'framer-motion';
 
 const feedbackData = [
     {
@@ -111,99 +112,175 @@ const ClientFeedback = () => {
         }
     };
 
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, margin: "-100px" });
+
     return (
-        <Grid bgcolor="#fff" container direction="column" alignItems="center" id="team">
-            <Typography mt={10} fontSize={14} fontFamily="poppins-medium" textAlign="center" color="#27363B">
-                Testimonials
-            </Typography>
-
-            <Grid width={100} height={2} bgcolor="#40536B" mb={2}></Grid>
-
-            <Grid container justifyContent="center" textAlign="center">
-                <Typography
-                    component="h3"
-                    color="#000"
-                    noWrap
-                    mt={2}
-                    fontSize={{ lg: 45, md: 40, sm: 40, xs: 30 }}
-                    fontFamily="poppins-semibold"
-                    sx={{ lineHeight: '60px' }}
+        <Grid 
+            bgcolor="#F7F8FA" 
+            container 
+            direction="column" 
+            alignItems="center" 
+            id="team"
+            ref={ref}
+            sx={{
+                position: 'relative',
+                overflow: 'hidden',
+                '&::before': {
+                    content: '""',
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    height: '250px',
+                    background: 'linear-gradient(180deg, rgba(247,248,250,1) 0%, rgba(247,248,250,0.5) 100%)',
+                    zIndex: 0,
+                },
+                '&::after': {
+                    content: '""',
+                    position: 'absolute',
+                    bottom: 0,
+                    left: 0,
+                    right: 0,
+                    height: '200px',
+                    background: 'linear-gradient(0deg, rgba(156,193,24,0.05) 0%, rgba(219,213,37,0.05) 50%, transparent 100%)',
+                    zIndex: 0,
+                }
+            }}
+        >
+            <Box sx={{ position: 'relative', zIndex: 1, width: '100%' }}>
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                    transition={{ duration: 0.6 }}
+                    style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}
                 >
-                    Kind Word,
-                </Typography>
+                    <Typography 
+                        mt={10} 
+                        fontSize={14} 
+                        fontFamily="poppins-medium" 
+                        textAlign="center" 
+                        color="#27363B"
+                    >
+                        Testimonials
+                    </Typography>
 
-                <Typography
-                    component="h3"
-                    color="#9CC118"
+                    <Grid width={100} height={2} bgcolor="#40536B" mb={2} sx={{ mt: 1 }}></Grid>
+
+                    <Grid container justifyContent="center" textAlign="center" mt={2} mb={6}>
+                        <Typography
+                            component="h3"
+                            color="#000"
+                            noWrap
+                            fontSize={{ lg: 50, md: 45, sm: 40, xs: 35 }}
+                            fontFamily="poppins-bold"
+                            sx={{ lineHeight: { lg: "60px", xs: "1.2" } }}
+                        >
+                            Kind Word,
+                        </Typography>
+
+                        <Typography
+                            component="h3"
+                            color="#9CC118"
+                            fontSize={{ lg: 50, md: 45, sm: 40, xs: 35 }}
+                            fontFamily="poppins-bold"
+                            sx={{ lineHeight: { lg: "60px", xs: "1.2" } }}
+                        >
+                            &nbsp;Big Impact
+                        </Typography>
+                    </Grid>
+                </motion.div>
+
+
+
+
+                {/* Slider */}
+                <Box
+                    ref={scrollRef}
                     sx={{
-                        mt: {
-                            xs: 0,
-                            sm: 0,
-                            md: 2,
-                        }
-                    }}
-                    fontSize={{ lg: 45, md: 40, sm: 40, xs: 40 }}
-                    fontFamily="poppins-semibold"
-                    // sx={{ lineHeight: '60px' }}
-                >
-                    &nbsp;Big Impact
-                </Typography>
-            </Grid>
-
-
-
-
-            {/* Slider */}
-            <Box
-                ref={scrollRef}
-                sx={{
-                    display: 'flex',
-                    overflowX: 'auto',
-                    scrollBehavior: 'smooth',
-                    gap: 2,
-                    py: 1,
-                    px: { xs: 2, sm: 4, md: 6 },
-                    width: '100%',
-                }}
-            >
-                {feedbackData.map((feedback, i) => (
-                    <ClientFeedbackCard key={i} {...feedback} />
-                ))}
-            </Box>
-
-            {/* Navigation Arrows */}
-            <Box display="flex" justifyContent="center" mt={2}>
-                <IconButton
-                    onClick={() => scroll('left')}
-                    sx={{
-                        mx: 1,
-                        backgroundColor: '#4CAF50', // Green
-                        color: '#fff',
-                        borderRadius: '50%',
-                        p: 1.5,
-                        '&:hover': {
-                            backgroundColor: '#45A049',
+                        display: 'flex',
+                        overflowX: 'auto',
+                        scrollBehavior: 'smooth',
+                        gap: 3,
+                        py: 2,
+                        px: { xs: 2, sm: 4, md: 6, lg: 8 },
+                        width: '100%',
+                        maxWidth: '1600px',
+                        mx: 'auto',
+                        '&::-webkit-scrollbar': {
+                            height: '8px',
+                        },
+                        '&::-webkit-scrollbar-track': {
+                            background: 'rgba(0,0,0,0.05)',
+                            borderRadius: '10px',
+                        },
+                        '&::-webkit-scrollbar-thumb': {
+                            background: 'linear-gradient(90deg, #9CC118 0%, #DBD525 100%)',
+                            borderRadius: '10px',
+                            '&:hover': {
+                                background: 'linear-gradient(90deg, #8BB017 0%, #CBC025 100%)',
+                            },
                         },
                     }}
                 >
-                    <ArrowBackIosNewIcon fontSize="small" />
-                </IconButton>
+                    {feedbackData.map((feedback, i) => (
+                        <motion.div
+                            key={i}
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+                            transition={{ duration: 0.5, delay: i * 0.1 }}
+                        >
+                            <ClientFeedbackCard {...feedback} />
+                        </motion.div>
+                    ))}
+                </Box>
 
-                <IconButton
-                    onClick={() => scroll('right')}
-                    sx={{
-                        mx: 1,
-                        backgroundColor: '#4CAF50', // Green
-                        color: '#fff',
-                        borderRadius: '50%',
-                        p: 1.5,
-                        '&:hover': {
-                            backgroundColor: '#45A049',
-                        },
-                    }}
-                >
-                    <ArrowForwardIosIcon fontSize="small" />
-                </IconButton>
+                {/* Navigation Arrows */}
+                <Box display="flex" justifyContent="center" mt={4} mb={8} sx={{ position: 'relative', zIndex: 1 }}>
+                    <IconButton
+                        onClick={() => scroll('left')}
+                        sx={{
+                            mx: 1,
+                            background: 'linear-gradient(135deg, #9CC118 0%, #DBD525 100%)',
+                            color: '#fff',
+                            borderRadius: '50%',
+                            p: 2,
+                            width: 50,
+                            height: 50,
+                            boxShadow: '0 5px 20px rgba(156,193,24,0.3)',
+                            transition: 'all 0.3s ease',
+                            '&:hover': {
+                                background: 'linear-gradient(135deg, #8BB017 0%, #CBC025 100%)',
+                                transform: 'scale(1.1)',
+                                boxShadow: '0 8px 25px rgba(156,193,24,0.4)',
+                            },
+                        }}
+                    >
+                        <ArrowBackIosNewIcon />
+                    </IconButton>
+
+                    <IconButton
+                        onClick={() => scroll('right')}
+                        sx={{
+                            mx: 1,
+                            background: 'linear-gradient(135deg, #9CC118 0%, #DBD525 100%)',
+                            color: '#fff',
+                            borderRadius: '50%',
+                            p: 2,
+                            width: 50,
+                            height: 50,
+                            boxShadow: '0 5px 20px rgba(156,193,24,0.3)',
+                            transition: 'all 0.3s ease',
+                            '&:hover': {
+                                background: 'linear-gradient(135deg, #8BB017 0%, #CBC025 100%)',
+                                transform: 'scale(1.1)',
+                                boxShadow: '0 8px 25px rgba(156,193,24,0.4)',
+                            },
+                        }}
+                    >
+                        <ArrowForwardIosIcon />
+                    </IconButton>
+                </Box>
             </Box>
         </Grid>
     );
