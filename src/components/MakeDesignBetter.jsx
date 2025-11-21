@@ -377,7 +377,7 @@ const MakeDesignBetter = () => {
                                                     mb: 2.5,
                                                 }}
                                             >
-                                                Our powerhouse team combines the expertise of visionary architects, creative designers, skilled developers, and strategic project managers. Together, we build solutions that are not just functional—they're forward-thinking, user-centric, and built to last.
+                                                Our powerhouse team combines the expertise of visionary architects, creative designers, skilled developers, and strategic project managers. Together, we build solutions that are not just functional—they&apos;re forward-thinking, user-centric, and built to last.
                                             </Typography>
 
                                             <Typography

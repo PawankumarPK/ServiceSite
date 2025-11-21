@@ -28,6 +28,7 @@ function MyApp({ Component, pageProps }) {
             width="1"
             style={{ display: 'none' }}
             src="https://www.facebook.com/tr?id=667828473015787&ev=PageView&noscript=1"
+            alt=""
           />
         </noscript>
         {/* End Meta Pixel Code */}

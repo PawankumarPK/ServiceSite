@@ -167,7 +167,7 @@ const CountriesServed = () => {
                                             mx: 'auto'
                                         }}
                                     >
-                                        As a leading web and mobile app development company, we proudly serve clients across India, Norway, Faroe Islands, USA, UAE, and Canada. Our global presence enables us to deliver world-class website development, mobile app development, and digital solutions tailored to diverse international markets. Whether you're a startup in Mumbai, a tech company in Silicon Valley, or an enterprise in Toronto, we bring expertise in React, Flutter, Next.js, and cutting-edge technologies to transform your digital presence.
+                                        As a leading web and mobile app development company, we proudly serve clients across India, Norway, Faroe Islands, USA, UAE, and Canada. Our global presence enables us to deliver world-class website development, mobile app development, and digital solutions tailored to diverse international markets. Whether you&apos;re a startup in Mumbai, a tech company in Silicon Valley, or an enterprise in Toronto, we bring expertise in React, Flutter, Next.js, and cutting-edge technologies to transform your digital presence.
                                     </Typography>
                                 </Box>
                             </motion.div>

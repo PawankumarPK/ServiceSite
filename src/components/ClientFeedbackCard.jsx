@@ -93,7 +93,7 @@ const ClientFeedbackCard = ({ imageSrc, altName, name, nameBg, designation, mess
                         lineHeight: 1,
                     }}
                 >
-                    "
+                    &ldquo;
                 </Typography>
             </Box>
 
@@ -222,7 +222,7 @@ const ClientFeedbackCard = ({ imageSrc, altName, name, nameBg, designation, mess
                         }
                     }}
                 >
-                    "{message}"
+                    &ldquo;{message}&rdquo;
                 </Typography>
             </Box>
         </Box>
