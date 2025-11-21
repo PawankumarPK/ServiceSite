@@ -320,25 +320,50 @@ const Footer = () => {
                             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
                             transition={{ duration: 0.5, delay: 0.7 }}
                         >
-                            <Grid alignItems='center' container mt={5} ml={{ lg: 0, md: 2, sm: 0 }}>
+                            <Box
+                                sx={{
+                                    display: 'flex',
+                                    flexDirection: 'row',
+                                    alignItems: 'flex-start',
+                                    mt: 5,
+                                    ml: { lg: 0, md: 2, sm: 0 },
+                                }}
+                            >
+                                <Box
+                                    sx={{
+                                        display: 'flex',
+                                        alignItems: 'flex-start',
+                                        pt: 0.5,
+                                        flexShrink: 0,
+                                    }}
+                                >
+                                    <Image
+                                        width={18}
+                                        src={locationIcon}
+                                        alt="location icon" />
+                                </Box>
 
-                                <Image
-                                    width={18}
-                                    src={locationIcon}
-                                    alt="location icon" />
-
-
-
-                                <Grid width={{ lg: 270, md: 300, sm: 150 }} ml={2}>
-                                    <Typography component="subtitle1" fontFamily='poppins-regular' color="#000" >
+                                <Box
+                                    sx={{
+                                        ml: 2,
+                                        flex: 1,
+                                        width: { lg: 270, md: 300, sm: 'auto', xs: 'auto' },
+                                        maxWidth: { lg: 270, md: 300, sm: '100%', xs: '100%' },
+                                    }}
+                                >
+                                    <Typography 
+                                        component="subtitle1" 
+                                        fontFamily='poppins-regular' 
+                                        color="#000"
+                                        sx={{
+                                            wordWrap: 'break-word',
+                                            overflowWrap: 'break-word',
+                                        }}
+                                    >
                                         10, Poorvi Marg, DLF Phase 2, Sector 25, Gurugram, Haryana 122022
                                     </Typography>
-                                </Grid>
-
-
-
-
-                            </Grid>
+                                </Box>
+                            </Box>
                         </motion.div>
 
                         <motion.div
@@ -369,44 +394,46 @@ const Footer = () => {
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.6, delay: 1 }}
             >
-                <Grid
-                    width={{ lg: 400, xs: 100 }}
-                    justifyContent={{ lg: 'center', md: "start", sm: "start", xs: "start" }}
-                    ml={{ lg: 0, md: 2, sm: 2, xs: 2 }}
-
-                    mt={8}
-                    container>
-
-                    {/* <Grid item mt="5px">
-                        <Image
-                            width={15}
-                            src={facebookIcon}
-                            alt="Facebook" />
-                    </Grid> */}
-
-
-                    {/* <Grid mt="5px" ml={10}>
-                        <Image
-                            width={25}
-                            src={twitterIcon}
-                            alt="Twitter" />
-                    </Grid> */}
+                <Box
+                    sx={{
+                        width: { lg: 400, xs: 'auto' },
+                        display: 'flex',
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                        justifyContent: { lg: 'center', md: "flex-start", sm: "flex-start", xs: "flex-start" },
+                        ml: { lg: 0, md: 2, sm: 2, xs: 2 },
+                        mt: 8,
+                        gap: 3,
+                    }}
+                >
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.5, rotate: -180 }}
+                        animate={isInView ? { opacity: 1, scale: 1, rotate: 0 } : { opacity: 0, scale: 0.5, rotate: -180 }}
+                        transition={{ duration: 0.6, delay: 1.0 }}
+                        whileHover={{ scale: 1.2, rotate: 10, transition: { duration: 0.2 } }}
+                        style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                    >
+                        <Link href="https://www.facebook.com/profile.php?id=100091625195907" target='_blank'>
+                            <Image
+                                width={20}
+                                src={facebookIcon}
+                                alt="Facebook" />
+                        </Link>
+                    </motion.div>
 
                     <motion.div
                         initial={{ opacity: 0, scale: 0.5, rotate: -180 }}
                         animate={isInView ? { opacity: 1, scale: 1, rotate: 0 } : { opacity: 0, scale: 0.5, rotate: -180 }}
                         transition={{ duration: 0.6, delay: 1.1 }}
                         whileHover={{ scale: 1.2, rotate: 10, transition: { duration: 0.2 } }}
+                        style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
                     >
-                        <Grid mt="4px" >
-                            <Link href="https://www.instagram.com/own_technologies/?next=%2F" target='_blank'>
-                                <Image
-                                    width={23}
-                                    src={instagramIcon}
-                                    alt="Instagram" />
-                            </Link>
-
-                        </Grid>
+                        <Link href="https://www.instagram.com/own_technologies/?next=%2F" target='_blank'>
+                            <Image
+                                width={23}
+                                src={instagramIcon}
+                                alt="Instagram" />
+                        </Link>
                     </motion.div>
 
                     <motion.div
@@ -414,22 +441,16 @@ const Footer = () => {
                         animate={isInView ? { opacity: 1, scale: 1, rotate: 0 } : { opacity: 0, scale: 0.5, rotate: -180 }}
                         transition={{ duration: 0.6, delay: 1.2 }}
                         whileHover={{ scale: 1.2, rotate: 10, transition: { duration: 0.2 } }}
+                        style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
                     >
-                        <Grid mt="3px" ml={5}>
-                            <Link href="https://www.linkedin.com/company/own-technologies/?viewAsMember=true" target='_blank'>
-                                <Image
-                                    width={23}
-                                    src={linkdinIcon}
-                                    alt="Linkdin" />
-
-                            </Link>
-                        </Grid>
+                        <Link href="https://www.linkedin.com/company/own-technologies/?viewAsMember=true" target='_blank'>
+                            <Image
+                                width={23}
+                                src={linkdinIcon}
+                                alt="LinkedIn" />
+                        </Link>
                     </motion.div>
-
-
-
-
-                </Grid>
+                </Box>
             </motion.div>
 
 

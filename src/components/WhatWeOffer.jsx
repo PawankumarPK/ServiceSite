@@ -1,4 +1,4 @@
-import { Box, Card, CardActionArea, CardContent, CardMedia, Grid, Grow, Paper, Stack, Typography } from '@mui/material'
+import { Box, Card, CardActionArea, CardContent, CardMedia, Grid, Grow, Paper, Stack, Typography, useMediaQuery, useTheme } from '@mui/material'
 import { Container } from '@mui/system'
 import editIcon from "../svg/editBlack.svg";
 import androidIcon from "../svg/android.svg";
@@ -20,10 +20,10 @@ import { motion, useInView } from 'framer-motion';
 
 
 ///----------------- Services common title -----------------
-const ServicesOffer = ({ title, description, icon, altName, variants }) => (
+const ServicesOffer = ({ title, description, icon, altName, variants, isMobile }) => (
     <motion.div
         variants={variants}
-        whileHover={{ 
+        whileHover={isMobile ? {} : { 
             y: -8, 
             scale: 1.02,
         }}
@@ -147,6 +147,8 @@ const ServicesOffer = ({ title, description, icon, altName, variants }) => (
 const WhatWeOffer = () => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -267,6 +269,7 @@ const WhatWeOffer = () => {
                                 icon={editIcon}
                                 altName="Edit Icon"
                                 variants={itemVariants}
+                                isMobile={isMobile}
                             />
                         </Grid>
 
@@ -277,6 +280,7 @@ const WhatWeOffer = () => {
                                 icon={webIcon}
                                 altName="web Icon"
                                 variants={itemVariants}
+                                isMobile={isMobile}
                             />
                         </Grid>
 
@@ -287,6 +291,7 @@ const WhatWeOffer = () => {
                                 icon={serverIcon}
                                 altName="server Icon"
                                 variants={itemVariants}
+                                isMobile={isMobile}
                             />
                         </Grid>
 
@@ -297,6 +302,7 @@ const WhatWeOffer = () => {
                                 icon={androidIcon}
                                 altName="android Icon"
                                 variants={itemVariants}
+                                isMobile={isMobile}
                             />
                         </Grid>
 
@@ -307,6 +313,7 @@ const WhatWeOffer = () => {
                                 icon={appStoreIos}
                                 altName="appStoreIos Icon"
                                 variants={itemVariants}
+                                isMobile={isMobile}
                             />
                         </Grid>
 
@@ -317,6 +324,7 @@ const WhatWeOffer = () => {
                                 icon={domainIcon}
                                 altName="domain Icon"
                                 variants={itemVariants}
+                                isMobile={isMobile}
                             />
                         </Grid>
 
@@ -327,6 +335,7 @@ const WhatWeOffer = () => {
                                 icon={flightIcon}
                                 altName="flight Icon"
                                 variants={itemVariants}
+                                isMobile={isMobile}
                             />
                         </Grid>
 
@@ -337,6 +346,7 @@ const WhatWeOffer = () => {
                                 icon={emailIcon}
                                 altName="Business Emails Icon"
                                 variants={itemVariants}
+                                isMobile={isMobile}
                             />
                         </Grid>
 
@@ -347,6 +357,7 @@ const WhatWeOffer = () => {
                                 icon={bookmarkIcon}
                                 altName="Bookmark Icon Icon"
                                 variants={itemVariants}
+                                isMobile={isMobile}
                             />
                         </Grid>
 
@@ -357,6 +368,7 @@ const WhatWeOffer = () => {
                                 icon={creditCardIcon}
                                 altName="creditCard Icon"
                                 variants={itemVariants}
+                                isMobile={isMobile}
                             />
                         </Grid>
 
@@ -367,6 +379,7 @@ const WhatWeOffer = () => {
                                 icon={headsetIcon}
                                 altName="headset Icon"
                                 variants={itemVariants}
+                                isMobile={isMobile}
                             />
                         </Grid>
 
@@ -377,6 +390,7 @@ const WhatWeOffer = () => {
                                 icon={photoVideoIcon}
                                 altName="photo Video Icon"
                                 variants={itemVariants}
+                                isMobile={isMobile}
                             />
                         </Grid>
                     </Grid>

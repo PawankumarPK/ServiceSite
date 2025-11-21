@@ -2,10 +2,13 @@ import { Box, Grid, Typography, Container } from '@mui/material'
 import React, { useRef } from 'react'
 import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
+import { useMediaQuery, useTheme } from '@mui/material';
 
 const CountriesServed = () => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -95,7 +98,7 @@ const CountriesServed = () => {
                                 color="#000"
                                 noWrap
                                 fontSize={{ lg: 45, md: 45, xs: 40 }}
-                                fontFamily="poppins-semibold"
+                                fontFamily="poppins-bold"
                                 style={{ lineHeight: "60px" }}
                             >
                                 Countries We
@@ -105,7 +108,7 @@ const CountriesServed = () => {
                                 component="h3"
                                 color='#9CC118'
                                 fontSize={{ lg: 45, md: 45, xs: 40 }}
-                                fontFamily="poppins-semibold"
+                                fontFamily="poppins-bold"
                                 style={{ lineHeight: "60px" }}
                             >
                                 &nbsp;Serve
@@ -197,7 +200,7 @@ const CountriesServed = () => {
                                 >
                                     <motion.div
                                         variants={itemVariants}
-                                        whileHover={{
+                                        whileHover={isMobile ? {} : {
                                             scale: 1.15,
                                             y: -15,
                                             rotate: [0, -5, 5, -5, 0],

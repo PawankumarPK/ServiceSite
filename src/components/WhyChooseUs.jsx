@@ -13,12 +13,13 @@ import webIcon from "../svg/webIcon.svg";
 import React, { useRef } from 'react'
 import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
+import { useMediaQuery, useTheme } from '@mui/material';
 
 ///----------------- Services common title -----------------
-const Services = ({ title, description, icon, bgColor, altTag, variants }) => (
+const Services = ({ title, description, icon, bgColor, altTag, variants, isMobile }) => (
     <motion.div
         variants={variants}
-        whileHover={{ 
+        whileHover={isMobile ? {} : { 
             y: -10, 
             scale: 1.02,
         }}
@@ -57,13 +58,13 @@ const Services = ({ title, description, icon, bgColor, altTag, variants }) => (
                 },
                 '&:hover': {
                     boxShadow: '0 15px 40px rgba(0,0,0,0.15)',
-                    transform: 'translateY(-5px)',
+                    transform: isMobile ? 'none' : 'translateY(-5px)',
                     border: `1px solid ${bgColor}40`,
                     '&::before': {
                         transform: 'scaleY(1)',
                     },
                     '& .icon-container': {
-                        transform: 'scale(1.1) rotate(5deg)',
+                        transform: isMobile ? 'scale(1.05)' : 'scale(1.1) rotate(5deg)',
                         boxShadow: `0 8px 20px ${bgColor}50`,
                     }
                 }
@@ -141,6 +142,8 @@ const Services = ({ title, description, icon, bgColor, altTag, variants }) => (
 const WhyChooseUs = () => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -153,15 +156,15 @@ const WhyChooseUs = () => {
     };
 
     const itemVariants = {
-        hidden: { opacity: 0, x: -30, scale: 0.95 },
+        hidden: { opacity: 0, x: isMobile ? -10 : -30, scale: isMobile ? 0.98 : 0.95 },
         visible: {
             opacity: 1,
             x: 0,
             scale: 1,
             transition: {
-                duration: 0.6,
+                duration: isMobile ? 0.4 : 0.6,
                 type: "spring",
-                stiffness: 100
+                stiffness: isMobile ? 120 : 100
             }
         }
     };
@@ -273,6 +276,7 @@ const WhyChooseUs = () => {
                                 bgColor="#9CC118"
                                 altTag="Chart Line Icon"
                                 variants={itemVariants}
+                                isMobile={isMobile}
                             />
                         </Grid>
 
@@ -284,6 +288,7 @@ const WhyChooseUs = () => {
                                 bgColor="#DBBF05"
                                 altTag="Google Icon"
                                 variants={itemVariants}
+                                isMobile={isMobile}
                             />
                         </Grid>
 
@@ -295,6 +300,7 @@ const WhyChooseUs = () => {
                                 bgColor="#01A9F5"
                                 altTag="Lead Magnet Icon"
                                 variants={itemVariants}
+                                isMobile={isMobile}
                             />
                         </Grid>
 
@@ -306,6 +312,7 @@ const WhyChooseUs = () => {
                                 bgColor="#0796A1"
                                 altTag="Web Icon"
                                 variants={itemVariants}
+                                isMobile={isMobile}
                             />
                         </Grid>
 
@@ -317,6 +324,7 @@ const WhyChooseUs = () => {
                                 bgColor="#12A824"
                                 altTag="Social Marketing Icon"
                                 variants={itemVariants}
+                                isMobile={isMobile}
                             />
                         </Grid>
 
@@ -328,6 +336,7 @@ const WhyChooseUs = () => {
                                 bgColor="#8F07A1"
                                 altTag="Delivery On Time Icon"
                                 variants={itemVariants}
+                                isMobile={isMobile}
                             />
                         </Grid>
 
@@ -339,6 +348,7 @@ const WhyChooseUs = () => {
                                 bgColor="#DBD525"
                                 altTag="Customized Designs Icon"
                                 variants={itemVariants}
+                                isMobile={isMobile}
                             />
                         </Grid>
 
@@ -350,6 +360,7 @@ const WhyChooseUs = () => {
                                 bgColor="#DB4125"
                                 altTag="Award Winning Icon"
                                 variants={itemVariants}
+                                isMobile={isMobile}
                             />
                         </Grid>
 
@@ -361,6 +372,7 @@ const WhyChooseUs = () => {
                                 bgColor="#25DBBF"
                                 altTag="Home Icon"
                                 variants={itemVariants}
+                                isMobile={isMobile}
                             />
                         </Grid>
                         </Grid>

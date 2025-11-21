@@ -2,6 +2,7 @@ import { Box, Grid, Typography } from '@mui/material'
 import React, { useRef } from 'react'
 import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
+import { useMediaQuery, useTheme } from '@mui/material';
 
 import officeImg1 from "../../public/office/office-img-1.jpg";
 import officeImg2 from "../../public/office/office-img-2.jpg";
@@ -13,6 +14,8 @@ import officeImg6 from "../../public/office/office-img-6.jpg";
 const OfficeSection = () => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -156,7 +159,7 @@ const OfficeSection = () => {
                                 >
                                     <motion.div
                                         variants={itemVariants}
-                                        whileHover={{ 
+                                        whileHover={isMobile ? {} : { 
                                             scale: 1.05,
                                             y: -10,
                                             transition: { duration: 0.3 }

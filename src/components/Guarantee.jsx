@@ -7,8 +7,9 @@ import support from "../../public/png/support.png";
 import React, { useRef } from 'react'
 import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
+import { useMediaQuery, useTheme } from '@mui/material';
 
-const GuaranteeCard = ({ icon, title, description, index, variants, isInView }) => {
+const GuaranteeCard = ({ icon, title, description, index, variants, isInView, isMobile }) => {
     const colors = [
         { primary: '#9CC118', secondary: '#7BA015', accent: '#DBD525', light: '#F0F8D8' },
         { primary: '#01A9F5', secondary: '#0178B8', accent: '#0796A1', light: '#E0F5FF' },
@@ -20,7 +21,7 @@ const GuaranteeCard = ({ icon, title, description, index, variants, isInView }) 
     return (
         <motion.div
             variants={variants}
-            whileHover={{ 
+            whileHover={isMobile ? {} : { 
                 y: -15,
                 scale: 1.02,
             }}
@@ -71,7 +72,7 @@ const GuaranteeCard = ({ icon, title, description, index, variants, isInView }) 
                     },
                     '&:hover': {
                         boxShadow: `0 20px 50px ${color.primary}25`,
-                        transform: 'translateY(-10px)',
+                        transform: isMobile ? 'none' : 'translateY(-10px)',
                         border: `1px solid ${color.primary}50`,
                         '&::before': {
                             transform: 'scaleX(1)',
@@ -312,6 +313,8 @@ const GuaranteeCard = ({ icon, title, description, index, variants, isInView }) 
 const Guarantee = () => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -324,12 +327,12 @@ const Guarantee = () => {
     };
 
     const itemVariants = {
-        hidden: { opacity: 0, y: 40 },
+        hidden: { opacity: 0, y: isMobile ? 20 : 40 },
         visible: {
             opacity: 1,
             y: 0,
             transition: {
-                duration: 0.5,
+                duration: isMobile ? 0.4 : 0.5,
                 ease: [0.4, 0, 0.2, 1]
             }
         }
@@ -466,6 +469,7 @@ const Guarantee = () => {
                                             index={index}
                                             variants={itemVariants}
                                             isInView={isInView}
+                                            isMobile={isMobile}
                                         />
                                     </Grid>
                                 ))}

@@ -7,8 +7,9 @@ import lightBulbImg from "../../public/png/lightbulb.png";
 import React, { useRef } from 'react'
 import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
+import { useMediaQuery, useTheme } from '@mui/material';
 
-const ProcessCard = ({ icon, title, description, index, variants, isInView }) => {
+const ProcessCard = ({ icon, title, description, index, variants, isInView, isMobile }) => {
     const colors = [
         { primary: '#9CC118', secondary: '#DBD525' },
         { primary: '#01A9F5', secondary: '#0796A1' },
@@ -20,7 +21,7 @@ const ProcessCard = ({ icon, title, description, index, variants, isInView }) =>
     return (
         <motion.div
             variants={variants}
-            whileHover={{
+            whileHover={isMobile ? {} : {
                 y: -15,
                 scale: 1.03,
             }}
@@ -70,7 +71,7 @@ const ProcessCard = ({ icon, title, description, index, variants, isInView }) =>
                     },
                     '&:hover': {
                         boxShadow: `0 20px 50px ${color.primary}30`,
-                        transform: 'translateY(-8px)',
+                        transform: isMobile ? 'none' : 'translateY(-8px)',
                         border: `1px solid ${color.primary}30`,
                         '&::before': {
                             transform: 'scaleX(1)',
@@ -79,11 +80,11 @@ const ProcessCard = ({ icon, title, description, index, variants, isInView }) =>
                             opacity: 1,
                         },
                         '& .process-icon': {
-                            transform: 'scale(1.15) rotate(5deg)',
+                            transform: isMobile ? 'scale(1.05)' : 'scale(1.15) rotate(5deg)',
                             filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.2))',
                         },
                         '& .process-number': {
-                            transform: 'scale(1.2)',
+                            transform: isMobile ? 'scale(1.05)' : 'scale(1.2)',
                             opacity: 1,
                         }
                     }
@@ -228,6 +229,8 @@ const ProcessCard = ({ icon, title, description, index, variants, isInView }) =>
 const YouImagineWeCreate = () => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -362,7 +365,7 @@ const YouImagineWeCreate = () => {
                     >
                         <Grid
                             container
-                            spacing={{ xs: 3, sm: 4, md: 5 }}
+                            spacing={{ xs: 4, sm: 4, md: 5 }}
                             justifyContent='center'
                             alignItems='stretch'
                             pb={10}
@@ -378,6 +381,8 @@ const YouImagineWeCreate = () => {
                                     sx={{
                                         display: 'flex',
                                         height: { xs: 450, sm: 470, md: 490 },
+                                        mb: { xs: 2, sm: 0 },
+                                        mt: { xs: 2, sm: 0 },
                                     }}
                                 >
                                     <ProcessCard
@@ -387,6 +392,7 @@ const YouImagineWeCreate = () => {
                                         index={index}
                                         variants={itemVariants}
                                         isInView={isInView}
+                                        isMobile={isMobile}
                                     />
                                 </Grid>
                             ))}

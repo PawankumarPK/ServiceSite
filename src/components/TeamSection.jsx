@@ -1,4 +1,4 @@
-import { Box, Card, CardActionArea, CardContent, CardMedia, Container, Grid, Grow, Link, Paper, Stack, Typography } from '@mui/material'
+import { Box, Card, CardActionArea, CardContent, CardMedia, Container, Grid, Grow, Link, Paper, Stack, Typography, useMediaQuery, useTheme } from '@mui/material'
 import pawan from "../../public/team/pawan.jpeg";
 import rohan from "../../public/team/rohan.jpg";
 import aarav from "../../public/team/aarav.jpg";
@@ -22,10 +22,10 @@ import ClientFeedbackCard from './ClientFeedbackCard';
 import { motion, useInView } from 'framer-motion';
 
 ///----------------- Team common sections -----------------
-const Teams = ({ name, designation, img, nameBg, altName, variants }) => (
+const Teams = ({ name, designation, img, nameBg, altName, variants, isMobile }) => (
     <motion.div
         variants={variants}
-        whileHover={{
+        whileHover={isMobile ? {} : {
             scale: 1.05,
             y: -10,
         }}
@@ -237,6 +237,8 @@ const Teams = ({ name, designation, img, nameBg, altName, variants }) => (
 const TeamSection = () => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, });
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -249,16 +251,16 @@ const TeamSection = () => {
     };
 
     const itemVariants = {
-        hidden: { opacity: 0, y: 50, scale: 0.8, rotate: -10 },
+        hidden: { opacity: 0, y: isMobile ? 20 : 50, scale: isMobile ? 0.98 : 0.8, rotate: isMobile ? 0 : -10 },
         visible: {
             opacity: 1,
             y: 0,
             scale: 1,
             rotate: 0,
             transition: {
-                duration: 0.6,
+                duration: isMobile ? 0.4 : 0.6,
                 type: "spring",
-                stiffness: 100
+                stiffness: isMobile ? 120 : 100
             }
         }
     };
@@ -403,6 +405,7 @@ const TeamSection = () => {
                                             img={pawan}
                                             altName="team Member One"
                                             variants={itemVariants}
+                                            isMobile={isMobile}
                                         />
                                     </Link>
                                 </Box>
@@ -429,6 +432,7 @@ const TeamSection = () => {
                                         img={rohan}
                                         altName="team Member Two"
                                         variants={itemVariants}
+                                        isMobile={isMobile}
                                     />
                                 </Box>
                             </Grid>
@@ -454,6 +458,7 @@ const TeamSection = () => {
                                         img={aarav}
                                         altName="team Member Three"
                                         variants={itemVariants}
+                                        isMobile={isMobile}
                                     />
                                 </Box>
                             </Grid>
@@ -479,6 +484,7 @@ const TeamSection = () => {
                                         img={vihaan}
                                         altName="team Member Four"
                                         variants={itemVariants}
+                                        isMobile={isMobile}
                                     />
                                 </Box>
                             </Grid>
@@ -504,6 +510,7 @@ const TeamSection = () => {
                                         img={meera}
                                         altName="team Member Five"
                                         variants={itemVariants}
+                                        isMobile={isMobile}
                                     />
                                 </Box>
                             </Grid>
@@ -529,6 +536,7 @@ const TeamSection = () => {
                                         img={ananya}
                                         altName="team Member Six"
                                         variants={itemVariants}
+                                        isMobile={isMobile}
                                     />
                                 </Box>
                             </Grid>
@@ -554,6 +562,7 @@ const TeamSection = () => {
                                         img={armaan}
                                         altName="team Member Seven"
                                         variants={itemVariants}
+                                        isMobile={isMobile}
                                     />
                                 </Box>
                             </Grid>

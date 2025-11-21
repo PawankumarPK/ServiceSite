@@ -12,7 +12,9 @@ import {
     Grid,
     Card,
     CardContent,
-    Chip
+    Chip,
+    useMediaQuery,
+    useTheme
 } from '@mui/material';
 import { motion, AnimatePresence } from 'framer-motion';
 import portfolio_8 from "../../public/png/portfolio_8.png";
@@ -374,16 +376,16 @@ const categorizedCourseData = [
 
 
 ///----------------- Team common sections -----------------
-const PortfolioDesc = ({ name, img, nameBg, altName, isMobileApp, link }) => (
+const PortfolioDesc = ({ name, img, nameBg, altName, isMobileApp, link, isMobile }) => (
     <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
+        initial={{ opacity: 0, scale: isMobile ? 0.98 : 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
-        whileHover={{
+        whileHover={isMobile ? {} : {
             y: -10,
             scale: 1.03,
         }}
         transition={{
-            duration: 0.4,
+            duration: isMobile ? 0.3 : 0.4,
             hover: { duration: 0.3 }
         }}
         style={{
@@ -500,6 +502,8 @@ const PortfolioDesc = ({ name, img, nameBg, altName, isMobileApp, link }) => (
 
 const FilteredCourses = () => {
     const [selectedTab, setSelectedTab] = useState("Websites");
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
     const handleTabChange = (_event, newValue) => {
         setSelectedTab(newValue);
@@ -625,6 +629,7 @@ const FilteredCourses = () => {
                                             altName={course.name}
                                             isMobileApp={selectedTab === 'Mobile Apps'}
                                             link={course.link}
+                                            isMobile={isMobile}
                                         />
                                     </motion.div>
                                 </Grid>

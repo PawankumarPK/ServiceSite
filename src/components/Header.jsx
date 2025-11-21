@@ -178,7 +178,7 @@ const Header = () => {
           {/* ----------------------- Social Media icons ----------------------- */}
           <Grid container item xs="auto" spacing={3}>
 
-            {/* <Grid item
+            <Grid item
               sx={{
                 width: {
                   lg: 35,
@@ -193,34 +193,20 @@ const Header = () => {
                   xs: 32
                 }
               }}>
-              <Image
-                layout="responsive"
-                src={facebookIcon}
-                alt="Facebook" />
-            </Grid> */}
-
-
-            {/* <Grid item
-              sx={{
-                width: {
-                  lg: 45,
-                  md: 45,
-                  sm: 45,
-                  xs: 45
-                },
-                height: {
-                  lg: 45,
-                  md: 45,
-                  sm: 45,
-                  xs: 45
-                }
-              }}>
-
-              <Image
-                layout="responsive"
-                src={twitterIcon}
-                alt="Twitter" />
-            </Grid> */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5, rotate: -180 }}
+                animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                whileHover={{ scale: 1.2, rotate: 10, transition: { duration: 0.15 } }}
+              >
+                <Link href="https://www.facebook.com/profile.php?id=100091625195907" target='_blank' passHref>
+                  <Image
+                    layout='responsive'
+                    src={facebookIcon}
+                    alt="Facebook icon" />
+                </Link>
+              </motion.div>
+            </Grid>
 
             <Grid item
               sx={{
@@ -477,7 +463,17 @@ const Header = () => {
 
 
 
-        <Grid container justifyContent={{ lg: "end", xs: "end" }} alignItems='center' pt={13}>
+        <Grid 
+          container 
+          justifyContent={{ lg: "end", xs: "center" }} 
+          alignItems='center' 
+          pt={13}
+          sx={{
+            px: { xs: 2, sm: 2, md: 0 },
+            overflow: 'hidden',
+            width: '100%',
+          }}
+        >
 
           {/* ----------------------- We make beautiful & Resposive text section ----------------------- */}
 
@@ -511,19 +507,23 @@ const Header = () => {
             animate={{ opacity: 1, y: 0, scale: 1, rotateX: 0 }}
             transition={{ duration: 1, delay: 0.4, type: "spring", stiffness: 60 }}
           >
-            <Grid
-              flexDirection='column'
-              container 
-              height={{ lg: 350, xs: 330 }}
-              width={{ lg: 550, md: 400, sm: 400, xs: 400 }}
+            <Box
+              height={{ lg: 'auto', xs: 'auto' }}
+              width={{ lg: 550, md: 400, sm: '100%', xs: '100%' }}
+              maxWidth={{ lg: 550, md: 400, sm: 400, xs: '100%' }}
               mt={-3}
               bgcolor="#DBD525"
               sx={{
+                display: 'flex',
+                flexDirection: 'column',
                 alignItems: 'flex-start',
                 justifyContent: 'flex-start',
                 px: { xs: 3, sm: 4, md: 4, lg: 4 },
+                py: { xs: 3, sm: 4 },
+                overflow: 'visible',
+                boxSizing: 'border-box',
+                minHeight: { lg: 350, xs: 'auto' },
               }}
-
             >
 
               <motion.div
@@ -576,43 +576,67 @@ const Header = () => {
                   pb={2}
                   sx={{ 
                     textAlign: 'left',
-                    width: '100%'
+                    width: '100%',
+                    wordWrap: 'break-word',
+                    overflowWrap: 'break-word',
+                    maxWidth: '100%',
                   }}>
                   Ready to elevate your digital presence? We craft stunning websites and powerful mobile applications that combine speed, functionality, and exceptional user experience. Our expert team transforms your vision into reality, delivering custom solutions that drive engagement and boost your business growth.
                 </Typography>
               </motion.div>
 
 
-              <Grid pt={2} pb={0} sx={{ width: '100%', display: 'flex', justifyContent: 'flex-start' }}>
+              <Box 
+                pt={2} 
+                pb={2} 
+                sx={{ 
+                  width: '100%', 
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'flex-start',
+                  justifyContent: 'flex-start',
+                }}
+              >
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.6, delay: 1.4 }}
-                >
-                  <Button href="#about" scroll={true} variant="outlined" sx={{ 
-                    borderRadius: 50,
-                    py: 1,
-                    px: { xs: 2, sm: 3, md: 3, lg: 3 }
+                  style={{ 
+                    width: '100%', 
+                    display: 'flex',
+                    justifyContent: 'flex-start',
+                    alignItems: 'flex-start',
                   }}
+                >
+                  <Button 
+                    href="#about" 
+                    scroll={true} 
+                    variant="outlined" 
+                    sx={{ 
+                      borderRadius: 50,
+                      py: 1,
+                      px: { xs: 2, sm: 3, md: 3, lg: 3 },
+                      display: 'inline-flex',
+                      whiteSpace: 'nowrap',
+                    }}
                     style={{
                       color: "#fff",
-                      border: '2px solid',
-                    }}>
+                      border: '2px solid #fff',
+                    }}
+                  >
                     <Typography
                       component="p"
                       fontFamily='poppins-medium'
                       color="#fff"
                       textTransform='none'
-                      fontSize={{ xs: 13, sm: 14, md: 15, lg: 16 }}>
-
+                      fontSize={{ xs: 13, sm: 14, md: 15, lg: 16 }}
+                    >
                       Learn More
-
                     </Typography>
-
                   </Button>
                 </motion.div>
-              </Grid>
-            </Grid>
+              </Box>
+            </Box>
           </motion.div>
 
 
@@ -685,14 +709,14 @@ const Header = () => {
         width: {
           lg: 60,
           md: 80,
-          sm: 80,
-          xs: 70
+          sm: 70,
+          xs: 55
         },
         height: {
           lg: 60,
           md: 80,
-          sm: 80,
-          xs: 70
+          sm: 70,
+          xs: 55
         },
         animation: `${breatheAnimation} 2.5s infinite ease-in-out`,
         borderRadius: '50%',
