@@ -366,191 +366,199 @@ const TeamSection = () => {
                     animate={isInView ? "visible" : "hidden"}
                     style={{ width: '100%' }}
                 >
-                    <Grid
-                        container
-                        spacing={{ xs: 3, sm: 4, md: 4 }}
-                        justifyContent='center'
-                        sx={{ maxWidth: '1400px', margin: '0 auto', px: { xs: 2, sm: 3, md: 4 } }}
-                        pb={10}
-                        pt={6}
+                    <Box
+                        sx={{
+                            width: '100%',
+                            maxWidth: '1400px',
+                            mx: 'auto',
+                            px: { xs: '20px', sm: '20px', md: '20px', lg: '20px' },
+                        }}
                     >
-                        <Grid item xs={6} sm={4} md={3} lg={2.4}>
-                            <Box
-                                sx={{
-                                    bgcolor: '#fff',
-                                    borderRadius: '20px',
-                                    p: 3,
-                                    boxShadow: '0 10px 30px rgba(0,0,0,0.08)',
-                                    transition: 'all 0.3s ease',
-                                    height: '100%',
-                                    '&:hover': {
-                                        boxShadow: '0 20px 50px rgba(156,193,24,0.2)',
-                                    }
-                                }}
-                            >
-                                <Link href="https://www.linkedin.com/in/pawan-kumar-yadav/" scroll={true} passHref target="_blank" style={{ textDecoration: 'none' }}>
+                        <Grid
+                            container
+                            spacing={{ xs: 3, sm: 4, md: 4 }}
+                            justifyContent='center'
+                            pb={10}
+                            pt={6}
+                        >
+                            <Grid item xs={6} sm={4} md={3} lg={2.4}>
+                                <Box
+                                    sx={{
+                                        bgcolor: '#fff',
+                                        borderRadius: '20px',
+                                        p: 3,
+                                        boxShadow: '0 10px 30px rgba(0,0,0,0.08)',
+                                        transition: 'all 0.3s ease',
+                                        height: '100%',
+                                        '&:hover': {
+                                            boxShadow: '0 20px 50px rgba(156,193,24,0.2)',
+                                        }
+                                    }}
+                                >
+                                    <Link href="https://www.linkedin.com/in/pawan-kumar-yadav/" scroll={true} passHref target="_blank" style={{ textDecoration: 'none' }}>
+                                        <Teams
+                                            name="Pawan"
+                                            designation="Captain"
+                                            nameBg={teamBgOne}
+                                            img={pawan}
+                                            altName="team Member One"
+                                            variants={itemVariants}
+                                        />
+                                    </Link>
+                                </Box>
+                            </Grid>
+
+                            <Grid item xs={6} sm={4} md={3} lg={2.4}>
+                                <Box
+                                    sx={{
+                                        bgcolor: '#fff',
+                                        borderRadius: '20px',
+                                        p: 3,
+                                        boxShadow: '0 10px 30px rgba(0,0,0,0.08)',
+                                        transition: 'all 0.3s ease',
+                                        height: '100%',
+                                        '&:hover': {
+                                            boxShadow: '0 20px 50px rgba(156,193,24,0.2)',
+                                        }
+                                    }}
+                                >
                                     <Teams
-                                        name="Pawan"
-                                        designation="Captain"
-                                        nameBg={teamBgOne}
-                                        img={pawan}
-                                        altName="team Member One"
+                                        name="Rohan"
+                                        designation="Frontend Developer"
+                                        nameBg={teamBgTwo}
+                                        img={rohan}
+                                        altName="team Member Two"
                                         variants={itemVariants}
                                     />
-                                </Link>
-                            </Box>
-                        </Grid>
+                                </Box>
+                            </Grid>
 
-                        <Grid item xs={6} sm={4} md={3} lg={2.4}>
-                            <Box
-                                sx={{
-                                    bgcolor: '#fff',
-                                    borderRadius: '20px',
-                                    p: 3,
-                                    boxShadow: '0 10px 30px rgba(0,0,0,0.08)',
-                                    transition: 'all 0.3s ease',
-                                    height: '100%',
-                                    '&:hover': {
-                                        boxShadow: '0 20px 50px rgba(156,193,24,0.2)',
-                                    }
-                                }}
-                            >
-                                <Teams
-                                    name="Rohan"
-                                    designation="Frontend Developer"
-                                    nameBg={teamBgTwo}
-                                    img={rohan}
-                                    altName="team Member Two"
-                                    variants={itemVariants}
-                                />
-                            </Box>
-                        </Grid>
+                            <Grid item xs={6} sm={4} md={3} lg={2.4}>
+                                <Box
+                                    sx={{
+                                        bgcolor: '#fff',
+                                        borderRadius: '20px',
+                                        p: 3,
+                                        boxShadow: '0 10px 30px rgba(0,0,0,0.08)',
+                                        transition: 'all 0.3s ease',
+                                        height: '100%',
+                                        '&:hover': {
+                                            boxShadow: '0 20px 50px rgba(156,193,24,0.2)',
+                                        }
+                                    }}
+                                >
+                                    <Teams
+                                        name="Aarav"
+                                        designation="Backend Developer"
+                                        nameBg={teamBgThree}
+                                        img={aarav}
+                                        altName="team Member Three"
+                                        variants={itemVariants}
+                                    />
+                                </Box>
+                            </Grid>
 
-                        <Grid item xs={6} sm={4} md={3} lg={2.4}>
-                            <Box
-                                sx={{
-                                    bgcolor: '#fff',
-                                    borderRadius: '20px',
-                                    p: 3,
-                                    boxShadow: '0 10px 30px rgba(0,0,0,0.08)',
-                                    transition: 'all 0.3s ease',
-                                    height: '100%',
-                                    '&:hover': {
-                                        boxShadow: '0 20px 50px rgba(156,193,24,0.2)',
-                                    }
-                                }}
-                            >
-                                <Teams
-                                    name="Aarav"
-                                    designation="Backend Developer"
-                                    nameBg={teamBgThree}
-                                    img={aarav}
-                                    altName="team Member Three"
-                                    variants={itemVariants}
-                                />
-                            </Box>
-                        </Grid>
+                            <Grid item xs={6} sm={4} md={3} lg={2.4}>
+                                <Box
+                                    sx={{
+                                        bgcolor: '#fff',
+                                        borderRadius: '20px',
+                                        p: 3,
+                                        boxShadow: '0 10px 30px rgba(0,0,0,0.08)',
+                                        transition: 'all 0.3s ease',
+                                        height: '100%',
+                                        '&:hover': {
+                                            boxShadow: '0 20px 50px rgba(156,193,24,0.2)',
+                                        }
+                                    }}
+                                >
+                                    <Teams
+                                        name="Vihaan"
+                                        designation="FullStack Developer"
+                                        nameBg={teamBgTwo}
+                                        img={vihaan}
+                                        altName="team Member Four"
+                                        variants={itemVariants}
+                                    />
+                                </Box>
+                            </Grid>
 
-                        <Grid item xs={6} sm={4} md={3} lg={2.4}>
-                            <Box
-                                sx={{
-                                    bgcolor: '#fff',
-                                    borderRadius: '20px',
-                                    p: 3,
-                                    boxShadow: '0 10px 30px rgba(0,0,0,0.08)',
-                                    transition: 'all 0.3s ease',
-                                    height: '100%',
-                                    '&:hover': {
-                                        boxShadow: '0 20px 50px rgba(156,193,24,0.2)',
-                                    }
-                                }}
-                            >
-                                <Teams
-                                    name="Vihaan"
-                                    designation="FullStack Developer"
-                                    nameBg={teamBgTwo}
-                                    img={vihaan}
-                                    altName="team Member Four"
-                                    variants={itemVariants}
-                                />
-                            </Box>
-                        </Grid>
+                            <Grid item xs={6} sm={4} md={3} lg={2.4}>
+                                <Box
+                                    sx={{
+                                        bgcolor: '#fff',
+                                        borderRadius: '20px',
+                                        p: 3,
+                                        boxShadow: '0 10px 30px rgba(0,0,0,0.08)',
+                                        transition: 'all 0.3s ease',
+                                        height: '100%',
+                                        '&:hover': {
+                                            boxShadow: '0 20px 50px rgba(156,193,24,0.2)',
+                                        }
+                                    }}
+                                >
+                                    <Teams
+                                        name="Meera"
+                                        designation="DevOps Engineer"
+                                        nameBg={teamBgOne}
+                                        img={meera}
+                                        altName="team Member Five"
+                                        variants={itemVariants}
+                                    />
+                                </Box>
+                            </Grid>
 
-                        <Grid item xs={6} sm={4} md={3} lg={2.4}>
-                            <Box
-                                sx={{
-                                    bgcolor: '#fff',
-                                    borderRadius: '20px',
-                                    p: 3,
-                                    boxShadow: '0 10px 30px rgba(0,0,0,0.08)',
-                                    transition: 'all 0.3s ease',
-                                    height: '100%',
-                                    '&:hover': {
-                                        boxShadow: '0 20px 50px rgba(156,193,24,0.2)',
-                                    }
-                                }}
-                            >
-                                <Teams
-                                    name="Meera"
-                                    designation="DevOps Engineer"
-                                    nameBg={teamBgOne}
-                                    img={meera}
-                                    altName="team Member Five"
-                                    variants={itemVariants}
-                                />
-                            </Box>
-                        </Grid>
+                            <Grid item xs={6} sm={4} md={3} lg={2.4}>
+                                <Box
+                                    sx={{
+                                        bgcolor: '#fff',
+                                        borderRadius: '20px',
+                                        p: 3,
+                                        boxShadow: '0 10px 30px rgba(0,0,0,0.08)',
+                                        transition: 'all 0.3s ease',
+                                        height: '100%',
+                                        '&:hover': {
+                                            boxShadow: '0 20px 50px rgba(156,193,24,0.2)',
+                                        }
+                                    }}
+                                >
+                                    <Teams
+                                        name="Ananya"
+                                        designation="UI/UX Designer"
+                                        nameBg={teamBgTwo}
+                                        img={ananya}
+                                        altName="team Member Six"
+                                        variants={itemVariants}
+                                    />
+                                </Box>
+                            </Grid>
 
-                        <Grid item xs={6} sm={4} md={3} lg={2.4}>
-                            <Box
-                                sx={{
-                                    bgcolor: '#fff',
-                                    borderRadius: '20px',
-                                    p: 3,
-                                    boxShadow: '0 10px 30px rgba(0,0,0,0.08)',
-                                    transition: 'all 0.3s ease',
-                                    height: '100%',
-                                    '&:hover': {
-                                        boxShadow: '0 20px 50px rgba(156,193,24,0.2)',
-                                    }
-                                }}
-                            >
-                                <Teams
-                                    name="Ananya"
-                                    designation="UI/UX Designer"
-                                    nameBg={teamBgTwo}
-                                    img={ananya}
-                                    altName="team Member Six"
-                                    variants={itemVariants}
-                                />
-                            </Box>
+                            <Grid item xs={6} sm={4} md={3} lg={2.4}>
+                                <Box
+                                    sx={{
+                                        bgcolor: '#fff',
+                                        borderRadius: '20px',
+                                        p: 3,
+                                        boxShadow: '0 10px 30px rgba(0,0,0,0.08)',
+                                        transition: 'all 0.3s ease',
+                                        height: '100%',
+                                        '&:hover': {
+                                            boxShadow: '0 20px 50px rgba(156,193,24,0.2)',
+                                        }
+                                    }}
+                                >
+                                    <Teams
+                                        name="Armaan"
+                                        designation="FullStack Developer"
+                                        nameBg={teamBgThree}
+                                        img={armaan}
+                                        altName="team Member Seven"
+                                        variants={itemVariants}
+                                    />
+                                </Box>
+                            </Grid>
                         </Grid>
-
-                        <Grid item xs={6} sm={4} md={3} lg={2.4}>
-                            <Box
-                                sx={{
-                                    bgcolor: '#fff',
-                                    borderRadius: '20px',
-                                    p: 3,
-                                    boxShadow: '0 10px 30px rgba(0,0,0,0.08)',
-                                    transition: 'all 0.3s ease',
-                                    height: '100%',
-                                    '&:hover': {
-                                        boxShadow: '0 20px 50px rgba(156,193,24,0.2)',
-                                    }
-                                }}
-                            >
-                                <Teams
-                                    name="Armaan"
-                                    designation="FullStack Developer"
-                                    nameBg={teamBgThree}
-                                    img={armaan}
-                                    altName="team Member Seven"
-                                    variants={itemVariants}
-                                />
-                            </Box>
-                        </Grid>
-                    </Grid>
+                    </Box>
                 </motion.div>
             </Box>
         </Grid>

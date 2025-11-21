@@ -278,6 +278,7 @@ const YouImagineWeCreate = () => {
             sx={{
                 position: 'relative',
                 overflow: 'hidden',
+                width: '100%',
                 '&::before': {
                     content: '""',
                     position: 'absolute',
@@ -300,7 +301,7 @@ const YouImagineWeCreate = () => {
                 }
             }}
         >
-            <Grid container direction="column" alignItems="center" sx={{ position: 'relative', zIndex: 1 }}>
+            <Grid container direction="column" alignItems="center" sx={{ position: 'relative', zIndex: 1, width: '100%' }}>
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
@@ -351,42 +352,46 @@ const YouImagineWeCreate = () => {
                     animate={isInView ? "visible" : "hidden"}
                     style={{ width: '100%' }}
                 >
-                    <Grid
-                        container
-                        spacing={{ xs: 3, sm: 4, md: 5 }}
-                        justifyContent='center'
-                        alignItems='stretch'
-                        pb={10}
-                        pt={2}
+                    <Box
                         sx={{
-                            px: { xs: 2, sm: 3, md: 4, lg: 6 },
+                            width: '100%',
                             maxWidth: '1400px',
-                            mx: 'auto'
+                            mx: 'auto',
+                            px: { xs: '20px', sm: '20px', md: '20px', lg: '20px' },
                         }}
                     >
-                        {processSteps.map((step, index) => (
-                            <Grid
-                                item
-                                xs={12}
-                                sm={6}
-                                md={4}
-                                key={index}
-                                sx={{
-                                    display: 'flex',
-                                    height: { xs: 450, sm: 470, md: 490 },
-                                }}
-                            >
-                                <ProcessCard
-                                    icon={step.icon}
-                                    title={step.title}
-                                    description={step.description}
-                                    index={index}
-                                    variants={itemVariants}
-                                    isInView={isInView}
-                                />
-                            </Grid>
-                        ))}
-                    </Grid>
+                        <Grid
+                            container
+                            spacing={{ xs: 3, sm: 4, md: 5 }}
+                            justifyContent='center'
+                            alignItems='stretch'
+                            pb={10}
+                            pt={2}
+                        >
+                            {processSteps.map((step, index) => (
+                                <Grid
+                                    item
+                                    xs={12}
+                                    sm={6}
+                                    md={4}
+                                    key={index}
+                                    sx={{
+                                        display: 'flex',
+                                        height: { xs: 450, sm: 470, md: 490 },
+                                    }}
+                                >
+                                    <ProcessCard
+                                        icon={step.icon}
+                                        title={step.title}
+                                        description={step.description}
+                                        index={index}
+                                        variants={itemVariants}
+                                        isInView={isInView}
+                                    />
+                                </Grid>
+                            ))}
+                        </Grid>
+                    </Box>
                 </motion.div>
             </Grid>
         </Grid>

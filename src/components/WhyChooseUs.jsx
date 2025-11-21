@@ -251,17 +251,20 @@ const WhyChooseUs = () => {
                     animate={isInView ? "visible" : "hidden"}
                     style={{ width: '100%' }}
                 >
-                    <Grid 
-                        container 
-                        justifyContent='center' 
-                        spacing={{ xs: 2, sm: 3, md: 4 }}
-                        sx={{ 
-                            px: { xs: 2, sm: 3, md: 4, lg: 6 },
-                            pb: 10,
+                    <Box
+                        sx={{
+                            width: '100%',
                             maxWidth: '1400px',
-                            mx: 'auto'
+                            mx: 'auto',
+                            px: { xs: '20px', sm: '20px', md: '20px', lg: '20px' },
                         }}
                     >
+                        <Grid 
+                            container 
+                            justifyContent='center' 
+                            spacing={{ xs: 2, sm: 3, md: 4 }}
+                            pb={10}
+                        >
                         <Grid item xs={12} sm={6} md={4} lg={4} sx={{ display: 'flex' }}>
                             <Services
                                 title="All Dynamic Websites"
@@ -360,7 +363,8 @@ const WhyChooseUs = () => {
                                 variants={itemVariants}
                             />
                         </Grid>
-                    </Grid>
+                        </Grid>
+                    </Box>
                 </motion.div>
             </Box>
         </Grid>
