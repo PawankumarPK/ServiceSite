@@ -34,7 +34,7 @@ const CountriesServed = () => {
     const countries = [
         { name: 'INDIA', code: 'IN', flag: 'https://flagcdn.com/w320/in.png' },
         { name: 'NORWAY', code: 'NO', flag: 'https://flagcdn.com/w320/no.png' },
-        { name: 'ICELAND', code: 'IS', flag: 'https://flagcdn.com/w320/is.png' },
+        { name: 'FAROE ISLANDS', code: 'FO', flag: 'https://flagcdn.com/w320/fo.png' },
         { name: 'USA', code: 'US', flag: 'https://flagcdn.com/w320/us.png' },
         { name: 'DUBAI', code: 'AE', flag: 'https://flagcdn.com/w320/ae.png' },
         { name: 'CANADA', code: 'CA', flag: 'https://flagcdn.com/w320/ca.png' },
@@ -164,7 +164,7 @@ const CountriesServed = () => {
                                             mx: 'auto'
                                         }}
                                     >
-                                        As a leading web and mobile app development company, we proudly serve clients across India, Norway, Iceland, USA, Dubai (UAE), and Canada. Our global presence enables us to deliver world-class website development, mobile app development, and digital solutions tailored to diverse international markets. Whether you're a startup in Mumbai, a tech company in Silicon Valley, or an enterprise in Toronto, we bring expertise in React, Flutter, Next.js, and cutting-edge technologies to transform your digital presence.
+                                        As a leading web and mobile app development company, we proudly serve clients across India, Norway, Faroe Islands, USA, Dubai (UAE), and Canada. Our global presence enables us to deliver world-class website development, mobile app development, and digital solutions tailored to diverse international markets. Whether you're a startup in Mumbai, a tech company in Silicon Valley, or an enterprise in Toronto, we bring expertise in React, Flutter, Next.js, and cutting-edge technologies to transform your digital presence.
                                     </Typography>
                                 </Box>
                             </motion.div>
