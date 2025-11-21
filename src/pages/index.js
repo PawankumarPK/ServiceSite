@@ -12,6 +12,7 @@ import TeamSection from '../components/TeamSection'
 import WhatWeOffer from '../components/WhatWeOffer'
 import WhyChooseUs from '../components/WhyChooseUs'
 import YouImagineWeCreate from '../components/YouImagineWeCreate'
+import CountriesServed from '../components/CountriesServed'
 
 
 export default function Home() {
@@ -73,6 +74,7 @@ export default function Home() {
       <ClientFeedback />
       <WhyChooseUs />
       <WhatWeOffer />
+      <CountriesServed />
       <TeamSection />
 
 
