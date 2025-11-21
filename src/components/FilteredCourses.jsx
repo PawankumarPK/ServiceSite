@@ -376,56 +376,36 @@ const categorizedCourseData = [
 ///----------------- Team common sections -----------------
 const PortfolioDesc = ({ name, img, nameBg, altName, isMobileApp, link }) => (
     <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
         whileHover={{
-            y: -15,
-            scale: 1.02,
+            y: -10,
+            scale: 1.03,
+        }}
+        transition={{
+            duration: 0.4,
+            hover: { duration: 0.3 }
         }}
         style={{
-            transition: 'all 0.3s ease',
+            width: '100%',
             height: '100%',
+            display: 'flex',
+            flexDirection: 'column',
         }}
     >
         <Box
             sx={{
                 bgcolor: '#fff',
-                borderRadius: '25px',
+                borderRadius: '12px',
                 overflow: 'hidden',
-                boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
-                transition: 'all 0.4s ease',
-                position: 'relative',
-                border: '1px solid rgba(0,0,0,0.05)',
+                border: '1px solid rgba(0,0,0,0.2)',
                 height: '100%',
                 display: 'flex',
                 flexDirection: 'column',
-                '&::before': {
-                    content: '""',
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    right: 0,
-                    height: '4px',
-                    background: 'linear-gradient(90deg, #9CC118 0%, #DBD525 50%, #9CC118 100%)',
-                    transform: 'scaleX(0)',
-                    transformOrigin: 'left',
-                    transition: 'transform 0.4s ease',
-                    zIndex: 1,
-                },
+                transition: 'all 0.3s ease',
                 '&:hover': {
-                    boxShadow: '0 20px 50px rgba(156,193,24,0.25)',
-                    transform: 'translateY(-8px)',
-                    border: '1px solid rgba(156,193,24,0.3)',
-                    '&::before': {
-                        transform: 'scaleX(1)',
-                    },
-                    '& .portfolio-image': {
-                        transform: 'scale(1.08)',
-                    },
-                    '& .portfolio-overlay': {
-                        opacity: 1,
-                    },
-                    '& .portfolio-name': {
-                        transform: 'translateY(-5px)',
-                    }
+                    border: '1px solid rgba(156,193,24,0.5)',
+                    boxShadow: '0 8px 25px rgba(156,193,24,0.15)',
                 }
             }}
         >
@@ -438,34 +418,28 @@ const PortfolioDesc = ({ name, img, nameBg, altName, isMobileApp, link }) => (
                         display: 'flex',
                         justifyContent: 'center',
                         alignItems: 'center',
-                        px: { xs: 2, sm: 2.5 },
-                        py: { xs: 0.5, sm: 1 },
+                        px: { xs: 1, sm: 1.5 },
+                        py: { xs: 0.5, sm: 0.5 },
                         minHeight: isMobileApp ? 240 : 220,
                         maxHeight: isMobileApp ? 240 : 220,
+                        transition: 'all 0.3s ease',
+                        '&:hover': {
+                            '& .portfolio-image': {
+                                transform: 'scale(1.05)',
+                            }
+                        }
                     }}
                 >
-                    <Box
-                        className="portfolio-overlay"
-                        sx={{
-                            position: 'absolute',
-                            inset: 0,
-                            background: 'linear-gradient(135deg, rgba(156,193,24,0.15) 0%, rgba(219,213,37,0.15) 100%)',
-                            opacity: 0,
-                            transition: 'opacity 0.4s ease',
-                            zIndex: 1,
-                        }}
-                    />
                     <Box
                         className="portfolio-image"
                         sx={{
                             position: 'relative',
-                            zIndex: 2,
-                            transition: 'transform 0.5s ease',
                             width: '100%',
                             height: '100%',
                             display: 'flex',
                             justifyContent: 'center',
                             alignItems: 'center',
+                            transition: 'transform 0.5s ease',
                         }}
                     >
                         <Image
@@ -488,14 +462,13 @@ const PortfolioDesc = ({ name, img, nameBg, altName, isMobileApp, link }) => (
                     className="portfolio-name"
                     sx={{
                         pt: 2,
-                        pb: 2.5,
-                        px: 2,
+                        pb: 2,
+                        px: 1,
                         display: "flex",
                         justifyContent: "center",
                         alignItems: "center",
                         position: 'relative',
-                        transition: 'transform 0.4s ease',
-                        background: 'linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(247,248,250,1) 100%)',
+                        transition: 'transform 0.3s ease',
                     }}
                 >
                     <Image
@@ -635,7 +608,7 @@ const FilteredCourses = () => {
                                     xs={12}
                                     sm={6}
                                     md={4}
-                                    lg={3}
+                                    lg={4}
                                     key={course.id}
                                     sx={{ display: 'flex' }}
                                 >

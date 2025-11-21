@@ -8,6 +8,7 @@ import officeImg2 from "../../public/office/office-img-2.jpg";
 import officeImg3 from "../../public/office/office-img-3.jpg";
 import officeImg4 from "../../public/office/office-img-4.jpg";
 import officeImg5 from "../../public/office/office-img-5.jpg";
+import officeImg6 from "../../public/office/office-img-6.jpg";
 
 const OfficeSection = () => {
     const ref = useRef(null);
@@ -43,6 +44,7 @@ const OfficeSection = () => {
         { src: officeImg3, alt: 'Office workspace 3' },
         { src: officeImg4, alt: 'Office workspace 4' },
         { src: officeImg5, alt: 'Office workspace 5' },
+        { src: officeImg6, alt: 'Office workspace 6' },
     ];
 
     return (
