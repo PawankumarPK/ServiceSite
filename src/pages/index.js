@@ -13,6 +13,7 @@ import WhatWeOffer from '../components/WhatWeOffer'
 import WhyChooseUs from '../components/WhyChooseUs'
 import YouImagineWeCreate from '../components/YouImagineWeCreate'
 import CountriesServed from '../components/CountriesServed'
+import OfficeSection from '../components/OfficeSection'
 
 
 export default function Home() {
@@ -76,6 +77,7 @@ export default function Home() {
       <WhatWeOffer />
       <CountriesServed />
       <TeamSection />
+      <OfficeSection />
 
 
       <Footer />
