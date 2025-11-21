@@ -50,13 +50,31 @@ const NavbarTitle = ({ text }) => (
 
 const Header = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false)
+  const [showScrollButton, setShowScrollButton] = useState(false)
 
   const chooseMessage = (message) => {
     setIsDrawerOpen(message);
   };
 
-  return (
+  useEffect(() => {
+    const handleScroll = () => {
+      // Show button when user scrolls down more than 300px
+      if (window.scrollY > 300) {
+        setShowScrollButton(true)
+      } else {
+        setShowScrollButton(false)
+      }
+    }
 
+    window.addEventListener('scroll', handleScroll)
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
+  return (
+    <>
     <Box 
       sx={{ 
         display: 'flex', 
@@ -597,44 +615,6 @@ const Header = () => {
             </Grid>
           </motion.div>
 
-            {/* Whatsapp Icon */}
-            <Grid
-              onClick={() => window.open(`https://wa.me/+919910765616?text=${encodeURIComponent("Hi! I'm interested in your services. Can you please help me?")}`)}
-              p={1.2}
-              position="fixed"
-              display='flex'
-              justifyContent="end"
-              left='80%'
-              top='80%'
-              container
-              sx={{
-                cursor: 'pointer',
-                left: {
-                  lg: '92%',
-                  md: '90%',
-                  sm: '80%',
-                  xs: '80%'
-                },
-                width: {
-                  lg: 60,
-                  md: 80,
-                  sm: 80,
-                  xs: 70
-                },
-                animation: `${breatheAnimation} 2.5s infinite ease-in-out`,
-                borderRadius: '50%',
-
-              }}
-
-            >
-              <Image
-                layout="responsive"
-                src={popupWhatsapp}
-                component="img"
-                alt="Whatsapp logo">
-              </Image>
-
-            </Grid>
 
             {/* Up Arrow Icon */}
             {/* <Grid
@@ -684,6 +664,120 @@ const Header = () => {
 
     </Box>
 
+    {/* Whatsapp Icon - Outside all containers */}
+    <Box
+      onClick={() => window.open(`https://wa.me/+919910765616?text=${encodeURIComponent("Hi! I'm interested in your services. Can you please help me?")}`)}
+      sx={{
+        position: 'fixed',
+        cursor: 'pointer',
+        right: {
+          lg: '2%',
+          md: '3%',
+          sm: '5%',
+          xs: '5%'
+        },
+        bottom: {
+          lg: '120px',
+          md: '120px',
+          sm: '100px',
+          xs: '100px'
+        },
+        width: {
+          lg: 60,
+          md: 80,
+          sm: 80,
+          xs: 70
+        },
+        height: {
+          lg: 60,
+          md: 80,
+          sm: 80,
+          xs: 70
+        },
+        animation: `${breatheAnimation} 2.5s infinite ease-in-out`,
+        borderRadius: '50%',
+        zIndex: 999999,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        pointerEvents: 'auto',
+      }}
+    >
+      <Image
+        layout="responsive"
+        src={popupWhatsapp}
+        component="img"
+        alt="Whatsapp logo"
+        style={{
+          width: '100%',
+          height: '100%',
+          borderRadius: '50%',
+        }}>
+      </Image>
+    </Box>
+
+    {/* Scroll to Top Icon - Outside all containers */}
+    {showScrollButton && (
+      <Box
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        sx={{
+          position: 'fixed',
+          cursor: 'pointer',
+          right: {
+            lg: '2%',
+            md: '3%',
+            sm: '5%',
+            xs: '5%'
+          },
+          bottom: {
+            lg: '40px',
+            md: '40px',
+            sm: '20px',
+            xs: '20px'
+          },
+          width: {
+            lg: 50,
+            md: 60,
+            sm: 60,
+            xs: 55
+          },
+          height: {
+            lg: 50,
+            md: 60,
+            sm: 60,
+            xs: 55
+          },
+          borderRadius: '50%',
+          bgcolor: '#9CC118',
+          zIndex: 999999,
+          boxShadow: '0 4px 15px rgba(156,193,24,0.4)',
+          transition: 'all 0.3s ease',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          pointerEvents: 'auto',
+          opacity: showScrollButton ? 1 : 0,
+          transform: showScrollButton ? 'translateY(0)' : 'translateY(20px)',
+          '&:hover': {
+            bgcolor: '#DBD525',
+            transform: 'translateY(-3px)',
+            boxShadow: '0 6px 20px rgba(156,193,24,0.6)',
+          }
+        }}
+      >
+        <Image
+          layout="responsive"
+          src={upArrow}
+          component="img"
+          alt="Scroll to top"
+          style={{
+            width: '60%',
+            height: '60%',
+          }}>
+        </Image>
+      </Box>
+    )}
+    </>
   )
 }
 
