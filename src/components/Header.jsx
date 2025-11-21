@@ -437,7 +437,7 @@ const Header = () => {
 
             {/* Whatsapp Icon */}
             <Grid
-              onClick={() => window.open(`https://wa.me/+919910765616?text=`)}
+              onClick={() => window.open(`https://wa.me/+919910765616?text=${encodeURIComponent("Hi! I'm interested in your services. Can you please help me?")}`)}
               p={1.2}
               position="fixed"
               display='flex'
