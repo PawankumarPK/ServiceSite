@@ -6,6 +6,8 @@ import vihaan from "../../public/team/vihaan.jpg";
 import meera from "../../public/team/meera.jpg";
 import ananya from "../../public/team/ananya.jpg";
 import armaan from "../../public/team/armaan.jpg";
+import pulkit from "../../public/team/pulkit.jpg";
+
 import teamTwo from "../../public/png/team2.png";
 import teamThree from "../../public/png/team3.png";
 
@@ -560,6 +562,32 @@ const TeamSection = () => {
                                         designation="FullStack Developer"
                                         nameBg={teamBgThree}
                                         img={armaan}
+                                        altName="team Member Seven"
+                                        variants={itemVariants}
+                                        isMobile={isMobile}
+                                    />
+                                </Box>
+                            </Grid>
+
+                            <Grid item xs={6} sm={4} md={3} lg={2.4}>
+                                <Box
+                                    sx={{
+                                        bgcolor: '#fff',
+                                        borderRadius: '20px',
+                                        p: 3,
+                                        boxShadow: '0 10px 30px rgba(0,0,0,0.08)',
+                                        transition: 'all 0.3s ease',
+                                        height: '100%',
+                                        '&:hover': {
+                                            boxShadow: '0 20px 50px rgba(156,193,24,0.2)',
+                                        }
+                                    }}
+                                >
+                                    <Teams
+                                        name="Pulkit"
+                                        designation="Flutter Developer"
+                                        nameBg={teamBgOne}
+                                        img={pulkit}
                                         altName="team Member Seven"
                                         variants={itemVariants}
                                         isMobile={isMobile}
