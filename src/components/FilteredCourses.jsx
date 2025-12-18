@@ -30,6 +30,15 @@ const categorizedCourseData = [
         content: [
             {
                 id: 1,
+                name: "Hissini",
+                description: "Hissini",
+                image: "../projects/hissini.jpg",
+                nameBg: "../../png/teamBg1.png",
+                location: "Worldwide",
+                link: "https://hissini.com/"
+            },
+            {
+                id: 1,
                 name: "Cleansip Water",
                 description: "Cleansip Water",
                 image: "../projects/cleansip.jpg",
@@ -161,7 +170,8 @@ const categorizedCourseData = [
                 location: "Noida",
                 link: "https://www.technocomsolutions.com/"
 
-            }
+            },
+          
         ]
     },
     {

@@ -112,8 +112,8 @@ const Footer = () => {
 
                             </Grid>
 
-                        {/* ///--------- All Textfield ----------------------  */}
-                        {/* <Grid container >
+                            {/* ///--------- All Textfield ----------------------  */}
+                            {/* <Grid container >
                             <Grid width={{ lg: 300, md: 200, sm: 350, xs: 200 }} ml={{ lg: 10, md: 10, sm: 0 }} mt={5}>
 
                                 <Grid>
@@ -351,9 +351,9 @@ const Footer = () => {
                                         maxWidth: { lg: 270, md: 300, sm: '100%', xs: '100%' },
                                     }}
                                 >
-                                    <Typography 
-                                        component="subtitle1" 
-                                        fontFamily='poppins-regular' 
+                                    <Typography
+                                        component="subtitle1"
+                                        fontFamily='poppins-regular'
                                         color="#000"
                                         sx={{
                                             wordWrap: 'break-word',
@@ -461,10 +461,66 @@ const Footer = () => {
                 animate={isInView ? { opacity: 1 } : { opacity: 0 }}
                 transition={{ duration: 0.6, delay: 1.3 }}
             >
-                <Grid textAlign={{ lg: 'center', md: "center", sm: "start", xs: "start" }} pb={5} ml={{ lg: 0, md: 2, sm: 2, xs: 2 }}>
-                    <Typography component="p" ml={{ lg: 10 }} mt={10} fontSize={12} fontFamily='poppins-regular' color="#838788" textTransform='none'>
-                        Copyright © 2025  |  Created with ❤️ by OWN Technologies.
-                    </Typography>
+                <Grid
+                    textAlign={{ lg: 'center', md: "center", sm: "start", xs: "start" }}
+                    pb={5}
+                    ml={{ lg: 0, md: 2, sm: 2, xs: 2 }}
+                >
+                    <Box
+                        sx={{
+                            mt: 8,
+                            pt: 3,
+                            borderTop: '1px solid rgba(131, 135, 136, 0.25)',
+                            display: 'flex',
+                            flexDirection: { xs: 'column', sm: 'row' },
+                            alignItems: 'center',
+                            justifyContent: { lg: 'center', md: 'center', sm: 'flex-start', xs: 'flex-start' },
+                            gap: { xs: 0.5, sm: 1.5 },
+                        }}
+                    >
+                        <Typography
+                            component="p"
+                            fontSize={12}
+                            fontFamily='poppins-regular'
+                            color="#838788"
+                            textTransform='none'
+                        >
+                            Copyright © 2025-26
+                        </Typography>
+
+                        <Typography
+                            component="p"
+                            fontSize={12}
+                            fontFamily='poppins-regular'
+                            color="#838788"
+                            textTransform='none'
+                        >
+                            <Box component="span" sx={{ mx: 0.5, color: '#B0B5BA' }}>|</Box>
+                            Created with
+                            <Box
+                                component="span"
+                                sx={{
+                                    mx: 0.5,
+                                    color: '#E63946',
+                                    fontSize: '1.1em',
+                                }}
+                            >
+                                ❤️
+                            </Box>
+                            by{" "}
+                            <Box
+                                component="span"
+                                sx={{
+                                    fontFamily: 'poppins-semibold',
+                                    letterSpacing: 0.4,
+                                    color: '#9CC118',
+                                }}
+                            >
+                                OwnTechnologies
+                            </Box>
+                            .
+                        </Typography>
+                    </Box>
                 </Grid>
             </motion.div>
 
