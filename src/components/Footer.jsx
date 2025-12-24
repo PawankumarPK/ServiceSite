@@ -45,7 +45,33 @@ const Footer = () => {
     };
 
     return (
-        <Grid bgcolor="#fff" id="contact" ref={ref}>
+        <Grid
+            bgcolor="#fff"
+            id="contact"
+            ref={ref}
+            sx={{ position: 'relative', overflow: 'hidden' }}
+        >
+            {/* Watermark */}
+            <Box
+                sx={{
+                    position: 'absolute',
+                    left: '50%',
+                    top: { lg: '52%', md: '52%', sm: '55%', xs: '57%' },
+                    transform: 'translate(-50%, -50%) rotate(-18deg)',
+                    fontSize: { lg: 100, md: 95, sm: 85, xs: 70 },
+                    fontFamily: 'poppins-bold',
+                    color: 'rgba(39, 54, 59, 0.08)',
+                    letterSpacing: 1,
+                    userSelect: 'none',
+                    pointerEvents: 'none',
+                    textTransform: 'uppercase',
+                    whiteSpace: 'nowrap',
+                    maxWidth: '80vw',
+                    textAlign: 'center',
+                }}
+            >
+                CodeAndClick Pvt. Ltd
+            </Box>
 
             <Grid
                 mb={8}
@@ -496,29 +522,18 @@ const Footer = () => {
                             textTransform='none'
                         >
                             <Box component="span" sx={{ mx: 0.5, color: '#B0B5BA' }}>|</Box>
-                            Created with
+                            Government-authorised digital partner:
                             <Box
                                 component="span"
                                 sx={{
-                                    mx: 0.5,
-                                    color: '#E63946',
-                                    fontSize: '1.1em',
-                                }}
-                            >
-                                ❤️
-                            </Box>
-                            by{" "}
-                            <Box
-                                component="span"
-                                sx={{
+                                    ml: 0.5,
                                     fontFamily: 'poppins-semibold',
                                     letterSpacing: 0.4,
                                     color: '#9CC118',
                                 }}
                             >
-                                OwnTechnologies
+                                CodeAndClick Pvt. Ltd.
                             </Box>
-                            .
                         </Typography>
                     </Box>
                 </Grid>
