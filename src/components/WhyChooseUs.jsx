@@ -110,7 +110,7 @@ const Services = ({ title, description, icon, bgColor, altTag, variants, isMobil
                     <Typography 
                         component="h4" 
                         fontSize={{ xs: 15, sm: 16 }} 
-                        fontFamily='poppins-semibold' 
+                        fontFamily="var(--font-poppins), sans-serif" fontWeight={600} 
                         fontWeight={600} 
                         color="#27363B"
                         sx={{ mb: 1.5 }}
@@ -122,7 +122,7 @@ const Services = ({ title, description, icon, bgColor, altTag, variants, isMobil
                         component="p" 
                         lineHeight="24px" 
                         fontSize={{ xs: 13, sm: 14 }} 
-                        fontFamily='poppins-regular' 
+                        fontFamily="var(--font-poppins), sans-serif" fontWeight={400} 
                         color="#595959"
                         sx={{
                             textTransform: 'none',
@@ -212,7 +212,7 @@ const WhyChooseUs = () => {
                     <Typography 
                         mt={10} 
                         fontSize={14} 
-                        fontFamily='poppins-medium' 
+                        fontFamily="var(--font-poppins), sans-serif" fontWeight={500} 
                         textAlign="center" 
                         color="#27363B"
                     >
@@ -227,7 +227,7 @@ const WhyChooseUs = () => {
                             color="#000" 
                             noWrap 
                             fontSize={{lg:50,md:45,xs:40}} 
-                            fontFamily="poppins-bold" 
+                            fontFamily="var(--font-poppins), sans-serif" fontWeight={700} 
                             sx={{ lineHeight: { lg: "60px", xs: "1.2" } }}
                         >
                             Why Choose
@@ -237,7 +237,7 @@ const WhyChooseUs = () => {
                             component="h3" 
                             color='#9CC118' 
                             fontSize={{lg:50,md:45,xs:40}} 
-                            fontFamily="poppins-bold" 
+                            fontFamily="var(--font-poppins), sans-serif" fontWeight={700} 
                             sx={{ lineHeight: { lg: "60px", xs: "1.2" } }}
                         >
                             &nbsp;Us

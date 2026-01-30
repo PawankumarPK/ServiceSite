@@ -115,7 +115,7 @@ const ServicesOffer = ({ title, description, icon, altName, variants, isMobile }
 
                     <Typography
                         variant='p'
-                        fontFamily="poppins-semibold"
+                        fontFamily="var(--font-poppins), sans-serif" fontWeight={600}
                         component='subtitle1'
                         color='#27363B'
                         fontSize={{ lg: 18, md: 16, xs: 16 }}
@@ -133,7 +133,7 @@ const ServicesOffer = ({ title, description, icon, altName, variants, isMobile }
                             lineHeight: "24px",
                             color: '#595959',
                         }}
-                        fontFamily="poppins-regular"
+                        fontFamily="var(--font-poppins), sans-serif" fontWeight={400}
                         component='p'
                     >
                         {description}
@@ -214,7 +214,7 @@ const WhatWeOffer = () => {
                         component="subtitle2" 
                         mt={10} 
                         fontSize={14} 
-                        fontFamily='poppins-medium' 
+                        fontFamily="var(--font-poppins), sans-serif" fontWeight={500} 
                         textAlign="center" 
                         color="#27363B"
                     >
@@ -229,7 +229,7 @@ const WhatWeOffer = () => {
                             color="#000" 
                             noWrap 
                             fontSize={{ lg: 50, md: 45, xs: 40 }} 
-                            fontFamily="poppins-bold" 
+                            fontFamily="var(--font-poppins), sans-serif" fontWeight={700} 
                             sx={{ lineHeight: { lg: "60px", xs: "1.2" } }}
                         >
                             What We
@@ -239,7 +239,7 @@ const WhatWeOffer = () => {
                             component="h3" 
                             color='#9CC118' 
                             fontSize={{ lg: 50, md: 45, xs: 40 }} 
-                            fontFamily="poppins-bold" 
+                            fontFamily="var(--font-poppins), sans-serif" fontWeight={700} 
                             sx={{ lineHeight: { lg: "60px", xs: "1.2" } }}
                         >
                             &nbsp;Offer

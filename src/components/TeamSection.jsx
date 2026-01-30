@@ -207,7 +207,7 @@ const Teams = ({ name, designation, img, nameBg, altName, variants, isMobile }) 
                             maxWidth: '180px',
                         }}
                         fontSize={{ xs: 11, sm: 12, md: 14, lg: 16 }}
-                        fontFamily="poppins-semibold"
+                        fontFamily="var(--font-poppins), sans-serif" fontWeight={600}
                         component='h4'
                         color='#fff'
                         textAlign='center'
@@ -221,7 +221,7 @@ const Teams = ({ name, designation, img, nameBg, altName, variants, isMobile }) 
             <Typography
                 mt={1.5}
                 fontSize={{ xs: 12, sm: 13, md: 14 }}
-                fontFamily="poppins-regular"
+                fontFamily="var(--font-poppins), sans-serif" fontWeight={400}
                 component='p'
                 color='#595959'
                 textAlign='center'
@@ -299,7 +299,7 @@ const TeamSection = () => {
                     <Typography
                         mt={10}
                         fontSize={14}
-                        fontFamily='poppins-medium'
+                        fontFamily="var(--font-poppins), sans-serif" fontWeight={500}
                         textAlign="center"
                         color="#27363B"
                     >
@@ -314,7 +314,7 @@ const TeamSection = () => {
                             color="#000"
                             noWrap
                             fontSize={{ lg: 50, md: 45, sm: 40, xs: 32 }}
-                            fontFamily="poppins-bold"
+                            fontFamily="var(--font-poppins), sans-serif" fontWeight={700}
                             sx={{ lineHeight: { lg: "60px", xs: "1.2" } }}
                         >
                             We have some
@@ -331,7 +331,7 @@ const TeamSection = () => {
                             color="#9CC118"
                             mt={0}
                             fontSize={{ lg: 50, md: 45, sm: 40, xs: 32 }}
-                            fontFamily="poppins-bold"
+                            fontFamily="var(--font-poppins), sans-serif" fontWeight={700}
                             sx={{
                                 lineHeight: { lg: "60px", xs: "1.2" },
                             }}
@@ -350,7 +350,7 @@ const TeamSection = () => {
                                 component='p'
                                 mt={3}
                                 fontSize={{ lg: 15, md: 14, xs: 13 }}
-                                fontFamily='poppins-regular'
+                                fontFamily="var(--font-poppins), sans-serif" fontWeight={400}
                                 textAlign="center"
                                 color="#595959"
                                 sx={{ lineHeight: '1.8' }}

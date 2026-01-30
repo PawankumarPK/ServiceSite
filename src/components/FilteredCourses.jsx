@@ -30,6 +30,15 @@ const categorizedCourseData = [
         content: [
             {
                 id: 1,
+                name: "BVT Training",
+                description: "BVT Training",
+                image: "../projects/bvt-training.jpg",
+                nameBg: "../../png/teamBg3.png",
+                location: "Maritime",
+                link: "https://bvttraining.com/home"
+            },
+            {
+                id: 1,
                 name: "Hissini",
                 description: "Hissini",
                 image: "../projects/hissini.jpg",
@@ -171,6 +180,7 @@ const categorizedCourseData = [
                 link: "https://www.technocomsolutions.com/"
 
             },
+           
           
         ]
     },
@@ -270,12 +280,30 @@ const categorizedCourseData = [
             {
                 id: 3,
                 name: "IGNTI Portal",
-                description: "Solaris Portal",
+                description: "IGNTI Portal",
                 image: "../projects/adminPanel/ignti-portal.png",
                 nameBg: "../../png/teamBg3.png",
                 location: "Delhi",
                 link: "https://ignti.in/"
 
+            },
+            {
+                id: 4,
+                name: "BVT Admin",
+                description: "BVT Admin",
+                image: "../projects/adminPanel/bvt-admin.jpg",
+                nameBg: "../../png/teamBg1.png",
+                location: "Maritime",
+                link: "https://admin.owntechnologies.in/"
+            },
+            {
+                id: 4,
+                name: "Aarogya Admin Panel",
+                description: "Aaroya Admin Panel",
+                image: "../projects/adminPanel/aarogya-admin-panel.jpg",
+                nameBg: "../../png/teamBg2.png",
+                location: "Aarogya",
+                link: "https://aarogyaadminpanel.vercel.app/"
             }
         ]
     },
@@ -494,7 +522,8 @@ const PortfolioDesc = ({ name, img, nameBg, altName, isMobileApp, link, isMobile
                         sx={{
                             position: "absolute",
                             fontSize: { xs: 15, sm: 16 },
-                            fontFamily: "poppins-semibold",
+                            fontFamily: "var(--font-poppins), sans-serif",
+                            fontWeight: 600,
                             color: '#fff',
                             fontWeight: 600,
                         }}
@@ -578,7 +607,8 @@ const FilteredCourses = () => {
                                 py: 1.5,
                                 color: '#27363B',
                                 backgroundColor: 'transparent',
-                                fontFamily: 'poppins-semibold',
+                                fontFamily: 'var(--font-poppins), sans-serif',
+                                fontWeight: 600,
                                 fontSize: { xs: 13, sm: 14 },
                                 transition: 'all 0.3s ease',
                                 '&:hover': {

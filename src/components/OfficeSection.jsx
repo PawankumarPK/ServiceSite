@@ -91,7 +91,7 @@ const OfficeSection = () => {
                         component="subtitle2"
                         mt={10}
                         fontSize={14}
-                        fontFamily='poppins-medium'
+                        fontFamily="var(--font-poppins), sans-serif" fontWeight={500}
                         textAlign="center"
                         color="#27363B"
                     >
@@ -105,7 +105,7 @@ const OfficeSection = () => {
                             component="h3"
                             color="#000"
                             fontSize={{ lg: 50, md: 45, xs: 40 }}
-                            fontFamily="poppins-bold"
+                            fontFamily="var(--font-poppins), sans-serif" fontWeight={700}
                             sx={{ lineHeight: { lg: "60px", xs: "1.2" } }}
                         >
                             Where Innovation
@@ -114,7 +114,7 @@ const OfficeSection = () => {
                             component="h3"
                             color='#9CC118'
                             fontSize={{ lg: 50, md: 45, xs: 40 }}
-                            fontFamily="poppins-bold"
+                            fontFamily="var(--font-poppins), sans-serif" fontWeight={700}
                             sx={{ lineHeight: { lg: "60px", xs: "1.2" } }}
                         >
                             &nbsp;Happens
@@ -265,7 +265,7 @@ const OfficeSection = () => {
                             component="p"
                             fontSize={{ lg: 16, md: 15, xs: 14 }}
                             color="#595959"
-                            fontFamily="poppins-regular"
+                            fontFamily="var(--font-poppins), sans-serif" fontWeight={400}
                             sx={{
                                 lineHeight: '28px',
                             }}
