@@ -158,7 +158,7 @@ const ClientFeedback = () => {
                     <Typography 
                         mt={10} 
                         fontSize={14} 
-                        fontFamily="poppins-medium" 
+                        fontFamily="var(--font-poppins), sans-serif" fontWeight={500} 
                         textAlign="center" 
                         color="#27363B"
                     >
@@ -173,7 +173,7 @@ const ClientFeedback = () => {
                             color="#000"
                             noWrap
                             fontSize={{ lg: 50, md: 45, sm: 40, xs: 35 }}
-                            fontFamily="poppins-bold"
+                            fontFamily="var(--font-poppins), sans-serif" fontWeight={700}
                             sx={{ lineHeight: { lg: "60px", xs: "1.2" } }}
                         >
                             Kind Word,
@@ -183,7 +183,7 @@ const ClientFeedback = () => {
                             component="h3"
                             color="#9CC118"
                             fontSize={{ lg: 50, md: 45, sm: 40, xs: 35 }}
-                            fontFamily="poppins-bold"
+                            fontFamily="var(--font-poppins), sans-serif" fontWeight={700}
                             sx={{ lineHeight: { lg: "60px", xs: "1.2" } }}
                         >
                             &nbsp;Big Impact

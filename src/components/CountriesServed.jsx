@@ -83,7 +83,7 @@ const CountriesServed = () => {
                             component="subtitle2"
                             mt={10}
                             fontSize={14}
-                            fontFamily='poppins-medium'
+                            fontFamily="var(--font-poppins), sans-serif" fontWeight={500}
                             textAlign="center"
                             color="#27363B"
                         >
@@ -98,7 +98,7 @@ const CountriesServed = () => {
                                 color="#000"
                                 noWrap
                                 fontSize={{ lg: 45, md: 45, xs: 40 }}
-                                fontFamily="poppins-bold"
+                                fontFamily="var(--font-poppins), sans-serif" fontWeight={700}
                                 style={{ lineHeight: "60px" }}
                             >
                                 Countries We
@@ -108,7 +108,7 @@ const CountriesServed = () => {
                                 component="h3"
                                 color='#9CC118'
                                 fontSize={{ lg: 45, md: 45, xs: 40 }}
-                                fontFamily="poppins-bold"
+                                fontFamily="var(--font-poppins), sans-serif" fontWeight={700}
                                 style={{ lineHeight: "60px" }}
                             >
                                 &nbsp;Serve
@@ -147,7 +147,7 @@ const CountriesServed = () => {
                                     <Typography
                                         component="h2"
                                         fontSize={{ lg: 32, md: 28, xs: 24 }}
-                                        fontFamily="poppins-semibold"
+                                        fontFamily="var(--font-poppins), sans-serif" fontWeight={600}
                                         color="#27363B"
                                         sx={{
                                             lineHeight: { lg: '1.4', xs: '1.3' },
@@ -159,7 +159,7 @@ const CountriesServed = () => {
                                     <Typography
                                         component="p"
                                         fontSize={{ lg: 16, md: 15, xs: 14 }}
-                                        fontFamily="poppins-regular"
+                                        fontFamily="var(--font-poppins), sans-serif" fontWeight={400}
                                         color="#595959"
                                         sx={{
                                             lineHeight: '1.8',
@@ -198,15 +198,21 @@ const CountriesServed = () => {
                                     lg={2}
                                     key={country.code}
                                 >
-                                    <motion.div
-                                        variants={itemVariants}
-                                        whileHover={isMobile ? {} : {
-                                            scale: 1.15,
-                                            y: -15,
-                                            rotate: [0, -5, 5, -5, 0],
-                                        }}
-                                        style={{ transition: 'all 0.3s ease' }}
-                                    >
+                                    <motion.div variants={itemVariants}>
+                                        <motion.div
+                                            animate={{ scale: 1, y: 0, rotate: 0 }}
+                                            whileHover={isMobile ? undefined : {
+                                                scale: 1.15,
+                                                y: -15,
+                                                rotate: 5,
+                                            }}
+                                            transition={{
+                                                type: 'spring',
+                                                stiffness: 300,
+                                                damping: 25,
+                                            }}
+                                            style={{ height: '100%' }}
+                                        >
                                         <Box
                                             sx={{
                                                 display: 'flex',
@@ -283,7 +289,7 @@ const CountriesServed = () => {
                                             <Typography
                                                 component="subtitle1"
                                                 fontSize={14}
-                                                fontFamily="poppins-semibold"
+                                                fontFamily="var(--font-poppins), sans-serif" fontWeight={600}
                                                 color="#27363B"
                                                 textAlign="center"
                                                 sx={{
@@ -294,6 +300,7 @@ const CountriesServed = () => {
                                                 {country.name}
                                             </Typography>
                                         </Box>
+                                        </motion.div>
                                     </motion.div>
                                 </Grid>
                             ))}

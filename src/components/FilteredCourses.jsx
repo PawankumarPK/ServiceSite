@@ -522,7 +522,8 @@ const PortfolioDesc = ({ name, img, nameBg, altName, isMobileApp, link, isMobile
                         sx={{
                             position: "absolute",
                             fontSize: { xs: 15, sm: 16 },
-                            fontFamily: "poppins-semibold",
+                            fontFamily: "var(--font-poppins), sans-serif",
+                            fontWeight: 600,
                             color: '#fff',
                             fontWeight: 600,
                         }}
@@ -606,7 +607,8 @@ const FilteredCourses = () => {
                                 py: 1.5,
                                 color: '#27363B',
                                 backgroundColor: 'transparent',
-                                fontFamily: 'poppins-semibold',
+                                fontFamily: 'var(--font-poppins), sans-serif',
+                                fontWeight: 600,
                                 fontSize: { xs: 13, sm: 14 },
                                 transition: 'all 0.3s ease',
                                 '&:hover': {

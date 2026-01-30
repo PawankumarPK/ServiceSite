@@ -88,7 +88,7 @@ const FeatureCard = ({ icon, title, bgColor, index, variants }) => (
             <Typography 
                 component="p" 
                 fontSize={14} 
-                fontFamily='poppins-semibold' 
+                fontFamily="var(--font-poppins), sans-serif" fontWeight={600} 
                 textAlign="center" 
                 color="#27363B"
                 sx={{
@@ -304,7 +304,7 @@ const MakeDesignBetter = () => {
                                             component="p"
                                             fontSize={{ lg: 16, md: 15, xs: 13 }}
                                             color="#9CC118"
-                                            fontFamily="poppins-semibold"
+                                            fontFamily="var(--font-poppins), sans-serif" fontWeight={600}
                                             sx={{ 
                                                 mb: 2,
                                                 textTransform: 'uppercase',
@@ -317,7 +317,7 @@ const MakeDesignBetter = () => {
                                         <Typography
                                             component="h2"
                                             fontSize={{ lg: 48, md: 40, sm: 34, xs: 28 }}
-                                            fontFamily="poppins-bold"
+                                            fontFamily="var(--font-poppins), sans-serif" fontWeight={700}
                                             color="#000"
                                             sx={{
                                                 lineHeight: { lg: "1.2", xs: "1.3" },
@@ -358,7 +358,7 @@ const MakeDesignBetter = () => {
                                                 component="p"
                                                 fontSize={{ lg: 16, md: 15, xs: 14 }}
                                                 color="#595959"
-                                                fontFamily="poppins-regular"
+                                                fontFamily="var(--font-poppins), sans-serif" fontWeight={400}
                                                 sx={{
                                                     lineHeight: '28px',
                                                     mb: 2.5,
@@ -371,7 +371,7 @@ const MakeDesignBetter = () => {
                                                 component="p"
                                                 fontSize={{ lg: 16, md: 15, xs: 14 }}
                                                 color="#595959"
-                                                fontFamily="poppins-regular"
+                                                fontFamily="var(--font-poppins), sans-serif" fontWeight={400}
                                                 sx={{
                                                     lineHeight: '28px',
                                                     mb: 2.5,
@@ -384,7 +384,7 @@ const MakeDesignBetter = () => {
                                                 component="p"
                                                 fontSize={{ lg: 16, md: 15, xs: 14 }}
                                                 color="#595959"
-                                                fontFamily="poppins-regular"
+                                                fontFamily="var(--font-poppins), sans-serif" fontWeight={400}
                                                 sx={{
                                                     lineHeight: '28px',
                                                 }}
@@ -403,7 +403,8 @@ const MakeDesignBetter = () => {
                                                     px: 5,
                                                     py: 2,
                                                     fontSize: 16,
-                                                    fontFamily: 'poppins-semibold',
+                                                    fontFamily: 'var(--font-poppins), sans-serif',
+                                                    fontWeight: 600,
                                                     textTransform: 'none',
                                                     boxShadow: '0 8px 25px rgba(39,54,59,0.3)',
                                                     transition: 'all 0.3s ease',

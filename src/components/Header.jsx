@@ -385,11 +385,11 @@ const Header = () => {
           {/* ----------------------- We make beautiful & Resposive text section ----------------------- */}
 
           <Grid>
-            <Typography component="h3" color="#000" pr={{ lg: 5, xs: 2 }} mt={-10} fontSize={40} fontFamily="poppins-bold">
+            <Typography component="h3" color="#000" pr={{ lg: 5, xs: 2 }} mt={-10} fontSize={40} fontFamily="var(--font-poppins), sans-serif" fontWeight={700}>
               WE BUILD
             </Typography>
 
-            <Typography component="h3" color="#000" fontSize={15} fontFamily="poppins" textAlign='center' pr={{ lg: 5, xs: 0 }}>
+            <Typography component="h3" color="#000" fontSize={15} fontFamily="var(--font-poppins), sans-serif" fontWeight={400} textAlign='center' pr={{ lg: 5, xs: 0 }}>
               Modern & Scalable
             </Typography>
 
@@ -418,7 +418,7 @@ const Header = () => {
 
               <Typography
                 component="h1"
-                fontFamily='poppins'
+                fontFamily="var(--font-poppins), sans-serif" fontWeight={400}
                 fontSize={22}
                 color="#fff" 
                 pt={4}
@@ -428,7 +428,7 @@ const Header = () => {
 
               <Typography
                 component="h1"
-                fontFamily='poppins-bold'
+                fontFamily="var(--font-poppins), sans-serif" fontWeight={700}
                 color="#fff" 
                 fontSize={{ lg: 40, xs: 30 }} 
                 fontWeight={800}
@@ -440,7 +440,7 @@ const Header = () => {
               <Typography
                   component="subtitle1"
                   fontSize={{ lg: 15, xs: 11 }}
-                  fontFamily='poppins'
+                  fontFamily="var(--font-poppins), sans-serif" fontWeight={400}
                   color="#fff" 
                   pt={2}
                   pb={2}
@@ -484,7 +484,7 @@ const Header = () => {
                   >
                     <Typography
                       component="p"
-                      fontFamily='poppins-medium'
+                      fontFamily="var(--font-poppins), sans-serif" fontWeight={500}
                       color="#fff"
                       textTransform='none'
                       fontSize={{ xs: 13, sm: 14, md: 15, lg: 16 }}

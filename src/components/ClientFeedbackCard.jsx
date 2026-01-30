@@ -170,7 +170,8 @@ const ClientFeedbackCard = ({ imageSrc, altName, name, nameBg, designation, mess
                     sx={{
                         position: 'absolute',
                         fontSize: { xs: 14, sm: 16 },
-                        fontFamily: 'poppins-semibold',
+                        fontFamily: 'var(--font-poppins), sans-serif',
+                        fontWeight: 600,
                         color: '#fff',
                         textAlign: 'center',
                         width: '100%',
@@ -184,7 +185,7 @@ const ClientFeedbackCard = ({ imageSrc, altName, name, nameBg, designation, mess
             {/* Designation */}
             <Typography
                 fontSize={{ xs: 13, sm: 14 }}
-                fontFamily="poppins-medium"
+                fontFamily="var(--font-poppins), sans-serif" fontWeight={500}
                 color="#595959"
                 textAlign="center"
                 sx={{ mb: 3 }}
@@ -203,7 +204,7 @@ const ClientFeedbackCard = ({ imageSrc, altName, name, nameBg, designation, mess
             >
                 <Typography
                     fontSize={{ xs: 14, sm: 15 }}
-                    fontFamily="poppins-regular"
+                    fontFamily="var(--font-poppins), sans-serif" fontWeight={400}
                     textAlign="center"
                     color="#333"
                     sx={{

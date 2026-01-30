@@ -58,16 +58,19 @@ const Footer = () => {
                     left: '50%',
                     top: { lg: '52%', md: '52%', sm: '55%', xs: '57%' },
                     transform: 'translate(-50%, -50%) rotate(-18deg)',
-                    fontSize: { lg: 100, md: 95, sm: 85, xs: 70 },
-                    fontFamily: 'poppins-bold',
+                    fontSize: { lg: 100, md: 95, sm: 85, xs: 28 },
+                    fontFamily: 'var(--font-poppins), sans-serif',
+                    fontWeight: 700,
                     color: 'rgba(39, 54, 59, 0.08)',
-                    letterSpacing: 1,
+                    letterSpacing: { lg: 1, md: 1, xs: 0.5 },
                     userSelect: 'none',
                     pointerEvents: 'none',
                     textTransform: 'uppercase',
-                    whiteSpace: 'nowrap',
-                    maxWidth: '80vw',
+                    whiteSpace: { xs: 'normal', sm: 'nowrap' },
+                    maxWidth: { xs: '85vw', sm: '80vw' },
+                    width: { xs: 'max-content', sm: 'auto' },
                     textAlign: 'center',
+                    lineHeight: 1.2,
                 }}
             >
                 CodeAndClick Pvt. Ltd
@@ -108,7 +111,7 @@ const Footer = () => {
                                         ml={{ lg: 1, md: 1, sm: 1, xs: 1 }}
                                     >
 
-                                        <Typography component="h6" color="#27363B" textAlign='center' fontSize={{ lg: 40, xs: 35 }} fontFamily="poppins-bold">
+                                        <Typography component="h6" color="#27363B" textAlign='center' fontSize={{ lg: 40, xs: 35 }} fontFamily="var(--font-poppins), sans-serif" fontWeight={700}>
                                             OWN
                                         </Typography>
 
@@ -127,7 +130,7 @@ const Footer = () => {
                                     >
 
 
-                                        <Typography textAlign='center' fontSize={{ lg: 15, xs: 15 }} fontFamily="poppins-regular">
+                                        <Typography textAlign='center' fontSize={{ lg: 15, xs: 15 }} fontFamily="var(--font-poppins), sans-serif" fontWeight={400}>
                                             Technologies
                                         </Typography>
 
@@ -176,7 +179,7 @@ const Footer = () => {
                             mt={3}>
 
 
-                            <Typography component="subtitle1" color="#000" textAlign='start' fontSize={{ lg: 15, xs: 15 }} fontFamily="poppins-regular">
+                            <Typography component="subtitle1" color="#000" textAlign='start' fontSize={{ lg: 15, xs: 15 }} fontFamily="var(--font-poppins), sans-serif" fontWeight={400}>
                                 Accelerate your online presence
                             </Typography>
 
@@ -198,7 +201,7 @@ const Footer = () => {
 
 
                             <Typography component="body1"
-                                color="#838788" textAlign='start' fontSize={{ lg: 15, xs: 15 }} fontFamily="poppins-regular">
+                                color="#838788" textAlign='start' fontSize={{ lg: 15, xs: 15 }} fontFamily="var(--font-poppins), sans-serif" fontWeight={400}>
                                 We have been helping businesses reach their full potential — and beyond. Our agency offers a wide array of services to get you there. Explore our website for more info, and see how far you can go!
                             </Typography>
 
@@ -227,7 +230,7 @@ const Footer = () => {
 
 
                             <Typography component="h4"
-                                textAlign='start' fontSize={{ lg: 20, xs: 15 }} fontFamily="poppins-semibold">
+                                textAlign='start' fontSize={{ lg: 20, xs: 15 }} fontFamily="var(--font-poppins), sans-serif" fontWeight={600}>
                                 Contact Us
 
                             </Typography>
@@ -254,7 +257,7 @@ const Footer = () => {
                                         width={18}
                                         src={callIcon}
                                         alt="call Icon" />
-                                    <Typography component="subtitle1" ml={2} fontFamily='poppins-regular' color="#000" textTransform='none'>
+                                    <Typography component="subtitle1" ml={2} fontFamily="var(--font-poppins), sans-serif" fontWeight={400} color="#000" textTransform='none'>
                                         +91-9910765616
                                     </Typography>
 
@@ -280,7 +283,7 @@ const Footer = () => {
                                         src={emailIcon}
                                         alt="email Icon" />
 
-                                    <Typography component="subtitle1" ml={2} fontFamily='poppins-regular' color="#000" textTransform='none'>
+                                    <Typography component="subtitle1" ml={2} fontFamily="var(--font-poppins), sans-serif" fontWeight={400} color="#000" textTransform='none'>
                                         hello@owntechnologies.in
                                     </Typography>
 
@@ -305,7 +308,7 @@ const Footer = () => {
                                         src={emailIcon}
                                         alt="email Icon" />
 
-                                    <Typography component="subtitle1" ml={2} fontFamily='poppins-regular' color="#000" textTransform='none'>
+                                    <Typography component="subtitle1" ml={2} fontFamily="var(--font-poppins), sans-serif" fontWeight={400} color="#000" textTransform='none'>
                                         pyadav.workmail@gmail.com
                                     </Typography>
 
@@ -334,7 +337,7 @@ const Footer = () => {
                             ml={{ lg: 0, md: 2, sm: 0 }}>
 
 
-                            <Typography component="h4" textAlign='start' fontSize={{ lg: 20, xs: 15 }} fontFamily="poppins-semibold">
+                            <Typography component="h4" textAlign='start' fontSize={{ lg: 20, xs: 15 }} fontFamily="var(--font-poppins), sans-serif" fontWeight={600}>
                                 Address
 
                             </Typography>
@@ -379,7 +382,7 @@ const Footer = () => {
                                 >
                                     <Typography
                                         component="subtitle1"
-                                        fontFamily='poppins-regular'
+                                        fontFamily="var(--font-poppins), sans-serif" fontWeight={400}
                                         color="#000"
                                         sx={{
                                             wordWrap: 'break-word',
@@ -507,7 +510,7 @@ const Footer = () => {
                         <Typography
                             component="p"
                             fontSize={12}
-                            fontFamily='poppins-regular'
+                            fontFamily="var(--font-poppins), sans-serif" fontWeight={400}
                             color="#838788"
                             textTransform='none'
                         >
@@ -517,7 +520,7 @@ const Footer = () => {
                         <Typography
                             component="p"
                             fontSize={12}
-                            fontFamily='poppins-regular'
+                            fontFamily="var(--font-poppins), sans-serif" fontWeight={400}
                             color="#838788"
                             textTransform='none'
                         >
@@ -527,7 +530,8 @@ const Footer = () => {
                                 component="span"
                                 sx={{
                                     ml: 0.5,
-                                    fontFamily: 'poppins-semibold',
+                                    fontFamily: 'var(--font-poppins), sans-serif',
+                                    fontWeight: 600,
                                     letterSpacing: 0.4,
                                     color: '#9CC118',
                                 }}

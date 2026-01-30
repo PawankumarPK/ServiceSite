@@ -112,7 +112,8 @@ const ProcessCard = ({ icon, title, description, index, variants, isInView, isMo
                     <Typography
                         sx={{
                             fontSize: 20,
-                            fontFamily: 'poppins-bold',
+                            fontFamily: 'var(--font-poppins), sans-serif',
+                            fontWeight: 700,
                             color: '#fff',
                         }}
                     >
@@ -175,7 +176,7 @@ const ProcessCard = ({ icon, title, description, index, variants, isInView, isMo
                 <Typography
                     component="h3"
                     fontSize={{ xs: 20, sm: 22, md: 24 }}
-                    fontFamily="poppins-bold"
+                    fontFamily="var(--font-poppins), sans-serif" fontWeight={700}
                     color="#27363B"
                     textAlign="center"
                     sx={{
@@ -202,7 +203,7 @@ const ProcessCard = ({ icon, title, description, index, variants, isInView, isMo
                     <Typography
                         component="p"
                         fontSize={{ xs: 14, sm: 15 }}
-                        fontFamily="poppins-regular"
+                        fontFamily="var(--font-poppins), sans-serif" fontWeight={400}
                         color="#595959"
                         textAlign="center"
                         sx={{
@@ -315,7 +316,7 @@ const YouImagineWeCreate = () => {
                         component="p"
                         mt={10}
                         fontSize={14}
-                        fontFamily='poppins-medium'
+                        fontFamily="var(--font-poppins), sans-serif" fontWeight={500}
                         textAlign="center"
                         color="#27363B"
                     >
@@ -330,7 +331,7 @@ const YouImagineWeCreate = () => {
                             color="#000"
                             noWrap
                             fontSize={{ lg: 50, md: 45, xs: 40 }}
-                            fontFamily="poppins-bold"
+                            fontFamily="var(--font-poppins), sans-serif" fontWeight={700}
                             sx={{ lineHeight: { lg: "60px", xs: "1.2" } }}
                         >
                             You Imagine,
@@ -340,7 +341,7 @@ const YouImagineWeCreate = () => {
                             component="h3"
                             color='#9CC118'
                             fontSize={{ lg: 50, md: 45, xs: 40 }}
-                            fontFamily="poppins-bold"
+                            fontFamily="var(--font-poppins), sans-serif" fontWeight={700}
                             sx={{ lineHeight: { lg: "60px", xs: "1.2" } }}
                         >
                             &nbsp;We Create

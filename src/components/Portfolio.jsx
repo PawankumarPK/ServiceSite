@@ -64,7 +64,7 @@ const PortfolioDesc = ({ name, img, nameBg, altName }) => (
 
             <Typography sx={{ position: "absolute" }}
                 fontSize={15}
-                fontFamily="poppins-semibold"
+                fontFamily="var(--font-poppins), sans-serif" fontWeight={600}
                 component='h4'
                 color='#fff'
                 textAlign='center'>
@@ -123,7 +123,7 @@ const Portfolio = () => {
                             component="subtitle2"
                             mt={10}
                             fontSize={14}
-                            fontFamily='poppins-medium'
+                            fontFamily="var(--font-poppins), sans-serif" fontWeight={500}
                             textAlign="center"
                             color="#27363B"
                         >
@@ -137,7 +137,7 @@ const Portfolio = () => {
                                 component="h3"
                                 color="#000"
                                 fontSize={{ lg: 50, md: 45, xs: 40 }}
-                                fontFamily="poppins-bold"
+                                fontFamily="var(--font-poppins), sans-serif" fontWeight={700}
                                 sx={{ lineHeight: { lg: "60px", xs: "1.2" } }}
                             >
                                 Latest &
@@ -147,7 +147,7 @@ const Portfolio = () => {
                                 component="h3"
                                 color='#9CC118'
                                 fontSize={{ lg: 50, md: 45, xs: 40 }}
-                                fontFamily="poppins-bold"
+                                fontFamily="var(--font-poppins), sans-serif" fontWeight={700}
                                 sx={{ lineHeight: { lg: "60px", xs: "1.2" } }}
                             >
                                 &nbsp;Creative Work

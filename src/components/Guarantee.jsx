@@ -176,7 +176,8 @@ const GuaranteeCard = ({ icon, title, description, index, variants, isInView, is
                         className="guarantee-number-text"
                         sx={{
                             fontSize: 20,
-                            fontFamily: 'poppins-bold',
+                            fontFamily: 'var(--font-poppins), sans-serif',
+                            fontWeight: 700,
                             color: color.primary,
                             transition: 'color 0.4s ease',
                         }}
@@ -264,7 +265,7 @@ const GuaranteeCard = ({ icon, title, description, index, variants, isInView, is
                 <Typography
                     component="h3"
                     fontSize={{ xs: 21, sm: 23, md: 25 }}
-                    fontFamily="poppins-bold"
+                    fontFamily="var(--font-poppins), sans-serif" fontWeight={700}
                     color="#27363B"
                     textAlign="center"
                     sx={{
@@ -294,7 +295,7 @@ const GuaranteeCard = ({ icon, title, description, index, variants, isInView, is
                     <Typography
                         component="p"
                         fontSize={{ xs: 14, sm: 15 }}
-                        fontFamily="poppins-regular"
+                        fontFamily="var(--font-poppins), sans-serif" fontWeight={400}
                         color="#595959"
                         textAlign="center"
                         sx={{
@@ -398,7 +399,7 @@ const Guarantee = () => {
                             component="p" 
                             mt={10} 
                             fontSize={14} 
-                            fontFamily='poppins-medium' 
+                            fontFamily="var(--font-poppins), sans-serif" fontWeight={500} 
                             textAlign="center" 
                             color="#27363B"
                         >
@@ -412,7 +413,7 @@ const Guarantee = () => {
                                 component="h3" 
                                 color="#000" 
                                 fontSize={{ lg: 50, md: 45, xs: 40 }} 
-                                fontFamily="poppins-bold" 
+                                fontFamily="var(--font-poppins), sans-serif" fontWeight={700} 
                                 sx={{ lineHeight: { lg: "60px", xs: "1.2" } }}
                             >
                                 Work With
@@ -422,7 +423,7 @@ const Guarantee = () => {
                                 component="h3" 
                                 color='#9CC118' 
                                 fontSize={{ lg: 50, md: 45, xs: 40 }} 
-                                fontFamily="poppins-bold" 
+                                fontFamily="var(--font-poppins), sans-serif" fontWeight={700} 
                                 sx={{ lineHeight: { lg: "60px", xs: "1.2" } }}
                             >
                                 &nbsp;Guarantee
