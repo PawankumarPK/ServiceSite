@@ -17,18 +17,8 @@ import Image from 'next/image';
 import DrawerItem from './Drawer';
 import { useEffect } from 'react';
 import Link from 'next/link';
-import { keyframes } from '@emotion/react';
-import { motion } from 'framer-motion';
 
-
-
-const breatheAnimation = keyframes`
-  0% { transform: scale(1); box-shadow: 0 0 10px #25D366, 0 0 20px #25D366; }
-  50% { transform: scale(1.05); box-shadow: 0 0 20px #25D366, 0 0 30px #25D366; }
-  100% { transform: scale(1); box-shadow: 0 0 10px #25D366, 0 0 20px #25D366; }
-`;
-
-///----------------- Navbar common title -----------------
+/// ----------------- Navbar common title -----------------
 const NavbarTitle = ({ text }) => (
   <Typography
     display={{ xs: 'none', sm: 'block', md: 'block', lg: 'block' }}
@@ -119,43 +109,32 @@ const Header = () => {
           <Grid
             onClick={() => window.open(`tel:9910765616`)}
             container item xs alignItems='center'>
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <Grid
+            <Grid
 
-                sx={{
-                  cursor: 'pointer',
-                  width: {
-                    lg: 22,
-                    md: 22,
-                    sm: 22,
-                    xs: 20
-                  },
-                  height: {
-                    lg: 22,
-                    md: 22,
-                    sm: 22,
-                    xs: 20
-                  }
-                }}>
-                <Image
-                  layout="responsive"
-                  src={calling}
-                  component="img"
-                  alt="Calling logo">
-                </Image>
-              </Grid>
-            </motion.div>
+              sx={{
+                cursor: 'pointer',
+                width: {
+                  lg: 22,
+                  md: 22,
+                  sm: 22,
+                  xs: 20
+                },
+                height: {
+                  lg: 22,
+                  md: 22,
+                  sm: 22,
+                  xs: 20
+                }
+              }}>
+              <Image
+                layout="responsive"
+                src={calling}
+                component="img"
+                alt="Calling logo">
+              </Image>
+            </Grid>
 
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-            >
-              <Typography
+            <Typography
                 component="p"
                 sx={{
                   cursor: 'pointer',
@@ -171,7 +150,6 @@ const Header = () => {
                 color='common.white'>
                 +91-9910765616
               </Typography>
-            </motion.div>
           </Grid>
 
 
@@ -193,19 +171,12 @@ const Header = () => {
                   xs: 32
                 }
               }}>
-              <motion.div
-                initial={{ opacity: 0, scale: 0.5, rotate: -180 }}
-                animate={{ opacity: 1, scale: 1, rotate: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                whileHover={{ scale: 1.2, rotate: 10, transition: { duration: 0.15 } }}
-              >
-                <Link href="https://www.facebook.com/profile.php?id=100091625195907" target='_blank' passHref>
-                  <Image
-                    layout='responsive'
-                    src={facebookIcon}
-                    alt="Facebook icon" />
-                </Link>
-              </motion.div>
+              <Link href="https://www.facebook.com/profile.php?id=100091625195907" target='_blank' passHref>
+                <Image
+                  layout='responsive'
+                  src={facebookIcon}
+                  alt="Facebook icon" />
+              </Link>
             </Grid>
 
             <Grid item
@@ -223,20 +194,12 @@ const Header = () => {
                   xs: 42
                 }
               }}>
-              <motion.div
-                initial={{ opacity: 0, scale: 0.5, rotate: -180 }}
-                animate={{ opacity: 1, scale: 1, rotate: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                whileHover={{ scale: 1.2, rotate: 10, transition: { duration: 0.15 } }}
-              >
-                <Link href="https://www.instagram.com/own_technologies/?next=%2F" target='_blank' passHref>
-                  <Image
-                    layout='responsive'
-                    src={instagramIcon}
-                    alt="instagram icon" />
-
-                </Link>
-              </motion.div>
+              <Link href="https://www.instagram.com/own_technologies/?next=%2F" target='_blank' passHref>
+                <Image
+                  layout='responsive'
+                  src={instagramIcon}
+                  alt="instagram icon" />
+              </Link>
 
             </Grid>
 
@@ -255,19 +218,12 @@ const Header = () => {
                   xs: 42
                 }
               }}>
-              <motion.div
-                initial={{ opacity: 0, scale: 0.5, rotate: -180 }}
-                animate={{ opacity: 1, scale: 1, rotate: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-                whileHover={{ scale: 1.2, rotate: 10, transition: { duration: 0.15 } }}
-              >
-                <Link href="https://www.linkedin.com/company/own-technologies/?viewAsMember=true" target='_blank' passHref>
-                  <Image
-                    layout='responsive'
-                    src={linkdinIcon}
-                    alt="linkdin icon" />
-                </Link>
-              </motion.div>
+              <Link href="https://www.linkedin.com/company/own-technologies/?viewAsMember=true" target='_blank' passHref>
+                <Image
+                  layout='responsive'
+                  src={linkdinIcon}
+                  alt="linkdin icon" />
+              </Link>
             </Grid>
           </Grid>
 
@@ -280,13 +236,7 @@ const Header = () => {
 
           {/* ----------------------- Own button section ----------------------- */}
 
-          <motion.div
-            initial={{ opacity: 0, x: -50, scale: 0.8 }}
-            animate={{ opacity: 1, x: 0, scale: 1 }}
-            transition={{ duration: 0.7, delay: 0.1, type: "spring", stiffness: 100 }}
-            whileHover={{ scale: 1.05 }}
-          >
-            <Grid
+          <Grid
               sx={{
                 width: {
                   lg: 140,
@@ -319,7 +269,6 @@ const Header = () => {
               </Typography>
 
             </Grid>
-          </motion.div>
 
 
           {/* ----------------------- Navbar section ----------------------- */}
@@ -335,81 +284,39 @@ const Header = () => {
 
 
               <Grid item xs="auto" paddingRight={{ lg: 4, xs: 2 }}>
-                <motion.div
-                  initial={{ opacity: 0, y: -20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.2 }}
-                  whileHover={{ scale: 1.1, y: -2, transition: { duration: 0.15 } }}
-                >
-                  <Link href="#services" scroll={true} passHref>
-                    <NavbarTitle text="SERVICES" />
-                  </Link>
-                </motion.div>
+                <Link href="#services" scroll={true} passHref>
+                  <NavbarTitle text="SERVICES" />
+                </Link>
               </Grid>
 
               <Grid item xs="auto" paddingRight={{ lg: 4, xs: 2 }}>
-                <motion.div
-                  initial={{ opacity: 0, y: -20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.3 }}
-                  whileHover={{ scale: 1.1, y: -2, transition: { duration: 0.15 } }}
-                >
-                  <Link href="#portfolio" scroll={true} passHref>
-                    <NavbarTitle text="PORTFOLIO" />
-                  </Link>
-                </motion.div>
+                <Link href="#portfolio" scroll={true} passHref>
+                  <NavbarTitle text="PORTFOLIO" />
+                </Link>
               </Grid>
 
               <Grid item xs="auto" paddingRight={{ lg: 4, xs: 2 }}>
-                <motion.div
-                  initial={{ opacity: 0, y: -20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.4 }}
-                  whileHover={{ scale: 1.1, y: -2, transition: { duration: 0.15 } }}
-                >
-                  <Link href="#features" scroll={true} passHref>
-                    <NavbarTitle text="FEATURES" />
-                  </Link>
-                </motion.div>
+                <Link href="#features" scroll={true} passHref>
+                  <NavbarTitle text="FEATURES" />
+                </Link>
               </Grid>
 
               <Grid item xs="auto" paddingRight={{ lg: 4, xs: 2 }}>
-                <motion.div
-                  initial={{ opacity: 0, y: -20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.5 }}
-                  whileHover={{ scale: 1.1, y: -2, transition: { duration: 0.15 } }}
-                >
-                  <Link href="#guarantee" scroll={true} passHref>
-                    <NavbarTitle text="GUARANTEE" />
-                  </Link>
-                </motion.div>
+                <Link href="#guarantee" scroll={true} passHref>
+                  <NavbarTitle text="GUARANTEE" />
+                </Link>
               </Grid>
 
               <Grid item xs="auto" paddingRight={{ lg: 4, xs: 2 }}>
-                <motion.div
-                  initial={{ opacity: 0, y: -20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.6 }}
-                  whileHover={{ scale: 1.1, y: -2, transition: { duration: 0.15 } }}
-                >
-                  <Link href="#contact" scroll={true} passHref>
-                    <NavbarTitle text="CONTACT" />
-                  </Link>
-                </motion.div>
+                <Link href="#contact" scroll={true} passHref>
+                  <NavbarTitle text="CONTACT" />
+                </Link>
               </Grid>
 
               <Grid item xs="auto" paddingRight={{ lg: 4, xs: 2 }}>
-                <motion.div
-                  initial={{ opacity: 0, y: -20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.7 }}
-                  whileHover={{ scale: 1.1, y: -2, transition: { duration: 0.15 } }}
-                >
-                  <Link href="https://blog.owntechnologies.in/" target='_blank' scroll={true} passHref>
-                    <NavbarTitle text="BLOGS" />
-                  </Link>
-                </motion.div>
+                <Link href="https://blog.owntechnologies.in/" target='_blank' scroll={true} passHref>
+                  <NavbarTitle text="BLOGS" />
+                </Link>
               </Grid>
 
               {/* Drawer */}
@@ -478,36 +385,19 @@ const Header = () => {
           {/* ----------------------- We make beautiful & Resposive text section ----------------------- */}
 
           <Grid>
-            <motion.div
-              initial={{ opacity: 0, x: 50, scale: 0.8 }}
-              animate={{ opacity: 1, x: 0, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.3, type: "spring", stiffness: 80 }}
-            >
-              <Typography component="h3" color="#000" pr={{ lg: 5, xs: 2 }} mt={-10} fontSize={40} fontFamily="poppins-bold">
-                WE BUILD
-              </Typography>
-            </motion.div>
+            <Typography component="h3" color="#000" pr={{ lg: 5, xs: 2 }} mt={-10} fontSize={40} fontFamily="poppins-bold">
+              WE BUILD
+            </Typography>
 
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-            >
-              <Typography component="h3" color="#000" fontSize={15} fontFamily="poppins" textAlign='center' pr={{ lg: 5, xs: 0 }}>
-                Modern & Scalable
-              </Typography>
-            </motion.div>
+            <Typography component="h3" color="#000" fontSize={15} fontFamily="poppins" textAlign='center' pr={{ lg: 5, xs: 0 }}>
+              Modern & Scalable
+            </Typography>
 
           </Grid>
 
 
           {/* ----------------------- Creative website & app section ----------------------- */}
-          <motion.div
-            initial={{ opacity: 0, y: 100, scale: 0.9, rotateX: 15 }}
-            animate={{ opacity: 1, y: 0, scale: 1, rotateX: 0 }}
-            transition={{ duration: 1, delay: 0.4, type: "spring", stiffness: 60 }}
-          >
-            <Box
+          <Box
               height={{ lg: 'auto', xs: 'auto' }}
               width={{ lg: 550, md: 400, sm: '100%', xs: '100%' }}
               maxWidth={{ lg: 550, md: 400, sm: 400, xs: '100%' }}
@@ -526,48 +416,28 @@ const Header = () => {
               }}
             >
 
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.8 }}
-                style={{ width: '100%' }}
-              >
-                <Typography
-                  component="h1"
-                  fontFamily='poppins'
-                  fontSize={22}
-                  color="#fff" 
-                  pt={4}
-                  sx={{ textAlign: 'left' }}>
-                  Innovative
-                </Typography>
-              </motion.div>
+              <Typography
+                component="h1"
+                fontFamily='poppins'
+                fontSize={22}
+                color="#fff" 
+                pt={4}
+                sx={{ textAlign: 'left' }}>
+                Innovative
+              </Typography>
 
-              <motion.div
-                initial={{ opacity: 0, x: -30, scale: 0.9 }}
-                animate={{ opacity: 1, x: 0, scale: 1 }}
-                transition={{ duration: 0.7, delay: 1, type: "spring" }}
-                style={{ width: '100%' }}
-              >
-                <Typography
-                  component="h1"
-                  fontFamily='poppins-bold'
-                  color="#fff" 
-                  fontSize={{ lg: 40, xs: 30 }} 
-                  fontWeight={800}
-                  sx={{ textAlign: 'left' }}>
-                  WEBSITE & APPS
-                </Typography>
-              </motion.div>
+              <Typography
+                component="h1"
+                fontFamily='poppins-bold'
+                color="#fff" 
+                fontSize={{ lg: 40, xs: 30 }} 
+                fontWeight={800}
+                sx={{ textAlign: 'left' }}>
+                WEBSITE & APPS
+              </Typography>
 
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, delay: 1.2 }}
-                style={{ width: '100%' }}
-              >
-                <Typography
+              <Typography
                   component="subtitle1"
                   fontSize={{ lg: 15, xs: 11 }}
                   fontFamily='poppins'
@@ -583,7 +453,6 @@ const Header = () => {
                   }}>
                   Ready to elevate your digital presence? We craft stunning websites and powerful mobile applications that combine speed, functionality, and exceptional user experience. Our expert team transforms your vision into reality, delivering custom solutions that drive engagement and boost your business growth.
                 </Typography>
-              </motion.div>
 
 
               <Box 
@@ -597,18 +466,7 @@ const Header = () => {
                   justifyContent: 'flex-start',
                 }}
               >
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: 1.4 }}
-                  style={{ 
-                    width: '100%', 
-                    display: 'flex',
-                    justifyContent: 'flex-start',
-                    alignItems: 'flex-start',
-                  }}
-                >
-                  <Button 
+                <Button 
                     href="#about" 
                     scroll={true} 
                     variant="outlined" 
@@ -634,10 +492,8 @@ const Header = () => {
                       Learn More
                     </Typography>
                   </Button>
-                </motion.div>
               </Box>
             </Box>
-          </motion.div>
 
 
             {/* Up Arrow Icon */}
@@ -718,7 +574,6 @@ const Header = () => {
           sm: 70,
           xs: 55
         },
-        animation: `${breatheAnimation} 2.5s infinite ease-in-out`,
         borderRadius: '50%',
         zIndex: 999999,
         display: 'flex',
