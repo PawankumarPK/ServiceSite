@@ -177,12 +177,10 @@
     "core-js-pure" "^3.25.1"
     "regenerator-runtime" "^0.13.11"
 
-"@babel/runtime@^7.10.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.18.3", "@babel/runtime@^7.18.9", "@babel/runtime@^7.20.1", "@babel/runtime@^7.5.5", "@babel/runtime@^7.8.7":
-  "integrity" "sha512-Q+8MqP7TiHMWzSfwiJwXCjyf4GYA4Dgw3emg/7xmwsdLJOZUp+nMqcOwOzzYheuM1rhDu8FSj2l0aoMygEuXuA=="
-  "resolved" "https://registry.npmjs.org/@babel/runtime/-/runtime-7.20.6.tgz"
-  "version" "7.20.6"
-  dependencies:
-    "regenerator-runtime" "^0.13.11"
+"@babel/runtime@^7.10.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.18.3", "@babel/runtime@^7.18.9", "@babel/runtime@^7.20.1", "@babel/runtime@^7.23.1", "@babel/runtime@^7.5.5", "@babel/runtime@^7.8.7":
+  "integrity" "sha512-1x3D2xEk2fRo3PAhwQwu5UubzgiVWSXTBfWpVd2Mx2AzRqJuDJCsgaDVZ7HB5iGzDW1Hl1sWN2mFyKjmR9uAog=="
+  "resolved" "https://registry.npmjs.org/@babel/runtime/-/runtime-7.27.1.tgz"
+  "version" "7.27.1"
 
 "@babel/template@^7.18.10", "@babel/template@^7.20.7":
   "integrity" "sha512-8SegXApWe6VoNw0r9JHpSteLKTpTiLZ4rMlGIm9JQ18KiCtyQiAMEazujAHrUS5flrcqYZa75ukev3P6QmUwUw=="
@@ -431,7 +429,14 @@
   "resolved" "https://registry.npmjs.org/@mui/core-downloads-tracker/-/core-downloads-tracker-5.10.16.tgz"
   "version" "5.10.16"
 
-"@mui/material@^5.0.1", "@mui/material@^5.10.16":
+"@mui/icons-material@^5.14.14":
+  "integrity" "sha512-vwuaMsKvI7AWTeYqR8wYbpXijuU8PzMAJWRAq2DDIuOZPxjKyHlr8WQ25+azZYkIXtJ7AqnVb1ZmHdEyB4/kug=="
+  "resolved" "https://registry.npmjs.org/@mui/icons-material/-/icons-material-5.14.14.tgz"
+  "version" "5.14.14"
+  dependencies:
+    "@babel/runtime" "^7.23.1"
+
+"@mui/material@^5.0.0", "@mui/material@^5.0.1", "@mui/material@^5.10.16":
   "integrity" "sha512-JSHcDQQ+k30NKkCM/0KX6jq4F5LOrbFKZpS+cEl7scZWOCJpUPH5ccAT5a7O8wzrgNZ8Y9PnwzNvWBrfShpJFw=="
   "resolved" "https://registry.npmjs.org/@mui/material/-/material-5.10.16.tgz"
   "version" "5.10.16"
@@ -509,6 +514,11 @@
   "version" "13.0.5"
   dependencies:
     "glob" "7.1.7"
+
+"@next/swc-darwin-arm64@13.0.5":
+  "integrity" "sha512-mshlh8QOtOalfZbc17uNAftWgqHTKnrv6QUwBe+mpGz04eqsSUzVz1JGZEdIkmuDxOz00cK2NPoc+VHDXh99IQ=="
+  "resolved" "https://registry.npmjs.org/@next/swc-darwin-arm64/-/swc-darwin-arm64-13.0.5.tgz"
+  "version" "13.0.5"
 
 "@next/swc-darwin-x64@13.0.5":
   "integrity" "sha512-SfigOKW4Z2UB3ruUPyvrlDIkcJq1hiw1wvYApWugD+tQsAkYZKEoz+/8emCmeYZ6Gwgi1WHV+z52Oj8u7bEHPg=="
@@ -824,9 +834,9 @@
   "version" "3.1.0"
 
 "caniuse-lite@^1.0.30001406", "caniuse-lite@^1.0.30001449":
-  "integrity" "sha512-SDIV6bgE1aVbK6XyxdURbUE89zY7+k1BBBaOwYwkNCglXlel/E7mELiHC64HQ+W0xSKlqWhV9Wh7iHxUjMs4fA=="
-  "resolved" "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001457.tgz"
-  "version" "1.0.30001457"
+  "integrity" "sha512-1Pbh5FLmn5y4+QhNyJE9j3/7dK44dGB83/ZMjv/qJk86TvDbjk0LosiZo0i0WB0Vx607qMX9jYrn1VLHCkN4rw=="
+  "resolved" "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001572.tgz"
+  "version" "1.0.30001572"
 
 "chalk@^2.0.0":
   "integrity" "sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ=="
