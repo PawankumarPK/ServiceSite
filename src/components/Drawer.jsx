@@ -32,45 +32,39 @@ const DrawerItem = ({ chooseMessage }) => {
                 <Grid item xs>
                     <Grid height={75}>
 
-                        <Grid  item xs="auto" paddingRight={{ lg: 4, xs: 2 }} onClick={() => { chooseMessage(false) }}>
-                            <Link isDrawerOpen={false} href="#services" scroll={true} passHref style={{ textDecoration: 'none' }}
-                            >
-                                <NavbarTitle text="SERVICES" />
+                        <Grid item xs="auto" paddingRight={{ lg: 4, xs: 2 }} onClick={() => { chooseMessage(false) }}>
+                            <Link href="#home" scroll={true} passHref style={{ textDecoration: 'none' }}>
+                                <NavbarTitle text="Home" />
                             </Link>
                         </Grid>
 
                         <Grid item xs="auto" paddingRight={{ lg: 4, xs: 2 }} onClick={() => { chooseMessage(false) }}>
-                            <Link href="#guarantee" scroll={true} passHref style={{ textDecoration: 'none' }}>
-                                <NavbarTitle text="GUARANTEE" />
-                            </Link>
-                        </Grid>
-
-
-                        <Grid item xs="auto" paddingRight={{ lg: 4, xs: 2 }} onClick={() => { chooseMessage(false) }}>
-                            <Link href="#portfolio" scroll={true} passHref style={{ textDecoration: 'none' }}>
-                                <NavbarTitle text="PORTFOLIO" />
-                            </Link>
-                        </Grid>
-
-
-                        <Grid item xs="auto" paddingRight={{ lg: 4, xs: 2 }} onClick={() => { chooseMessage(false) }}>
-                            <Link href="#features" scroll={true} passHref style={{ textDecoration: 'none' }}>
-                                <NavbarTitle text="FEATURES" />
+                            <Link href="#services" scroll={true} passHref style={{ textDecoration: 'none' }}>
+                                <NavbarTitle text="Services" />
                             </Link>
                         </Grid>
 
                         <Grid item xs="auto" paddingRight={{ lg: 4, xs: 2 }} onClick={() => { chooseMessage(false) }}>
-                            <Link href="https://blog.owntechnologies.in/" target='_blank' scroll={true} passHref style={{ textDecoration: 'none' }}>
-                                <NavbarTitle text="BLOGS" />
+                            <Link href="#solutions" scroll={true} passHref style={{ textDecoration: 'none' }}>
+                                <NavbarTitle text="Solutions" />
                             </Link>
                         </Grid>
 
-
-
+                        <Grid item xs="auto" paddingRight={{ lg: 4, xs: 2 }} onClick={() => { chooseMessage(false) }}>
+                            <Link href="#industries" scroll={true} passHref style={{ textDecoration: 'none' }}>
+                                <NavbarTitle text="Industries" />
+                            </Link>
+                        </Grid>
 
                         <Grid item xs="auto" paddingRight={{ lg: 4, xs: 2 }} onClick={() => { chooseMessage(false) }}>
-                            <Link href="#contact" scroll={true} passHref style={{ textDecoration: 'none' }}>
-                                <NavbarTitle text="CONTACT" />
+                            <Link href="#sports" scroll={true} passHref style={{ textDecoration: 'none' }}>
+                                <NavbarTitle text="Sports" />
+                            </Link>
+                        </Grid>
+
+                        <Grid item xs="auto" paddingRight={{ lg: 4, xs: 2 }} onClick={() => { chooseMessage(false) }}>
+                            <Link href="#about" scroll={true} passHref style={{ textDecoration: 'none' }}>
+                                <NavbarTitle text="Company" />
                             </Link>
                         </Grid>
 

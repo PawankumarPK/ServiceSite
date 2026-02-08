@@ -1,664 +1,405 @@
-import React, { useState } from 'react'
-import { Box, Button, Grid, Typography, Drawer, IconButton, createTheme, useTheme, useMediaQuery, } from "@mui/material";
-import bannerImage from "../media/bannerImg.jpg";
-import calling from "../svg/calling.svg";
-import popupWhatsapp from "../../public/png/popup-whatsapp.png";
-import upArrow from "../../public/png/up-arrow.png";
-
-import facebookIcon from "../svg/facebookIcon.svg";
-import instagramIcon from "../svg/instagramIcon.svg";
-import linkdinIcon from "../svg/linkedinIcon.svg";
-import twitterIcon from "../svg/twitterIcon.svg";
-import menuIcon from "../svg/menu.svg";
-
-import { Container } from '@mui/system';
+import React, { useState, useEffect } from 'react';
+import { Box, Button, Grid, Typography, Drawer } from '@mui/material';
 import Image from 'next/image';
+import Link from 'next/link';
+import { Container } from '@mui/system';
+
+import calling from '../svg/calling.svg';
+import emailBlack from '../svg/emailBlack.svg';
+import menuIcon from '../svg/menu.svg';
+import ownLogo from '../../public/png/ownLogo.png';
+import popupWhatsapp from '../../public/png/popup-whatsapp.png';
+import upArrow from '../../public/png/up-arrow.png';
 
 import DrawerItem from './Drawer';
-import { useEffect } from 'react';
-import Link from 'next/link';
 
-/// ----------------- Navbar common title -----------------
-const NavbarTitle = ({ text }) => (
-  <Typography
-    display={{ xs: 'none', sm: 'block', md: 'block', lg: 'block' }}
-    component="p"
-    sx={{
-      fontSize: {
-        lg: 17,
-        md: 17,
-        sm: 14,
-        xs: 6
-      }
-    }}
-    fontWeight={600}
-    color="#000">
-    {text}
-  </Typography>
-)
-
+// Same nav as screenshot: Home, Services, Solutions, Industries, Sports, Company
+const NAV_LINKS = [
+  { label: 'Home', href: '#home' },
+  { label: 'Services', href: '#services' },
+  { label: 'Solutions', href: '#solutions' },
+  { label: 'Industries', href: '#industries' },
+  { label: 'Sports', href: '#sports' },
+  { label: 'Company', href: '#about' },
+];
 
 const Header = () => {
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false)
-  const [showScrollButton, setShowScrollButton] = useState(false)
-
-  const chooseMessage = (message) => {
-    setIsDrawerOpen(message);
-  };
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [showScrollButton, setShowScrollButton] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      // Show button when user scrolls down more than 300px
-      if (window.scrollY > 300) {
-        setShowScrollButton(true)
-      } else {
-        setShowScrollButton(false)
-      }
-    }
+    const handleScroll = () => setShowScrollButton(window.scrollY > 300);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
-    window.addEventListener('scroll', handleScroll)
-    
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [])
+  const openWhatsApp = () =>
+    window.open(
+      `https://wa.me/+919587867258?text=${encodeURIComponent("Hi! I'm interested in your services.")}`,
+      '_blank'
+    );
 
   return (
     <>
-    <Box 
-      sx={{ 
-        display: 'flex', 
-        alignItems: 'center',
-        position: 'relative',
-        minHeight: { xs: '100vh', sm: '100vh', md: '100vh', lg: '100vh' },
-        width: '100%',
-        overflow: 'hidden'
-      }} 
-      id="home" 
-      bgcolor="#F7F8FA">
-      <Box
-        sx={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          width: '100%',
-          height: '100%',
-          zIndex: 0
-        }}
-      >
-        <Image
-          priority
-          src={bannerImage}
-          layout='fill'
-          objectFit='cover'
-          alt='Banner Image'
-          style={{
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover'
-          }}>
-        </Image>
+      {/* ----------------------- Top Bar (same as screenshot) ----------------------- */}
+      <Box sx={{ bgcolor: '#fff', borderBottom: '1px solid rgba(0,0,0,0.06)', py: 0.75 }}>
+        <Container maxWidth="lg">
+          <Grid container alignItems="center">
+            <Grid item xs={12} sm="auto">
+              <Grid container alignItems="center" spacing={2} flexWrap="nowrap">
+                <Grid item>
+                  <Link
+                    href="mailto:sales@comfygen.com?subject=Enquiry"
+                    passHref
+                    style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', color: '#000' }}
+                  >
+                    <Image src={emailBlack} alt="" width={18} height={18} />
+                    <Typography component="span" sx={{ ml: 1, fontSize: 14 }} color="#000">
+                      sales@comfygen.com
+                    </Typography>
+                  </Link>
+                </Grid>
+                <Grid item sx={{ pl: 2 }}>
+                  <Box
+                    component="a"
+                    href="tel:+919587867258"
+                    sx={{ display: 'flex', alignItems: 'center', textDecoration: 'none', color: '#000', cursor: 'pointer' }}
+                  >
+                    <Image src={calling} alt="" width={18} height={18} />
+                    <Typography component="span" sx={{ ml: 1, fontSize: 14 }} color="#000">
+                      +91 9587867258
+                    </Typography>
+                  </Box>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
+        </Container>
       </Box>
 
-      <Container sx={{ position: "relative", zIndex: 1, width: '100%' }}>
-
-        {/* ----------------------- Whatsapp and contact number ----------------------- */}
-        <Grid container alignItems='center' spacing={8} pt={6} pb={2}>
-          <Grid
-            onClick={() => window.open(`tel:9910765616`)}
-            container item xs alignItems='center'>
-            <Grid
-
-              sx={{
-                cursor: 'pointer',
-                width: {
-                  lg: 22,
-                  md: 22,
-                  sm: 22,
-                  xs: 20
-                },
-                height: {
-                  lg: 22,
-                  md: 22,
-                  sm: 22,
-                  xs: 20
-                }
-              }}>
-              <Image
-                layout="responsive"
-                src={calling}
-                component="img"
-                alt="Calling logo">
-              </Image>
-            </Grid>
-
-            <Typography
-                component="p"
-                sx={{
-                  cursor: 'pointer',
-                  fontSize: {
-                    lg: 18,
-                    md: 18,
-                    sm: 18,
-                    xs: 15
-                  }
-                }}
-                pl={1}
-                fontWeight={500}
-                color='common.white'>
-                +91-9910765616
-              </Typography>
-          </Grid>
-
-
-          {/* ----------------------- Social Media icons ----------------------- */}
-          <Grid container item xs="auto" spacing={3}>
-
-            <Grid item
-              sx={{
-                width: {
-                  lg: 35,
-                  md: 35,
-                  sm: 32,
-                  xs: 32
-                },
-                height: {
-                  lg: 35,
-                  md: 35,
-                  sm: 32,
-                  xs: 32
-                }
-              }}>
-              <Link href="https://www.facebook.com/profile.php?id=100091625195907" target='_blank' passHref>
-                <Image
-                  layout='responsive'
-                  src={facebookIcon}
-                  alt="Facebook icon" />
-              </Link>
-            </Grid>
-
-            <Grid item
-              sx={{
-                width: {
-                  lg: 42,
-                  md: 42,
-                  sm: 42,
-                  xs: 42
-                },
-                height: {
-                  lg: 42,
-                  md: 42,
-                  sm: 42,
-                  xs: 42
-                }
-              }}>
-              <Link href="https://www.instagram.com/own_technologies/?next=%2F" target='_blank' passHref>
-                <Image
-                  layout='responsive'
-                  src={instagramIcon}
-                  alt="instagram icon" />
-              </Link>
-
-            </Grid>
-
-            <Grid item
-              sx={{
-                width: {
-                  lg: 42,
-                  md: 42,
-                  sm: 42,
-                  xs: 42
-                },
-                height: {
-                  lg: 42,
-                  md: 42,
-                  sm: 42,
-                  xs: 42
-                }
-              }}>
-              <Link href="https://www.linkedin.com/company/own-technologies/?viewAsMember=true" target='_blank' passHref>
-                <Image
-                  layout='responsive'
-                  src={linkdinIcon}
-                  alt="linkdin icon" />
-              </Link>
-            </Grid>
-          </Grid>
-
-        </Grid>
-
-
-
-
-        <Grid container alignItems='center' pt={2}>
-
-          {/* ----------------------- Own button section ----------------------- */}
-
-          <Grid
-              sx={{
-                width: {
-                  lg: 140,
-                  md: 130,
-                  sm: 100,
-                  xs: 80
-                },
-                height: {
-                  lg: 75,
-                  md: 75,
-                  sm: 75,
-                  xs: 75
-                }
-              }}
-
-              display='flex' alignItems='center' justifyContent='center' bgcolor='#27363B'>
-
-              <Typography
-                component="h3"
-                sx={{
-                  fontSize: {
-                    lg: 40,
-                    md: 30,
-                    sm: 30,
-                    xs: 20
-                  }
-                }}
-                color='#fff' fontWeight='700'>
-                OWN
-              </Typography>
-
-            </Grid>
-
-
-          {/* ----------------------- Navbar section ----------------------- */}
-          <Grid item xs >
-            <Grid container height={75} bgcolor="#fff" alignContent='center' justifyContent="end">
-
-
-              {/* <Grid item xs="auto" paddingRight={4}>
-                <Link href="#home" scroll={true} passHref>
-                  <NavbarTitle text="HOME" />
-                </Link>
-              </Grid> */}
-
-
-              <Grid item xs="auto" paddingRight={{ lg: 4, xs: 2 }}>
-                <Link href="#services" scroll={true} passHref>
-                  <NavbarTitle text="SERVICES" />
-                </Link>
-              </Grid>
-
-              <Grid item xs="auto" paddingRight={{ lg: 4, xs: 2 }}>
-                <Link href="#portfolio" scroll={true} passHref>
-                  <NavbarTitle text="PORTFOLIO" />
-                </Link>
-              </Grid>
-
-              <Grid item xs="auto" paddingRight={{ lg: 4, xs: 2 }}>
-                <Link href="#features" scroll={true} passHref>
-                  <NavbarTitle text="FEATURES" />
-                </Link>
-              </Grid>
-
-              <Grid item xs="auto" paddingRight={{ lg: 4, xs: 2 }}>
-                <Link href="#guarantee" scroll={true} passHref>
-                  <NavbarTitle text="GUARANTEE" />
-                </Link>
-              </Grid>
-
-              <Grid item xs="auto" paddingRight={{ lg: 4, xs: 2 }}>
-                <Link href="#contact" scroll={true} passHref>
-                  <NavbarTitle text="CONTACT" />
-                </Link>
-              </Grid>
-
-              <Grid item xs="auto" paddingRight={{ lg: 4, xs: 2 }}>
-                <Link href="https://blog.owntechnologies.in/" target='_blank' scroll={true} passHref>
-                  <NavbarTitle text="BLOGS" />
-                </Link>
-              </Grid>
-
-              {/* Drawer */}
-
-
-
-              <Grid display={{ xs: 'block', sm: 'none', md: 'none', lg: 'none' }} paddingRight={{ lg: 4, xs: 2 }}>
-
-                <Grid width={30}>
-                  <Image
-                    onClick={() => setIsDrawerOpen(true)}
-                    layout="responsive"
-                    src={menuIcon}
-                    component="img"
-                    alt="Menu Icon">
-                  </Image>
-                </Grid>
-
-
-
-                {/* <DrawerNav /> */}
-
-                <Drawer
-                  anchor='left'
-                  open={isDrawerOpen}
-                  onClose={() => {
-                    setIsDrawerOpen(chooseMessage)
-                  }
-                  }>
-
-                  <DrawerItem chooseMessage={chooseMessage} />
-
-                </Drawer>
-
-              </Grid>
-
-
-            </Grid>
-          </Grid>
-
-          {/* <Grid marginLeft={10} justifyContent="center" alignContent='center'>
-              <Image
-                width={40}
-                src={menuIcon}
-                layout='intrinsic'
-                alt="Menu" />
-            </Grid> */}
-
-        </Grid>
-
-
-
-
-        <Grid 
-          container 
-          justifyContent={{ lg: "end", xs: "center" }} 
-          alignItems='center' 
-          pt={13}
-          sx={{
-            px: { xs: 2, sm: 2, md: 0 },
-            overflow: 'hidden',
-            width: '100%',
-          }}
-        >
-
-          {/* ----------------------- We make beautiful & Resposive text section ----------------------- */}
-
-          <Grid>
-            <Typography component="h3" color="#000" pr={{ lg: 5, xs: 2 }} mt={-10} fontSize={40} fontFamily="var(--font-poppins), sans-serif" fontWeight={700}>
-              WE BUILD
-            </Typography>
-
-            <Typography component="h3" color="#000" fontSize={15} fontFamily="var(--font-poppins), sans-serif" fontWeight={400} textAlign='center' pr={{ lg: 5, xs: 0 }}>
-              Modern & Scalable
-            </Typography>
-
-          </Grid>
-
-
-          {/* ----------------------- Creative website & app section ----------------------- */}
-          <Box
-              height={{ lg: 'auto', xs: 'auto' }}
-              width={{ lg: 550, md: 400, sm: '100%', xs: '100%' }}
-              maxWidth={{ lg: 550, md: 400, sm: 400, xs: '100%' }}
-              mt={-3}
-              bgcolor="#DBD525"
-              sx={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'flex-start',
-                justifyContent: 'flex-start',
-                px: { xs: 3, sm: 4, md: 4, lg: 4 },
-                py: { xs: 3, sm: 4 },
-                overflow: 'visible',
-                boxSizing: 'border-box',
-                minHeight: { lg: 350, xs: 'auto' },
-              }}
-            >
-
-              <Typography
-                component="h1"
-                fontFamily="var(--font-poppins), sans-serif" fontWeight={400}
-                fontSize={22}
-                color="#fff" 
-                pt={4}
-                sx={{ textAlign: 'left' }}>
-                Innovative
-              </Typography>
-
-              <Typography
-                component="h1"
-                fontFamily="var(--font-poppins), sans-serif" fontWeight={700}
-                color="#fff" 
-                fontSize={{ lg: 40, xs: 30 }} 
-                fontWeight={800}
-                sx={{ textAlign: 'left' }}>
-                WEBSITE & APPS
-              </Typography>
-
-
-              <Typography
-                  component="subtitle1"
-                  fontSize={{ lg: 15, xs: 11 }}
-                  fontFamily="var(--font-poppins), sans-serif" fontWeight={400}
-                  color="#fff" 
-                  pt={2}
-                  pb={2}
-                  sx={{ 
-                    textAlign: 'left',
-                    width: '100%',
-                    wordWrap: 'break-word',
-                    overflowWrap: 'break-word',
-                    maxWidth: '100%',
-                  }}>
-                  Ready to elevate your digital presence? We craft stunning websites and powerful mobile applications that combine speed, functionality, and exceptional user experience. Our expert team transforms your vision into reality, delivering custom solutions that drive engagement and boost your business growth.
-                </Typography>
-
-
-              <Box 
-                pt={2} 
-                pb={2} 
-                sx={{ 
-                  width: '100%', 
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'flex-start',
-                  justifyContent: 'flex-start',
-                }}
-              >
-                <Button 
-                    href="#about" 
-                    scroll={true} 
-                    variant="outlined" 
-                    sx={{ 
-                      borderRadius: 50,
-                      py: 1,
-                      px: { xs: 2, sm: 3, md: 3, lg: 3 },
-                      display: 'inline-flex',
-                      whiteSpace: 'nowrap',
-                    }}
-                    style={{
-                      color: "#fff",
-                      border: '2px solid #fff',
+      {/* ----------------------- Main Navigation (same as screenshot) ----------------------- */}
+      <Box sx={{ bgcolor: '#fff', boxShadow: '0 1px 3px rgba(0,0,0,0.06)', position: 'sticky', top: 0, zIndex: 1100 }}>
+        <Container maxWidth="lg">
+          <Grid container alignItems="center" sx={{ minHeight: 72 }}>
+            {/* Logo - same as footer: icon + OWN + Technologies */}
+            <Grid item xs={6} md={3}>
+              <Link href="#home" passHref style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
+                <Image src={ownLogo} alt="OWN Technologies" width={48} height={48} />
+                <Box sx={{ ml: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                  <Typography
+                    component="span"
+                    sx={{
+                      fontSize: { xs: 22, sm: 26 },
+                      fontWeight: 700,
+                      color: '#27363B',
+                      fontFamily: 'var(--font-poppins), sans-serif',
+                      lineHeight: 1.1,
                     }}
                   >
-                    <Typography
-                      component="p"
-                      fontFamily="var(--font-poppins), sans-serif" fontWeight={500}
-                      color="#fff"
-                      textTransform='none'
-                      fontSize={{ xs: 13, sm: 14, md: 15, lg: 16 }}
-                    >
-                      Learn More
-                    </Typography>
-                  </Button>
-              </Box>
-            </Box>
-
-
-            {/* Up Arrow Icon */}
-            {/* <Grid
-              p={1}
-              position="fixed"
-              display='flex'
-              justifyContent="end"
-              left='78%'
-              top='85%'
-              container
-              sx={{
-                cursor: 'pointer',
-                left: {
-                  lg: '90.3%',
-                  md: '90.3%',
-                  sm: '80.3%',
-                  xs: '81%'
-                },
-                width: {
-                  lg: 75,
-                  md: 75,
-                  sm: 70,
-                  xs: 65
-                },
-
-              }}>
-
-              <Link href="#" scroll={true} passHref>
-                <Grid
-                  paddingTop={2}
-                  sx={{
-                    cursor: 'pointer',
-                  }}>
-                  <Image
-                    layout="responsive"
-                    src={upArrow}
-                    component="img"
-                    alt="Up Arrow">
-                  </Image>
-                </Grid>
+                    OWN
+                  </Typography>
+                  <Typography
+                    component="span"
+                    sx={{
+                      fontSize: { xs: 11, sm: 13 },
+                      fontWeight: 400,
+                      color: '#27363B',
+                      fontFamily: 'var(--font-poppins), sans-serif',
+                      lineHeight: 1.2,
+                    }}
+                  >
+                    Technologies
+                  </Typography>
+                </Box>
               </Link>
-            </Grid> */}
+            </Grid>
 
+            {/* Nav links - same as screenshot: Home, Services, Solutions, Industries, Sports, Company */}
+            <Grid item xs={0} md={6} sx={{ display: { xs: 'none', md: 'flex' }, justifyContent: 'center' }}>
+              <Grid container spacing={0} justifyContent="center">
+                {NAV_LINKS.map((link) => (
+                  <Grid item key={link.href}>
+                    <Link href={link.href} passHref style={{ textDecoration: 'none' }}>
+                      <Typography
+                        component="span"
+                        sx={{
+                          px: 1.5,
+                          py: 0.5,
+                          fontSize: 14,
+                          fontWeight: 500,
+                          color: '#000',
+                          fontFamily: 'var(--font-poppins), sans-serif',
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          '&:hover': { color: '#2563eb' },
+                        }}
+                      >
+                        {link.label}
+                        <Box component="span" sx={{ ml: 0.25, fontSize: 10, opacity: 0.8 }}>▼</Box>
+                      </Typography>
+                    </Link>
+                  </Grid>
+                ))}
+              </Grid>
+            </Grid>
+
+            {/* Get a Quote button - blue with arrow */}
+            <Grid item xs={6} md={3} sx={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>
+              <Button
+                href="#contact"
+                component={Link}
+                scroll
+                variant="contained"
+                sx={{
+                  display: { xs: 'none', sm: 'inline-flex' },
+                  borderRadius: '8px',
+                  bgcolor: '#2563eb',
+                  px: 2.5,
+                  py: 1,
+                  fontSize: 14,
+                  fontWeight: 600,
+                  fontFamily: 'var(--font-poppins), sans-serif',
+                  textTransform: 'none',
+                  boxShadow: '0 2px 8px rgba(37,99,235,0.35)',
+                  '&:hover': { bgcolor: '#1d4ed8', boxShadow: '0 4px 12px rgba(37,99,235,0.4)' },
+                }}
+              >
+                Get a Quote
+                <Box component="span" sx={{ ml: 0.75, fontSize: 16 }}>↗</Box>
+              </Button>
+              <Box
+                onClick={() => setIsDrawerOpen(true)}
+                sx={{ display: { xs: 'block', md: 'none' }, cursor: 'pointer', p: 1 }}
+                aria-label="Menu"
+              >
+                <Image src={menuIcon} alt="Menu" width={28} height={28} />
+              </Box>
+            </Grid>
           </Grid>
+        </Container>
+      </Box>
 
-      </Container >
-
-    </Box>
-
-    {/* Whatsapp Icon - Outside all containers */}
-    <Box
-      onClick={() => window.open(`https://wa.me/+919910765616?text=${encodeURIComponent("Hi! I'm interested in your services. Can you please help me?")}`)}
-      sx={{
-        position: 'fixed',
-        cursor: 'pointer',
-        right: {
-          lg: '2%',
-          md: '3%',
-          sm: '5%',
-          xs: '5%'
-        },
-        bottom: {
-          lg: '120px',
-          md: '120px',
-          sm: '100px',
-          xs: '100px'
-        },
-        width: {
-          lg: 60,
-          md: 80,
-          sm: 70,
-          xs: 55
-        },
-        height: {
-          lg: 60,
-          md: 80,
-          sm: 70,
-          xs: 55
-        },
-        borderRadius: '50%',
-        zIndex: 999999,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        pointerEvents: 'auto',
-      }}
-    >
-      <Image
-        layout="responsive"
-        src={popupWhatsapp}
-        component="img"
-        alt="Whatsapp logo"
-        style={{
-          width: '100%',
-          height: '100%',
-          borderRadius: '50%',
-        }}>
-      </Image>
-    </Box>
-
-    {/* Scroll to Top Icon - Outside all containers */}
-    {showScrollButton && (
+      {/* ----------------------- Hero Section (same as screenshot) ----------------------- */}
       <Box
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        id="home"
+        sx={{ position: 'relative', minHeight: { xs: '85vh', sm: '90vh', md: '100vh' }, width: '100%', overflow: 'hidden' }}
+      >
+        <Box sx={{ position: 'absolute', inset: 0, zIndex: 0 }}>
+          <Image priority src="/png/banner.jpg" alt="Hero background" fill style={{ objectFit: 'cover' }} sizes="100vw" />
+        </Box>
+        <Box sx={{ position: 'absolute', inset: 0, bgcolor: 'rgba(30, 58, 95, 0.48)', zIndex: 1 }} />
+
+        {/* Floating social - same as screenshot: WhatsApp, Microsoft Teams, Telegram */}
+        <Box
+          sx={{
+            position: 'absolute',
+            right: { xs: 12, md: 24 },
+            top: '50%',
+            transform: 'translateY(-50%)',
+            zIndex: 3,
+            display: 'flex',
+            flexDirection: 'column',
+            gap: 1.5,
+          }}
+        >
+          <Box
+            onClick={openWhatsApp}
+            sx={{
+              width: 48,
+              height: 48,
+              borderRadius: '50%',
+              bgcolor: '#25D366',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              cursor: 'pointer',
+              boxShadow: '0 4px 14px rgba(37,211,102,0.45)',
+              transition: 'transform 0.2s',
+              '&:hover': { transform: 'scale(1.1)' },
+            }}
+          >
+            <Image src={popupWhatsapp} alt="WhatsApp" width={28} height={28} style={{ filter: 'brightness(0) invert(1)' }} />
+          </Box>
+          <Box
+            component="a"
+            href="https://www.microsoft.com/microsoft-teams"
+            target="_blank"
+            rel="noopener noreferrer"
+            sx={{
+              width: 48,
+              height: 48,
+              borderRadius: '50%',
+              bgcolor: '#5B5FC7',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              cursor: 'pointer',
+              boxShadow: '0 4px 14px rgba(91,95,199,0.4)',
+              transition: 'transform 0.2s',
+              textDecoration: 'none',
+              color: '#fff',
+              fontSize: 18,
+              fontWeight: 700,
+              fontFamily: 'var(--font-poppins), sans-serif',
+              '&:hover': { transform: 'scale(1.1)' },
+            }}
+          >
+            T
+          </Box>
+          <Box
+            component="a"
+            href="https://t.me/"
+            target="_blank"
+            rel="noopener noreferrer"
+            sx={{
+              width: 48,
+              height: 48,
+              borderRadius: '50%',
+              bgcolor: '#0088CC',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              cursor: 'pointer',
+              boxShadow: '0 4px 14px rgba(0,136,204,0.4)',
+              transition: 'transform 0.2s',
+              textDecoration: 'none',
+              color: '#fff',
+              fontSize: 20,
+              '&:hover': { transform: 'scale(1.1)' },
+            }}
+          >
+            ✈
+          </Box>
+        </Box>
+
+        {/* Hero content - same as screenshot */}
+        <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 2, height: '100%', pl: { xs: 1.5, sm: 2, md: 2 }, pr: { xs: 2, sm: 3 } }}>
+          <Grid
+            container
+            alignItems="center"
+            justifyContent="flex-start"
+            sx={{ minHeight: { xs: '85vh', sm: '90vh', md: '100vh' }, py: { xs: 6, md: 8 } }}
+          >
+            <Grid item xs={12} md={10} lg={8}>
+              <Typography
+                component="h1"
+                sx={{
+                  color: '#fff',
+                  fontSize: { xs: 26, sm: 32, md: 38, lg: 44 },
+                  fontWeight: 700,
+                  fontFamily: 'var(--font-poppins), sans-serif',
+                  lineHeight: 1.25,
+                  mb: 2,
+                  textTransform: 'capitalize',
+                }}
+              >
+                AI-Based Mobile App & Web Development Company
+              </Typography>
+              <Typography
+                component="p"
+                sx={{
+                  color: 'rgba(255,255,255,0.92)',
+                  fontSize: { xs: 14, sm: 15, md: 16 },
+                  lineHeight: 1.75,
+                  maxWidth: 560,
+                  mb: 3,
+                  fontFamily: 'var(--font-poppins), sans-serif',
+                }}
+              >
+                Are you looking to build powerful mobile application? Comfygen is a trusted AI-based mobile app & web development company. We design and build mobile apps and websites with AI-powered solutions tailored for startups, enterprises, and global businesses.
+              </Typography>
+              <Button
+                onClick={openWhatsApp}
+                variant="contained"
+                sx={{
+                  borderRadius: '50px',
+                  bgcolor: '#fff',
+                  color: '#1a1a1a',
+                  px: 3,
+                  py: 1.5,
+                  fontSize: 16,
+                  fontWeight: 600,
+                  fontFamily: 'var(--font-poppins), sans-serif',
+                  textTransform: 'none',
+                  boxShadow: '0 4px 20px rgba(0,0,0,0.15)',
+                  '&:hover': { bgcolor: '#f5f5f5', boxShadow: '0 6px 24px rgba(0,0,0,0.2)' },
+                }}
+              >
+                Talk to an expert!
+                <Box
+                  component="span"
+                  sx={{
+                    ml: 1.5,
+                    width: 36,
+                    height: 36,
+                    borderRadius: '50%',
+                    bgcolor: '#2563eb',
+                    color: '#fff',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: 18,
+                  }}
+                >
+                  →
+                </Box>
+              </Button>
+            </Grid>
+          </Grid>
+        </Container>
+      </Box>
+
+      <Drawer anchor="left" open={isDrawerOpen} onClose={() => setIsDrawerOpen(false)}>
+        <DrawerItem chooseMessage={() => setIsDrawerOpen(false)} />
+      </Drawer>
+
+      {/* Floating WhatsApp */}
+      <Box
+        onClick={openWhatsApp}
         sx={{
           position: 'fixed',
-          cursor: 'pointer',
-          right: {
-            lg: '2%',
-            md: '3%',
-            sm: '5%',
-            xs: '5%'
-          },
-          bottom: {
-            lg: '40px',
-            md: '40px',
-            sm: '20px',
-            xs: '20px'
-          },
-          width: {
-            lg: 50,
-            md: 60,
-            sm: 60,
-            xs: 55
-          },
-          height: {
-            lg: 50,
-            md: 60,
-            sm: 60,
-            xs: 55
-          },
+          right: { lg: '2%', md: '3%', sm: '5%', xs: '5%' },
+          bottom: { lg: 120, md: 120, sm: 100, xs: 100 },
+          width: { lg: 56, md: 60, sm: 54, xs: 50 },
+          height: { lg: 56, md: 60, sm: 54, xs: 50 },
           borderRadius: '50%',
-          bgcolor: '#9CC118',
+          bgcolor: '#25D366',
+          boxShadow: '0 4px 20px rgba(37,211,102,0.5)',
+          cursor: 'pointer',
           zIndex: 999999,
-          boxShadow: '0 4px 15px rgba(156,193,24,0.4)',
-          transition: 'all 0.3s ease',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          pointerEvents: 'auto',
-          opacity: showScrollButton ? 1 : 0,
-          transform: showScrollButton ? 'translateY(0)' : 'translateY(20px)',
-          '&:hover': {
-            bgcolor: '#DBD525',
-            transform: 'translateY(-3px)',
-            boxShadow: '0 6px 20px rgba(156,193,24,0.6)',
-          }
         }}
       >
-        <Image
-          layout="responsive"
-          src={upArrow}
-          component="img"
-          alt="Scroll to top"
-          style={{
-            width: '60%',
-            height: '60%',
-          }}>
-        </Image>
+        <Image src={popupWhatsapp} alt="WhatsApp" width={32} height={32} style={{ filter: 'brightness(0) invert(1)' }} />
       </Box>
-    )}
+
+      {showScrollButton && (
+        <Box
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          sx={{
+            position: 'fixed',
+            right: { lg: '2%', md: '3%', sm: '5%', xs: '5%' },
+            bottom: { lg: 40, md: 40, sm: 20, xs: 20 },
+            width: 48,
+            height: 48,
+            borderRadius: '50%',
+            bgcolor: '#2563eb',
+            boxShadow: '0 4px 15px rgba(37,99,235,0.4)',
+            cursor: 'pointer',
+            zIndex: 999999,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            '&:hover': { bgcolor: '#1d4ed8' },
+          }}
+        >
+          <Image src={upArrow} alt="Scroll to top" width={24} height={24} style={{ transform: 'rotate(180deg)' }} />
+        </Box>
+      )}
     </>
-  )
-}
+  );
+};
 
-
-export default Header
+export default Header;
