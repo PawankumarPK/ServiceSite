@@ -154,7 +154,50 @@ const Header = () => {
 
 
           {/* ----------------------- Social Media icons ----------------------- */}
-          <Grid container item xs="auto" spacing={3}>
+          <Grid container item xs="auto" spacing={3} alignItems="center">
+
+            {/* Offer - reopens marketing popup */}
+            <Grid item>
+              <Box
+                onClick={() => window.dispatchEvent(new CustomEvent('openMarketingPopup'))}
+                sx={{
+                  cursor: 'pointer',
+                  px: { lg: 2, md: 1.5, sm: 1.5, xs: 1.25 },
+                  py: { lg: 1, md: 0.75, xs: 0.6 },
+                  borderRadius: '50px',
+                  background: 'linear-gradient(135deg, #9CC118 0%, #DBD525 50%, #9CC118 100%)',
+                  backgroundSize: '200% 200%',
+                  animation: 'offerShine 3s ease-in-out infinite',
+                  boxShadow: '0 4px 20px rgba(156,193,24,0.5), inset 0 1px 0 rgba(255,255,255,0.3)',
+                  border: '2px solid rgba(255,255,255,0.6)',
+                  transition: 'all 0.3s ease',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  '&:hover': {
+                    transform: 'scale(1.08)',
+                    boxShadow: '0 6px 28px rgba(156,193,24,0.6), inset 0 1px 0 rgba(255,255,255,0.4)',
+                  },
+                  '&:active': {
+                    transform: 'scale(0.98)',
+                  },
+                }}
+              >
+                <Typography
+                  component="span"
+                  sx={{
+                    color: '#1a1a1a',
+                    fontSize: { lg: 14, md: 13, sm: 12, xs: 11 },
+                    fontWeight: 800,
+                    fontFamily: 'var(--font-poppins), sans-serif',
+                    letterSpacing: '0.5px',
+                    textTransform: 'uppercase',
+                  }}
+                >
+                  🎁 Offer
+                </Typography>
+              </Box>
+            </Grid>
 
             <Grid item
               sx={{
@@ -169,9 +212,12 @@ const Header = () => {
                   md: 35,
                   sm: 32,
                   xs: 32
-                }
+                },
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
               }}>
-              <Link href="https://www.facebook.com/profile.php?id=100091625195907" target='_blank' passHref>
+              <Link href="https://www.facebook.com/profile.php?id=100091625195907" target='_blank' passHref style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <Image
                   layout='responsive'
                   src={facebookIcon}
@@ -192,9 +238,12 @@ const Header = () => {
                   md: 42,
                   sm: 42,
                   xs: 42
-                }
+                },
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
               }}>
-              <Link href="https://www.instagram.com/own_technologies/?next=%2F" target='_blank' passHref>
+              <Link href="https://www.instagram.com/own_technologies/?next=%2F" target='_blank' passHref style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <Image
                   layout='responsive'
                   src={instagramIcon}
@@ -216,9 +265,12 @@ const Header = () => {
                   md: 42,
                   sm: 42,
                   xs: 42
-                }
+                },
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
               }}>
-              <Link href="https://www.linkedin.com/company/own-technologies/?viewAsMember=true" target='_blank' passHref>
+              <Link href="https://www.linkedin.com/company/own-technologies/?viewAsMember=true" target='_blank' passHref style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <Image
                   layout='responsive'
                   src={linkdinIcon}
@@ -428,10 +480,10 @@ const Header = () => {
 
               <Typography
                 component="h1"
-                fontFamily="var(--font-poppins), sans-serif" fontWeight={700}
+                fontFamily="var(--font-poppins), sans-serif"
+                fontWeight={800}
                 color="#fff" 
                 fontSize={{ lg: 40, xs: 30 }} 
-                fontWeight={800}
                 sx={{ textAlign: 'left' }}>
                 WEBSITE & APPS
               </Typography>

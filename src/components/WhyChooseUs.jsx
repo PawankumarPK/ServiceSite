@@ -110,7 +110,7 @@ const Services = ({ title, description, icon, bgColor, altTag, variants, isMobil
                     <Typography 
                         component="h4" 
                         fontSize={{ xs: 15, sm: 16 }} 
-                        fontFamily="var(--font-poppins), sans-serif" fontWeight={600} 
+                        fontFamily="var(--font-poppins), sans-serif"
                         fontWeight={600} 
                         color="#27363B"
                         sx={{ mb: 1.5 }}

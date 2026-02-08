@@ -22,6 +22,11 @@ a {
   box-sizing: border-box;
 }
 
+@keyframes offerShine {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

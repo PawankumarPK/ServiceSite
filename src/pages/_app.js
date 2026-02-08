@@ -1,5 +1,8 @@
 import '../styles/globals.css'
 import Head from 'next/head'
+import dynamic from 'next/dynamic'
+
+const MarketingPopup = dynamic(() => import('../components/MarketingPopup'), { ssr: false })
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -40,6 +43,7 @@ function MyApp({ Component, pageProps }) {
         {/* End Meta Pixel Code */}
       </Head>
       <Component {...pageProps} />
+      <MarketingPopup />
     </>
   )
 }
